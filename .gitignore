@@ -1,0 +1,27 @@
+# Bağımlılıklar
+node_modules/
+vendor/
+
+# Derleme çıktıları
+dist/
+build/
+coverage/
+
+# Ortam dosyaları ve gizli bilgiler
+.env
+.env.*
+!.env.example
+
+# Günlükler
+*.log
+
+# Editör ve işletim sistemi dosyaları
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Geçici dosyalar
+*.tmp
+*.swp
+*.swo
