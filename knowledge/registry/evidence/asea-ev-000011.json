@@ -1,0 +1,19 @@
+{
+  "id": "ASEA-EV-000011",
+  "record_type": "evidence",
+  "version": "1.0.0",
+  "workflow_state": "Validated",
+  "title": "CS2023 defines software-engineering quality and delivery competencies",
+  "owner_role": "Researcher",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-18",
+  "supersedes": [],
+  "tags": ["volume-01", "software-engineering", "coverage-expansion"],
+  "source_id": "ASEA-SRC-000001",
+  "locator": "Software Engineering (SE), Preamble and Knowledge Units",
+  "paraphrase": "CS2023 organizes requirements, design, construction, verification and validation, software quality, evolution, teamwork, and delivery as connected software-engineering competencies.",
+  "scope": "Curriculum evidence for Volume 01 clean-code, refactoring, requirements, design, validation, review, and delivery concepts; detailed professional processes require their governing standards.",
+  "observed_on": "2026-07-18",
+  "extractor_role": "Knowledge Engineer",
+  "independence_group": "acm-ieee-aaai-cs2023"
+}

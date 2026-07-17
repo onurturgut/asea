@@ -1,0 +1,95 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asea.dev/schemas/kos/common.schema.json",
+  "title": "ASEA KOS Common Definitions",
+  "$defs": {
+    "semver": {
+      "type": "string",
+      "pattern": "^(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)\\.(0|[1-9][0-9]*)$"
+    },
+    "date": {
+      "type": "string",
+      "format": "date"
+    },
+    "nonEmptyString": {
+      "type": "string",
+      "minLength": 1
+    },
+    "recordId": {
+      "type": "string",
+      "pattern": "^(ASEA-[A-Z]+(?:-[A-Z0-9]+)*-[0-9]{3,6}|V[0-9]{2}-C[0-9]{2}-CPP-[0-9]{3})$"
+    },
+    "scoreFive": {
+      "oneOf": [
+        {
+          "type": "integer",
+          "minimum": 0,
+          "maximum": 5
+        },
+        {
+          "const": "not_applicable"
+        }
+      ]
+    },
+    "scoreHundred": {
+      "type": "integer",
+      "minimum": 0,
+      "maximum": 100
+    },
+    "baseRecord": {
+      "type": "object",
+      "required": [
+        "id",
+        "record_type",
+        "version",
+        "workflow_state",
+        "title",
+        "owner_role",
+        "created_on",
+        "updated_on",
+        "supersedes",
+        "tags"
+      ],
+      "properties": {
+        "id": {
+          "$ref": "#/$defs/recordId"
+        },
+        "record_type": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "version": {
+          "$ref": "#/$defs/semver"
+        },
+        "workflow_state": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "title": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "owner_role": {
+          "$ref": "#/$defs/nonEmptyString"
+        },
+        "created_on": {
+          "$ref": "#/$defs/date"
+        },
+        "updated_on": {
+          "$ref": "#/$defs/date"
+        },
+        "supersedes": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        },
+        "tags": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "uniqueItems": true
+        }
+      }
+    }
+  }
+}

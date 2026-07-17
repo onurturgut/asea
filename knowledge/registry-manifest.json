@@ -1,0 +1,38 @@
+{
+  "manifest_id": "ASEA-KOS-MF-001",
+  "version": "1.0.0",
+  "status": "Draft",
+  "authority": "Authoritative",
+  "generated_on": "2026-07-17",
+  "schema_version": "1.0.0",
+  "registries": {
+    "sources": "registry/sources",
+    "evidence": "registry/evidence",
+    "claims": "registry/claims",
+    "concepts": "registry/concepts",
+    "contradictions": "registry/contradictions",
+    "edges": "registry/edges"
+  },
+  "workflow_areas": {
+    "research_briefs": "research-briefs",
+    "extraction": "extraction",
+    "graph_snapshots": "graph/snapshots",
+    "graph_derived": "graph/derived",
+    "production_packets": "production-packets",
+    "asset_manifests": "asset-manifests",
+    "update_requests": "update-requests",
+    "reviews": "reviews",
+    "releases": "releases"
+  },
+  "schemas": [
+    "schemas/source.schema.json",
+    "schemas/evidence.schema.json",
+    "schemas/claim.schema.json",
+    "schemas/concept.schema.json",
+    "schemas/edge.schema.json",
+    "schemas/research-brief.schema.json",
+    "schemas/production-packet.schema.json"
+  ],
+  "validator": "scripts/validate-knowledge.mjs",
+  "canonical_curriculum_registry": "../docs/01-programming/assessment.md"
+}

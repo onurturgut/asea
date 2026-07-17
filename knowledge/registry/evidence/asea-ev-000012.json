@@ -1,0 +1,19 @@
+{
+  "id": "ASEA-EV-000012",
+  "record_type": "evidence",
+  "version": "1.0.0",
+  "workflow_state": "Validated",
+  "title": "ECMAScript specifies values, expressions, statements, and declarations",
+  "owner_role": "Researcher",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-18",
+  "supersedes": [],
+  "tags": ["volume-01", "language-semantics", "coverage-expansion"],
+  "source_id": "ASEA-SRC-000003",
+  "locator": "Clauses 6, 13, and 14: ECMAScript Data Types and Values; Expressions; Statements and Declarations",
+  "paraphrase": "ECMAScript normatively defines language values and types, expression evaluation, bindings and assignment, conditional and iterative statements, and structured control transfer.",
+  "scope": "Language-specific evidence for Volume 01 value, variable, expression, Boolean, conditional, loop, and composite-control concepts; examples must state their ECMAScript scope.",
+  "observed_on": "2026-07-18",
+  "extractor_role": "Knowledge Engineer",
+  "independence_group": "ecma-262"
+}

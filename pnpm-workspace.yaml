@@ -5,3 +5,6 @@ packages:
 allowBuilds:
   sharp: true
   unrs-resolver: true
+
+minimumReleaseAgeExclude:
+  - markdownlint-cli2@0.23.1

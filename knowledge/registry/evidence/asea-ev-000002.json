@@ -1,0 +1,19 @@
+{
+  "id": "ASEA-EV-000002",
+  "record_type": "evidence",
+  "version": "1.0.0",
+  "workflow_state": "Validated",
+  "title": "A language engine executes source with host-environment services",
+  "owner_role": "Researcher",
+  "created_on": "2026-07-17",
+  "updated_on": "2026-07-17",
+  "supersedes": [],
+  "tags": ["chapter-01", "chapter-02", "runtime"],
+  "source_id": "ASEA-SRC-000002",
+  "locator": "The engine and the host",
+  "paraphrase": "The JavaScript engine implements the language and parses and executes source code, while a host environment provides mechanisms for interaction with external resources and observable output.",
+  "scope": "JavaScript as one concrete illustration; not a universal implementation pipeline.",
+  "observed_on": "2026-07-17",
+  "extractor_role": "Knowledge Engineer",
+  "independence_group": "mdn"
+}

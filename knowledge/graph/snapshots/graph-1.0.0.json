@@ -1,0 +1,33 @@
+{
+  "graph_id": "ASEA-KG-001",
+  "version": "1.0.0",
+  "status": "Draft",
+  "generated_on": "2026-07-17",
+  "source_manifest": "../../registry-manifest.json",
+  "concept_ids": [
+    "ASEA-CON-000001",
+    "ASEA-CON-000002",
+    "ASEA-CON-000003",
+    "ASEA-CON-000004",
+    "ASEA-CON-000005",
+    "ASEA-CON-000006"
+  ],
+  "edge_ids": [
+    "ASEA-EDGE-000001",
+    "ASEA-EDGE-000002",
+    "ASEA-EDGE-000003",
+    "ASEA-EDGE-000004",
+    "ASEA-EDGE-000005",
+    "ASEA-EDGE-000006",
+    "ASEA-EDGE-000007",
+    "ASEA-EDGE-000008",
+    "ASEA-EDGE-000009",
+    "ASEA-EDGE-000010"
+  ],
+  "canonical_curriculum_registry": "../../../docs/01-programming/assessment.md",
+  "validation": {
+    "prerequisite_graph": "acyclic",
+    "orphan_concepts": 0,
+    "duplicate_ids": 0
+  }
+}

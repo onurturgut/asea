@@ -1,0 +1,148 @@
+{
+  "id": "V01-C02-CPP-001",
+  "record_type": "production-packet",
+  "version": "1.0.0",
+  "workflow_state": "Ready for Production",
+  "title": "V01-C02 How Computers Execute Programs Production Packet",
+  "owner_role": "Learning Designer",
+  "created_on": "2026-07-17",
+  "updated_on": "2026-07-17",
+  "supersedes": [],
+  "tags": ["volume-01", "chapter-02", "content-production"],
+  "chapter_id": "V01-C02",
+  "chapter_version": "0.1.0",
+  "blueprint_id": "V01-C02-BP01",
+  "learning_outcome_ids": ["V01-LO003", "V01-LO004"],
+  "prerequisite_ids": ["V01-C01"],
+  "source_ids": [
+    "ASEA-SRC-000001",
+    "ASEA-SRC-000002",
+    "ASEA-SRC-000005",
+    "ASEA-SRC-000006",
+    "ASEA-SRC-000007",
+    "ASEA-SRC-000008"
+  ],
+  "evidence_ids": [
+    "ASEA-EV-000001",
+    "ASEA-EV-000002",
+    "ASEA-EV-000003",
+    "ASEA-EV-000004",
+    "ASEA-EV-000005",
+    "ASEA-EV-000006",
+    "ASEA-EV-000007",
+    "ASEA-EV-000008"
+  ],
+  "claim_ids": [
+    "ASEA-CLM-000001",
+    "ASEA-CLM-000002",
+    "ASEA-CLM-000003",
+    "ASEA-CLM-000004",
+    "ASEA-CLM-000005",
+    "ASEA-CLM-000006"
+  ],
+  "concept_ids": [
+    "ASEA-CON-000001",
+    "ASEA-CON-000002",
+    "ASEA-CON-000003",
+    "ASEA-CON-000004",
+    "ASEA-CON-000005",
+    "ASEA-CON-000006"
+  ],
+  "graph_version": "1.0.0",
+  "required_components": [
+    "Hook",
+    "Story",
+    "Problem",
+    "Curiosity",
+    "Mental Model",
+    "Visualization",
+    "Interactive Demo",
+    "Theory",
+    "Engineering Perspective",
+    "Industry Case Study",
+    "Code Walkthrough",
+    "Debugging",
+    "Common Mistakes",
+    "AI Discussion",
+    "Exercise",
+    "Lab",
+    "Challenge",
+    "Reflection",
+    "Quiz",
+    "Mini Project",
+    "Summary",
+    "References"
+  ],
+  "required_asset_types": [
+    "Markdown",
+    "Mermaid",
+    "Execution trace table",
+    "Runnable code sample",
+    "Lab",
+    "Quiz",
+    "Assessment rubric"
+  ],
+  "assessment_alignment": [
+    {
+      "outcome_id": "V01-LO003",
+      "concept_ids": [
+        "ASEA-CON-000003",
+        "ASEA-CON-000004",
+        "ASEA-CON-000005",
+        "ASEA-CON-000006"
+      ],
+      "practice_artifact_ids": [
+        "V01-C02-EX01",
+        "V01-C02-L01",
+        "V01-C02-CH01"
+      ],
+      "assessment_id": "V01-C02-AS01",
+      "acceptance_evidence": "A complete instruction-by-instruction trace with correct initial, intermediate, and final states plus an explanation of control transfer."
+    },
+    {
+      "outcome_id": "V01-LO004",
+      "concept_ids": [
+        "ASEA-CON-000001",
+        "ASEA-CON-000002",
+        "ASEA-CON-000005",
+        "ASEA-CON-000006"
+      ],
+      "practice_artifact_ids": [
+        "V01-C02-EX01",
+        "V01-C02-L01"
+      ],
+      "assessment_id": "V01-C02-AS01",
+      "acceptance_evidence": "A version-scoped explanation that separates source representation, translation/runtime path, execution state, and observable output without universalizing one implementation."
+    }
+  ],
+  "accessibility_requirements": [
+    "Every diagram has an equivalent ordered text description.",
+    "Execution traces use labeled columns and do not rely on color.",
+    "Interactive behavior is keyboard operable and has a static fallback.",
+    "Animations, if used, include pause controls and a reduced-motion alternative.",
+    "Technical terms are defined at first meaningful use."
+  ],
+  "known_risks": [
+    "Fetch-decode-execute may be misread as a cycle-accurate universal CPU implementation.",
+    "Learners may equate runtime memory with persistent storage.",
+    "Compiler versus interpreter may be presented as a false binary.",
+    "An industry case study requires additional validated Tier 3 evidence before inclusion."
+  ],
+  "exclusions": [
+    "Digital logic design",
+    "Processor pipelines and speculative execution",
+    "Cache hierarchy and virtual memory",
+    "Operating-system process scheduling",
+    "Compiler construction",
+    "Assembly-language programming",
+    "Persistent storage internals"
+  ],
+  "review_owners": [
+    "Subject-Matter Reviewer",
+    "Curriculum Architect",
+    "Learning Designer",
+    "Accessibility Reviewer",
+    "Repository Reviewer"
+  ],
+  "production_decision": "Authorized"
+}

@@ -1,0 +1,19 @@
+{
+  "id": "ASEA-EV-000009",
+  "record_type": "evidence",
+  "version": "1.0.0",
+  "workflow_state": "Validated",
+  "title": "CS2023 defines foundational programming and software-development competencies",
+  "owner_role": "Researcher",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-18",
+  "supersedes": [],
+  "tags": ["volume-01", "software-development-fundamentals", "coverage-expansion"],
+  "source_id": "ASEA-SRC-000001",
+  "locator": "Software Development Fundamentals (SDF), Preamble and Knowledge Units",
+  "paraphrase": "CS2023 positions reading and writing programs, using fundamental programming concepts and data structures, applying development practices, testing, debugging, and reasoning about program quality and performance as early software-development foundations.",
+  "scope": "Curriculum evidence for Volume 01 programming, data, control-flow, function, collection, text, error, debugging, and testing concepts; language-specific semantics require a language specification.",
+  "observed_on": "2026-07-18",
+  "extractor_role": "Knowledge Engineer",
+  "independence_group": "acm-ieee-aaai-cs2023"
+}

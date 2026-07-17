@@ -1,0 +1,56 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asea.dev/schemas/kos/evidence.schema.json",
+  "title": "ASEA Evidence Record",
+  "allOf": [
+    {
+      "$ref": "./common.schema.json#/$defs/baseRecord"
+    },
+    {
+      "type": "object",
+      "required": [
+        "source_id",
+        "locator",
+        "paraphrase",
+        "scope",
+        "observed_on",
+        "extractor_role",
+        "independence_group"
+      ],
+      "properties": {
+        "record_type": {
+          "const": "evidence"
+        },
+        "source_id": {
+          "type": "string",
+          "pattern": "^ASEA-SRC-[0-9]{6}$"
+        },
+        "locator": {
+          "type": "string",
+          "minLength": 1
+        },
+        "paraphrase": {
+          "type": "string",
+          "minLength": 1
+        },
+        "scope": {
+          "type": "string",
+          "minLength": 1
+        },
+        "observed_on": {
+          "type": "string",
+          "format": "date"
+        },
+        "extractor_role": {
+          "type": "string",
+          "minLength": 1
+        },
+        "independence_group": {
+          "type": "string",
+          "minLength": 1
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  ]
+}

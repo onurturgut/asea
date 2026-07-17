@@ -1,0 +1,24 @@
+{
+  "derived_view_id": "ASEA-KG-DERIVED-001",
+  "source_graph_id": "ASEA-KG-001",
+  "source_version": "1.0.0",
+  "generated_on": "2026-07-17",
+  "scope_id": "V01-C02",
+  "nodes": [
+    "ASEA-CON-000001",
+    "ASEA-CON-000002",
+    "ASEA-CON-000003",
+    "ASEA-CON-000004",
+    "ASEA-CON-000005",
+    "ASEA-CON-000006"
+  ],
+  "edge_ids": [
+    "ASEA-EDGE-000001",
+    "ASEA-EDGE-000002",
+    "ASEA-EDGE-000003",
+    "ASEA-EDGE-000004",
+    "ASEA-EDGE-000005",
+    "ASEA-EDGE-000006",
+    "ASEA-EDGE-000007"
+  ]
+}

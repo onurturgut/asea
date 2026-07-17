@@ -3,8 +3,8 @@ document_type: "supporting-document"
 supporting_document_id: "V01-SD-ASMT-001"
 supporting_document_type: "Assessment Plan"
 title: "Volume 01 Assessment and Traceability Plan"
-version: "1.0.0"
-status: "Review"
+version: "1.0.1"
+status: "Stable"
 scope_id: "V01"
 authority: "Authoritative"
 owner_role: "Assessment Architect"
@@ -245,7 +245,6 @@ This section is the canonical source of truth for all active Volume 01 outcome r
 - Orphan Chapter or Assessment relationships: 0.
 - Derived views must record this registry ID `V01-SD-ASMT-001`, version `1.0.0`, and generation date.
 - Stable status requires a passing Validation Report and Approved Assessment/Repository Review.
-
 
 ## References
 

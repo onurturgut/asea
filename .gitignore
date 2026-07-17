@@ -1,6 +1,9 @@
 # Bağımlılıklar
 node_modules/
 vendor/
+.pnpm/
+.pnpm-vstore/
+.turbo/
 
 # Derleme çıktıları
 dist/

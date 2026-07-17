@@ -2,7 +2,7 @@
 document_type: "review"
 review_id: "ASEA-RV001"
 title: "ASEA Repository 1.0 Release Candidate Repository Review"
-version: "1.0.0"
+version: "1.0.1"
 status: "Stable"
 review_type: "Repository"
 review_domain: "Repository"
@@ -92,4 +92,3 @@ The review inspected the validation evidence, enumerated required Volume paths, 
 - [Review Standard](../../standards/governance/02-review-standard.md)
 - [Validation Standard](../../standards/governance/08-validation-standard.md)
 - [Freeze Standard](../../standards/governance/05-freeze-standard.md)
-

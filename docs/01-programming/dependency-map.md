@@ -3,8 +3,8 @@ document_type: "supporting-document"
 supporting_document_id: "V01-SD-DMAP-001"
 supporting_document_type: "Dependency Map"
 title: "Volume 01 Dependency Map"
-version: "1.0.0"
-status: "Review"
+version: "1.1.0"
+status: "Stable"
 scope_id: "V01"
 authority: "Authoritative"
 owner_role: "Curriculum Architect"
@@ -37,34 +37,34 @@ The existing profile-specific sections below contain the authoritative Dependenc
 ## Primary Learning Path
 
 ```text
-01 Programming
-→ 02 Program Execution
-→ 03 Problem Definition and Decomposition
-→ 04 Algorithms, Pseudocode, and Tracing
-→ 05 Values and Data Types
-→ 06 Variables and State
-→ 07 Operators and Expressions
-→ 08 Input, Output, and Data Transformation
-→ 09 Boolean Logic and Truth
-→ 10 Conditional Execution
-→ 11 Repetition and Loops
-→ 12 Nested and Composite Control Flow
-→ 13 Functions and Contracts
-→ 14 Parameters and Return Values
-→ 15 Scope, Lifetime, and Side Effects
-→ 16 Functional Decomposition and Reuse
-→ 17 Collections and Iteration
-→ 18 Records and Data Modeling
-→ 19 Recursion and Recursive Thinking
-→ 20 Strings and Text Processing
-→ 21 Searching Algorithms
-→ 22 Sorting Algorithms
-→ 23 Algorithmic Complexity and Trade-offs
-→ 24 Errors and Failure Modes
-→ 25 Systematic Debugging
-→ 26 Testing Fundamentals
-→ 27 Clean Code and Refactoring
-→ 28 Program Design from Requirements to Delivery
+V01-C01 Programming
+→ V01-C02 Program Execution
+→ V01-C03 Problem Definition and Decomposition
+→ V01-C04 Algorithms, Pseudocode, and Tracing
+→ V01-C05 Values and Data Types
+→ V01-C06 Variables and State
+→ V01-C07 Operators and Expressions
+→ V01-C08 Input, Output, and Data Transformation
+→ V01-C09 Boolean Logic and Truth
+→ V01-C10 Conditional Execution
+→ V01-C11 Repetition and Loops
+→ V01-C12 Nested and Composite Control Flow
+→ V01-C13 Functions and Contracts
+→ V01-C14 Parameters and Return Values
+→ V01-C15 Scope, Lifetime, and Side Effects
+→ V01-C16 Functional Decomposition and Reuse
+→ V01-C17 Collections and Iteration
+→ V01-C18 Records and Data Modeling
+→ V01-C19 Recursion and Recursive Thinking
+→ V01-C20 Strings and Text Processing
+→ V01-C21 Searching Algorithms
+→ V01-C22 Sorting Algorithms
+→ V01-C23 Algorithmic Complexity and Trade-offs
+→ V01-C24 Errors and Failure Modes
+→ V01-C25 Systematic Debugging
+→ V01-C26 Testing Fundamentals
+→ V01-C27 Clean Code and Refactoring
+→ V01-C28 Program Design from Requirements to Delivery
 ```
 
 Bu ana yol önerilen öğrenme sırasıdır. Aşağıdaki harita gerçek zorunlu bağımlılıkları daha kesin gösterir; her Chapter yalnızca hemen önceki numaraya değil, listelenen bilgi kanıtlarına bağlıdır.
@@ -73,66 +73,66 @@ Bu ana yol önerilen öğrenme sırasıdır. Aşağıdaki harita gerçek zorunlu
 
 | Chapter | Cannot Be Learned Reliably Without | Required Evidence Produced |
 | ---: | --- | --- |
-| 01 | Volume 00 çalışma modeli | Program, instruction ve computation ayrımını açıklama |
-| 02 | 01 | Instruction, memory, input ve output yürütmesini trace etme |
-| 03 | 01-02 | Problem sözleşmesi ve decomposition tree |
-| 04 | 03 | Sonlanan pseudocode ve trace table |
-| 05 | 02, 04 | Değerleri tür ve temsil sınırlarıyla sınıflandırma |
-| 06 | 05 | Değişken durumunu adım adım izleme |
-| 07 | 05-06 | Expression değerlendirme ve ara sonuç trace'i |
-| 08 | 04, 07 | Validate-transform-output veri akışı |
-| 09 | 07 | Truth table ve Boolean expression |
-| 10 | 08-09 | Karar tablosundan conditional flow üretme |
-| 11 | 06, 09-10 | Sonlanan loop ve iteration trace'i |
-| 12 | 10-11 | İç içe akışı doğrulanabilir parçalara ayırma |
-| 13 | 04, 12 | Function contract ve invocation trace'i |
-| 14 | 07, 13 | Parametre-return veri akışı |
-| 15 | 06, 13-14 | Scope/lifetime trace ve side-effect ayrımı |
-| 16 | 03-04, 13-15 | Çok adımlı çözümün fonksiyonlara ayrılması |
-| 17 | 11, 14-16 | Koleksiyon traversal ve aggregate sonucu |
-| 18 | 05, 14, 17 | Alanları ve invariant'ları olan record modeli |
-| 19 | 10, 13-15 | Base case, recursive case ve call trace |
-| 20 | 08, 14, 17 | Normalize-tokenize-filter-summarize hattı |
-| 21 | 10-11, 17 | Linear/binary search trace ve kullanım koşulu |
-| 22 | 11-12, 17 | Sorting pass trace ve invariant |
-| 23 | 04, 17, 21-22 | Girdi büyüklüğüne göre maliyet karşılaştırması |
-| 24 | 08, 12, 15, 18 | Failure sınıflandırması ve error boundary |
-| 25 | 02, 04, 23-24 | Yeniden üretim, hipotez, deney ve kök neden kaydı |
-| 26 | 10, 13-18, 24-25 | Normal, boundary ve invalid test seti |
-| 27 | 16, 23, 25-26 | Davranışı koruyan refactoring kanıtı |
-| 28 | 03-27 | Gereksinimden teslimata program design dossier |
+| `V01-C01` | `V00` | Program, instruction ve computation ayrımını açıklama |
+| `V01-C02` | `V01-C01` | Instruction, memory, input ve output yürütmesini trace etme |
+| `V01-C03` | `V01-C01`, `V01-C02` | Problem sözleşmesi ve decomposition tree |
+| `V01-C04` | `V01-C03` | Sonlanan pseudocode ve trace table |
+| `V01-C05` | `V01-C02`, `V01-C04` | Değerleri tür ve temsil sınırlarıyla sınıflandırma |
+| `V01-C06` | `V01-C05` | Değişken durumunu adım adım izleme |
+| `V01-C07` | `V01-C05`, `V01-C06` | Expression değerlendirme ve ara sonuç trace'i |
+| `V01-C08` | `V01-C04`, `V01-C07` | Validate-transform-output veri akışı |
+| `V01-C09` | `V01-C07` | Truth table ve Boolean expression |
+| `V01-C10` | `V01-C08`, `V01-C09` | Karar tablosundan conditional flow üretme |
+| `V01-C11` | `V01-C06`, `V01-C09`, `V01-C10` | Sonlanan loop ve iteration trace'i |
+| `V01-C12` | `V01-C10`, `V01-C11` | İç içe akışı doğrulanabilir parçalara ayırma |
+| `V01-C13` | `V01-C04`, `V01-C12` | Function contract ve invocation trace'i |
+| `V01-C14` | `V01-C07`, `V01-C13` | Parametre-return veri akışı |
+| `V01-C15` | `V01-C06`, `V01-C13`, `V01-C14` | Scope/lifetime trace ve side-effect ayrımı |
+| `V01-C16` | `V01-C03`, `V01-C04`, `V01-C13`, `V01-C14`, `V01-C15` | Çok adımlı çözümün fonksiyonlara ayrılması |
+| `V01-C17` | `V01-C11`, `V01-C14`, `V01-C15`, `V01-C16` | Koleksiyon traversal ve aggregate sonucu |
+| `V01-C18` | `V01-C05`, `V01-C14`, `V01-C17` | Alanları ve invariant'ları olan record modeli |
+| `V01-C19` | `V01-C10`, `V01-C13`, `V01-C14`, `V01-C15` | Base case, recursive case ve call trace |
+| `V01-C20` | `V01-C08`, `V01-C14`, `V01-C17` | Normalize-tokenize-filter-summarize hattı |
+| `V01-C21` | `V01-C10`, `V01-C11`, `V01-C17` | Linear/binary search trace ve kullanım koşulu |
+| `V01-C22` | `V01-C11`, `V01-C12`, `V01-C17` | Sorting pass trace ve invariant |
+| `V01-C23` | `V01-C04`, `V01-C17`, `V01-C21`, `V01-C22` | Girdi büyüklüğüne göre maliyet karşılaştırması |
+| `V01-C24` | `V01-C08`, `V01-C12`, `V01-C15`, `V01-C18` | Failure sınıflandırması ve error boundary |
+| `V01-C25` | `V01-C02`, `V01-C04`, `V01-C23`, `V01-C24` | Yeniden üretim, hipotez, deney ve kök neden kaydı |
+| `V01-C26` | `V01-C10`, `V01-C13`, `V01-C14`, `V01-C15`, `V01-C16`, `V01-C17`, `V01-C18`, `V01-C24`, `V01-C25` | Normal, boundary ve invalid test seti |
+| `V01-C27` | `V01-C16`, `V01-C23`, `V01-C25`, `V01-C26` | Davranışı koruyan refactoring kanıtı |
+| `V01-C28` | `V01-C03`, `V01-C04`, `V01-C05`, `V01-C06`, `V01-C07`, `V01-C08`, `V01-C09`, `V01-C10`, `V01-C11`, `V01-C12`, `V01-C13`, `V01-C14`, `V01-C15`, `V01-C16`, `V01-C17`, `V01-C18`, `V01-C19`, `V01-C20`, `V01-C21`, `V01-C22`, `V01-C23`, `V01-C24`, `V01-C25`, `V01-C26`, `V01-C27` | Gereksinimden teslimata program design dossier |
 
 ## Branching Dependencies
 
 ```text
-07 Expressions ───────┐
-                      ├→ 09 Boolean Logic → 10 Conditions
-08 Data Transformation┘
+V01-C07 Expressions ───────┐
+                      ├→ V01-C09 Boolean Logic → V01-C10 Conditions
+V01-C08 Data Transformation┘
 
-11 Loops ─────────────┐
-14 Parameters/Returns ├→ 17 Collections → 18 Records
-16 Decomposition ─────┘
+V01-C11 Loops ─────────────┐
+V01-C14 Parameters/Returns ├→ V01-C17 Collections → V01-C18 Records
+V01-C16 Decomposition ─────┘
 
-10 Conditions ────────┐
-13 Functions ─────────┼→ 19 Recursion
-15 Scope ─────────────┘
+V01-C10 Conditions ────────┐
+V01-C13 Functions ─────────┼→ V01-C19 Recursion
+V01-C15 Scope ─────────────┘
 
-17 Collections ───────┬→ 21 Searching ─┐
-                      └→ 22 Sorting ────┴→ 23 Complexity
+V01-C17 Collections ───────┬→ V01-C21 Searching ─┐
+                      └→ V01-C22 Sorting ────┴→ V01-C23 Complexity
 
-24 Failure Modes → 25 Debugging → 26 Testing → 27 Refactoring
-03-27 ─────────────────────────────────────────→ 28 Program Design
+V01-C24 Failure Modes → V01-C25 Debugging → V01-C26 Testing → V01-C27 Refactoring
+03-27 ─────────────────────────────────────────→ V01-C28 Program Design
 ```
 
 ## Module Gates
 
-- **Gate M1:** Chapter 04'te bir algoritmayı pseudocode ve trace ile doğrulama.
-- **Gate M2:** Chapter 08'de tür, durum ve dönüşüm hatlarını açıklama.
-- **Gate M3:** Chapter 12'de sonlanan ve doğru bileşik kontrol akışı kurma.
-- **Gate M4:** Chapter 16'da davranışı fonksiyon sözleşmelerine ayırma.
-- **Gate M5:** Chapter 20'de structured data ve text pipeline tasarlama.
-- **Gate M6:** Chapter 23'te algoritma seçimini correctness ve cost ile savunma.
-- **Gate M7:** Chapter 28'de küçük programı requirements, tests ve review kanıtıyla teslim etme.
+- **Gate `V01-M01`:** Chapter 04'te bir algoritmayı pseudocode ve trace ile doğrulama.
+- **Gate `V01-M02`:** Chapter 08'de tür, durum ve dönüşüm hatlarını açıklama.
+- **Gate `V01-M03`:** Chapter 12'de sonlanan ve doğru bileşik kontrol akışı kurma.
+- **Gate `V01-M04`:** Chapter 16'da davranışı fonksiyon sözleşmelerine ayırma.
+- **Gate `V01-M05`:** Chapter 20'de structured data ve text pipeline tasarlama.
+- **Gate `V01-M06`:** Chapter 23'te algoritma seçimini correctness ve cost ile savunma.
+- **Gate `V01-M07`:** Chapter 28'de küçük programı requirements, tests ve review kanıtıyla teslim etme.
 
 ## Volume 02 Transition Dependency
 

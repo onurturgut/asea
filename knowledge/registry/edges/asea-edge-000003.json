@@ -1,0 +1,17 @@
+{
+  "id": "ASEA-EDGE-000003",
+  "record_type": "edge",
+  "version": "1.0.0",
+  "workflow_state": "Approved",
+  "title": "Source representation precedes instruction sequence",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-17",
+  "updated_on": "2026-07-17",
+  "supersedes": [],
+  "tags": ["chapter-02", "prerequisite"],
+  "source_concept_id": "ASEA-CON-000001",
+  "target_id": "ASEA-CON-000004",
+  "relation_type": "prerequisite-of",
+  "rationale": "Instruction tracing requires distinguishing represented code from an active execution.",
+  "evidence_or_decision_ids": ["ASEA-CLM-000002", "ASEA-CLM-000005"]
+}

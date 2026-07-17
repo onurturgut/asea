@@ -3,8 +3,8 @@ document_type: "supporting-document"
 supporting_document_id: "V01-SD-IDX-001"
 supporting_document_type: "Index"
 title: "Volume 01 Derived Traceability Matrix"
-version: "1.0.0"
-status: "Review"
+version: "1.0.1"
+status: "Stable"
 scope_id: "V01"
 authority: "Derived"
 owner_role: "Assessment Architect"
@@ -13,9 +13,9 @@ source_ids:
 derived_from:
   - "V01-SD-ASMT-001"
 source_document: "assessment.md"
-source_version: "1.0.0"
-generated_on: "2026-07-17"
-canonical_registry: "V01-SD-ASMT-001" 
+source_version: "1.0.1"
+generated_on: "2026-07-18"
+canonical_registry: "V01-SD-ASMT-001"
 ---
 
 # Volume 01 Traceability Matrix
@@ -129,7 +129,6 @@ Changes to a mapping require an updated Blueprint version, impact analysis acros
 - Derived rows: 46; unique canonical outcome IDs: 46.
 - The derived table must equal the authoritative Traceability section in assessment.md.
 - This file remains Review until a Validation Report confirms exact equivalence.
-
 
 ## References
 

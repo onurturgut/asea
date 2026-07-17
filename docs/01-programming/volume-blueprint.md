@@ -4,9 +4,9 @@ blueprint_id: "V01-BP01"
 blueprint_type: "Volume"
 scope_id: "V01"
 title: "Volume 01 Master Blueprint — Programming Foundations"
-version: "1.0.0"
-status: "Draft"
-freeze_status: "Unfrozen"
+version: "1.1.0"
+status: "Stable"
+freeze_status: "Frozen"
 owner_role: "Curriculum Architect"
 prerequisites:
   - "V00"
@@ -291,6 +291,10 @@ planned_artifacts:
   - "V01-CP01"
 review_ids:
   - "V01-RV001"
+  - "V01-RV007"
+  - "V01-RV008"
+  - "V01-RV009"
+  - "V01-RV010"
 ---
 
 # Volume 01 Master Blueprint — Programming Foundations
@@ -313,6 +317,21 @@ Veri yapıları, web, veritabanı, sistem tasarımı, test, güvenlik ve otomasy
 
 Programming Foundations seçilmiştir çünkü:
 
+- sonraki bütün teknik Volume'ların kullandığı program, veri, kontrol, fonksiyon,
+  algoritma ve doğrulama dilini kurar;
+- belirli bir framework veya ürün yaşam döngüsüne bağlı değildir;
+- öğrencinin yalnızca çalışan sonuç değil, izlenebilir çözüm ve mühendislik
+  gerekçesi üretmesini sağlar;
+- erken aşamada yanlış zihinsel modelleri görünür ve değerlendirilebilir hale
+  getirir.
+
+### Educational Vision
+
+Volume, programlamayı sözdizimi ezberi olarak değil; belirsiz bir problemi
+kesinleştirme, yürütülebilir davranış tasarlama, sonucu kanıtla doğrulama ve
+değişikliği güvenle yönetme disiplini olarak öğretir. Dil ve araçlar öğrenme
+hedefi değil, bu yeterlikleri gözlemlemek için kullanılan ortamlardır.
+
 ## Scope
 
 ### Scope and Language Policy
@@ -327,21 +346,67 @@ Volume, öğrenciyi Beginner seviyesinden güçlü programlama temeline taşır;
 
 Bu Volume özellikle şunları öğretmez:
 
+- framework veya platform uzmanlığı;
+- web, mobil ya da masaüstü uygulama mimarisi;
+- database, kalıcı veri, network ve distributed system tasarımı;
+- operating system, compiler veya computer architecture uzmanlığı;
+- ileri veri yapıları ve ileri algoritma ispatları;
+- cloud, deployment, DevOps ve production operations;
+- güvenlik uzmanlığı veya domain-specific product development.
+
 ## Audience and Level
 
 Volume 01 begins at Beginner level and targets a verified transition toward Intermediate small-program engineering. The intended learner has completed Volume 00 and does not need prior programming or JavaScript experience.
+
+### Target Audience
+
+- Daha önce programlama yapmamış ASEA öğrencileri.
+- Parçalı tutorial deneyimi olup temel zihinsel modellerini sistematik hale
+  getirmek isteyen öğrenciler.
+- Kod yazabilen ancak problem decomposition, tracing, testing ve debugging
+  kanıtı üretmekte zorlanan başlangıç seviyesindeki geliştiriciler.
+- Sonraki Computer Science ve Software Engineering Volume'ları için ölçülebilir
+  temel yeterlik oluşturmak isteyen bağımsız öğrenciler.
 
 ### End-of-Volume Capability
 
 Başarılı öğrenci, sınırları açık küçük bir gerçek dünya problemini alıp:
 
+- gereksinim, girdi, çıktı, constraint ve edge case'lere ayırabilir;
+- dili bağımsız algoritma ve yürütme modeli kurabilir;
+- veri, state, control flow, function ve collection davranışını trace edebilir;
+- küçük bir programı modüler bileşenlere ayırıp uygulayabilir;
+- normal, boundary ve invalid girdiler için test kanıtı üretebilir;
+- failure'ı yeniden üretip hipotez temelli debug edebilir;
+- doğruluk, okunabilirlik, maliyet ve değiştirilebilirlik kararlarını açıklayabilir;
+- teslimatını test, review ve reflection kanıtıyla savunabilir.
+
 ### Real-World Problems Within Scope
 
 Öğrenci aşağıdaki sınırlı problemleri çözebilir:
 
+- kurallı ücret, indirim ve uygunluk hesaplamaları;
+- kullanıcı girdisini doğrulayan ve dönüştüren küçük işlem hatları;
+- koleksiyon arama, sıralama, filtreleme ve özetleme görevleri;
+- metin normalizasyonu ve temel raporlama;
+- küçük rule-based workflow ve command-line problem çözücüleri;
+- yeniden üretilebilir hata, test ve refactoring çalışmaları.
+
 ## Prerequisites
 
 Volume 00 study discipline, evidence recording, reflection practice, Markdown editing, and the ability to follow a structured local-development workflow are required. Programming-language knowledge is not a prerequisite.
+
+### Entry Requirements
+
+Öğrenci Volume'a başlamadan önce:
+
+- Volume 00 çalışma, tekrar ve reflection döngüsünü uygulayabilmeli;
+- dosya ve klasörleri güvenli biçimde yönetebilmeli;
+- Markdown ile kısa teknik not yazabilmeli;
+- verilen komutu yerel terminalde takip edip sonucu kaydedebilmeli;
+- hata veya belirsizlik durumunda kanıt toplayıp yardım isteyebilmelidir.
+
+Önceden programlama dili, algoritma veya JavaScript bilgisi beklenmez.
 
 ### Dependency Contract
 
@@ -354,6 +419,56 @@ The canonical Volume outcomes are `V01-LO001` through `V01-LO046`. Their measura
 ### Knowledge Produced by Each Module
 
 - **Module 1:** Problem sözleşmesi, ayrıştırma ağacı, sözde kod ve trace table.
+- **Module 2:** Açık veri temsili, state table, expression trace ve dönüşüm hattı.
+- **Module 3:** Truth table, decision table, sonlanan loop ve sadeleştirilmiş
+  control-flow modeli.
+- **Module 4:** Function contract, call/return trace, scope modeli ve function map.
+- **Module 5:** Collection traversal, record modeli, recursion trace ve text
+  processing pipeline.
+- **Module 6:** Search/sort trace, operation-count modeli ve algoritma seçim
+  gerekçesi.
+- **Module 7:** Failure contract, debug log, test seti, refactoring kanıtı ve
+  program design dossier.
+
+### Exit Competencies
+
+Volume'u tamamlayan öğrenci:
+
+1. problemi ölçülebilir bir program sözleşmesine dönüştürür;
+2. çözümü pseudocode, trace ve test örnekleriyle doğrular;
+3. temel veri ve program state'ini doğru modeller;
+4. kontrol akışı ve fonksiyon sınırlarını gerekçeli tasarlar;
+5. koleksiyon, record, recursion ve text davranışını temel seviyede uygular;
+6. uygun arama veya sıralama yaklaşımını maliyet ve constraint ile seçer;
+7. failure, debugging, testing ve refactoring süreçlerini kanıtla yürütür;
+8. küçük bir programı gereksinimden teslimata kadar açıklanabilir biçimde
+   tamamlar.
+
+### Competency Mapping
+
+| Competency | Canonical outcomes | Primary architecture evidence |
+|---|---|---|
+| Computational Thinking | `V01-LO001`–`V01-LO006` | Chapters 01–04, Labs 01–04, Mini Project 01 |
+| Data and State Reasoning | `V01-LO007`–`V01-LO012` | Chapters 05–08, Labs 05–08, Mini Project 02 |
+| Control-Flow Design | `V01-LO013`–`V01-LO018` | Chapters 09–12, Labs 09–12, Mini Project 03 |
+| Functional Decomposition | `V01-LO019`–`V01-LO024` | Chapters 13–16, Labs 13–16, Mini Project 04 |
+| Structured-Data Processing | `V01-LO025`–`V01-LO031` | Chapters 17–20, Labs 17–20, Mini Project 05 |
+| Algorithmic Reasoning | `V01-LO032`–`V01-LO037` | Chapters 21–23, Labs 21–23, Mini Project 06 |
+| Reliable Program Engineering | `V01-LO038`–`V01-LO046` | Chapters 24–28, Labs 24–28, Capstone |
+
+### Skills Matrix
+
+| Skill | Introduced | Practiced | Integrated | Exit evidence |
+|---|---|---|---|---|
+| Problem framing and decomposition | Module 1 | Modules 2–6 | Module 7 | `V01-LO005`, `V01-LO046` |
+| Algorithm writing and tracing | Module 1 | Modules 2–5 | Module 6 | `V01-LO006`, `V01-LO036` |
+| Reading code and predicting behavior | Modules 1–2 | Modules 3–6 | Module 7 | `V01-LO004`, `V01-LO041` |
+| Writing basic programs | Module 2 | Modules 3–6 | Module 7 | `V01-LO012`, `V01-LO046` |
+| Data and state modeling | Module 2 | Modules 3–5 | Module 7 | `V01-LO009`, `V01-LO027` |
+| Function and module design | Module 4 | Modules 5–6 | Module 7 | `V01-LO024`, `V01-LO046` |
+| Algorithm selection | Module 6 | Module 6 | Module 7 | `V01-LO037` |
+| Debugging and testing | Module 7 | Module 7 | Capstone | `V01-LO041`–`V01-LO043` |
+| Refactoring and technical explanation | Module 7 | Module 7 | Capstone | `V01-LO044`–`V01-LO046` |
 
 ### Readiness for Volume 02
 
@@ -373,6 +488,15 @@ Yirmi sekiz Chapter, sekiz temel bağımlılık katmanını yeterince küçük �
 
 Yedi modül, Chapter'ları içerik benzerliğine göre değil, bağımlılık kapılarına göre gruplar:
 
+1. Computational Thinking yürütülebilir problem modelini üretir.
+2. Data and Expressions algoritmanın işleyeceği state modelini kurar.
+3. Control Flow state değişimini kurallı davranışa dönüştürür.
+4. Functions and Decomposition davranışı sözleşmeli birimlere ayırır.
+5. Structured Data and Recursion çoklu ve iç içe veriyi işlenebilir hale getirir.
+6. Algorithms and Efficiency doğru çözümler arasında gerekçeli seçim yaptırır.
+7. Reliability and Program Design bütün önceki yeterlikleri güvenilir teslimata
+   dönüştürür.
+
 ### Why the Chapter Order Works
 
 Chapter sırası **Concept → Example → Practice → Challenge → Assessment → Reflection** döngüsünün üzerinde ilerleyen bir bağımlılık grafiğidir.
@@ -380,6 +504,20 @@ Chapter sırası **Concept → Example → Practice → Challenge → Assessment
 ### Chapter Placement Rationale
 
 Her Chapter bulunduğu konumda belirli bir bilgi üretir:
+
+- Chapters 01–04, koddan önce problem ve execution modelini kurar.
+- Chapters 05–08, control flow başlamadan önce value, type, state ve expression
+  davranışını güvence altına alır.
+- Chapters 09–12, function abstraction öncesinde karar ve tekrar davranışını
+  görünür hale getirir.
+- Chapters 13–16, tekrar eden davranışı contract, parameter, scope ve decomposition
+  ile yönetir.
+- Chapters 17–20, functions ve iteration üzerine structured data, recursion ve
+  text processing ekler.
+- Chapters 21–23, collections ve functions hazır olduktan sonra search, sort ve
+  complexity karşılaştırmasını öğretir.
+- Chapters 24–28, çalışan programı failure, debugging, testing, refactoring ve
+  teslimat açısından güvenilir hale getirir.
 
 ### Pedagogical Approach
 
@@ -392,12 +530,37 @@ Programlama becerisi açıklama, hatırlama ve uygulamayı birlikte gerektirir. 
 ### Design Principles
 
 - Concept First
+- Language Second
+- Observable Behavior
+- Trace Before Implementation
+- Practice Before Transfer
+- Evidence Before Completion
+- Progressive Difficulty
+- Official Documentation First
+- Small, Reversible Changes
+- Engineering Judgment
 
 ## Practice and Assessment Map
 
 Practice follows **Concept → Example → Practice → Challenge → Assessment → Reflection**. Each Chapter maps to one planned Lab, Chapter-level assessment instruments, a module Mini Project where applicable, and the Volume Capstone integration path.
 
-Canonical mappings are maintained in [labs.md](./labs.md), [projects.md](./projects.md), [assessment.md](./assessment.md), and [traceability-matrix.md](./traceability-matrix.md). This section introduces no activity beyond those source contracts.
+Canonical mappings are maintained in [labs.md](./labs.md),
+[projects.md](./projects.md), and [assessment.md](./assessment.md).
+[traceability-matrix.md](./traceability-matrix.md) is a derived view and
+introduces no relationship or activity beyond those source contracts.
+
+### Assessment Strategy
+
+| Scope | Required evidence | Purpose |
+|---|---|---|
+| Every Chapter | Quiz, open-ended response, practical evidence, reflection | Concept understanding, reasoning, application, and self-correction |
+| Every Module | Chapter gates, module review, integrated Mini Project where assigned | Transfer across the module's outcomes |
+| Volume | Final Quiz, Technical Review, Code Review, Capstone Review, Self Assessment | Integrated exit competency and Volume 02 readiness |
+
+Quiz scores alone cannot complete a Chapter. Practical outcomes require an
+observable Lab, Challenge, Project, or equivalent artefact. Scoring, retry rules,
+canonical outcome relationships, and completion thresholds remain owned by
+[assessment.md](./assessment.md).
 
 ## Dependencies
 
@@ -405,13 +568,32 @@ The dependency contract is defined under Prerequisites, and the pedagogical orde
 
 ## Traceability
 
-Chapter placement and module outputs establish the source-to-evidence chain. Canonical row-level outcome relationships are maintained in [traceability-matrix.md](./traceability-matrix.md); Chapter scope remains defined by [chapter-map.md](./chapter-map.md).
+Chapter placement and module outputs establish the source-to-evidence chain.
+Canonical row-level outcome relationships are maintained in
+[assessment.md](./assessment.md); [traceability-matrix.md](./traceability-matrix.md)
+is derived from that registry. Chapter scope remains defined by
+[chapter-map.md](./chapter-map.md).
 
 ## Acceptance Criteria
 
 The Blueprint is eligible for freeze only when all 28 Chapter Blueprints, 46 canonical outcomes, 28 Lab contracts, assessment mappings, six Mini Projects, one Capstone, repository validation, and required Review decisions are complete and consistent.
 
 Readiness thresholds remain defined in [assessment.md](./assessment.md), while the freeze decision must cite a v2 Review record and successful validation evidence.
+
+### Completion Criteria
+
+Architecture production is complete when:
+
+- the Volume purpose, audience, scope, entry requirements, and exit competencies
+  are explicit;
+- all 46 outcomes are measurable and owned by `learning-outcomes.md`;
+- all 28 Chapters have ID, objective, outcomes, prerequisites, competency,
+  difficulty, assessment type, and next-step relationships in `chapter-map.md`;
+- the seven-module sequence and acyclic prerequisite graph reconcile;
+- every outcome has planned instruction, practice, and assessment evidence;
+- project and Capstone requirements use only taught competencies;
+- canonical metadata, links, IDs, versions, and authority boundaries validate;
+- the Blueprint enters `Review / Unfrozen` with no lesson or code production.
 
 ## Risks and Constraints
 
@@ -423,7 +605,21 @@ The authoritative depth and technology boundaries are defined under Scope. Untau
 
 Chapter ekleme, kaldırma veya sıralama değişikliği; bağımlılık grafiği, öğrenme çıktıları, lab, proje, assessment ve çalışma planı üzerindeki etkisiyle birlikte incelenmelidir. Blueprint `Draft → Technical Review → Content Review → Repository Review → Stable Release` sürecini izler. Geriye uyumsuz öğrenme yolu değişikliği major sürüm gerektirir.
 
-Current lifecycle state is Draft / Unfrozen. Freeze requires approved Technical, Content, Repository, and Final Review evidence. After freeze, structural changes require a versioned change request and renewed review.
+### Review Strategy
+
+| Gate | Canonical metadata | Review focus | Required evidence |
+|---|---|---|---|
+| Technical Blueprint Review | `review_type: Technical`, `review_domain: Blueprint` | Dependency validity, technical scope, competency feasibility | Blueprint, Chapter Map, Dependency Map |
+| Content Blueprint Review | `review_type: Content`, `review_domain: Blueprint` | Progression, workload, outcome and assessment alignment | Learning Outcomes, Module Map, Assessment Plan |
+| Repository Blueprint Review | `review_type: Repository`, `review_domain: Blueprint` | Metadata, IDs, links, versions, path and authority compliance | Validation Report and changed-file inventory |
+| Final Blueprint Review | `review_type: Final`, `review_domain: Blueprint` | Prior approvals and freeze eligibility | Approved Review IDs and freeze inputs |
+
+Each gate receives a new canonical Review ID for the exact scope version.
+`Review Ready` is a delivery description, not a metadata enum.
+
+Current lifecycle state is `Review / Unfrozen`. Freeze requires approved
+Technical, Content, Repository, and Final Review evidence. After freeze,
+structural changes require a versioned change request and renewed review.
 
 ## References
 

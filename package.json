@@ -1,0 +1,23 @@
+{
+  "name": "@asea/repository",
+  "version": "0.1.0",
+  "private": true,
+  "packageManager": "pnpm@11.13.1",
+  "engines": {
+    "node": ">=20.9.0"
+  },
+  "scripts": {
+    "dev": "turbo run dev",
+    "build": "turbo run build",
+    "lint": "turbo run lint && pnpm lint:knowledge",
+    "lint:docs": "markdownlint-cli2 \"**/*.md\" \"#**/node_modules\" \"#.pnpm\" \"#.pnpm-vstore\" \"#**/.next\"",
+    "lint:knowledge": "markdownlint-cli2 \"docs/knowledge-operating-system/**/*.md\" \"knowledge/**/*.md\"",
+    "typecheck": "turbo run typecheck",
+    "validate:knowledge": "node knowledge/scripts/validate-knowledge.mjs"
+  },
+  "devDependencies": {
+    "markdownlint-cli2": "0.23.1",
+    "turbo": "2.10.5",
+    "typescript": "6.0.3"
+  }
+}

@@ -2,7 +2,7 @@
 document_type: "review"
 review_id: "V01-RV002"
 title: "Volume 01 Release Candidate Volume Review"
-version: "1.0.0"
+version: "1.0.1"
 status: "Stable"
 review_type: "Final"
 review_domain: "Volume"
@@ -100,4 +100,3 @@ The review compared the Volume inventory and metadata with Volume Standard v2, v
 - [Review Standard](../../standards/governance/02-review-standard.md)
 - [Traceability Standard](../../standards/governance/03-traceability-standard.md)
 - [Freeze Standard](../../standards/governance/05-freeze-standard.md)
-

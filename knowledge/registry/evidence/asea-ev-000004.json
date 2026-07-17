@@ -1,0 +1,19 @@
+{
+  "id": "ASEA-EV-000004",
+  "record_type": "evidence",
+  "version": "1.0.0",
+  "workflow_state": "Validated",
+  "title": "Processor manuals define an architecture and programming environment",
+  "owner_role": "Researcher",
+  "created_on": "2026-07-17",
+  "updated_on": "2026-07-17",
+  "supersedes": [],
+  "tags": ["chapter-02", "cpu", "instruction-set"],
+  "source_id": "ASEA-SRC-000006",
+  "locator": "Intel 64 and IA-32 Architectures Software Developer Manuals landing page",
+  "paraphrase": "Intel's manuals document the architecture and programming environment through which software-visible instructions, registers, memory behavior, and execution rules are specified.",
+  "scope": "x86-64 and IA-32 as a concrete architecture example; not a universal CPU implementation.",
+  "observed_on": "2026-07-17",
+  "extractor_role": "Knowledge Engineer",
+  "independence_group": "intel-sdm"
+}

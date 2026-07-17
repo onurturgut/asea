@@ -1,0 +1,19 @@
+{
+  "id": "ASEA-EV-000010",
+  "record_type": "evidence",
+  "version": "1.0.0",
+  "workflow_state": "Validated",
+  "title": "CS2023 defines algorithm design and analysis as foundational competencies",
+  "owner_role": "Researcher",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-18",
+  "supersedes": [],
+  "tags": ["volume-01", "algorithmic-foundations", "coverage-expansion"],
+  "source_id": "ASEA-SRC-000001",
+  "locator": "Algorithmic Foundations (AL), Preamble and Knowledge Units",
+  "paraphrase": "CS2023 treats computational problem solving, algorithm design, fundamental data structures and algorithms, correctness-oriented reasoning, searching, sorting, and analysis of computational trade-offs as core algorithmic foundations.",
+  "scope": "Curriculum evidence for Volume 01 problem definition, pseudocode, tracing, searching, sorting, and complexity concepts; it does not prescribe one programming language.",
+  "observed_on": "2026-07-18",
+  "extractor_role": "Knowledge Engineer",
+  "independence_group": "acm-ieee-aaai-cs2023"
+}

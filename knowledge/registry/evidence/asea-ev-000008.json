@@ -1,0 +1,19 @@
+{
+  "id": "ASEA-EV-000008",
+  "record_type": "evidence",
+  "version": "1.0.0",
+  "workflow_state": "Validated",
+  "title": "Memory instructions read and write abstract machine memory",
+  "owner_role": "Researcher",
+  "created_on": "2026-07-17",
+  "updated_on": "2026-07-17",
+  "supersedes": [],
+  "tags": ["chapter-02", "memory", "state"],
+  "source_id": "ASEA-SRC-000008",
+  "locator": "Instructions > Memory Instructions and Modules > Memories",
+  "paraphrase": "WebAssembly models memory as byte-addressed state and defines load and store instructions that read and write values subject to bounds and type rules.",
+  "scope": "WebAssembly linear memory as an inspectable model; not a complete physical-memory hierarchy.",
+  "observed_on": "2026-07-17",
+  "extractor_role": "Knowledge Engineer",
+  "independence_group": "webassembly-spec"
+}

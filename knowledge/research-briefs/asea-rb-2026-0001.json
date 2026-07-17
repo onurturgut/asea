@@ -1,0 +1,60 @@
+{
+  "id": "ASEA-RB-2026-0001",
+  "record_type": "research-brief",
+  "version": "1.0.0",
+  "workflow_state": "Approved",
+  "title": "V01-C02 How Computers Execute Programs Research Brief",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-17",
+  "updated_on": "2026-07-17",
+  "supersedes": [],
+  "tags": ["volume-01", "chapter-02", "execution-model"],
+  "scope_id": "V01-C02",
+  "target_outcome_ids": ["V01-LO003", "V01-LO004"],
+  "prerequisite_ids": ["V01-C01"],
+  "in_scope": [
+    "Source code versus running program",
+    "Compiler, interpreter, and runtime as bounded implementation paths",
+    "CPU as a software-visible abstraction",
+    "Instruction sequence and next-instruction behavior",
+    "Program state and simplified execution memory",
+    "Input, output, and observable trace",
+    "Limits of the simplified execution model"
+  ],
+  "out_of_scope": [
+    "Digital logic implementation",
+    "Pipeline timing and out-of-order execution",
+    "Cache hierarchy and virtual memory",
+    "Operating-system scheduling",
+    "Compiler construction",
+    "Assembly-language programming",
+    "Persistent storage internals"
+  ],
+  "required_source_tiers": [1, 2],
+  "search_queries": [
+    "ACM CS2023 instruction execution state memory curriculum",
+    "official abstract machine instruction sequence memory execution",
+    "official compiler documentation source to machine code",
+    "official processor architecture programming environment",
+    "academic software hierarchy computer execution course"
+  ],
+  "volatile_topics": [
+    "Specific language implementation pipelines",
+    "Current WebAssembly specification version",
+    "Current LLVM documentation version"
+  ],
+  "deliverables": [
+    "Verified source and evidence records",
+    "Validated atomic claims",
+    "Complete concept extractions",
+    "Acyclic Chapter 02 graph mapping",
+    "Chapter Production Packet"
+  ],
+  "stop_conditions": [
+    "Both learning outcomes have approved concept and claim coverage",
+    "Every material production claim has Tier 1 or Tier 2 evidence",
+    "The model explicitly distinguishes architectural behavior from implementation detail",
+    "No Blocking contradiction remains",
+    "The prerequisite graph is acyclic"
+  ]
+}

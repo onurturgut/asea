@@ -1,0 +1,96 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asea.dev/schemas/kos/source.schema.json",
+  "title": "ASEA Source Record",
+  "allOf": [
+    {
+      "$ref": "./common.schema.json#/$defs/baseRecord"
+    },
+    {
+      "type": "object",
+      "required": [
+        "publisher",
+        "canonical_url",
+        "source_type",
+        "tier",
+        "publication_or_version_date",
+        "accessed_on",
+        "language",
+        "usage_rights",
+        "freshness_class",
+        "verification_status"
+      ],
+      "properties": {
+        "record_type": {
+          "const": "source"
+        },
+        "publisher": {
+          "type": "string",
+          "minLength": 1
+        },
+        "authors": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "canonical_url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "persistent_identifier": {
+          "type": "string"
+        },
+        "source_type": {
+          "enum": [
+            "academic-curriculum",
+            "standard",
+            "official-documentation",
+            "institutional-course",
+            "industry-publication",
+            "community"
+          ]
+        },
+        "tier": {
+          "type": "integer",
+          "minimum": 1,
+          "maximum": 4
+        },
+        "publication_or_version_date": {
+          "type": "string",
+          "minLength": 4
+        },
+        "accessed_on": {
+          "type": "string",
+          "format": "date"
+        },
+        "language": {
+          "type": "string",
+          "minLength": 2
+        },
+        "usage_rights": {
+          "type": "string",
+          "minLength": 1
+        },
+        "freshness_class": {
+          "enum": [
+            "Fast",
+            "Moderate",
+            "Slow",
+            "Historical"
+          ]
+        },
+        "verification_status": {
+          "enum": [
+            "Proposed",
+            "Verified",
+            "Active",
+            "Deprecated",
+            "Archived"
+          ]
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  ]
+}

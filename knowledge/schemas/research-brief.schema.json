@@ -1,0 +1,99 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://asea.dev/schemas/kos/research-brief.schema.json",
+  "title": "ASEA Research Brief",
+  "allOf": [
+    {
+      "$ref": "./common.schema.json#/$defs/baseRecord"
+    },
+    {
+      "type": "object",
+      "required": [
+        "scope_id",
+        "target_outcome_ids",
+        "prerequisite_ids",
+        "in_scope",
+        "out_of_scope",
+        "required_source_tiers",
+        "search_queries",
+        "volatile_topics",
+        "deliverables",
+        "stop_conditions"
+      ],
+      "properties": {
+        "record_type": {
+          "const": "research-brief"
+        },
+        "scope_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "target_outcome_ids": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "prerequisite_ids": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "in_scope": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "out_of_scope": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "required_source_tiers": {
+          "type": "array",
+          "minItems": 1,
+          "uniqueItems": true,
+          "items": {
+            "type": "integer",
+            "minimum": 1,
+            "maximum": 4
+          }
+        },
+        "search_queries": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "volatile_topics": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "deliverables": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        },
+        "stop_conditions": {
+          "type": "array",
+          "minItems": 1,
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "unevaluatedProperties": false
+    }
+  ]
+}

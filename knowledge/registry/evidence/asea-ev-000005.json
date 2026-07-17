@@ -1,0 +1,19 @@
+{
+  "id": "ASEA-EV-000005",
+  "record_type": "evidence",
+  "version": "1.0.0",
+  "workflow_state": "Validated",
+  "title": "Compiler code generation can produce target machine representations",
+  "owner_role": "Researcher",
+  "created_on": "2026-07-17",
+  "updated_on": "2026-07-17",
+  "supersedes": [],
+  "tags": ["chapter-02", "compiler", "machine-code"],
+  "source_id": "ASEA-SRC-000007",
+  "locator": "Introduction",
+  "paraphrase": "LLVM's target-independent code generator translates its internal representation into machine code for a selected target, represented as assembly or binary suitable for static or JIT compilation.",
+  "scope": "LLVM compilation architecture as evidence that translation paths are implementation-dependent.",
+  "observed_on": "2026-07-17",
+  "extractor_role": "Knowledge Engineer",
+  "independence_group": "llvm"
+}

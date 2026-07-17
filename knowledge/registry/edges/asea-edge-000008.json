@@ -1,0 +1,17 @@
+{
+  "id": "ASEA-EDGE-000008",
+  "record_type": "edge",
+  "version": "1.0.0",
+  "workflow_state": "Approved",
+  "title": "Program state is practiced by the Chapter 02 lab",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-17",
+  "updated_on": "2026-07-17",
+  "supersedes": [],
+  "tags": ["chapter-02", "practice"],
+  "source_concept_id": "ASEA-CON-000003",
+  "target_id": "V01-C02-L01",
+  "relation_type": "practiced-by",
+  "rationale": "The planned lab requires an explicit initial, intermediate, and final state trace.",
+  "evidence_or_decision_ids": ["V01-C02-BP01"]
+}

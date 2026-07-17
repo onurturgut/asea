@@ -1,0 +1,19 @@
+{
+  "id": "ASEA-EV-000007",
+  "record_type": "evidence",
+  "version": "1.0.0",
+  "workflow_state": "Validated",
+  "title": "Instruction sequences normally execute in order",
+  "owner_role": "Researcher",
+  "created_on": "2026-07-17",
+  "updated_on": "2026-07-17",
+  "supersedes": [],
+  "tags": ["chapter-02", "instructions", "control-flow"],
+  "source_id": "ASEA-SRC-000008",
+  "locator": "Execution > Conventions > Prose Notation",
+  "paraphrase": "WebAssembly instruction sequences execute in order unless a trap, jump, exception, or structured control transfer changes that order.",
+  "scope": "WebAssembly abstract execution semantics; used to teach sequence with explicit model limits.",
+  "observed_on": "2026-07-17",
+  "extractor_role": "Knowledge Engineer",
+  "independence_group": "webassembly-spec"
+}

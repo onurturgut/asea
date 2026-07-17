@@ -2,7 +2,7 @@
 document_type: "review"
 review_id: "ASEA-RV002"
 title: "ASEA Repository 1.0 Release Candidate Governance Review"
-version: "1.0.0"
+version: "1.0.1"
 status: "Stable"
 review_type: "Repository"
 review_domain: "Governance"
@@ -78,4 +78,3 @@ The review compared migrated supporting documents, the traceability registry, de
 - [Review Standard](../../standards/governance/02-review-standard.md)
 - [Decision Record Standard](../../standards/governance/04-decision-record-standard.md)
 - [Freeze Standard](../../standards/governance/05-freeze-standard.md)
-

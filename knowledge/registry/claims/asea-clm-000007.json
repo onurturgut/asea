@@ -1,0 +1,43 @@
+{
+  "id": "ASEA-CLM-000007",
+  "record_type": "claim",
+  "version": "1.0.0",
+  "workflow_state": "Validated",
+  "title": "Program",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-18",
+  "supersedes": [],
+  "tags": [
+    "volume-01",
+    "v01-c01",
+    "programming-fundamentals"
+  ],
+  "proposition": "A program is a finite representation of instructions and data intended to produce defined behavior when executed by a compatible computing system.",
+  "scope": "Technology-neutral curriculum statement for V01-C01 within Volume 01 Programming Foundations.",
+  "exceptions": [
+    "Concrete implementations, organizational practices, or domain constraints may require a narrower application of this proposition."
+  ],
+  "evidence_ids": [
+    "ASEA-EV-000009"
+  ],
+  "academic_score": 4,
+  "official_score": "not_applicable",
+  "industry_score": "not_applicable",
+  "community_score": "not_applicable",
+  "confidence_score": 84,
+  "freshness_score": 90,
+  "evidence_count": 1,
+  "confidence_components": {
+    "authority": 90,
+    "directness": 82,
+    "independence": 50,
+    "reproducibility": 80,
+    "consistency": 88,
+    "scope_clarity": 90
+  },
+  "score_rationale": "Tier 1 curriculum evidence supports the bounded foundational proposition; formal Claim Review and any needed domain-specific corroboration remain required before production approval.",
+  "contradiction_ids": [],
+  "next_review_on": "2027-01-18",
+  "review_decision": "Changes Required"
+}

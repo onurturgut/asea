@@ -1,0 +1,17 @@
+{
+  "id": "ASEA-EDGE-000009",
+  "record_type": "edge",
+  "version": "1.0.0",
+  "workflow_state": "Approved",
+  "title": "Instruction sequence is assessed by Chapter 02",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-17",
+  "updated_on": "2026-07-17",
+  "supersedes": [],
+  "tags": ["chapter-02", "assessment"],
+  "source_concept_id": "ASEA-CON-000004",
+  "target_id": "V01-C02-AS01",
+  "relation_type": "assessed-by",
+  "rationale": "V01-LO003 requires tracing a simple instruction sequence.",
+  "evidence_or_decision_ids": ["V01-C02-BP01", "V01-LO003"]
+}

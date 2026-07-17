@@ -4,7 +4,7 @@ blueprint_id: "V01-C15-BP01"
 blueprint_type: "Chapter"
 scope_id: "V01-C15"
 title: "Chapter 15 Blueprint — Scope, Lifetime, and Side Effects"
-version: "0.1.0"
+version: "0.1.1"
 status: "Draft"
 freeze_status: "Unfrozen"
 owner_role: "Curriculum Architect"
@@ -400,4 +400,3 @@ This local trace is derived from `learning-outcomes.md`, `chapter-map.md`, `labs
 - [Volume Standard v2.0](../../standards/volume-standard-v2.md)
 - [Curriculum Standard v2.0](../../standards/curriculum-standard-v2.md)
 - [Repository Standard v2.0](../../standards/repository-standard-v2.md)
-

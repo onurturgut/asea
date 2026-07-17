@@ -1,0 +1,44 @@
+{
+  "id": "ASEA-CLM-000027",
+  "record_type": "claim",
+  "version": "1.0.0",
+  "workflow_state": "Validated",
+  "title": "Expression Evaluation",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-18",
+  "supersedes": [],
+  "tags": [
+    "volume-01",
+    "v01-c07",
+    "language-concepts"
+  ],
+  "proposition": "Expression evaluation applies language-defined operator and conversion rules to produce a value or effect.",
+  "scope": "Technology-neutral curriculum statement for V01-C07; CS2023 supports the competency scope and ECMAScript supplies one bounded normative example.",
+  "exceptions": [
+    "Language-specific syntax and runtime behavior may differ; ECMAScript evidence is illustrative unless the claim explicitly names ECMAScript."
+  ],
+  "evidence_ids": [
+    "ASEA-EV-000009",
+    "ASEA-EV-000012"
+  ],
+  "academic_score": 4,
+  "official_score": 5,
+  "industry_score": "not_applicable",
+  "community_score": "not_applicable",
+  "confidence_score": 92,
+  "freshness_score": 92,
+  "evidence_count": 2,
+  "confidence_components": {
+    "authority": 95,
+    "directness": 88,
+    "independence": 90,
+    "reproducibility": 85,
+    "consistency": 92,
+    "scope_clarity": 92
+  },
+  "score_rationale": "Independent Tier 1 curriculum evidence and Tier 2 official documentation support the bounded proposition; formal Claim Review remains required before production approval.",
+  "contradiction_ids": [],
+  "next_review_on": "2027-01-18",
+  "review_decision": "Changes Required"
+}

@@ -1,0 +1,26 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./apps/web"
+    },
+    {
+      "path": "./apps/admin"
+    },
+    {
+      "path": "./packages/ui"
+    },
+    {
+      "path": "./packages/shared"
+    },
+    {
+      "path": "./packages/database"
+    },
+    {
+      "path": "./packages/content-engine"
+    },
+    {
+      "path": "./packages/ai"
+    }
+  ]
+}

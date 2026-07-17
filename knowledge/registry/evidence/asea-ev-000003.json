@@ -1,0 +1,19 @@
+{
+  "id": "ASEA-EV-000003",
+  "record_type": "evidence",
+  "version": "1.0.0",
+  "workflow_state": "Validated",
+  "title": "Nand2Tetris exposes the computer and software hierarchy",
+  "owner_role": "Researcher",
+  "created_on": "2026-07-17",
+  "updated_on": "2026-07-17",
+  "supersedes": [],
+  "tags": ["chapter-02", "abstraction"],
+  "source_id": "ASEA-SRC-000005",
+  "locator": "Home page and course description",
+  "paraphrase": "The course constructs a general-purpose computer and a modern software hierarchy from basic building blocks, making cross-layer relationships explicit.",
+  "scope": "Pedagogical evidence for a simplified, layered execution model.",
+  "observed_on": "2026-07-17",
+  "extractor_role": "Knowledge Engineer",
+  "independence_group": "nand2tetris"
+}

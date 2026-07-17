@@ -3,8 +3,8 @@ document_type: "supporting-document"
 supporting_document_id: "V01-SD-PROJ-001"
 supporting_document_type: "Project Plan"
 title: "Volume 01 Project Blueprint"
-version: "1.0.0"
-status: "Review"
+version: "1.1.0"
+status: "Stable"
 scope_id: "V01"
 authority: "Authoritative"
 owner_role: "Curriculum Architect"
@@ -36,6 +36,10 @@ The existing profile-specific sections below contain the authoritative Project P
 
 ## Mini Project 01 — Instruction Simulator
 
+- **Project ID:** `V01-P01`
+- **Difficulty:** Beginner
+- **Related Blueprint:** [`V01-BP01`](./volume-blueprint.md)
+
 - **Goal:** Basit bir machine state üzerinde kesin talimatları sırayla yürüten çözüm modeli tasarlamak.
 - **Purpose:** Program, execution, decomposition, pseudocode ve trace kavramlarını birleştirmek.
 - **Learning Outcomes:** V01-LO001–V01-LO006.
@@ -49,6 +53,10 @@ The existing profile-specific sections below contain the authoritative Project P
 - **Estimated Duration:** 5-7 hours.
 
 ## Mini Project 02 — Data Transformation Console
+
+- **Project ID:** `V01-P02`
+- **Difficulty:** Beginner
+- **Related Blueprint:** [`V01-BP01`](./volume-blueprint.md)
 
 - **Goal:** Ham kayıt girdisini doğrulayıp normalize edilmiş özet çıktıya dönüştürmek.
 - **Purpose:** Type, state, expression ve transformation pipeline yeterliklerini bütünleştirmek.
@@ -64,6 +72,10 @@ The existing profile-specific sections below contain the authoritative Project P
 
 ## Mini Project 03 — Rule-Based Workflow
 
+- **Project ID:** `V01-P03`
+- **Difficulty:** Beginner
+- **Related Blueprint:** [`V01-BP01`](./volume-blueprint.md)
+
 - **Goal:** Birden fazla kural ve tekrar içeren karar sürecini eksiksiz yürütmek.
 - **Purpose:** Boolean logic, conditions, loops ve composite control flow'u gerçekçi bir akışta kullanmak.
 - **Learning Outcomes:** V01-LO013–V01-LO018.
@@ -77,6 +89,10 @@ The existing profile-specific sections below contain the authoritative Project P
 - **Estimated Duration:** 7-9 hours.
 
 ## Mini Project 04 — Function-Based Utility Toolkit
+
+- **Project ID:** `V01-P04`
+- **Difficulty:** Beginner
+- **Related Blueprint:** [`V01-BP01`](./volume-blueprint.md)
 
 - **Goal:** İlişkili küçük davranışları açık contract'lı fonksiyonlar halinde sunan araç seti tasarlamak.
 - **Purpose:** Parameter, return, scope, side effect ve decomposition becerilerini birleştirmek.
@@ -92,6 +108,10 @@ The existing profile-specific sections below contain the authoritative Project P
 
 ## Mini Project 05 — Structured Data Processor
 
+- **Project ID:** `V01-P05`
+- **Difficulty:** Beginner
+- **Related Blueprint:** [`V01-BP01`](./volume-blueprint.md)
+
 - **Goal:** Record koleksiyonunu doğrulayan, dönüştüren ve metin tabanlı rapor üreten program tasarlamak.
 - **Purpose:** Collections, data modeling, recursion ve text processing yeterliklerini bütünleştirmek.
 - **Learning Outcomes:** V01-LO025–V01-LO031.
@@ -106,6 +126,10 @@ The existing profile-specific sections below contain the authoritative Project P
 
 ## Mini Project 06 — Algorithm Workbench
 
+- **Project ID:** `V01-P06`
+- **Difficulty:** Intermediate
+- **Related Blueprint:** [`V01-BP01`](./volume-blueprint.md)
+
 - **Goal:** Aynı veri üzerinde search ve sort seçeneklerini trace, ölçüm ve trade-off ile karşılaştırmak.
 - **Purpose:** Algorithm correctness, invariant ve complexity düşüncesini uygulamak.
 - **Learning Outcomes:** V01-LO032–V01-LO037.
@@ -119,6 +143,10 @@ The existing profile-specific sections below contain the authoritative Project P
 - **Estimated Duration:** 9-12 hours.
 
 ## Capstone Project — Reliable Command-Line Problem Solver
+
+- **Project ID:** `V01-CP01`
+- **Difficulty:** Intermediate
+- **Related Blueprint:** [`V01-BP01`](./volume-blueprint.md)
 
 - **Goal:** Gerçekçi, sınırları açık bir operasyon problemini güvenilir ve değiştirilebilir command-line programıyla çözmek.
 - **Purpose:** Volume'un bütün learning outcomes setini gereksinimden teknik savunmaya kadar birleştirmek.

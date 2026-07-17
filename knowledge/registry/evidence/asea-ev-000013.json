@@ -1,0 +1,19 @@
+{
+  "id": "ASEA-EV-000013",
+  "record_type": "evidence",
+  "version": "1.0.0",
+  "workflow_state": "Validated",
+  "title": "ECMAScript specifies execution contexts, functions, objects, and control abstractions",
+  "owner_role": "Researcher",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-18",
+  "supersedes": [],
+  "tags": ["volume-01", "functions", "data-modeling", "coverage-expansion"],
+  "source_id": "ASEA-SRC-000003",
+  "locator": "Clauses 9, 15, and 20: Executable Code and Execution Contexts; Functions and Classes; Control Abstraction Objects",
+  "paraphrase": "ECMAScript defines execution contexts and lexical environments, function creation and calls, objects and properties, and control abstractions that expose scope, lifetime, parameter, return, collection, and failure behavior.",
+  "scope": "Language-specific evidence for Volume 01 function, scope, decomposition, collection, record, recursion, text, and error concepts; general engineering guidance requires independent sources.",
+  "observed_on": "2026-07-18",
+  "extractor_role": "Knowledge Engineer",
+  "independence_group": "ecma-262"
+}

@@ -1,0 +1,17 @@
+{
+  "id": "ASEA-EDGE-000005",
+  "record_type": "edge",
+  "version": "1.0.0",
+  "workflow_state": "Approved",
+  "title": "Program state precedes CPU abstraction",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-17",
+  "updated_on": "2026-07-17",
+  "supersedes": [],
+  "tags": ["chapter-02", "prerequisite"],
+  "source_concept_id": "ASEA-CON-000003",
+  "target_id": "ASEA-CON-000006",
+  "relation_type": "prerequisite-of",
+  "rationale": "The simplified CPU applies explicit transitions to defined state.",
+  "evidence_or_decision_ids": ["ASEA-CLM-000004"]
+}
