@@ -1,0 +1,89 @@
+{
+  "id": "ASEA-RB-2026-0002",
+  "record_type": "research-brief",
+  "version": "0.1.0",
+  "workflow_state": "Review",
+  "title": "V01-C06 Variables and State Research Brief",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-18",
+  "supersedes": [],
+  "tags": [
+    "volume-01",
+    "chapter-06",
+    "variables",
+    "state",
+    "ecmascript"
+  ],
+  "scope_id": "V01-C06",
+  "target_outcome_ids": [
+    "V01-LO009",
+    "V01-LO010"
+  ],
+  "prerequisite_ids": [
+    "V01-C05"
+  ],
+  "in_scope": [
+    "Technology-neutral variable, named binding, assignment, and program-state model",
+    "Declaration, binding creation, initialization, read, assignment, and reassignment distinctions",
+    "Mutable and constant binding selection from expected state change",
+    "Binding reassignment versus mutation of referenced object state",
+    "ECMAScript var, let, and const as bounded normative examples",
+    "Lexical Environment and Execution Context only where required to verify binding behavior",
+    "Global, function, and block scope only where required to delimit declaration behavior",
+    "Temporal Dead Zone, redeclaration, shadowing, and hoisting terminology as verified edge cases",
+    "Closures, memory, garbage collection, engine behavior, performance, and compatibility as explicitly bounded supporting notes",
+    "Modern declaration and state-management recommendations supported by official documentation or tooling policy"
+  ],
+  "out_of_scope": [
+    "Learner-facing lesson prose or storytelling",
+    "Final quiz questions, answers, distractors, or scoring",
+    "Final exercises, laboratory instructions, projects, or solutions",
+    "Full scope, closure, side-effect, or function curriculum owned by later Chapters",
+    "Universal stack-versus-heap claims",
+    "Language-level performance guarantees for declaration keywords",
+    "V8 implementation details represented as ECMAScript requirements",
+    "New Concepts, Claims, Evidence, Outcomes, Assessments, or graph relations",
+    "Publication approval or Knowledge Foundation Freeze"
+  ],
+  "required_source_tiers": [
+    1,
+    2
+  ],
+  "search_queries": [
+    "ECMAScript Environment Records bindings variables declarations specification",
+    "ECMAScript let const var declaration instantiation initialization",
+    "ECMAScript Temporal Dead Zone uninitialized binding ResolveBinding",
+    "ECMAScript global function block scope redeclaration per iteration environment",
+    "MDN var let const closures memory management browser compatibility",
+    "V8 official garbage collection variables closures engine behavior",
+    "ESLint official no-var prefer-const no-shadow no-undef",
+    "academic JavaScript formal semantics bindings scope"
+  ],
+  "volatile_topics": [
+    "Living ECMAScript clause numbering and edition label",
+    "Browser compatibility data",
+    "V8 optimization and garbage-collector implementation",
+    "ESLint rule status and configuration",
+    "MDN page content and lifecycle"
+  ],
+  "deliverables": [
+    "Reviewed Research Collection",
+    "Version-pinned Research Packet",
+    "Concept, Claim, Evidence, Source, Outcome, and Assessment coverage matrix",
+    "Open issue register",
+    "Technical Research Review",
+    "Educational Research Review",
+    "Exact-version Validation Report",
+    "Approval checklist and approval record"
+  ],
+  "stop_conditions": [
+    "Both target Outcomes have complete Concept to Claim to Evidence to Active Source traceability",
+    "Every retained material technical statement is specification-aligned or explicitly bounded as non-normative",
+    "No unresolved contradiction affects V01-LO009 or V01-LO010",
+    "All requested research topics have been reviewed for duplication and terminology consistency",
+    "Core Concepts, Claims, Evidence, and graph relations complete their canonical review gates",
+    "The exact Research Packet version passes validation",
+    "Independent Technical and Educational Research Reviews are Approved"
+  ]
+}
