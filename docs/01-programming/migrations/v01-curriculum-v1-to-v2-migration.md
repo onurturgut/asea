@@ -3,31 +3,33 @@ document_type: "migration-record"
 migration_record_id: "V01-MG-001-002-001"
 title: "Volume 01 Curriculum Blueprint v1 to v2 Migration"
 version: "1.0.0"
-status: "Draft"
-migration_state: "Planned"
+status: "Stable"
+migration_state: "Completed"
 scope_id: "V01"
 source_version: "1.1.0"
 target_version: "2.0.0"
 owner_role: "Curriculum Architect"
 compatibility_report_id: "V01-SD-COMP-001"
-review_ids: []
+review_ids:
+  - "V01-RV019"
+  - "V01-RV020"
 ---
 
 # Volume 01 Curriculum Blueprint v1 to v2 Migration
 
 ## Migration Purpose
 
-This record starts a controlled curriculum migration from the frozen Volume 01
-Blueprint `V01-BP01` version `1.1.0` to a proposed version `2.0.0`.
+This record documents the completed controlled curriculum migration from
+Volume 01 Blueprint `V01-BP01` version `1.1.0` to version `2.0.0`.
 
-The migration preserves the active Blueprint Freeze while the proposal is
-reviewed. It expands the existing programming foundations with the
+The migration preserved the source Blueprint Freeze throughout review and
+validation. It expands the existing programming foundations with the
 JavaScript-specific knowledge required for later JavaScript, TypeScript, and
 React volumes without discarding the current curriculum's durable,
 language-independent engineering foundation.
 
-This record does not authorize Blueprint v2, modify a frozen artefact, or make a
-second curriculum canonical.
+Blueprint v2 was activated only after the approved review sequence and new
+Freeze Record. Blueprint v1 remains immutable historical evidence.
 
 ## Scope and Inventory
 
@@ -168,9 +170,7 @@ systems and break historical traceability.
 
 ## File Operations
 
-No frozen file operation is authorized while this record is `Planned`.
-
-After approval, the migration must execute in this order:
+The migration executed in this approved order:
 
 1. record Accepted status for `V01-ADR-017` through an Approved review;
 2. authorize the migration execution window under the Freeze Standard;
@@ -251,16 +251,22 @@ switch. The immutable v1 Freeze Record must never be edited.
 
 ## Results
 
-Current migration result: **Planned**.
+Current migration result: **Completed**.
 
 - Source inventory: complete.
 - Target architecture proposal: complete.
 - ID strategy: complete.
 - Compatibility analysis: complete.
-- Curriculum decision: Proposed.
-- Blueprint v2 candidate: not created.
+- Curriculum decision: `V01-ADR-017`, Accepted.
+- Blueprint v2: `V01-BP01@2.0.0`, Stable/Frozen.
 - Frozen source changes: none.
-- Canonical switch: not authorized.
+- Source history: preserved by `V01-FR-BP-001` and Git history.
+- Canonical manifest: `V01-MF002`, Stable.
+- Canonical registry: `V01-SD-IDX-005`, Active operational state.
+- New Freeze: `V01-FR-BP-002`, Active.
+- Canonical switch: completed on 2026-07-19.
+- Migration validation: `V01-VR003`, Pass.
+- Post-migration validation: `V01-VR005`, Pass.
 
 ## References
 

@@ -3,12 +3,18 @@ document_type: "decision-record"
 decision_id: "V01-ADR-017"
 title: "Expand Volume 01 Through a Controlled Blueprint v2 Migration"
 version: "1.0.0"
-status: "Draft"
-decision_status: "Proposed"
+status: "Stable"
+decision_status: "Accepted"
 scope_id: "V01"
-decided_on: "2026-07-18"
+decided_on: "2026-07-19"
 owner_role: "Curriculum Architect"
-review_ids: []
+review_ids:
+  - "V01-RV015"
+  - "V01-RV016"
+  - "V01-RV017"
+  - "V01-RV018"
+  - "V01-RV019"
+  - "V01-RV020"
 superseded_by: []
 ---
 
@@ -38,7 +44,7 @@ therefore required.
 
 ## Decision
 
-Propose a MAJOR migration of `V01-BP01` from version `1.1.0` to version `2.0.0`
+Adopt a MAJOR migration of `V01-BP01` from version `1.1.0` to version `2.0.0`
 with the following target contract:
 
 - preserve all seven existing Module IDs and meanings;
@@ -56,8 +62,9 @@ with the following target contract:
 - activate Blueprint v2 only through a single canonical switch after all
   required approvals and validation pass.
 
-This decision remains a proposal until it receives an Approved review. It does
-not authorize changes to the frozen Blueprint.
+This Accepted decision authorizes the separately governed Blueprint v2 Freeze
+workflow. It does not execute migration, replace the active Blueprint, or
+change the current Freeze Record.
 
 ## Rationale
 
@@ -129,15 +136,19 @@ Costs and risks:
 
 ## Status
 
-The decision status is `Proposed`.
+The decision status is `Accepted`.
 
-Acceptance requires:
+Acceptance evidence:
 
-1. Curriculum Review approval;
-2. Technical Review approval;
-3. Repository Review approval;
-4. confirmation that the migration plan preserves the active source Freeze;
-5. authorization to produce, but not yet activate, the Blueprint v2 candidate.
+1. Curriculum Review `V01-RV015`, Approved;
+2. Technical Review `V01-RV016`, Approved;
+3. Repository Review `V01-RV017`, Approved;
+4. Governance Review `V01-RV018`, Approved;
+5. Migration Review `V01-RV019`, Approved;
+6. Final Architecture Review `V01-RV020`, Approved.
+
+The Accepted decision authorizes Freeze preparation, not migration execution
+or canonical activation.
 
 ## Superseded By
 
@@ -157,7 +168,8 @@ This decision affects:
 - migration record `V01-MG-001-002-001`;
 - compatibility report `V01-SD-COMP-001`.
 
-No affected authoritative artefact is modified by this Proposed record.
+No affected authoritative curriculum artefact is modified by this Accepted
+record. Canonical activation remains a separate governed transaction.
 
 ## References
 

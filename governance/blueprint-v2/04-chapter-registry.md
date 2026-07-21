@@ -2,9 +2,9 @@
 document_type: "supporting-document"
 supporting_document_id: "V01-SD-CMAP-002"
 supporting_document_type: "Chapter Map"
-title: "Volume 01 Blueprint v2 Candidate Chapter Registry"
+title: "Volume 01 Blueprint v2 Canonical Chapter Registry"
 version: "0.1.0"
-status: "Draft"
+status: "Stable"
 scope_id: "V01"
 authority: "Authoritative"
 owner_role: "Curriculum Architect"
@@ -14,22 +14,22 @@ derived_from:
   - "./02-canonical-schema.md"
 ---
 
-# Volume 01 Blueprint v2 Candidate Chapter Registry
+# Volume 01 Blueprint v2 Canonical Chapter Registry
 
 ## Purpose
 
 Define the complete Chapter identity, Module membership, prerequisite, parent,
-and direct-child relationships for the v2 candidate.
+and direct-child relationships for canonical Blueprint v2.
 
 ## Scope
 
 The registry contains 38 Chapters. Existing Chapter titles and meanings are
-preserved; ten candidate Chapters extend JavaScript readiness.
+preserved; ten new Chapters extend JavaScript readiness.
 
 ## Ownership
 
-- Authority is limited to the Draft v2 candidate.
-- The active v1 Chapter Map remains canonical.
+- Authority applies to canonical Blueprint v2.
+- The v1 Chapter Map remains immutable archived history.
 - Parent is the primary Module record.
 - Children are direct reverse dependency edges, not ownership.
 
@@ -76,7 +76,7 @@ preserved; ten candidate Chapters extend JavaScript readiness.
 | `V01-C37` | ES Modules and Program Organization | `V01-M12` | `V01-C16`, `V01-C33`, `V01-C36` | `V01-M12` | `V01-C24`, `V01-C28` |
 | `V01-C38` | JavaScript Runtime, Tooling, and Execution Environments | `V01-M08` | `V01-C02`, `V01-C08` | `V01-M08` | `V01-C28`, `V01-C29` |
 
-### Candidate learning order
+### Canonical learning order
 
 The recommended order is:
 
@@ -99,7 +99,7 @@ Independent branches converge before the reliability and delivery gate.
 
 ## References
 
-- [Canonical Schema Candidate](./02-canonical-schema.md)
+- [Canonical Blueprint](./02-canonical-schema.md)
 - [Learning Outcome Registry](./05-learning-outcome-registry.md)
 - [Dependency Graph](./06-dependency-graph.md)
 - [Current v1 Chapter Map](../../docs/01-programming/chapter-map.md)

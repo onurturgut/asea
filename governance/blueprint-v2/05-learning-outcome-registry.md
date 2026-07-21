@@ -2,9 +2,9 @@
 document_type: "supporting-document"
 supporting_document_id: "V01-SD-LO-002"
 supporting_document_type: "Learning Outcomes Registry"
-title: "Volume 01 Blueprint v2 Candidate Learning Outcome Registry"
+title: "Volume 01 Blueprint v2 Canonical Learning Outcome Registry"
 version: "0.1.0"
-status: "Draft"
+status: "Stable"
 scope_id: "V01"
 authority: "Authoritative"
 owner_role: "Curriculum Architect"
@@ -17,22 +17,22 @@ derived_from:
   - "../../docs/01-programming/learning-outcomes.md"
 ---
 
-# Volume 01 Blueprint v2 Candidate Learning Outcome Registry
+# Volume 01 Blueprint v2 Canonical Learning Outcome Registry
 
 ## Purpose
 
 Define complete parent, difficulty, Bloom, and dependency mappings for all 66
-candidate Learning Outcomes.
+canonical Learning Outcomes.
 
 ## Scope
 
 `V01-LO001`-`V01-LO046` preserve their v1 statements and evidence contracts.
-`V01-LO047`-`V01-LO066` are new Draft candidate outcomes.
+`V01-LO047`-`V01-LO066` are the new Blueprint v2 outcomes.
 
 ## Ownership
 
-- Authority is limited to the Draft v2 candidate.
-- The active v1 Learning Outcomes Registry remains canonical.
+- Authority applies to canonical Blueprint v2.
+- The v1 Learning Outcomes Registry remains immutable archived history.
 - Parent Lesson uses the same identity as its canonical parent Chapter.
 - No separate Lesson ID family is created.
 
@@ -109,9 +109,9 @@ candidate Learning Outcomes.
 | `V01-LO065` | `V01-C38` | `V01-C38` | `V01-M08` | Beginner | Understand | `V01-C02`, `V01-C08` |
 | `V01-LO066` | `V01-C38` | `V01-C38` | `V01-M08` | Beginner | Apply | `V01-LO065` |
 
-### New candidate outcome statements
+### New canonical outcome statements
 
-| ID | Measurable candidate statement |
+| ID | Measurable outcome statement |
 | --- | --- |
 | `V01-LO047` | Trace JavaScript coercion and equality behavior for representative normal and edge-case expressions |
 | `V01-LO048` | Justify an explicit conversion and equality strategy for a specified data boundary |

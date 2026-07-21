@@ -3,7 +3,7 @@ document_type: "supporting-document"
 supporting_document_id: "V01-SD-PROJ-001"
 supporting_document_type: "Project Plan"
 title: "Volume 01 Project Blueprint"
-version: "1.1.0"
+version: "1.2.0"
 status: "Stable"
 scope_id: "V01"
 authority: "Authoritative"
@@ -17,7 +17,7 @@ derived_from: []
 
 ## Purpose
 
-Altı Mini Project ve tek Capstone kolaydan zora ilerler. Projeler çözüm veya kod içermez; problem sınırı, kanıt ve değerlendirme sözleşmesini tanımlar. Her proje ilgili Chapter kapısı geçildikten sonra başlatılır.
+Sekiz Mini Project ve tek Capstone kolaydan zora ilerler. Projeler çözüm veya kod içermez; problem sınırı, kanıt ve değerlendirme sözleşmesini tanımlar. Her proje ilgili Chapter kapısı geçildikten sonra başlatılır.
 
 ## Scope
 
@@ -142,6 +142,58 @@ The existing profile-specific sections below contain the authoritative Project P
 - **Evaluation:** Correctness %30, measurement %25, complexity reasoning %25, communication %20.
 - **Estimated Duration:** 9-12 hours.
 
+## Mini Project 07 — JavaScript Data Reliability Integrator
+
+- **Project ID:** `V01-P07`
+- **Project Name:** JavaScript Data Reliability Integrator
+- **Project Type:** Semi-Guided Integration Project
+- **Project Level:** Intermediate
+- **Purpose:** Integrate JavaScript runtime, type, object, collection,
+  functional, numeric, and temporal competencies into one bounded reliability
+  contract.
+- **Prerequisites:** `V01-P01`-`V01-P06`; `V01-C29`-`V01-C35`; `V01-C38`.
+- **Target Competencies:** Runtime reasoning, explicit conversion, object and
+  collection modeling, callback and closure analysis, numeric reliability, and
+  temporal boundary handling.
+- **Related Modules:** `V01-M08`, `V01-M09`, `V01-M10`, `V01-M11`.
+- **Related Chapters:** `V01-C29`-`V01-C35`, `V01-C38`.
+- **Related Learning Outcomes:** `V01-LO047`-`V01-LO060`,
+  `V01-LO065`-`V01-LO066`.
+- **Estimated Duration:** 14-18 hours.
+- **Assessment Type:** Practical integration review and technical defense.
+- **Completion Criteria:** All mapped outcomes have verifiable evidence;
+  runtime and data-boundary assumptions are explicit; normal, boundary, and
+  failure behavior is traceable; the learner independently defends design
+  choices.
+- **Dependency References:** Canonical Chapter dependencies for
+  `V01-C29`-`V01-C35` and `V01-C38`; project sequence `V01-P01`-`V01-P06`.
+
+## Mini Project 08 — Modular Failure-Resilient Program Design
+
+- **Project ID:** `V01-P08`
+- **Project Name:** Modular Failure-Resilient Program Design
+- **Project Type:** Independent Pre-Capstone Project
+- **Project Level:** Intermediate
+- **Purpose:** Demonstrate independent program organization, error-boundary,
+  testing, debugging, and maintainability decisions before Capstone entry.
+- **Prerequisites:** `V01-P07`; `V01-C24`-`V01-C27`; `V01-C36`-`V01-C38`.
+- **Target Competencies:** Failure modeling, systematic debugging, testing,
+  refactoring, ES module boundaries, dependency analysis, and reproducible
+  runtime execution.
+- **Related Modules:** `V01-M12`, `V01-M07`.
+- **Related Chapters:** `V01-C24`-`V01-C27`, `V01-C36`-`V01-C38`.
+- **Related Learning Outcomes:** `V01-LO038`-`V01-LO045`,
+  `V01-LO061`-`V01-LO066`.
+- **Estimated Duration:** 16-20 hours.
+- **Assessment Type:** Independent project review, repository review, and
+  technical defense.
+- **Completion Criteria:** Every mapped outcome has independent evidence;
+  module and error boundaries are explicit; verification covers expected and
+  failure paths; no unresolved Critical defect remains; design decisions are
+  defended without protected solution material.
+- **Dependency References:** `V01-P07`; canonical Chapter dependencies for
+  `V01-C24`-`V01-C27` and `V01-C36`-`V01-C38`.
+
 ## Capstone Project — Reliable Command-Line Problem Solver
 
 - **Project ID:** `V01-CP01`
@@ -151,7 +203,7 @@ The existing profile-specific sections below contain the authoritative Project P
 - **Goal:** Gerçekçi, sınırları açık bir operasyon problemini güvenilir ve değiştirilebilir command-line programıyla çözmek.
 - **Purpose:** Volume'un bütün learning outcomes setini gereksinimden teknik savunmaya kadar birleştirmek.
 - **Learning Outcomes:** Birincil V01-LO046; destekleyici V01-LO005, V01-LO006, V01-LO012, V01-LO018, V01-LO024, V01-LO027, V01-LO037, V01-LO038–V01-LO045.
-- **Required Chapters:** 01-28 ve altı Mini Project'in başarıyla tamamlanması.
+- **Required Chapters:** 01-38 ve sekiz Mini Project'in başarıyla tamamlanması.
 - **Features:** Girdi doğrulama, en az iki record koleksiyonu veya ilişkili veri görünümü, rule-based işlem, search/sort kararı, özet rapor, controlled failure, test suite.
 - **Technical Scope:** Command-line interface; local in-memory veya sağlanan statik veri; network, database, GUI, framework ve deployment kapsam dışıdır.
 - **Technical Requirements:** En az 10 ölçülebilir requirement; function contracts; açık data model; en az 25 test case; debug log; complexity note; refactoring record; user/developer documentation.
@@ -173,9 +225,9 @@ Alan seçimi yeni teknik kapsam eklememelidir.
 
 ## Project Count
 
-- Mini Project: 6
+- Mini Project: 8
 - Capstone Project: 1
-- Total: 7
+- Total: 9
 
 ## Validation
 

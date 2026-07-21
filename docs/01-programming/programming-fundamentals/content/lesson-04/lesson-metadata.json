@@ -1,0 +1,18 @@
+{
+  "lesson_id": "V01-C04",
+  "chapter_id": "V01-C04",
+  "module_id": "V01-M01",
+  "production_unit": "lesson-04",
+  "academy": "Programming Fundamentals",
+  "version": "0.1.0",
+  "difficulty": "Beginner",
+  "estimated_duration": "V01-C04 consolidated duration: 2.5 hours",
+  "learning_outcomes": ["V01-LO006"],
+  "competencies": ["Algorithm design", "Execution tracing"],
+  "prerequisites": ["V01-C03", "lesson-02"],
+  "dependencies": ["V01-C03", "lesson-02"],
+  "research_packet_version": "1.0.0",
+  "content_version": "0.1.0",
+  "status": "Draft",
+  "language": "tr-TR"
+}

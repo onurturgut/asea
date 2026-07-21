@@ -2,9 +2,9 @@
 document_type: "supporting-document"
 supporting_document_id: "V01-SD-DMAP-002"
 supporting_document_type: "Dependency Map"
-title: "Volume 01 Blueprint v2 Candidate Dependency Graph"
+title: "Volume 01 Blueprint v2 Canonical Dependency Graph"
 version: "0.1.0"
-status: "Draft"
+status: "Stable"
 scope_id: "V01"
 authority: "Derived"
 owner_role: "Curriculum Architect"
@@ -14,23 +14,23 @@ derived_from:
   - "./04-chapter-registry.md"
 ---
 
-# Volume 01 Blueprint v2 Candidate Dependency Graph
+# Volume 01 Blueprint v2 Canonical Dependency Graph
 
 ## Purpose
 
 Expose and validate the complete prerequisite graph for the 38-Chapter v2
-candidate.
+canonical Blueprint.
 
 ## Scope
 
-The graph derives direct edges from the candidate Chapter Registry. It does not
+The graph derives direct edges from the canonical Chapter Registry. It does not
 create relationships independently.
 
 ## Ownership
 
-- The candidate Chapter Registry owns direct prerequisite relationships.
+- The canonical Chapter Registry owns direct prerequisite relationships.
 - This document owns the derived graph and validation evidence.
-- The active v1 Dependency Map remains canonical.
+- The v1 Dependency Map remains immutable archived history.
 
 ## Content
 
@@ -99,7 +99,7 @@ different order if all direct prerequisites remain satisfied.
 ## Validation
 
 Kahn's topological-sort algorithm processed all 38 nodes. A processed count
-equal to the node count proves that no cycle remains in the candidate graph.
+equal to the node count proves that no cycle remains in the canonical graph.
 All Chapter dependency tokens resolved to `V00` or one of the 38 Chapter IDs.
 
 ## References

@@ -1,9 +1,9 @@
 ---
 document_type: "manifest"
 manifest_id: "V01-MF002"
-title: "Volume 01 Blueprint v2 Candidate Manifest"
+title: "Volume 01 Blueprint v2 Canonical Manifest"
 version: "0.1.0"
-status: "Draft"
+status: "Stable"
 scope_id: "V01-BP01"
 scope_version: "2.0.0"
 generated_on: "2026-07-18"
@@ -68,39 +68,40 @@ artifacts:
   - id: "V01-BP01"
     path: "./02-canonical-schema.md"
     version: "2.0.0"
-    status: "Draft"
+    status: "Stable"
   - id: "V01-SD-CMAP-002"
     path: "./04-chapter-registry.md"
     version: "0.1.0"
-    status: "Draft"
+    status: "Stable"
   - id: "V01-SD-LO-002"
     path: "./05-learning-outcome-registry.md"
     version: "0.1.0"
-    status: "Draft"
+    status: "Stable"
   - id: "V01-SD-DMAP-002"
     path: "./06-dependency-graph.md"
     version: "0.1.0"
-    status: "Draft"
+    status: "Stable"
 ---
 
-# Volume 01 Blueprint v2 Candidate Manifest
+# Volume 01 Blueprint v2 Canonical Manifest
 
 ## Purpose
 
-Define the exact design and registry files in the Blueprint v2 review
-candidate.
+Define the exact design evidence and canonical registry files frozen for
+Blueprint v2.
 
 ## Scope
 
-The manifest covers the candidate architecture only. It does not list
+The manifest covers the frozen architecture only. It does not list
 learner-facing Chapter, lab, quiz, project, or AI Mentor production artefacts.
 
 ## Ownership
 
 - Manifest owner: Repository Governance Engineer.
 - Source Blueprint: `V01-BP01@2.0.0`.
-- Active canonical manifest remains `V01-MF001`.
-- This candidate manifest has no release or Freeze authority.
+- Active canonical manifest: `V01-MF002`.
+- Freeze authority: `V01-FR-BP-002`.
+- `V01-MF001` remains immutable Blueprint v1 history.
 
 ## Content
 
@@ -108,8 +109,8 @@ learner-facing Chapter, lab, quiz, project, or AI Mentor production artefacts.
 
 | Scope | Version |
 | --- | --- |
-| Blueprint candidate | `2.0.0` |
-| Candidate manifest | `0.1.0` |
+| Canonical Blueprint | `2.0.0` |
+| Canonical manifest | `0.1.0` |
 | Current repository package | `0.1.0` |
 | Standards profile | Standards v2 |
 
@@ -132,7 +133,7 @@ The package uses only registered types: `blueprint`, `manifest`,
 ### Folder structure
 
 - Design sources: `blueprint-v2/`
-- Candidate canonical records: `governance/blueprint-v2/`
+- Canonical Blueprint records: `governance/blueprint-v2/`
 - Current canonical Volume: `docs/01-programming/`
 - Knowledge records: `knowledge/`
 - Research and production staging: `research/` and `content/`
@@ -144,9 +145,9 @@ new target records use sequences after current allocations.
 
 ### Governance and validation policy
 
-Migration Standard controls the v1-to-v2 transition. Review, Validation, and
-Freeze standards control promotion. Draft candidate files cannot replace the
-active manifest or Blueprint.
+Migration Standard controls the completed v1-to-v2 transition. Review,
+Validation, and Freeze standards control future changes. Informational design
+sources remain Draft; the four canonical registry records are Stable.
 
 ## Validation
 
@@ -158,6 +159,6 @@ active manifest or Blueprint.
 
 ## References
 
-- [Canonical Schema Candidate](./02-canonical-schema.md)
+- [Canonical Blueprint](./02-canonical-schema.md)
 - [Migration Validation](./07-migration-validation.md)
 - [Repository Standard v2](../../docs/standards/repository-standard-v2.md)

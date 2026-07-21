@@ -1,0 +1,18 @@
+{
+  "lesson_id": "V01-C03",
+  "chapter_id": "V01-C03",
+  "module_id": "V01-M01",
+  "production_unit": "lesson-03",
+  "academy": "Programming Fundamentals",
+  "version": "0.1.0",
+  "difficulty": "Beginner",
+  "estimated_duration": "2.5 hours",
+  "learning_outcomes": ["V01-LO005"],
+  "competencies": ["Problem framing", "Structured decomposition"],
+  "prerequisites": ["V01-C01", "V01-C02"],
+  "dependencies": ["V01-C01", "V01-C02"],
+  "research_packet_version": "1.0.0",
+  "content_version": "0.1.0",
+  "status": "Draft",
+  "language": "tr-TR"
+}
