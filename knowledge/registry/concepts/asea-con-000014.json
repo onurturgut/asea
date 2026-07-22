@@ -1,0 +1,64 @@
+{
+  "id": "ASEA-CON-000014",
+  "record_type": "concept",
+  "version": "0.1.0",
+  "workflow_state": "Candidate",
+  "title": "Edge Case",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-22",
+  "supersedes": [],
+  "tags": [
+    "chapter-03",
+    "problem-solving"
+  ],
+  "definition": "An edge case is a valid or invalid scenario near a behavioral boundary where ordinary assumptions are most likely to fail.",
+  "purpose": "Teach systematic boundary discovery without treating every unusual input as the same class.",
+  "history": "Boundary analysis and testing practices emphasize values and conditions where behavior changes or assumptions break.",
+  "mental_model": "An edge case stands near a seam in the problem contract where two rules, limits, or assumptions meet.",
+  "analogy": "Testing a door at the exact closing point reveals boundary behavior, but software boundaries may involve time, permissions, concurrency, and data rather than a physical edge.",
+  "terminology": [
+    "edge case",
+    "boundary case",
+    "invalid input",
+    "valid domain",
+    "failure condition"
+  ],
+  "relationships": [
+    "derived-from problem boundaries",
+    "tests assumptions",
+    "supports acceptance evidence"
+  ],
+  "prerequisite_ids": [
+    "ASEA-CON-000012"
+  ],
+  "real_world_usage": [
+    "Deriving boundary and invalid-input tests",
+    "Finding rule conflicts before implementation"
+  ],
+  "common_mistakes": [
+    "Calling every invalid value an edge case",
+    "Testing only typical inputs"
+  ],
+  "industry_notes": "Boundary-focused review finds failures hidden by happy-path examples.",
+  "ai_notes": "AI-generated test lists must be checked against the actual valid domain and authoritative constraints.",
+  "interview_notes": "Ask the candidate to distinguish normal, boundary, edge, and invalid scenarios.",
+  "exercise_candidates": [
+    "Classify scenarios by validity and boundary relation"
+  ],
+  "lab_candidates": [
+    "Build a scenario matrix for ticket pricing"
+  ],
+  "project_candidates": [
+    "Define project edge cases before implementation"
+  ],
+  "claim_ids": [
+    "ASEA-CLM-000014"
+  ],
+  "learning_outcome_ids": [
+    "V01-LO005"
+  ],
+  "difficulty": "Beginner",
+  "knowledge_area": "Problem Solving"
+}
+

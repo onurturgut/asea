@@ -1,0 +1,90 @@
+{
+  "id": "V01-C04-CPP-001",
+  "record_type": "production-packet",
+  "version": "0.1.0",
+  "workflow_state": "Ready for Draft Production",
+  "title": "V01-C04 Algorithms, Pseudocode, and Tracing Production Packet",
+  "owner_role": "Learning Designer",
+  "created_on": "2026-07-22",
+  "updated_on": "2026-07-22",
+  "supersedes": [],
+  "tags": ["volume-01", "chapter-04", "content-production"],
+  "chapter_id": "V01-C04",
+  "chapter_version": "0.1.0",
+  "blueprint_id": "V01-C04-BP01",
+  "learning_outcome_ids": ["V01-LO006"],
+  "prerequisite_ids": ["V01-C03"],
+  "source_ids": ["ASEA-SRC-000001"],
+  "evidence_ids": ["ASEA-EV-000010"],
+  "claim_ids": ["ASEA-CLM-000016", "ASEA-CLM-000017", "ASEA-CLM-000018", "ASEA-CLM-000019"],
+  "concept_ids": ["ASEA-CON-000016", "ASEA-CON-000017", "ASEA-CON-000018", "ASEA-CON-000019"],
+  "graph_version": "1.0.1",
+  "required_components": [
+    "Hook",
+    "Prior Knowledge Retrieval",
+    "Algorithm Mental Model",
+    "Problem Contract to Algorithm",
+    "Pseudocode Convention",
+    "Preconditions and Postconditions",
+    "Sequence Selection and Iteration",
+    "Trace Table",
+    "Prediction Before Trace",
+    "Normal Boundary and Invalid Cases",
+    "Termination Argument",
+    "Correctness Boundary",
+    "Worked Fare Example",
+    "Guided Repair",
+    "Independent Transfer",
+    "AI Output Audit",
+    "Engineering Perspective",
+    "Reflection",
+    "Summary",
+    "References"
+  ],
+  "required_asset_types": [
+    "Markdown",
+    "Pseudocode",
+    "Mermaid",
+    "Algorithm contract table",
+    "Trace table",
+    "Termination checklist",
+    "Hands-on exercise",
+    "Assessment rubric"
+  ],
+  "assessment_alignment": [
+    {
+      "outcome_id": "V01-LO006",
+      "concept_ids": ["ASEA-CON-000016", "ASEA-CON-000017", "ASEA-CON-000018", "ASEA-CON-000019"],
+      "practice_artifact_ids": ["V01-C04-EX01", "V01-C04-L01", "V01-C04-CH01"],
+      "assessment_id": "V01-C04-AS01",
+      "acceptance_evidence": "A language-independent terminating fare algorithm with explicit preconditions and postconditions, two normal traces, one boundary trace, one invalid-input trace, and an evidence-based termination and AI-audit defense."
+    }
+  ],
+  "accessibility_requirements": [
+    "Every diagram has an ordered text alternative.",
+    "Trace tables use descriptive headers and do not rely on color.",
+    "Animations have static, pause, and reduced-motion alternatives.",
+    "Turkish technical terms include English at first meaningful use.",
+    "Pseudocode uses consistent indentation and one operation per line.",
+    "Learner instructions have explicit deliverables and time boxes."
+  ],
+  "known_risks": [
+    "Learners may copy programming-language syntax into pseudocode.",
+    "A few successful traces may be mistaken for proof of correctness.",
+    "Stop conditions may be written without guaranteed progress.",
+    "Preconditions may be used to hide required invalid-input behavior.",
+    "AI may invent rules or produce a non-terminating branch.",
+    "Student pilot is deferred by Repository Owner until later production."
+  ],
+  "exclusions": [
+    "Executable implementation",
+    "Programming-language syntax instruction",
+    "Asymptotic complexity",
+    "Formal Hoare logic",
+    "Recursion",
+    "Sorting and searching algorithms",
+    "Stable publication approval"
+  ],
+  "review_owners": ["Repository Owner"],
+  "production_decision": "Authorized"
+}

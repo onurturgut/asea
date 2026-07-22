@@ -16,21 +16,27 @@ x-production-unit: "lesson-01"
 x-canonical-lesson-id: "V01-C01"
 ---
 
-# Lesson Examples: Programlama Nedir?
+# Programlama (Programming) Nedir? — Ders Örnekleri
+
+**Terminoloji standardı:** program (Program), algoritma (Algorithm), talimat
+(Instruction), hesaplama (Computation), kaynak kod (Source Code), çalışma ortamı
+(Runtime Environment), yürütme (Execution) ve durum (State). Sonraki
+kullanımlar Türkçedir.
 
 ## Purpose
 
 Programlama, algoritma, program ve kesin talimat ayrımını açıklayan örnekleri
-Lesson Production için sunmak.
+ders üretimi için sunmak.
 
 ## Scope
 
 Örnekler yalnız Research Packet’taki dosya düzenleme, asansör, ATM ve farklı
-representation önerilerini kullanır.
+gösterim önerilerini kullanır.
 
 ## Ownership
 
-Örnekler derived içeriktir; yeni outcome veya assessment görevi oluşturmaz.
+Örnekler türetilmiş içeriktir; yeni öğrenme çıktısı veya değerlendirme
+görevi oluşturmaz.
 
 ## Content
 
@@ -77,20 +83,20 @@ Belirsiz dosya düzenleme isteği şu kesinlikte ifade edilebilir:
 7. Sonraki dosyaya geç ve aynı kuralı uygula.
 8. İşlenen ve atlanan dosya sayılarını göster.
 
-Bu sürüm hâlâ review edilebilir; ancak girdi, kural, çakışma ve çıktı önceki
+Bu sürüm hâlâ gözden geçirilebilir; ancak girdi, kural, çakışma ve çıktı önceki
 sürüme göre daha gözlenebilirdir.
 
 ### Örnek Açıklamaları
 
 Sekiz adımın her biri tek bir amaç taşır. Beşinci adım dönüşümü, altıncı adım
-edge case’i, sekizinci adım ise doğrulanabilir çıktıyı tanımlar. Öğrenci bu
-ayrımı yapabildiğinde günlük dil ile makine talimatı arasındaki precision
+Sınır durumu, sekizinci adım ise doğrulanabilir çıktıyı tanımlar. Öğrenci bu
+ayrımı yapabildiğinde günlük dil ile makine talimatı arasındaki kesinlik
 farkını görür.
 
 ### Öğrenme Notları
 
 - Bir örneğin açık görünmesi her ortamda eksiksiz olduğu anlamına gelmez.
-- Talimatları review ederken “hangi input?”, “hangi durumda?”, “hangi output?”
+- Talimatları gözden geçirirken “hangi girdi?”, “hangi durumda?”, “hangi çıktı?”
   sorularını kullanın.
 - Aynı algoritmanın farklı programlarla uygulanabilmesi, algoritma ile program
   arasındaki temel ayrımdır.
@@ -98,7 +104,7 @@ farkını görür.
 ## Validation
 
 - Packet dışı örnek: 0.
-- Kod, exercise veya assessment: 0.
+- Kod, egzersiz veya değerlendirme: 0.
 - `LO001` ve `LO002` desteği: Pass.
 
 ## References

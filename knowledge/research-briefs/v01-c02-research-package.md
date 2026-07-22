@@ -3,7 +3,7 @@ document_type: "supporting-document"
 supporting_document_id: "V01-C02-SD-IDX-001"
 supporting_document_type: "Index"
 title: "Chapter 02 Research Package"
-version: "1.0.0"
+version: "1.0.1"
 status: "Review"
 scope_id: "V01-C02"
 authority: "Derived"
@@ -49,10 +49,10 @@ Tier 3 and Tier 4 are not required for the bounded foundational claims. Producti
 | Claim | Confidence | Freshness | Outcome |
 |---|---:|---:|---|
 | `ASEA-CLM-000001` | 92 | 95 | Curriculum positioning |
-| `ASEA-CLM-000002` | 86 | 92 | `V01-LO004` |
-| `ASEA-CLM-000003` | 85 | 90 | `V01-LO004` |
-| `ASEA-CLM-000004` | 94 | 96 | `V01-LO003` |
-| `ASEA-CLM-000005` | 89 | 98 | `V01-LO003` |
+| `ASEA-CLM-000002` | 86 | 92 | `V01-LO003` |
+| `ASEA-CLM-000003` | 85 | 90 | `V01-LO003` |
+| `ASEA-CLM-000004` | 94 | 96 | `V01-LO004` |
+| `ASEA-CLM-000005` | 89 | 98 | `V01-LO004` |
 | `ASEA-CLM-000006` | 92 | 94 | `V01-LO003`, `V01-LO004` |
 
 All listed claims are `Approved`; no contradiction record is open.

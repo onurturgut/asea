@@ -1,16 +1,16 @@
 {
   "id": "V01-C02-CPP-001",
   "record_type": "production-packet",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "workflow_state": "Ready for Production",
   "title": "V01-C02 How Computers Execute Programs Production Packet",
   "owner_role": "Learning Designer",
   "created_on": "2026-07-17",
-  "updated_on": "2026-07-17",
+  "updated_on": "2026-07-22",
   "supersedes": [],
   "tags": ["volume-01", "chapter-02", "content-production"],
   "chapter_id": "V01-C02",
-  "chapter_version": "0.1.0",
+  "chapter_version": "0.2.2",
   "blueprint_id": "V01-C02-BP01",
   "learning_outcome_ids": ["V01-LO003", "V01-LO004"],
   "prerequisite_ids": ["V01-C01"],
@@ -48,7 +48,7 @@
     "ASEA-CON-000005",
     "ASEA-CON-000006"
   ],
-  "graph_version": "1.0.0",
+  "graph_version": "1.0.1",
   "required_components": [
     "Hook",
     "Story",
@@ -84,7 +84,7 @@
   ],
   "assessment_alignment": [
     {
-      "outcome_id": "V01-LO003",
+      "outcome_id": "V01-LO004",
       "concept_ids": [
         "ASEA-CON-000003",
         "ASEA-CON-000004",
@@ -100,7 +100,7 @@
       "acceptance_evidence": "A complete instruction-by-instruction trace with correct initial, intermediate, and final states plus an explanation of control transfer."
     },
     {
-      "outcome_id": "V01-LO004",
+      "outcome_id": "V01-LO003",
       "concept_ids": [
         "ASEA-CON-000001",
         "ASEA-CON-000002",

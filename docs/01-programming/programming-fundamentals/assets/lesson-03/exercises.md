@@ -18,7 +18,12 @@ x-production-unit: "lesson-03"
 x-content-language: "tr-TR"
 ---
 
-# Problem Çözme Yaklaşımı — Egzersizler
+# Problem Çözme (Problem Solving) Yaklaşımı — Egzersizler
+
+**Terminoloji standardı:** Problem tanımı (Problem Statement), gereksinim
+(Requirement), kabul ölçütü (Acceptance Criterion), kısıt (Constraint), varsayım
+(Assumption), sınır durum (Edge Case), parçalama (Decomposition) ve soyutlama
+(Abstraction). Sonraki kullanımlar Türkçedir.
 
 ## Purpose
 
@@ -38,56 +43,56 @@ Her egzersiz kanonik Learning Outcome ile eşlenmiştir.
 
 1. Belirti, problem ve çözüm fikri için birer örnek yaz.
 
-   - **Learning Outcome Mapping:** `V01-LO005`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO005`
 
 2. Bir talepte paydaşı ve başarı ölçütünü belirle.
 
-   - **Learning Outcome Mapping:** `V01-LO005`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO005`
 
 ### Kavram Pekiştirme
 
 1. Gereksinim, kısıt ve varsayımı ayrı sütunlarda sınıflandır.
 
-   - **Learning Outcome Mapping:** `V01-LO005`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO005`
 
 2. Sınır durum ile geçersiz girdiyi örnekle ayır.
 
-   - **Learning Outcome Mapping:** `V01-LO005`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO005`
 
 ### Gerçek Hayat Problemleri
 
 1. Dosya yükleme isteği için beş alanlı problem sözleşmesi kur.
 
-   - **Learning Outcome Mapping:** `V01-LO005`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO005`
 
 2. Randevu planlama problemini bağımlılıklarıyla parçala.
 
-   - **Learning Outcome Mapping:** `V01-LO005`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO005`
 
 ### Challenge Soruları
 
 1. Belirsiz not uygulaması isteğini ölçülebilir hâle getir.
 
-   - **Learning Outcome Mapping:** `V01-LO005`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO005`
 
 2. Bir varsayımı çürütecek kanıt ve model güncellemesi tasarla.
 
-   - **Learning Outcome Mapping:** `V01-LO005`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO005`
 
 ### Reflection Soruları
 
 1. Çözümü erken seçmek hangi bilgileri görünmez bırakır?
 
-   - **Learning Outcome Mapping:** `V01-LO005`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO005`
 
 2. Soyutlama ne zaman yararlı ayrıntı seçimi, ne zaman zararlı kayıp olur?
 
-   - **Learning Outcome Mapping:** `V01-LO005`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO005`
 
 ## Validation
 
-- Exercise Coverage: 10/10.
-- Learning Outcome Mapping: `V01-LO005`.
+- Egzersiz kapsamı: 10/10.
+- Öğrenme çıktısı eşlemesi: `V01-LO005`.
 - Cevabı doğrudan veren görev: 0.
 
 ## References

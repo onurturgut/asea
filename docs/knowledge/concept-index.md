@@ -3,7 +3,7 @@ document_type: "supporting-document"
 supporting_document_id: "ASEA-SD-IDX-004"
 supporting_document_type: "Index"
 title: "Volume 01 Concept Index"
-version: "1.0.0"
+version: "1.0.1"
 status: "Draft"
 scope_id: "V01"
 authority: "Derived"
@@ -29,8 +29,8 @@ Learning Outcome. They do not define new Concept relationships.
 ## Ownership
 
 - **Authority:** Derived.
-- **Source:** [Concept Candidate Registry](./concept-registry.md), version `1.0.0`.
-- **Generated:** 2026-07-18.
+- **Source:** [Concept Candidate Registry](./concept-registry.md), version `1.0.1`.
+- **Generated:** 2026-07-22.
 - **Owner:** Knowledge Architect.
 
 ## Content
@@ -211,8 +211,8 @@ Learning Outcome. They do not define new Concept relationships.
 | --- | ---: | --- |
 | `V01-LO001` | 5 | `ASEA-CON-000007`, `ASEA-CON-000008`, `ASEA-CON-000009`, `ASEA-CON-000010`, `ASEA-CON-000011` |
 | `V01-LO002` | 5 | `ASEA-CON-000007`, `ASEA-CON-000008`, `ASEA-CON-000009`, `ASEA-CON-000010`, `ASEA-CON-000011` |
-| `V01-LO003` | 6 | `ASEA-CON-000001`, `ASEA-CON-000002`, `ASEA-CON-000003`, `ASEA-CON-000004`, `ASEA-CON-000005`, `ASEA-CON-000006` |
-| `V01-LO004` | 6 | `ASEA-CON-000001`, `ASEA-CON-000002`, `ASEA-CON-000003`, `ASEA-CON-000004`, `ASEA-CON-000005`, `ASEA-CON-000006` |
+| `V01-LO003` | 4 | `ASEA-CON-000001`, `ASEA-CON-000002`, `ASEA-CON-000005`, `ASEA-CON-000006` |
+| `V01-LO004` | 4 | `ASEA-CON-000003`, `ASEA-CON-000004`, `ASEA-CON-000005`, `ASEA-CON-000006` |
 | `V01-LO005` | 4 | `ASEA-CON-000012`, `ASEA-CON-000013`, `ASEA-CON-000014`, `ASEA-CON-000015` |
 | `V01-LO006` | 4 | `ASEA-CON-000016`, `ASEA-CON-000017`, `ASEA-CON-000018`, `ASEA-CON-000019` |
 | `V01-LO007` | 4 | `ASEA-CON-000020`, `ASEA-CON-000021`, `ASEA-CON-000022`, `ASEA-CON-000023` |

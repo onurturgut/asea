@@ -16,7 +16,12 @@ x-production-unit: "lesson-03"
 x-content-language: "tr-TR"
 ---
 
-# Problem Çözme Yaklaşımı — Görselleştirme Notları
+# Problem Çözme (Problem Solving) Yaklaşımı — Görselleştirme Notları
+
+**Terminoloji standardı:** Problem tanımı (Problem Statement), gereksinim
+(Requirement), kabul ölçütü (Acceptance Criterion), kısıt (Constraint), varsayım
+(Assumption), sınır durum (Edge Case), parçalama (Decomposition) ve soyutlama
+(Abstraction). Sonraki kullanımlar Türkçedir.
 
 ## Purpose
 
@@ -33,32 +38,32 @@ sınırlıdır.
 
 ## Content
 
-### Diagram Suggestions
+### Diyagram Önerileri
 
 “İhtiyaç → Belirti/Problem ayrımı → Sözleşme” hunisi ve bağımlılık kenarları
 gösteren parçalama ağacı kullanılmalıdır.
 
-### Animation Suggestions
+### Animasyon Önerileri
 
 Belirsiz bir istekte alanların sırayla görünür hâle gelmesi canlandırılmalıdır:
 paydaş, başarı, girdi, çıktı, kısıt, varsayım ve sınır durum.
 
-### Timeline Suggestions
+### Zaman Çizelgesi Önerileri
 
 Katı bir şelale yerine “Hipotez → Model → Kanıt → Gözden geçirme” çevrimi
 zaman ekseninde tekrar eden bir döngü olarak gösterilmelidir.
 
-### Concept Graph Suggestions
+### Kavram Grafiği Önerileri
 
 Problem tanımı merkezde; paydaş ve kabul ölçütü amaç tarafında, girdi ve çıktı
 sözleşme tarafında, kısıt ve varsayım risk tarafında konumlandırılmalıdır.
 
-### UI Suggestions
+### Kullanıcı Arayüzü Önerileri
 
 Gereksinim, kısıt ve varsayım için ayrı sütunlar; her varsayım yanında kanıt ve
 doğrulama durumu bulunmalıdır. Sınır durumlar geçersiz girdilerden ayrılmalıdır.
 
-### Interactive Suggestions
+### Etkileşimli Öneriler
 
 Öğrenci bir talep kartındaki ifadeleri belirti, problem, çözüm fikri, kısıt veya
 varsayım alanına taşıyabilmeli; bağımlılıkları ayrıca bağlayabilmelidir.

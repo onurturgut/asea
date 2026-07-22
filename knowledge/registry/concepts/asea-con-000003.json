@@ -1,12 +1,12 @@
 {
   "id": "ASEA-CON-000003",
   "record_type": "concept",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "workflow_state": "Approved",
   "title": "Program State",
   "owner_role": "Knowledge Architect",
   "created_on": "2026-07-17",
-  "updated_on": "2026-07-17",
+  "updated_on": "2026-07-22",
   "supersedes": [],
   "tags": ["chapter-02", "state", "trace"],
   "definition": "Program state is the information an execution model must retain at a particular step to determine permitted next behavior.",
@@ -26,7 +26,7 @@
   "lab_candidates": ["Trace initial, intermediate, and final states of a tiny machine"],
   "project_candidates": ["Persist an inspectable state history in the instruction simulator"],
   "claim_ids": ["ASEA-CLM-000004"],
-  "learning_outcome_ids": ["V01-LO003"],
+  "learning_outcome_ids": ["V01-LO004"],
   "difficulty": "Beginner",
   "knowledge_area": "Programming Foundations"
 }

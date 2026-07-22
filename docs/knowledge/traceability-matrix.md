@@ -3,7 +3,7 @@ document_type: "supporting-document"
 supporting_document_id: "ASEA-SD-IDX-024"
 supporting_document_type: "Index"
 title: "Volume 01 Canonical Traceability Matrix"
-version: "1.0.0"
+version: "1.0.1"
 status: "Draft"
 scope_id: "V01"
 authority: "Derived"
@@ -36,10 +36,10 @@ registry or `assessment.md`.
 
 - **Source version:** `docs/knowledge/source-registry.md` version 1.0.0.
 - **Evidence version:** `docs/knowledge/evidence-registry.md` version 1.1.0.
-- **Claim version:** `docs/knowledge/claim-registry.md` version 1.0.0.
-- **Concept version:** `docs/knowledge/concept-registry.md` version 1.0.0.
+- **Claim version:** `docs/knowledge/claim-registry.md` version 1.0.1.
+- **Concept version:** `docs/knowledge/concept-registry.md` version 1.0.1.
 - **Curriculum source:** `V01-SD-ASMT-001` version 1.0.0.
-- **Generated:** 2026-07-18.
+- **Generated:** 2026-07-22.
 - **Authority:** Derived.
 
 ## Content

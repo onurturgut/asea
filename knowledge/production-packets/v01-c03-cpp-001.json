@@ -1,0 +1,119 @@
+{
+  "id": "V01-C03-CPP-001",
+  "record_type": "production-packet",
+  "version": "0.1.0",
+  "workflow_state": "Ready for Draft Production",
+  "title": "V01-C03 Problem Definition and Decomposition Production Packet",
+  "owner_role": "Learning Designer",
+  "created_on": "2026-07-22",
+  "updated_on": "2026-07-22",
+  "supersedes": [],
+  "tags": ["volume-01", "chapter-03", "content-production"],
+  "chapter_id": "V01-C03",
+  "chapter_version": "0.1.0",
+  "blueprint_id": "V01-C03-BP01",
+  "learning_outcome_ids": ["V01-LO005"],
+  "prerequisite_ids": ["V01-C01", "V01-C02"],
+  "source_ids": ["ASEA-SRC-000001"],
+  "evidence_ids": ["ASEA-EV-000010"],
+  "claim_ids": [
+    "ASEA-CLM-000012",
+    "ASEA-CLM-000013",
+    "ASEA-CLM-000014",
+    "ASEA-CLM-000015"
+  ],
+  "concept_ids": [
+    "ASEA-CON-000012",
+    "ASEA-CON-000013",
+    "ASEA-CON-000014",
+    "ASEA-CON-000015"
+  ],
+  "graph_version": "1.0.1",
+  "required_components": [
+    "Hook",
+    "Motivation",
+    "Prior Knowledge Retrieval",
+    "Mental Model",
+    "Problem Space",
+    "Problem Contract",
+    "Stakeholder and Outcome",
+    "Input and Output",
+    "Constraint and Assumption",
+    "Scope and Non-goal",
+    "Acceptance Criteria",
+    "Boundary and Edge Cases",
+    "Problem Decomposition",
+    "Dependency Mapping",
+    "Verification and Validation",
+    "Worked Example",
+    "Guided Practice",
+    "Independent Practice",
+    "AI Output Audit",
+    "Engineering Perspective",
+    "Reflection",
+    "Summary",
+    "References"
+  ],
+  "required_asset_types": [
+    "Markdown",
+    "Mermaid",
+    "Problem contract table",
+    "Decomposition tree",
+    "Dependency graph",
+    "Hands-on exercise",
+    "Assessment rubric"
+  ],
+  "assessment_alignment": [
+    {
+      "outcome_id": "V01-LO005",
+      "concept_ids": [
+        "ASEA-CON-000012",
+        "ASEA-CON-000013",
+        "ASEA-CON-000014",
+        "ASEA-CON-000015"
+      ],
+      "practice_artifact_ids": [
+        "V01-C03-EX01",
+        "V01-C03-L01",
+        "V01-C03-CH01"
+      ],
+      "assessment_id": "V01-C03-AS01",
+      "acceptance_evidence": "A bounded problem contract that identifies stakeholder, outcome, inputs, outputs, constraints, assumptions, non-goals, acceptance criteria and edge cases; plus a responsibility decomposition with explicit dependencies and an evidence-based defense of decisions."
+    }
+  ],
+  "accessibility_requirements": [
+    "Every diagram has an equivalent ordered text description.",
+    "Tables use descriptive headers and do not rely on color.",
+    "Interactive activities are keyboard operable and have static alternatives.",
+    "Animations, if produced later, include pause and reduced-motion alternatives.",
+    "Turkish technical terms include English at first meaningful use.",
+    "Learner instructions use short steps and explicit deliverables."
+  ],
+  "known_risks": [
+    "Requirements-engineering vocabulary may create excessive cognitive load for a beginner.",
+    "Edge case, boundary case and invalid input may be incorrectly treated as synonyms.",
+    "Learners may mistake decomposition for an arbitrary task list.",
+    "AI may invent requirements or prematurely select a solution.",
+    "Expanded candidate sources require canonical Source and Evidence registration before Stable publication.",
+    "Independent technical and pedagogical review plus a beginner pilot remain pending."
+  ],
+  "exclusions": [
+    "Algorithm implementation",
+    "Pseudocode design and tracing",
+    "Programming-language syntax",
+    "Formal requirements specification authoring",
+    "UML notation",
+    "Project management estimation",
+    "Production code generation",
+    "Stable publication approval"
+  ],
+  "review_owners": [
+    "Subject-Matter Reviewer",
+    "Pedagogical Reviewer",
+    "Assessment Reviewer",
+    "Accessibility Reviewer",
+    "Repository Reviewer"
+  ],
+  "production_decision": "Authorized"
+}
+

@@ -1,0 +1,20 @@
+{
+  "id": "V01-C08-CPP-001", "record_type": "production-packet", "version": "0.1.0",
+  "workflow_state": "Ready for Draft Production", "title": "V01-C08 Input, Output, and Data Transformation Production Packet",
+  "owner_role": "Learning Designer", "created_on": "2026-07-22", "updated_on": "2026-07-22",
+  "supersedes": [], "tags": ["volume-01", "chapter-08", "content-production"],
+  "chapter_id": "V01-C08", "chapter_version": "0.1.0", "blueprint_id": "V01-C08-BP01",
+  "learning_outcome_ids": ["V01-LO012"], "prerequisite_ids": ["V01-C04", "V01-C07"],
+  "source_ids": ["ASEA-SRC-000001", "ASEA-SRC-000003"],
+  "evidence_ids": ["ASEA-EV-000009", "ASEA-EV-000012"],
+  "claim_ids": ["ASEA-CLM-000029", "ASEA-CLM-000030", "ASEA-CLM-000031"],
+  "concept_ids": ["ASEA-CON-000029", "ASEA-CON-000030", "ASEA-CON-000031"],
+  "graph_version": "1.0.1",
+  "required_components": ["Hook", "Prior Retrieval", "Trust Boundary", "Input and Output", "Input Contract", "Parsing", "Syntactic Validation", "Semantic Validation", "Normalization", "Transformation", "Formatting", "Error Feedback", "Pipeline Trace", "Worked Registration Example", "AI Audit", "Reflection", "References"],
+  "required_asset_types": ["Markdown", "JavaScript", "Mermaid", "Pipeline diagram", "Contract table", "Transformation trace", "Hands-on exercise", "Assessment rubric"],
+  "assessment_alignment": [{"outcome_id":"V01-LO012","concept_ids":["ASEA-CON-000029","ASEA-CON-000030","ASEA-CON-000031"],"practice_artifact_ids":["V01-C08-EX01","V01-C08-L01","V01-C08-CH01"],"assessment_id":"V01-C08-AS01","acceptance_evidence":"An explicit input contract with invalid cases and a traceable pipeline of at least receive, parse, validate, normalize/transform, and format/output stages."}],
+  "accessibility_requirements": ["Every diagram has a text alternative.", "Tables do not rely on color.", "Turkish technical terms include English on first use.", "Code has Turkish comments and expected output.", "Errors identify the field and correction without relying on color."],
+  "known_risks": ["Learners may treat parsing as validation.", "Permissive numeric parsers may accept partial input.", "Normalization may destroy meaningful distinctions.", "Formatting may leak into internal calculations.", "Security scope may expand beyond beginner boundaries.", "AI may invent defaults or expose sensitive input in errors."],
+  "exclusions": ["Full web form implementation", "Database persistence", "Network APIs", "Advanced schema libraries", "Full Unicode text processing", "Authentication and authorization", "Full exception architecture", "Stable publication approval"],
+  "review_owners": ["Repository Owner"], "production_decision": "Authorized"
+}

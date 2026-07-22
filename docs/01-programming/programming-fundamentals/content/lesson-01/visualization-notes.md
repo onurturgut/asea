@@ -16,7 +16,12 @@ x-production-unit: "lesson-01"
 x-canonical-lesson-id: "V01-C01"
 ---
 
-# Visualization Notes: Programlama Nedir?
+# Programlama (Programming) Nedir? — Görselleştirme Notları
+
+**Terminoloji standardı:** program (Program), algoritma (Algorithm), talimat
+(Instruction), hesaplama (Computation), kaynak kod (Source Code), çalışma ortamı
+(Runtime Environment), yürütme (Execution) ve durum (State). Sonraki
+kullanımlar Türkçedir.
 
 ## Purpose
 
@@ -25,38 +30,38 @@ tanımlamak.
 
 ## Scope
 
-Notlar yalnız diagram, animation, timeline, concept graph, UI ve interaction
-tasarım girdisidir; görsel asset üretmez.
+Notlar yalnız diyagram, animasyon, zaman çizelgesi, kavram grafiği, kullanıcı
+arayüzü ve etkileşim tasarımı girdisidir; görsel varlık üretmez.
 
 ## Ownership
 
-Learning Experience Designer presentation’ı yönetir. Görseller yeni kavram veya
-curriculum relationship üretemez.
+Öğrenme deneyimi tasarımcısı sunumu yönetir. Görseller yeni kavram veya
+müfredat ilişkisi üretemez.
 
 ## Content
 
 ### Diyagram Önerileri
 
-- **Ana pipeline:** Problem → Algoritma → Kaynak kod → Çalışma ortamı → Durum
-  ve çıktı. Her node için tek cümlelik text alternative hazırlanmalı.
-- **Boundary map:** Algoritma, program ve daha geniş yazılım kavramlarını ayrı
+- **Ana akış:** Problem → Algoritma → Kaynak kod → Çalışma ortamı → Durum
+  ve çıktı. Her düğüm için tek cümlelik metin alternatifi hazırlanmalı.
+- **Sınır haritası:** Algoritma, program ve daha geniş yazılım kavramlarını ayrı
   kutularda; “uygulanır”, “çalıştırılır” ilişkileriyle gösterin.
-- **Precision funnel:** Belirsiz insan niyetinden açık input, rule ve output’a
+- **Kesinlik hunisi:** Belirsiz insan niyetinden açık girdi, kural ve çıktıya
   daralan bir akış.
-- **Stored-program model:** Bellekte instructions/data ve bunları işleyen bir
-  execution bileşeni; hardware ayrıntısına girilmemeli.
+- **Bellekte tutulan program modeli:** Bellekteki talimatlar/veri ve bunları
+  işleyen bir yürütme bileşeni; donanım ayrıntısına girilmemeli.
 
 ### Animasyon Önerileri
 
 - “Dosyaları düzenle” cümlesindeki belirsiz parçaları sırayla vurgulayın;
   öğrenci her vurguda eksik bilgiyi görsün.
-- Algorithm adımlarının source representation’a, ardından state değişimine
+- Algoritma adımlarının kaynak gösterimine, ardından durum değişimine
   dönüşmesini aşamalı gösterin.
-- Otomatik oynatma yerine ileri/geri kontrolü ve text transcript sunun.
+- Otomatik oynatma yerine ileri/geri kontrolü ve metin dökümü sunun.
 
 ### Timeline
 
-Yalnız iki doğrulanmış milestone kullanılmalı:
+Yalnız iki doğrulanmış dönüm noktası kullanılmalı:
 
 - 1843: Ada Lovelace’ın Analytical Engine için yayımlanan stepwise procedures
   bağlamı; “ilk programcı” kesin hükmü kullanılmamalı.
@@ -69,28 +74,28 @@ problem -> algorithm -> program -> execution -> state/output
                     \-> source code -> runtime -/
 ```
 
-Graph, algorithm ile programı aynı node’da birleştirmemelidir.
+Grafik, algoritma ile programı aynı düğümde birleştirmemelidir.
 
 ### UI Önerileri
 
 - Sol panelde belirsiz talimat, sağ panelde giderek kesinleşen sürüm.
-- Terimler için ilk kullanımdan açılan kısa bilingual definition card.
-- Pipeline node seçildiğinde yalnız o aşamanın input/output bilgisi gösterilsin.
-- Renk tek başına anlam taşımamalı; ikon ve label birlikte kullanılmalı.
+- Terimler için ilk kullanımda açılan kısa iki dilli tanım kartı.
+- Akış düğümü seçildiğinde yalnız o aşamanın girdi/çıktı bilgisi gösterilsin.
+- Renk tek başına anlam taşımamalı; ikon ve etiket birlikte kullanılmalı.
 
 ### İnteraktif Fikirler
 
-- Öğrenci belirsiz cümlede eksik input/rule/output parçalarını işaretler.
-- Sürükle-bırak ile problem, algorithm, program, execution kartlarını sıralar.
-- Bir talimat değiştiğinde hangi observable output’un etkileneceğini seçer.
-- Her interaction için klavye erişimi ve metin tabanlı alternatif sağlanır.
+- Öğrenci belirsiz cümlede eksik girdi/kural/çıktı parçalarını işaretler.
+- Sürükle-bırak ile problem, algoritma, program ve yürütme kartlarını sıralar.
+- Bir talimat değiştiğinde hangi gözlenebilir çıktının etkileneceğini seçer.
+- Her etkileşim için klavye erişimi ve metin tabanlı alternatif sağlanır.
 
 ## Validation
 
-- Packet dışı concept: 0.
-- Asset generated: no.
-- Accessibility fallback specified: yes.
-- Canonical relationship preserved: yes.
+- Paket dışı kavram: 0.
+- Üretilen varlık: yok.
+- Erişilebilirlik alternatifi: mevcut.
+- Kanonik ilişki: korundu.
 
 ## References
 

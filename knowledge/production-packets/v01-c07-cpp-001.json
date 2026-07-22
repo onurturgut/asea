@@ -1,0 +1,20 @@
+{
+  "id": "V01-C07-CPP-001", "record_type": "production-packet", "version": "0.1.0",
+  "workflow_state": "Ready for Draft Production", "title": "V01-C07 Operators and Expressions Production Packet",
+  "owner_role": "Learning Designer", "created_on": "2026-07-22", "updated_on": "2026-07-22",
+  "supersedes": [], "tags": ["volume-01", "chapter-07", "content-production"],
+  "chapter_id": "V01-C07", "chapter_version": "0.1.0", "blueprint_id": "V01-C07-BP01",
+  "learning_outcome_ids": ["V01-LO011"], "prerequisite_ids": ["V01-C05", "V01-C06"],
+  "source_ids": ["ASEA-SRC-000001", "ASEA-SRC-000003"],
+  "evidence_ids": ["ASEA-EV-000009", "ASEA-EV-000012"],
+  "claim_ids": ["ASEA-CLM-000026", "ASEA-CLM-000027", "ASEA-CLM-000028"],
+  "concept_ids": ["ASEA-CON-000026", "ASEA-CON-000027", "ASEA-CON-000028"],
+  "graph_version": "1.0.1",
+  "required_components": ["Hook", "Prior Retrieval", "Expression Mental Model", "Operator and Operand", "Arithmetic", "Comparison and Equality", "Coercion", "Precedence", "Associativity", "Grouping", "Evaluation Table", "Short-circuit Preview", "Worked Pricing Example", "AI Audit", "Reflection", "References"],
+  "required_asset_types": ["Markdown", "JavaScript", "Mermaid", "Expression tree", "Evaluation table", "Type trace", "Hands-on exercise", "Assessment rubric"],
+  "assessment_alignment": [{"outcome_id":"V01-LO011","concept_ids":["ASEA-CON-000026","ASEA-CON-000027","ASEA-CON-000028"],"practice_artifact_ids":["V01-C07-EX01","V01-C07-L01","V01-C07-CH01"],"assessment_id":"V01-C07-AS01","acceptance_evidence":"Compound expressions evaluated through explicit grouping, operand types, conversions, intermediate values, final value, and a readability-preserving rewrite."}],
+  "accessibility_requirements": ["Every diagram has a text alternative.", "Tables do not rely on color.", "Turkish technical terms include English on first use.", "Code has Turkish comments and expected output."],
+  "known_risks": ["Learners may memorize precedence instead of tracing.", "Coercion may remain invisible.", "Grouping may be confused with operand evaluation order.", "Short-circuit content may leak into V01-C09.", "AI may confidently claim a wrong final result."],
+  "exclusions": ["Full Boolean logic", "Control flow", "Bitwise programming", "Advanced optional chaining", "Full short-circuit semantics", "Stable publication approval"],
+  "review_owners": ["Repository Owner"], "production_decision": "Authorized"
+}

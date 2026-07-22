@@ -16,7 +16,13 @@ x-production-unit: "lesson-02"
 x-content-language: "tr-TR"
 ---
 
-# Algoritma Nedir? — Örnekler
+# Algoritma (Algorithm) Nedir? — Örnekler
+
+**Terminoloji standardı:** problem örneği (Problem Instance), girdi (Input),
+çıktı (Output), ön koşul (Precondition), son koşul (Postcondition), doğruluk
+(Correctness), sonlanma (Termination), izleme (Trace), uygulama
+(Implementation), sezgisel yöntem (Heuristic) ve determinizm (Determinism).
+Sonraki kullanımlar Türkçedir.
 
 ## Purpose
 
@@ -33,38 +39,38 @@ Tüm örnekler [Research Packet](../../research/lesson-02/research-packet.md)
 
 ## Content
 
-### Simple Examples
+### Basit Örnekler
 
 İki değerden büyüğünü seçen algoritmanın girdileri iki karşılaştırılabilir
 değer, çıktısı bu değerlerden büyük olanıdır. Eşitlik durumunun çıktısı da
 sözleşmede belirtilmelidir.
 
-### Real World Examples
+### Gerçek Hayat Örnekleri
 
 ATM para çekme algoritması, tutarı yalnız geçerli kart ve yeterli bakiye
 koşullarında işler. Başarılı işlem kadar reddedilen işlemin çıktısı ve bakiyenin
 değişmeden kalması da sözleşmenin parçasıdır.
 
-### Wrong Examples
+### Yanlış Örnekler
 
 “Listedeki değeri bulana kadar kontrol etmeye devam et.” Bu açıklama, değer
 listede yoksa çıkış yolu sunmaz. “Yeterli olana kadar tekrarla” ifadesi de
 ölçülebilir bir koşul içermediği için uygulanabilir değildir.
 
-### Correct Examples
+### Doğru Örnekler
 
 Boş olmayan bir listede en büyük değeri bulmak için ilk değer aday seçilir,
 kalan her değer adayla karşılaştırılır ve daha büyükse aday güncellenir. Liste
 bittiğinde aday döndürülür. Boş olmama ön koşulu ve liste sonundaki çıkış,
 yöntemin uygulanma alanını ve sonlanmasını açıklar.
 
-### Explanations
+### Açıklamalar
 
 Yanlış örneklerde sorun kullanılan kelime sayısı değil, geçerli girdi alanı ve
 çıkış koşulunun eksikliğidir. Doğru örnek, yöntemin hangi durumda başladığını,
 her adımda nasıl ilerlediğini ve ne zaman sonuç verdiğini açıklar.
 
-### Learning Notes
+### Öğrenme Notları
 
 - Her örnekte sözleşmeyi adımlardan önce belirleyin.
 - Bir normal, bir sınır ve bir geçersiz girdi seçin.

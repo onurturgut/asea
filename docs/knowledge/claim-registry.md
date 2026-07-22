@@ -3,7 +3,7 @@ document_type: "supporting-document"
 supporting_document_id: "ASEA-SD-IDX-018"
 supporting_document_type: "Index"
 title: "Volume 01 Canonical Claim Registry"
-version: "1.0.0"
+version: "1.0.1"
 status: "Draft"
 scope_id: "V01"
 authority: "Derived"
@@ -43,7 +43,7 @@ Concept Registry, Knowledge Graph, Evidence Registry, or curriculum.
 - **Evidence authority:** [`knowledge/registry/evidence/`](../../knowledge/registry/evidence/).
 - **Curriculum traceability authority:** [Assessment](../01-programming/assessment.md).
 - **Registry owner:** Knowledge Architect.
-- **Generated:** 2026-07-18.
+- **Generated:** 2026-07-22.
 
 ## Content
 
@@ -161,10 +161,10 @@ Statement Type is a descriptive registry profile. The atomic schema retains
 | Claim ID | Concept | Outcomes | Chapter | Assessment | Module | Evidence | Sources |
 | --- | --- | --- | --- | --- | --- | --- | --- |
 | `ASEA-CLM-000001` | `ASEA-CON-000006` | `V01-LO003`, `V01-LO004` | `V01-C02` | `V01-C02-AS01` | `V01-M01` | `ASEA-EV-000001`, `ASEA-EV-000003` | `ASEA-SRC-000001`, `ASEA-SRC-000005` |
-| `ASEA-CLM-000002` | `ASEA-CON-000001` | `V01-LO003`, `V01-LO004` | `V01-C02` | `V01-C02-AS01` | `V01-M01` | `ASEA-EV-000002` | `ASEA-SRC-000002` |
-| `ASEA-CLM-000003` | `ASEA-CON-000002` | `V01-LO003`, `V01-LO004` | `V01-C02` | `V01-C02-AS01` | `V01-M01` | `ASEA-EV-000005` | `ASEA-SRC-000007` |
-| `ASEA-CLM-000004` | `ASEA-CON-000003` | `V01-LO003`, `V01-LO004` | `V01-C02` | `V01-C02-AS01` | `V01-M01` | `ASEA-EV-000001`, `ASEA-EV-000006` | `ASEA-SRC-000001`, `ASEA-SRC-000008` |
-| `ASEA-CLM-000005` | `ASEA-CON-000004` | `V01-LO003`, `V01-LO004` | `V01-C02` | `V01-C02-AS01` | `V01-M01` | `ASEA-EV-000007` | `ASEA-SRC-000008` |
+| `ASEA-CLM-000002` | `ASEA-CON-000001` | `V01-LO003` | `V01-C02` | `V01-C02-AS01` | `V01-M01` | `ASEA-EV-000002` | `ASEA-SRC-000002` |
+| `ASEA-CLM-000003` | `ASEA-CON-000002` | `V01-LO003` | `V01-C02` | `V01-C02-AS01` | `V01-M01` | `ASEA-EV-000005` | `ASEA-SRC-000007` |
+| `ASEA-CLM-000004` | `ASEA-CON-000003` | `V01-LO004` | `V01-C02` | `V01-C02-AS01` | `V01-M01` | `ASEA-EV-000001`, `ASEA-EV-000006` | `ASEA-SRC-000001`, `ASEA-SRC-000008` |
+| `ASEA-CLM-000005` | `ASEA-CON-000004` | `V01-LO004` | `V01-C02` | `V01-C02-AS01` | `V01-M01` | `ASEA-EV-000007` | `ASEA-SRC-000008` |
 | `ASEA-CLM-000006` | `ASEA-CON-000005` | `V01-LO003`, `V01-LO004` | `V01-C02` | `V01-C02-AS01` | `V01-M01` | `ASEA-EV-000004`, `ASEA-EV-000008` | `ASEA-SRC-000006`, `ASEA-SRC-000008` |
 | `ASEA-CLM-000007` | `ASEA-CON-000007` | `V01-LO001`, `V01-LO002` | `V01-C01` | `V01-C01-AS01` | `V01-M01` | `ASEA-EV-000009` | `ASEA-SRC-000001` |
 | `ASEA-CLM-000008` | `ASEA-CON-000008` | `V01-LO001`, `V01-LO002` | `V01-C01` | `V01-C01-AS01` | `V01-M01` | `ASEA-EV-000009` | `ASEA-SRC-000001` |

@@ -16,7 +16,12 @@ x-production-unit: "lesson-03"
 x-content-language: "tr-TR"
 ---
 
-# Problem Çözme Yaklaşımı — Örnekler
+# Problem Çözme (Problem Solving) Yaklaşımı — Örnekler
+
+**Terminoloji standardı:** Problem tanımı (Problem Statement), gereksinim
+(Requirement), kabul ölçütü (Acceptance Criterion), kısıt (Constraint), varsayım
+(Assumption), sınır durum (Edge Case), parçalama (Decomposition) ve soyutlama
+(Abstraction). Sonraki kullanımlar Türkçedir.
 
 ## Purpose
 
@@ -33,38 +38,38 @@ Tüm örnekler [Research Packet](../../research/lesson-03/research-packet.md)
 
 ## Content
 
-### Simple Examples
+### Basit Örnekler
 
 “Dosya yüklenmiyor” bir belirtidir. Problem tanımı; etkilenen kullanıcıyı,
 desteklenen dosya türünü, boyut sınırını, beklenen sonucu ve başarısızlık
 mesajını açıklar. “Yeni yükleme kütüphanesi kullanmak” ise çözüm fikridir.
 
-### Real World Examples
+### Gerçek Hayat Örnekleri
 
 Randevu sistemi; kullanıcı, tarih ve saat dilimini girdi alır. Çalışma saatleri
 ve çakışmama kuralı kısıttır. Kullanıcının saat diliminin bilindiği kabulü bir
 varsayımdır. İlk ve son müsait saat sınır durumdur.
 
-### Wrong Examples
+### Yanlış Örnekler
 
 “Not uygulamasını daha modern, hızlı ve kolay yap.” Bu ifade paydaşı, ölçülebilir
 başarıyı, girdiyi, çıktıyı ve kısıtları belirtmez. Çözümün doğrulanacağı bir
 sözleşme sunmaz.
 
-### Correct Examples
+### Doğru Örnekler
 
 Toplu taşıma gecikme problemi; belirli hattı kullanan yolcuya, eşik üzerindeki
 gecikmeyi, yolculuk başlamadan önce seçilen kanaldan bildirmeyi hedefler.
 Gecikme verisi girdi, zamanında gönderilen bildirim çıktıdır. Kanal erişimi
 varsayım olarak kaydedilir ve kanıtla doğrulanır.
 
-### Explanations
+### Açıklamalar
 
 Doğru örnek çözümü dikte etmez; ihtiyacın hangi koşullarda karşılandığını
 gözlenebilir yapar. Gereksinim, kısıt ve varsayımı ayırmak, zorunlu sınırlarla
 henüz doğrulanmamış kabullerin birbirine karışmasını engeller.
 
-### Learning Notes
+### Öğrenme Notları
 
 - Her örnekte paydaşı ve başarı ölçütünü önce yazın.
 - Sınır durum ile geçersiz girdiyi ayrı işaretleyin.

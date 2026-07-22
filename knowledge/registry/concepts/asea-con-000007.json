@@ -1,0 +1,62 @@
+{
+  "id": "ASEA-CON-000007",
+  "record_type": "concept",
+  "version": "0.1.0",
+  "workflow_state": "Candidate",
+  "title": "Program",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-22",
+  "supersedes": [],
+  "tags": [
+    "chapter-01",
+    "programming-foundations"
+  ],
+  "definition": "A program is a finite representation of instructions and data intended to produce defined behavior when executed by a compatible computing system.",
+  "purpose": "Separate a program representation from an informal wish and from the running process that executes it.",
+  "history": "Stored-program computing made instructions representable data; this record keeps only the technology-neutral curriculum boundary.",
+  "mental_model": "A program is an inspectable instruction-and-data contract waiting for a compatible execution environment.",
+  "analogy": "A written score can guide a performance, but the score is not the performance and cannot act without performers and an environment.",
+  "terminology": [
+    "program",
+    "instruction representation",
+    "program data",
+    "defined behavior"
+  ],
+  "relationships": [
+    "represented-by instructions and data",
+    "executed-by compatible computing system",
+    "produces defined behavior"
+  ],
+  "prerequisite_ids": [],
+  "real_world_usage": [
+    "Distinguishing source artifacts from running behavior",
+    "Explaining why compatibility and execution environment matter"
+  ],
+  "common_mistakes": [
+    "Calling any vague goal a program",
+    "Treating the program file as the running process"
+  ],
+  "industry_notes": "Repositories, builds, deployments, and processes must preserve which program representation is being executed.",
+  "ai_notes": "AI-generated text becomes a program only when it forms a valid representation whose behavior can be executed and verified.",
+  "interview_notes": "Ask the candidate to distinguish a program, source representation, process, and output.",
+  "exercise_candidates": [
+    "Classify examples as program, running process, input, or output"
+  ],
+  "lab_candidates": [
+    "Represent a small everyday procedure as explicit instructions and data"
+  ],
+  "project_candidates": [
+    "Define the instruction set for a tiny simulator"
+  ],
+  "claim_ids": [
+    "ASEA-CLM-000007"
+  ],
+  "learning_outcome_ids": [
+    "V01-LO001",
+    "V01-LO002"
+  ],
+  "difficulty": "Beginner",
+  "knowledge_area": "Programming Foundations"
+}
+

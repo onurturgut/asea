@@ -1,0 +1,64 @@
+{
+  "id": "ASEA-CON-000009",
+  "record_type": "concept",
+  "version": "0.1.0",
+  "workflow_state": "Candidate",
+  "title": "Instruction",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-22",
+  "supersedes": [],
+  "tags": [
+    "chapter-01",
+    "programming-foundations"
+  ],
+  "definition": "An instruction is an explicitly represented operation whose permitted effect is defined by an execution model.",
+  "purpose": "Establish the smallest inspectable operation used in program and algorithm reasoning.",
+  "history": "Instruction representations differ across human procedures, programming languages, virtual machines, and processors; the shared curriculum idea is explicit operation and defined effect.",
+  "mental_model": "An instruction names one operation and the state transition it is allowed to cause.",
+  "analogy": "A precise board-game move has permitted effects under game rules; unlike a human player, a machine must not infer an unstated move.",
+  "terminology": [
+    "instruction",
+    "operation",
+    "effect",
+    "execution model"
+  ],
+  "relationships": [
+    "part-of program",
+    "changes state",
+    "interpreted-by execution model"
+  ],
+  "prerequisite_ids": [
+    "ASEA-CON-000007"
+  ],
+  "real_world_usage": [
+    "Tracing program behavior step by step",
+    "Reviewing whether an operation has a defined effect"
+  ],
+  "common_mistakes": [
+    "Writing several ambiguous actions as one instruction",
+    "Assuming machines infer missing intent"
+  ],
+  "industry_notes": "Precise operations improve reviewability, test derivation, and failure isolation.",
+  "ai_notes": "AI-produced steps must still be checked for ambiguity, ordering, and permitted effects.",
+  "interview_notes": "Ask the candidate to turn an ambiguous action into explicit ordered instructions.",
+  "exercise_candidates": [
+    "Rewrite ambiguous everyday steps as explicit operations"
+  ],
+  "lab_candidates": [
+    "Trace the effects of a small instruction sequence"
+  ],
+  "project_candidates": [
+    "Create instruction cards for a simulator"
+  ],
+  "claim_ids": [
+    "ASEA-CLM-000009"
+  ],
+  "learning_outcome_ids": [
+    "V01-LO001",
+    "V01-LO002"
+  ],
+  "difficulty": "Beginner",
+  "knowledge_area": "Programming Foundations"
+}
+

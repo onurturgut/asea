@@ -1,12 +1,12 @@
 {
   "id": "ASEA-CON-000001",
   "record_type": "concept",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "workflow_state": "Approved",
   "title": "Source Code and Running Program",
   "owner_role": "Knowledge Architect",
   "created_on": "2026-07-17",
-  "updated_on": "2026-07-17",
+  "updated_on": "2026-07-22",
   "supersedes": [],
   "tags": ["chapter-01", "chapter-02", "runtime"],
   "definition": "Source code is a human-authored program representation; a running program is the dynamic execution of a translated or interpreted representation within an execution environment.",
@@ -26,7 +26,7 @@
   "lab_candidates": ["Compare a source edit before and after restarting a running process"],
   "project_candidates": ["Annotate the stages of a tiny instruction simulator"],
   "claim_ids": ["ASEA-CLM-000002"],
-  "learning_outcome_ids": ["V01-LO004"],
+  "learning_outcome_ids": ["V01-LO003"],
   "difficulty": "Beginner",
   "knowledge_area": "Programming Foundations"
 }

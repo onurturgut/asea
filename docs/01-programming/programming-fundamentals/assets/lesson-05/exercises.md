@@ -18,7 +18,12 @@ x-production-unit: "lesson-05"
 x-content-language: "tr-TR"
 ---
 
-# Flowchart — Egzersizler
+# Akış Şeması (Flowchart) — Egzersizler
+
+**Terminoloji standardı:** düğüm (Node), yönlü kenar (Directed Edge),
+başlangıç/bitiş (Terminal), işlem (Process), karar (Decision), dal (Branch),
+birleşme (Merge), döngü (Loop) ve sonlanma yolu (Termination Path). Sonraki
+kullanımlar Türkçedir.
 
 ## Purpose
 
@@ -36,58 +41,58 @@ Her egzersiz kanonik Learning Outcome ile eşlenmiştir.
 
 ### Isınma Soruları
 
-1. Terminal, işlem, karar ve girdi/çıktı rollerini ayır.
+1. Başlangıç/bitiş, işlem, karar ve girdi/çıktı rollerini ayır.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 2. Yönlü kenarın neden gerekli olduğunu açıkla.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 ### Kavram Pekiştirme
 
 1. Etiketsiz bir karar dalındaki belirsizliği belirle.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 2. Bir döngüde ilerleme, geri dönüş ve çıkış öğelerini işaretle.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 ### Gerçek Hayat Problemleri
 
 1. Yaşa göre erişim kararını bütün yollarıyla tasarla.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 2. Sınırlı giriş denemesinin başarılı ve kilitli bitişlerini göster.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 ### Challenge Soruları
 
 1. Sonlanma yolu eksik bir şemayı düzelt.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 2. Bir sözde kod ile akış şemasının eşdeğerliğini yol yol incele.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 ### Reflection Soruları
 
 1. Büyük bir şema ne zaman parçalama sinyali verir?
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 2. Söz dizimi geçerli bir çizim neden teknik olarak yanlış olabilir?
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 ## Validation
 
-- Exercise Coverage: 10/10.
-- Learning Outcome Mapping: `V01-LO006`.
+- Egzersiz kapsamı: 10/10.
+- Öğrenme çıktısı eşlemesi: `V01-LO006`.
 - Cevabı doğrudan veren görev: 0.
 
 ## References

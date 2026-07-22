@@ -1,0 +1,74 @@
+{
+  "id": "V01-C06-CPP-001",
+  "record_type": "production-packet",
+  "version": "0.1.0",
+  "workflow_state": "Ready for Draft Production",
+  "title": "V01-C06 Variables and State Production Packet",
+  "owner_role": "Learning Designer",
+  "created_on": "2026-07-22",
+  "updated_on": "2026-07-22",
+  "supersedes": [],
+  "tags": ["volume-01", "chapter-06", "content-production"],
+  "chapter_id": "V01-C06",
+  "chapter_version": "0.1.0",
+  "blueprint_id": "V01-C06-BP01",
+  "learning_outcome_ids": ["V01-LO009", "V01-LO010"],
+  "prerequisite_ids": ["V01-C05"],
+  "source_ids": ["ASEA-SRC-000001", "ASEA-SRC-000003"],
+  "evidence_ids": ["ASEA-EV-000009", "ASEA-EV-000012"],
+  "claim_ids": ["ASEA-CLM-000024", "ASEA-CLM-000025"],
+  "concept_ids": ["ASEA-CON-000024", "ASEA-CON-000025"],
+  "graph_version": "1.0.1",
+  "required_components": [
+    "Curiosity Hook", "Prior Knowledge Retrieval", "Name Binding Value Model",
+    "Declaration Initialization Assignment Reassignment", "State and State Transition",
+    "State Table", "JavaScript let const and var", "Temporal Dead Zone Orientation",
+    "Constant Binding Versus Value Immutability", "Object Identity and Mutation Orientation",
+    "Naming", "Lifetime Intuition", "Account State Worked Example", "Mutation Reduction",
+    "AI Output Audit", "Engineering Perspective", "Reflection", "Summary", "References"
+  ],
+  "required_asset_types": [
+    "Markdown", "JavaScript", "Mermaid", "Binding table", "State transition table",
+    "Mutation decision matrix", "Hands-on exercise", "Assessment rubric"
+  ],
+  "assessment_alignment": [
+    {
+      "outcome_id": "V01-LO009",
+      "concept_ids": ["ASEA-CON-000024"],
+      "practice_artifact_ids": ["V01-C06-EX01", "V01-C06-L01"],
+      "assessment_id": "V01-C06-AS01",
+      "acceptance_evidence": "A complete state table showing every relevant binding before and after each assignment, including operation, previous value, new value, and invariant status."
+    },
+    {
+      "outcome_id": "V01-LO010",
+      "concept_ids": ["ASEA-CON-000024", "ASEA-CON-000025"],
+      "practice_artifact_ids": ["V01-C06-EX01", "V01-C06-L01", "V01-C06-CH01"],
+      "assessment_id": "V01-C06-AS01",
+      "acceptance_evidence": "A binding decision table that justifies const or mutable state from actual transition needs and identifies reassignment versus object mutation."
+    }
+  ],
+  "accessibility_requirements": [
+    "Every state diagram has an ordered text alternative.",
+    "State tables use descriptive headers and do not rely on color.",
+    "Animations have static and reduced-motion alternatives.",
+    "Turkish technical terms include English at first meaningful use.",
+    "Code has Turkish comments and explicit expected output.",
+    "Learner instructions have measurable deliverables and time boxes."
+  ],
+  "known_risks": [
+    "Learners may use the box analogy as a literal memory model.",
+    "Assignment may be confused with mathematical equality.",
+    "const may be mistaken for deep immutability.",
+    "var, let, and const differences may overload the state-learning goal.",
+    "Scope and closure detail may leak from V01-C15.",
+    "AI may remove or add mutation without preserving behavior.",
+    "Student pilot is deferred by Repository Owner until later production."
+  ],
+  "exclusions": [
+    "Full scope and shadowing", "Closures", "Detailed garbage collection",
+    "Engine-specific memory layout", "Destructuring", "Modules and imports",
+    "Detailed operator precedence", "Stable publication approval"
+  ],
+  "review_owners": ["Repository Owner"],
+  "production_decision": "Authorized"
+}

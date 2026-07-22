@@ -1,0 +1,65 @@
+{
+  "id": "ASEA-CON-000008",
+  "record_type": "concept",
+  "version": "0.1.0",
+  "workflow_state": "Candidate",
+  "title": "Programming",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-22",
+  "supersedes": [],
+  "tags": [
+    "chapter-01",
+    "programming-foundations"
+  ],
+  "definition": "Programming is the engineering activity of specifying, implementing, verifying, and maintaining executable solutions to defined problems.",
+  "purpose": "Prevent programming from being reduced to typing syntax or accepting generated code.",
+  "history": "Programming practice expanded from direct machine instruction entry to specification, implementation, verification, maintenance, and team delivery.",
+  "mental_model": "Programming is a feedback loop from problem contract to implementation evidence and maintained behavior.",
+  "analogy": "Constructing a bridge includes requirements, design, construction, inspection, and maintenance; the analogy stops where software can be copied and changed differently from physical structures.",
+  "terminology": [
+    "programming",
+    "specification",
+    "implementation",
+    "verification",
+    "maintenance"
+  ],
+  "relationships": [
+    "creates programs",
+    "depends-on defined problem",
+    "requires verification and maintenance"
+  ],
+  "prerequisite_ids": [
+    "ASEA-CON-000007"
+  ],
+  "real_world_usage": [
+    "Turning a ticket into reviewed code and tests",
+    "Maintaining behavior as requirements change"
+  ],
+  "common_mistakes": [
+    "Equating programming with syntax entry",
+    "Treating generated code as completed engineering work"
+  ],
+  "industry_notes": "Professional programming includes review, testing, version control, deployment evidence, and change management.",
+  "ai_notes": "AI can assist implementation, but the engineer retains responsibility for specification, verification, security, and maintenance.",
+  "interview_notes": "Ask how the candidate would move from an ambiguous ticket to a verified change.",
+  "exercise_candidates": [
+    "Label specification, implementation, verification, and maintenance activities"
+  ],
+  "lab_candidates": [
+    "Convert a bounded process into an inspectable programmed solution plan"
+  ],
+  "project_candidates": [
+    "Maintain a traceable change log for a tiny simulator"
+  ],
+  "claim_ids": [
+    "ASEA-CLM-000008"
+  ],
+  "learning_outcome_ids": [
+    "V01-LO001",
+    "V01-LO002"
+  ],
+  "difficulty": "Beginner",
+  "knowledge_area": "Programming Foundations"
+}
+

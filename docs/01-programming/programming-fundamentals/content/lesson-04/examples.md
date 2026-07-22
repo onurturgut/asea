@@ -16,7 +16,12 @@ x-production-unit: "lesson-04"
 x-content-language: "tr-TR"
 ---
 
-# Pseudocode — Örnekler
+# Sözde Kod (Pseudocode) — Örnekler
+
+**Terminoloji standardı:** anahtar sözcük (Keyword), atama (Assignment), koşul
+(Condition), seçim (Selection), yineleme (Iteration), yordam (Procedure), dönüş
+(Return), elle izleme (Dry Run) ve izleme tablosu (Trace Table). Sonraki
+kullanımlar Türkçedir.
 
 ## Purpose
 
@@ -33,7 +38,7 @@ doğrulanmış önerilerden türetilmiştir.
 
 ## Content
 
-### Simple Examples
+### Basit Örnekler
 
 ```pseudocode
 INPUT birinci, ikinci
@@ -46,7 +51,7 @@ END IF
 
 Bu örnekte girdi, iki olası dal ve tek çıktı açıkça görünür.
 
-### Real World Examples
+### Gerçek Hayat Örnekleri
 
 ```pseudocode
 SET deneme TO 0
@@ -63,7 +68,7 @@ OUTPUT "Deneme sınırı doldu"
 
 Deneme sayısının artması ilerlemeyi, `deneme < 3` koşulu sonlanmayı gösterir.
 
-### Wrong Examples
+### Yanlış Örnekler
 
 ```pseudocode
 IF puan geçerliyse
@@ -75,7 +80,7 @@ ELSE
 
 Blok sonları bulunmadığı için `ELSE` dalının hangi koşula ait olduğu belirsizdir.
 
-### Correct Examples
+### Doğru Örnekler
 
 ```pseudocode
 IF puan geçerliyse
@@ -91,13 +96,13 @@ END IF
 
 Açık son işaretleri ve girinti, her dalın sahipliğini gösterir.
 
-### Explanations
+### Açıklamalar
 
 Sözde kodun amacı belirli bir dilin sözdizimini taklit etmek değil, kontrol
 akışını tartışmasız kılmaktır. PIN örneğinde sayaç artmasaydı döngünün çıkış
 koşuluna ilerlediği gösterilemezdi.
 
-### Learning Notes
+### Öğrenme Notları
 
 - Her örneği en az normal ve sınır girdisiyle elle izleyin.
 - Atama ile karşılaştırmayı aynı gösterimle yazmayın.

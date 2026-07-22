@@ -1,0 +1,74 @@
+{
+  "id": "V01-C05-CPP-001",
+  "record_type": "production-packet",
+  "version": "0.1.0",
+  "workflow_state": "Ready for Draft Production",
+  "title": "V01-C05 Values and Data Types Production Packet",
+  "owner_role": "Learning Designer",
+  "created_on": "2026-07-22",
+  "updated_on": "2026-07-22",
+  "supersedes": [],
+  "tags": ["volume-01", "chapter-05", "content-production"],
+  "chapter_id": "V01-C05",
+  "chapter_version": "0.1.0",
+  "blueprint_id": "V01-C05-BP01",
+  "learning_outcome_ids": ["V01-LO007", "V01-LO008"],
+  "prerequisite_ids": ["V01-C02", "V01-C04"],
+  "source_ids": ["ASEA-SRC-000001"],
+  "evidence_ids": ["ASEA-EV-000009", "ASEA-EV-000012"],
+  "claim_ids": ["ASEA-CLM-000020", "ASEA-CLM-000021", "ASEA-CLM-000022", "ASEA-CLM-000023"],
+  "concept_ids": ["ASEA-CON-000020", "ASEA-CON-000021", "ASEA-CON-000022", "ASEA-CON-000023"],
+  "graph_version": "1.0.1",
+  "required_components": [
+    "Curiosity Hook", "Prior Knowledge Retrieval", "Value Type Literal Representation Model",
+    "Primitive and Composite Boundary", "Number and Precision", "Text and Unicode Orientation",
+    "Boolean", "Absence", "Explicit and Implicit Conversion", "Meaning Loss",
+    "Precision Loss", "Data Dictionary", "Boundary Validation", "Worked Import Example",
+    "Guided Classification", "Independent Conversion Audit", "AI Output Audit",
+    "Engineering Perspective", "Reflection", "Summary", "References"
+  ],
+  "required_asset_types": [
+    "Markdown", "JavaScript", "Mermaid", "Concept comparison table", "Data dictionary",
+    "Conversion matrix", "Boundary test matrix", "Hands-on exercise", "Assessment rubric"
+  ],
+  "assessment_alignment": [
+    {
+      "outcome_id": "V01-LO007",
+      "concept_ids": ["ASEA-CON-000020", "ASEA-CON-000021", "ASEA-CON-000022"],
+      "practice_artifact_ids": ["V01-C05-EX01", "V01-C05-L01"],
+      "assessment_id": "V01-C05-AS01",
+      "acceptance_evidence": "At least ten values classified by domain meaning, runtime type, representation, valid operations, absence policy, and justified exceptions."
+    },
+    {
+      "outcome_id": "V01-LO008",
+      "concept_ids": ["ASEA-CON-000022", "ASEA-CON-000023"],
+      "practice_artifact_ids": ["V01-C05-EX01", "V01-C05-L01", "V01-C05-CH01"],
+      "assessment_id": "V01-C05-AS01",
+      "acceptance_evidence": "A conversion matrix that identifies precision or meaning loss for normal, boundary, invalid, and ambiguous inputs and defines accept, reject, or preserve-raw decisions."
+    }
+  ],
+  "accessibility_requirements": [
+    "Every diagram has an ordered text alternative.",
+    "Tables use descriptive headers and do not rely on color.",
+    "Animations have static and reduced-motion alternatives.",
+    "Turkish technical terms include English at first meaningful use.",
+    "Code has Turkish comments and explicit expected output.",
+    "Learner instructions have measurable deliverables and time boxes."
+  ],
+  "known_risks": [
+    "Learners may classify digit-shaped identifiers as numbers.",
+    "JavaScript-specific behavior may be overgeneralized to all languages.",
+    "Explicit conversion may be mistaken for safe conversion.",
+    "NaN, null, undefined, zero, false, and empty text may be conflated.",
+    "Floating-point and Unicode detail may overload a beginner.",
+    "AI may infer domain types without validated requirements.",
+    "Student pilot is deferred by Repository Owner until later production."
+  ],
+  "exclusions": [
+    "Variable binding and reassignment", "Detailed operator semantics", "Full I/O pipeline",
+    "Static type-system theory", "Composite data structure implementation",
+    "Full Unicode processing", "Database type design", "Stable publication approval"
+  ],
+  "review_owners": ["Repository Owner"],
+  "production_decision": "Authorized"
+}

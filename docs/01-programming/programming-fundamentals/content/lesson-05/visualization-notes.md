@@ -16,7 +16,12 @@ x-production-unit: "lesson-05"
 x-content-language: "tr-TR"
 ---
 
-# Flowchart — Görselleştirme Notları
+# Akış Şeması (Flowchart) — Görselleştirme Notları
+
+**Terminoloji standardı:** düğüm (Node), yönlü kenar (Directed Edge),
+başlangıç/bitiş (Terminal), işlem (Process), karar (Decision), dal (Branch),
+birleşme (Merge), döngü (Loop) ve sonlanma yolu (Termination Path). Sonraki
+kullanımlar Türkçedir.
 
 ## Purpose
 
@@ -33,33 +38,33 @@ sınırlıdır.
 
 ## Content
 
-### Diagram Suggestions
+### Diyagram Önerileri
 
 Temel sembol açıklama tablosu; etiketli/etiketsiz karar karşılaştırması; döngü
 anatomisi; sözde kod ile düğüm eşleme görünümü hazırlanmalıdır.
 
-### Animation Suggestions
+### Animasyon Önerileri
 
 Seçilen bir girdinin başlangıçtan bitişe izlediği yol sırayla vurgulanmalı;
 seçilmeyen dallar soluk gösterilmelidir. Döngü turunda ilerleyen değer görünür
 olmalıdır.
 
-### Timeline Suggestions
+### Zaman Çizelgesi Önerileri
 
 Şema üretimi; sözleşme, doğrusal akış, karar dalları, döngü, sonlanma yolları ve
 görsel inceleme aşamalarıyla gösterilmelidir.
 
-### Concept Graph Suggestions
+### Kavram Grafiği Önerileri
 
 Akış şeması merkezde; terminal, işlem, karar, girdi/çıktı, dal, birleşme, döngü,
 sonlanma yolu ve görsel inceleme düğümleriyle bağlanmalıdır.
 
-### UI Suggestions
+### Kullanıcı Arayüzü Önerileri
 
 Sol panelde sembol paleti anlamlarıyla, orta alanda şema, sağ panelde seçili
 girdinin yol listesi bulunmalıdır. Dal etiketi eksikliği görünür uyarı olmalıdır.
 
-### Interactive Suggestions
+### Etkileşimli Öneriler
 
 Öğrenci bir girdi seçip düğüm düğüm ilerleyebilmeli; araç koşul sonucunu,
 seçilen kenarı ve bitişe ulaşılıp ulaşılmadığını göstermelidir.

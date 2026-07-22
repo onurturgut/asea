@@ -18,7 +18,12 @@ x-production-unit: "lesson-04"
 x-content-language: "tr-TR"
 ---
 
-# Pseudocode — Egzersizler
+# Sözde Kod (Pseudocode) — Egzersizler
+
+**Terminoloji standardı:** anahtar sözcük (Keyword), atama (Assignment), koşul
+(Condition), seçim (Selection), yineleme (Iteration), yordam (Procedure), dönüş
+(Return), elle izleme (Dry Run) ve izleme tablosu (Trace Table). Sonraki
+kullanımlar Türkçedir.
 
 ## Purpose
 
@@ -38,56 +43,56 @@ Her egzersiz kanonik Learning Outcome ile eşlenmiştir.
 
 1. Sözde kod ile çalıştırılabilir kod arasındaki farkı açıkla.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 2. INPUT, OUTPUT ve SET rollerini ayır.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 ### Kavram Pekiştirme
 
 1. İki değerin büyüğünü seçen açık bloklu sözde kodu incele.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 2. Atama ile eşitlik kullanımını iki örnekle karşılaştır.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 ### Gerçek Hayat Problemleri
 
 1. Koleksiyon toplamını sıra ve yinelemeyle sözde kod olarak ifade et.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 2. Sınırlı PIN denemesinde ilerleme ve çıkışı görünür kıl.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 ### Challenge Soruları
 
 1. İç içe koşullarda belirsiz ELSE sahipliğini açık bloklarla düzelt.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 2. Bir döngünün sonlanmadığı girdiyi bul ve ilerleme adımı öner.
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 ### Reflection Soruları
 
 1. Uygulama ayrıntısı hangi noktada algoritma mantığını gölgeler?
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 2. Okunabilir sözde kod neden tek başına doğruluk kanıtı değildir?
 
-   - **Learning Outcome Mapping:** `V01-LO006`
+   - **Öğrenme Çıktısı Eşlemesi:** `V01-LO006`
 
 ## Validation
 
-- Exercise Coverage: 10/10.
-- Learning Outcome Mapping: `V01-LO006`.
+- Egzersiz kapsamı: 10/10.
+- Öğrenme çıktısı eşlemesi: `V01-LO006`.
 - Cevabı doğrudan veren görev: 0.
 
 ## References

@@ -1,0 +1,181 @@
+ASEA — SONRASINDA YAPILACAKLAR
+
+Kayıt tarihi: 2026-07-22
+İlgili bölüm: V01-C02 — Bilgisayarlar Programları Nasıl Çalıştırır?
+Durum: Tasarım ve web geliştirme aşamasına ertelendi
+
+AMAÇ
+
+C02 ana dersinin mevcut anlatım omurgasını koruyarak dersi profesyonel,
+görsel, erişilebilir ve etkileşimli bir öğrenme deneyimine dönüştürmek.
+
+GÖRSEL GELİŞTİRMELER
+
+1. Kaynak kod → derleyici/yorumlayıcı → makine talimatları → CPU akış
+   diyagramını tasarlamak.
+2. CPU, RAM, yazmaçlar ve program sayacı arasındaki ilişkiyi gösteren bir
+   sistem şeması hazırlamak.
+3. Getir → çözümle → yürüt döngüsünü açıklayan adımlı animasyon oluşturmak.
+4. Derleme ve yorumlama yollarını karşılaştıran bir infografik hazırlamak.
+5. Doğru ve hatalı zihinsel modelleri karşılaştıran görseller üretmek.
+6. Mermaid diyagramlarını profesyonel ve ölçeklenebilir SVG görsellere
+   dönüştürmek.
+7. Laboratuvar adımlarını destekleyen ekran ve süreç görselleri hazırlamak.
+8. Quizlere görsel durum izleme ve yürütme soruları eklemek.
+
+ETKİLEŞİMLİ ÖĞRENME
+
+1. Her komut çalıştığında program sayacı, yazmaçlar, bellek ve çıktının nasıl
+   değiştiğini gösteren etkileşimli bir durum izleyici geliştirmek.
+2. Öğrencinin yürütme adımını tahmin edip sonucu karşılaştırabileceği bir
+   simülasyon hazırlamak.
+3. Yanlış adımı ve ilk durum sapmasını işaretleyen hata ayıklama etkinliği
+   oluşturmak.
+4. AI Mentörün doğrudan cevap vermeden ipucu sunacağı bağlamsal yardım
+   noktalarını tasarlamak.
+
+WEB VE YAYIN
+
+1. Görselleri masaüstü, tablet ve mobil ekranlara uyumlu hazırlamak.
+2. Quiz cevap anahtarını öğrenci denemesini teslim etmeden önce web
+   arayüzünde göstermemek.
+3. Cevap anahtarını yalnızca yetkili değerlendirme akışı üzerinden sunmak.
+4. Etkileşimli bileşenler için klavye kullanımı ve görünür odak desteği
+   sağlamak.
+5. Animasyonlara duraklatma ve azaltılmış hareket seçenekleri eklemek.
+6. Her görsel ve diyagram için anlamlı metin alternatifi hazırlamak.
+7. Bilgiyi yalnızca renk, hareket veya konumla aktarmamak.
+
+KALİTE KAPILARI
+
+1. Her görseli desteklediği learning outcome ile eşlemek.
+2. Teknik doğruluk incelemesi yapmak.
+3. Pedagojik ve erişilebilirlik incelemesi yapmak.
+4. Gerçek öğrencilerle görsel anlaşılabilirlik testi yapmak.
+5. Mobil ve masaüstü kullanılabilirlik testi yapmak.
+6. Yayın öncesinde performans, kırık bağlantı ve erişilebilirlik kontrollerini
+   çalıştırmak.
+
+ONAYLANAN UYGULAMA SIRASI
+
+1. C02 bağımsız teknik ve pedagojik incelemelerini tamamlamak.
+   Durum: İnceleme paketi hazır, gerçek incelemeci ataması bekleniyor.
+2. İnceleme sırasında bulunan sorunları düzeltmek ve yeniden doğrulamak.
+   Durum: Bağımsız inceleme sonuçlarını bekliyor.
+3. Başlangıç seviyesindeki gerçek öğrencilerle C02 pilotunu uygulamak.
+   Durum: Pilot başlatıldı. Uygulama rehberi, katılımcı rehberi ve veri kayıt
+   şeması hazırlandı. Beş ile sekiz gerçek başlangıç seviyesi katılımcının
+   kaydı ve oturumların uygulanması bekleniyor.
+4. Pilot sonuçlarına göre son düzenlemeleri yapmak.
+   Durum: Pilot verisini bekliyor.
+5. C02'yi ASEA'nın resmî referans chapter modeli olarak onaylamak.
+   Durum: Bağımsız inceleme ve pilot onayını bekliyor.
+6. C01'i onaylanan C02 kalite standardına yükseltmek.
+   Durum: Referans model onayını bekliyor.
+7. C03 ve sonraki chapter'ları onaylanan modelle sırayla üretmek.
+   Durum: C01 ve C02 referans çalışmalarını bekliyor.
+8. Web, görsel, animasyon ve etkileşimli öğrenme katmanını geliştirmek.
+   Durum: İçerik ve yayın mimarisi kapılarını bekliyor.
+
+DİL SADELEŞTİRME VE TERMİNOLOJİ DENETİMİ
+
+Kapsam: V01-C01–V01-C08 ve bundan sonra üretilecek bütün ASEA dersleri
+Durum: İçerik kalite ve toplu redaksiyon aşamasına ertelendi
+
+Amaç:
+
+Derslerin teknik doğruluğunu değiştirmeden, başlangıç seviyesindeki Türkçe
+konuşan öğrencilerin anlatımı kesintisiz takip edebilmesini sağlamak.
+
+Uygulanacak kurallar:
+
+1. Teknik terimi ilk anlamlı kullanımda Türkçe (English) biçiminde yazmak.
+2. Aynı terimin sonraki kullanımlarında yalnız Türkçe karşılığını kullanmak.
+3. raw input, pipeline, stage, contract, validation, failure, field, record,
+   consumer ve machine output gibi anlatım içine karışan İngilizce terimleri
+   doğal Türkçe karşılıklarla değiştirmek.
+4. Kod anahtar kelimelerini, API adlarını, dosya adlarını, komutları,
+   değişkenleri ve kanonik kimlikleri İngilizce bırakmak.
+5. Kod yorumlarını ve öğrenciye yönelik bütün açıklamaları Türkçe yazmak.
+6. Yerleşmiş karşılığı olmayan terimlerde anlamı bozmayan tutarlı bir Türkçe
+   açıklama kullanmak; aynı kavram için birden fazla karşılık üretmemek.
+7. C01–C08 üzerinde toplu terminoloji envanteri çıkarmak ve ortak ASEA
+   Türkçe Teknik Terimler Sözlüğü ile eşlemek.
+8. Dil düzenlemesi sırasında learning outcome, teknik iddia, kod davranışı,
+   kaynakça, dosya yolu ve kanonik kimlikleri değiştirmemek.
+9. Düzenleme sonrasında Markdown, bağlantı, terim tutarlılığı, öğrenme çıktısı
+   ve teknik doğruluk kontrollerini yeniden çalıştırmak.
+
+Öncelikli dönüşüm örnekleri:
+
+- raw input → ham girdi
+- pipeline → veri işleme hattı
+- stage → aşama
+- input contract → girdi sözleşmesi
+- parsing → ayrıştırma
+- validation → doğrulama
+- normalization → normalleştirme
+- transformation → dönüştürme
+- formatting → biçimlendirme
+- failure → başarısızlık
+- boundary case → sınır durumu
+- invalid case → geçersiz durum
+- field → alan
+- record → kayıt
+- machine output → makine tarafından işlenebilir çıktı
+
+Kalite koşulları:
+
+1. Teknik anlam ve öğrenme hedefleri korunmalı.
+2. Anlatım doğal Türkçe olmalı; yapay ve kelimesi kelimesine çeviriden
+   kaçınılmalı.
+3. Bir terimin Türkçe ve İngilizce karşılıkları bütün derslerde tutarlı olmalı.
+4. Öğrenci açıklamayı anlamak için İngilizce bilmek zorunda kalmamalı.
+5. Resmî kaynak isimleri ve kod öğeleri değiştirilmemeli.
+
+Uygulama zamanı:
+
+Akademi 01 derslerinin ana üretimi tamamlandıktan sonra, bağımsız eğitimsel
+inceleme ve web yayın hazırlığından önce toplu olarak uygulanacak. Bundan sonra
+üretilecek derslerde bu kurallar doğrudan yazım aşamasında uygulanacak.
+
+UYGULAMA ZAMANI
+
+Bu çalışmalar C02 bağımsız incelemesi ve öğrenci pilotu tamamlandıktan sonra,
+ASEA web tasarımı ve etkileşimli öğrenme altyapısı geliştirilirken uygulanacak.
+Web sitesinin henüz bulunmaması mevcut ders üretimini veya incelemeyi
+engellemez; yalnızca etkileşimli yayın ve cevap anahtarı güvenliği kapısını açık
+bırakır.
+
+TAKİP KURALI
+
+Sonradan yapılmasına karar verilen yeni işler bu dosyaya kapsamı, uygulanma
+aşaması ve kalite koşulları belirtilerek eklenecek. Tamamlanan maddeler silinmek
+yerine tamamlanma tarihiyle işaretlenecek.
+
+PİLOT UYGULAMA KAYDI
+
+Başlatılma tarihi: 2026-07-22
+Hedef katılımcı sayısı: 8
+Geçerli sonuç için alt sınır: 5 tamamlanmış katılımcı
+Katılımcı kodları: P01–P08
+Mevcut gerçek katılımcı sayısı: 0
+Mevcut tamamlanmış oturum sayısı: 0
+Sonuç durumu: Veri bekleniyor
+
+Hazır pilot bileşenleri:
+
+- Öğrenci pilot protokolü
+- Pilot kolaylaştırıcı uygulama rehberi
+- Pilot katılımcı rehberi
+- On yedi alanlı anonim sonuç veri şeması
+- Öğrenci katılım daveti
+
+Pilotun tamamlanması için yapılacaklar:
+
+1. Katılım davetini başlangıç seviyesindeki adaylara göndermek.
+2. Uygun adaylara P01–P08 anonim kodlarını atamak.
+3. Başlangıç ölçümü, ders, alıştırma, quiz, laboratuvar ve son ölçüm
+   oturumlarını uygulamak.
+4. Gerçek sonuçları pilot-results.csv dosyasına kaydetmek.
+5. En az beş geçerli tamamlanmış kayıttan sonra sonuç analizini başlatmak.

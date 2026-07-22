@@ -1,12 +1,12 @@
 {
   "id": "ASEA-CON-000002",
   "record_type": "concept",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "workflow_state": "Approved",
   "title": "Program Translation",
   "owner_role": "Knowledge Architect",
   "created_on": "2026-07-17",
-  "updated_on": "2026-07-17",
+  "updated_on": "2026-07-22",
   "supersedes": [],
   "tags": ["chapter-02", "compiler", "interpreter"],
   "definition": "Program translation is the implementation-dependent transformation or interpretation that connects source representation to executable behavior.",
@@ -26,7 +26,7 @@
   "lab_candidates": ["Inspect an implementation's intermediate or emitted representation without teaching compiler construction"],
   "project_candidates": ["Document the execution path selected for the instruction simulator"],
   "claim_ids": ["ASEA-CLM-000003"],
-  "learning_outcome_ids": ["V01-LO004"],
+  "learning_outcome_ids": ["V01-LO003"],
   "difficulty": "Beginner",
   "knowledge_area": "Programming Foundations"
 }

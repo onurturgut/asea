@@ -1,0 +1,64 @@
+{
+  "id": "ASEA-CON-000015",
+  "record_type": "concept",
+  "version": "0.1.0",
+  "workflow_state": "Candidate",
+  "title": "Problem Decomposition",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-22",
+  "supersedes": [],
+  "tags": [
+    "chapter-03",
+    "problem-solving"
+  ],
+  "definition": "Problem decomposition divides a bounded problem into smaller responsibilities whose inputs, outputs, and interactions can be reasoned about independently.",
+  "purpose": "Turn a bounded problem into reviewable responsibilities without losing coverage or dependencies.",
+  "history": "Decomposition and abstraction are foundational practices in computing, systems engineering, and software design.",
+  "mental_model": "A decomposition tree shows responsibility ownership, while a dependency graph shows what each responsibility needs from others.",
+  "analogy": "A team divides an event into venue, registration, safety, and communication responsibilities; the analogy fails if shared dependencies and feedback are hidden.",
+  "terminology": [
+    "problem decomposition",
+    "responsibility",
+    "subproblem",
+    "dependency",
+    "interface"
+  ],
+  "relationships": [
+    "depends-on problem definition",
+    "produces bounded subproblems",
+    "preserves interactions"
+  ],
+  "prerequisite_ids": [
+    "ASEA-CON-000012"
+  ],
+  "real_world_usage": [
+    "Breaking features into reviewable work",
+    "Locating responsibility overlap and gaps"
+  ],
+  "common_mistakes": [
+    "Splitting only by file or technology layer",
+    "Ignoring inputs, outputs, and dependencies"
+  ],
+  "industry_notes": "Clear responsibility and dependency boundaries improve planning, review, testability, and change isolation.",
+  "ai_notes": "AI task decomposition must be checked for missing work, overlap, unsafe sequencing, and unverifiable completion criteria.",
+  "interview_notes": "Ask the candidate to decompose a bounded problem and defend the dependency order.",
+  "exercise_candidates": [
+    "Repair a decomposition with overlap and missing responsibilities"
+  ],
+  "lab_candidates": [
+    "Create a decomposition tree and dependency graph"
+  ],
+  "project_candidates": [
+    "Map project responsibilities to acceptance criteria"
+  ],
+  "claim_ids": [
+    "ASEA-CLM-000015"
+  ],
+  "learning_outcome_ids": [
+    "V01-LO005"
+  ],
+  "difficulty": "Beginner",
+  "knowledge_area": "Problem Solving"
+}
+

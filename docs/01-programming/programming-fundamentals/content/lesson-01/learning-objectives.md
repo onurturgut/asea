@@ -18,12 +18,11 @@ x-production-unit: "lesson-01"
 x-canonical-lesson-id: "V01-C01"
 ---
 
-# Learning Objectives: Programlama Nedir?
+# Programlama (Programming) Nedir? — Öğrenme Amaçları
 
 ## Purpose
 
-Lesson objectives’i canonical Learning Outcomes ile ölçülebilir biçimde
-eşlemek.
+Ders amaçlarını kanonik öğrenme çıktılarıyla ölçülebilir biçimde eşlemek.
 
 ## Scope
 
@@ -33,8 +32,8 @@ Yalnız `V01-LO001` ve `V01-LO002` kapsamındadır.
 
 ## Ownership
 
-Outcome anlamı canonical registry’ye aittir. Bu belge presentation ve evidence
-beklentisini açıklar; yeni outcome üretmez.
+Öğrenme çıktısının anlamı kanonik kayıt sistemine aittir. Bu belge sunum ve
+kanıt beklentisini açıklar; yeni öğrenme çıktısı üretmez.
 
 ## Content
 
@@ -42,33 +41,33 @@ beklentisini açıklar; yeni outcome üretmez.
 
 - Program, algoritma, talimat ve hesaplamayı tanımlayıp birbirinden ayırmak.
 - Programlama ile kod yazmanın kapsam farkını açıklamak.
-- Problemden state/output’a uzanan temel aşamaları sıralamak.
+- Problemden durum/çıktıya uzanan temel aşamaları sıralamak.
 - Belirsiz bir günlük süreci kesin ve sıralı talimatlara dönüştürmek.
-- Talimatlardaki missing input, ambiguous action ve edge case’i belirlemek.
+- Talimatlardaki eksik girdi, belirsiz eylem ve sınır durumu belirlemek.
 
 ### Beklenen Yetkinlikler
 
-- problem framing;
-- precise instruction writing;
-- algorithm/program distinction;
-- basic execution reasoning;
-- ambiguity and edge-case detection.
+- problem çerçeveleme;
+- kesin talimat yazma;
+- algoritma/program ayrımı;
+- temel yürütme muhakemesi;
+- belirsizlik ve sınır durum belirleme.
 
 ### Ölçülebilir Kazanımlar
 
-- Verilen en az sekiz terim/örnek kartından program, algorithm, instruction ve
-  computation rollerini doğru sınıflandırır.
-- İki farklı senaryoda algorithm ile program farkını gerekçeli açıklar.
-- Problem-to-output pipeline’ındaki beş aşamayı doğru sıraya koyar.
+- Verilen en az sekiz terim/örnek kartından program, algoritma, talimat ve
+  hesaplama rollerini doğru sınıflandırır.
+- İki farklı senaryoda algoritma ile program farkını gerekçeli açıklar.
+- Problemden çıktıya uzanan akıştaki beş aşamayı doğru sıraya koyar.
 - Belirsiz bir süreci en az sekiz gözlenebilir adıma dönüştürür.
-- Kendi adımlarında en az bir missing input, branch veya edge case işaretler.
+- Kendi adımlarında en az bir eksik girdi, dal veya sınır durum işaretler.
 
-### Lesson Outcome Mapping
+### Ders ve Öğrenme Çıktısı Eşlemesi
 
 | Objective | Outcome | İçerik kanıtı |
 | --- | --- | --- |
-| Dört temel kavramı ayırma | `V01-LO001` | Kavram açıklaması ve classification examples |
-| Pipeline’ı açıklama | `V01-LO001` | Teknik açıklama ve diagram notes |
+| Dört temel kavramı ayırma | `V01-LO001` | Kavram açıklaması ve sınıflandırma örnekleri |
+| Akışı açıklama | `V01-LO001` | Teknik açıklama ve diyagram notları |
 | Sekiz kesin adım üretme | `V01-LO002` | Dosya düzenleme doğru kullanım örneği |
 | Belirsizlik belirleme | `V01-LO002` | Yanlış kullanım ve best practices |
 

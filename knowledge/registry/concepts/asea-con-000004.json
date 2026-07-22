@@ -1,12 +1,12 @@
 {
   "id": "ASEA-CON-000004",
   "record_type": "concept",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "workflow_state": "Approved",
   "title": "Instruction Sequence and Control Flow",
   "owner_role": "Knowledge Architect",
   "created_on": "2026-07-17",
-  "updated_on": "2026-07-17",
+  "updated_on": "2026-07-22",
   "supersedes": [],
   "tags": ["chapter-02", "instructions", "control-flow"],
   "definition": "An instruction sequence is an ordered representation whose next executed instruction is determined by the execution model and explicit control-flow rules.",
@@ -26,7 +26,7 @@
   "lab_candidates": ["Execute a tiny instruction table and record each cursor movement"],
   "project_candidates": ["Implement and test the instruction pointer of the simulator"],
   "claim_ids": ["ASEA-CLM-000005"],
-  "learning_outcome_ids": ["V01-LO003"],
+  "learning_outcome_ids": ["V01-LO004"],
   "difficulty": "Beginner",
   "knowledge_area": "Programming Foundations"
 }

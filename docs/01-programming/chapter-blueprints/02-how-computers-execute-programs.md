@@ -4,7 +4,7 @@ blueprint_id: "V01-C02-BP01"
 blueprint_type: "Chapter"
 scope_id: "V01-C02"
 title: "Chapter 02 Blueprint — How Computers Execute Programs"
-version: "0.1.1"
+version: "0.1.2"
 status: "Draft"
 freeze_status: "Unfrozen"
 owner_role: "Curriculum Architect"
@@ -71,8 +71,10 @@ This Chapter closes the gap between `V01-C01` evidence and the ability to talima
 
 ### Knowledge Outputs
 
-- **V01-LO003:** Basit bir talimat dizisinin yürütmesini trace etmek.
-- **V01-LO004:** source code ile running program farkını açıklamak..
+- **V01-LO003:** Source code, runtime, memory, input ve output ilişkisini doğru
+  execution model ile açıklamak.
+- **V01-LO004:** Küçük bir talimat dizisinde her adımdan sonra oluşan state'i
+  hatasız trace etmek.
 - A reviewable plan connecting concepts, examples, practice, assessment, and project evidence.
 
 ## Audience and Level
@@ -96,8 +98,10 @@ Plan a short retrieval task that asks the learner to reproduce the prerequisite 
 
 ### Outcome Mapping
 
-- **V01-LO003:** Basit bir talimat dizisinin yürütmesini trace etmek.
-- **V01-LO004:** source code ile running program farkını açıklamak..
+- **V01-LO003:** Source code, runtime, memory, input ve output ilişkisini doğru
+  execution model ile açıklamak.
+- **V01-LO004:** Küçük bir talimat dizisinde her adımdan sonra oluşan state'i
+  hatasız trace etmek.
 
 ### Legacy Source Mapping
 

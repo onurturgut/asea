@@ -16,7 +16,12 @@ x-production-unit: "lesson-04"
 x-content-language: "tr-TR"
 ---
 
-# Pseudocode — Görselleştirme Notları
+# Sözde Kod (Pseudocode) — Görselleştirme Notları
+
+**Terminoloji standardı:** anahtar sözcük (Keyword), atama (Assignment), koşul
+(Condition), seçim (Selection), yineleme (Iteration), yordam (Procedure), dönüş
+(Return), elle izleme (Dry Run) ve izleme tablosu (Trace Table). Sonraki
+kullanımlar Türkçedir.
 
 ## Purpose
 
@@ -33,32 +38,32 @@ sınırlıdır.
 
 ## Content
 
-### Diagram Suggestions
+### Diyagram Önerileri
 
 “Sözde kod → Elle izleme → İzleme tablosu” hattı ve sıra, seçim, yineleme için
 ayrı blok anatomileri gösterilmelidir.
 
-### Animation Suggestions
+### Animasyon Önerileri
 
 Bir döngü satırı vurgulanırken sayaç ve toplam değerlerinin izleme tablosunda
 aynı anda güncellenmesi canlandırılmalıdır.
 
-### Timeline Suggestions
+### Zaman Çizelgesi Önerileri
 
 Girdi alma, başlangıç ataması, koşul kontrolü, gövde, ilerleme, yeniden kontrol
 ve çıkış adımları yatay sırada gösterilmelidir.
 
-### Concept Graph Suggestions
+### Kavram Grafiği Önerileri
 
 Sözde kod merkezde; sıra, seçim, yineleme, yordam, atama, dönüş, elle izleme ve
 izleme tablosu çevre düğümleri olmalıdır.
 
-### UI Suggestions
+### Kullanıcı Arayüzü Önerileri
 
 Sol panelde satır numaralı sözde kod, sağ panelde değişken sütunları bulunan
 izleme tablosu; aktif satır ve güncellenen hücre aynı renkle eşlenmelidir.
 
-### Interactive Suggestions
+### Etkileşimli Öneriler
 
 Öğrenci bir girdi seçip “sonraki adım” ile ilerleyebilmeli; sistem blok sınırını,
 koşul sonucunu ve değişen değeri göstermelidir.

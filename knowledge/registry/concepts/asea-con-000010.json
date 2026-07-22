@@ -1,0 +1,65 @@
+{
+  "id": "ASEA-CON-000010",
+  "record_type": "concept",
+  "version": "0.1.0",
+  "workflow_state": "Candidate",
+  "title": "Computation",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-22",
+  "supersedes": [],
+  "tags": [
+    "chapter-01",
+    "programming-foundations"
+  ],
+  "definition": "Computation is the rule-governed transformation of inputs and state into outputs or new state.",
+  "purpose": "Give learners a technology-neutral model for reasoning about what execution accomplishes.",
+  "history": "Models of computation formalize how rule-governed steps transform representations; this record uses only the introductory input-state-output boundary.",
+  "mental_model": "Computation consumes an input and current state, applies defined rules, and produces output or changed state.",
+  "analogy": "A controlled recipe transforms ingredients and kitchen state into a dish, but human improvisation makes the analogy less strict than machine computation.",
+  "terminology": [
+    "computation",
+    "input",
+    "state",
+    "output",
+    "transformation"
+  ],
+  "relationships": [
+    "uses instructions",
+    "transforms input and state",
+    "produces output or new state"
+  ],
+  "prerequisite_ids": [
+    "ASEA-CON-000009"
+  ],
+  "real_world_usage": [
+    "Explaining data transformations",
+    "Separating observable output from internal state"
+  ],
+  "common_mistakes": [
+    "Treating computation as only arithmetic",
+    "Ignoring state changes that are not printed"
+  ],
+  "industry_notes": "Clear input, state, and output boundaries support contracts, tests, and observability.",
+  "ai_notes": "AI can propose a transformation, but execution and tests are needed to establish actual behavior.",
+  "interview_notes": "Ask the candidate to identify input, state transition, and output in a simple process.",
+  "exercise_candidates": [
+    "Annotate inputs, intermediate state, and outputs"
+  ],
+  "lab_candidates": [
+    "Trace a rule-governed transformation across several steps"
+  ],
+  "project_candidates": [
+    "Specify the state transition contract of a simulator"
+  ],
+  "claim_ids": [
+    "ASEA-CLM-000010"
+  ],
+  "learning_outcome_ids": [
+    "V01-LO001",
+    "V01-LO002"
+  ],
+  "difficulty": "Beginner",
+  "knowledge_area": "Programming Foundations"
+}
+

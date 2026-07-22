@@ -16,7 +16,12 @@ x-production-unit: "lesson-05"
 x-content-language: "tr-TR"
 ---
 
-# Flowchart — Örnekler
+# Akış Şeması (Flowchart) — Örnekler
+
+**Terminoloji standardı:** düğüm (Node), yönlü kenar (Directed Edge),
+başlangıç/bitiş (Terminal), işlem (Process), karar (Decision), dal (Branch),
+birleşme (Merge), döngü (Loop) ve sonlanma yolu (Termination Path). Sonraki
+kullanımlar Türkçedir.
 
 ## Purpose
 
@@ -33,35 +38,35 @@ Tüm örnekler [Research Packet](../../research/lesson-05/research-packet.md)
 
 ## Content
 
-### Simple Examples
+### Basit Örnekler
 
 Yaşa göre erişim akışı; başlangıç, yaş girdisi, eşik kararı, “Evet/Hayır”
 etiketli iki dal, iki sonuç ve bitişten oluşur. Her düğümün tek bir rolü vardır.
 
-### Real World Examples
+### Gerçek Hayat Örnekleri
 
 Sınırlı giriş denemesi; kimlik bilgisi girdisi, doğrulama kararı, başarılı bitiş,
 başarısız durumda sayacı artırma, sınır kontrolü, yeniden deneme ve kilitli
 bitiş yollarını gösterir.
 
-### Wrong Examples
+### Yanlış Örnekler
 
 Bir karar elmasından iki ok çıkar fakat okların üzerinde koşul sonucu yazmaz.
 Okların biri işleme, diğeri bitişe gider. Okuyucu hangi yolun “Evet”, hangisinin
 “Hayır” olduğunu tahmin etmek zorundadır.
 
-### Correct Examples
+### Doğru Örnekler
 
 Aynı karar düğümündeki iki kenar “Evet” ve “Hayır” olarak etiketlenir. Döngüye
 dönen yolda sayaç artırma işlemi, diğer yolda açık bitiş düğümü bulunur.
 
-### Explanations
+### Açıklamalar
 
 Doğru şema yalnız daha düzenli görünmez; her yolun koşulunu ve sonlanmasını
 izlenebilir kılar. Geri dönüş oku bulunan fakat durumu değiştirmeyen döngü,
 çıkış koşuluna ilerlediğini gösteremez.
 
-### Learning Notes
+### Öğrenme Notları
 
 - Her şeklin rolünü adıyla açıklayın.
 - Her karar yolunu bir girdiyle baştan sona izleyin.

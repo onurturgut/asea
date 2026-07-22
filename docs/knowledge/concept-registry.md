@@ -3,7 +3,7 @@ document_type: "supporting-document"
 supporting_document_id: "ASEA-SD-IDX-003"
 supporting_document_type: "Index"
 title: "Volume 01 Concept Candidate Registry"
-version: "1.0.0"
+version: "1.0.1"
 status: "Draft"
 scope_id: "V01"
 authority: "Derived"
@@ -160,10 +160,10 @@ they provide every required Concept field.
 
 | Concept ID | Learning Stage | Introduced In | Applied In | Mastered In | Related Chapters | Related Modules | Related Learning Outcomes | Related Assessments | Related Labs | Related Projects |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `ASEA-CON-000001` | Introduce → Apply → Integrate | `V01-C02` | `V01-C02-L01` | `V01-P01` | `V01-C02` | `V01-M01` | `V01-LO003`, `V01-LO004` | `V01-C02-AS01` | `V01-C02-L01` | `V01-P01` |
-| `ASEA-CON-000002` | Introduce → Apply → Integrate | `V01-C02` | `V01-C02-L01` | `V01-P01` | `V01-C02` | `V01-M01` | `V01-LO003`, `V01-LO004` | `V01-C02-AS01` | `V01-C02-L01` | `V01-P01` |
-| `ASEA-CON-000003` | Introduce → Apply → Integrate | `V01-C02` | `V01-C02-L01` | `V01-P01` | `V01-C02` | `V01-M01` | `V01-LO003`, `V01-LO004` | `V01-C02-AS01` | `V01-C02-L01` | `V01-P01` |
-| `ASEA-CON-000004` | Introduce → Apply → Integrate | `V01-C02` | `V01-C02-L01` | `V01-P01` | `V01-C02` | `V01-M01` | `V01-LO003`, `V01-LO004` | `V01-C02-AS01` | `V01-C02-L01` | `V01-P01` |
+| `ASEA-CON-000001` | Introduce → Apply → Integrate | `V01-C02` | `V01-C02-L01` | `V01-P01` | `V01-C02` | `V01-M01` | `V01-LO003` | `V01-C02-AS01` | `V01-C02-L01` | `V01-P01` |
+| `ASEA-CON-000002` | Introduce → Apply → Integrate | `V01-C02` | `V01-C02-L01` | `V01-P01` | `V01-C02` | `V01-M01` | `V01-LO003` | `V01-C02-AS01` | `V01-C02-L01` | `V01-P01` |
+| `ASEA-CON-000003` | Introduce → Apply → Integrate | `V01-C02` | `V01-C02-L01` | `V01-P01` | `V01-C02` | `V01-M01` | `V01-LO004` | `V01-C02-AS01` | `V01-C02-L01` | `V01-P01` |
+| `ASEA-CON-000004` | Introduce → Apply → Integrate | `V01-C02` | `V01-C02-L01` | `V01-P01` | `V01-C02` | `V01-M01` | `V01-LO004` | `V01-C02-AS01` | `V01-C02-L01` | `V01-P01` |
 | `ASEA-CON-000005` | Introduce → Apply → Integrate | `V01-C02` | `V01-C02-L01` | `V01-P01` | `V01-C02` | `V01-M01` | `V01-LO003`, `V01-LO004` | `V01-C02-AS01` | `V01-C02-L01` | `V01-P01` |
 | `ASEA-CON-000006` | Introduce → Apply → Integrate | `V01-C02` | `V01-C02-L01` | `V01-P01` | `V01-C02` | `V01-M01` | `V01-LO003`, `V01-LO004` | `V01-C02-AS01` | `V01-C02-L01` | `V01-P01` |
 | `ASEA-CON-000007` | Introduce → Apply → Integrate | `V01-C01` | `V01-C01-L01` | `V01-P01` | `V01-C01` | `V01-M01` | `V01-LO001`, `V01-LO002` | `V01-C01-AS01` | `V01-C01-L01` | `V01-P01` |
@@ -266,10 +266,10 @@ they provide every required Concept field.
 
 | Concept ID | Prerequisites | Related Concepts | Status | Version | Owner | Created | Last Updated | Review Status |
 | --- | --- | --- | --- | --- | --- | --- | --- | --- |
-| `ASEA-CON-000001` | None | `ASEA-CON-000002`, `ASEA-CON-000003`, `ASEA-CON-000004`, `ASEA-CON-000005`, `ASEA-CON-000006` | Approved | 1.0.0 | Knowledge Architect | 2026-07-17 | 2026-07-17 | Approved |
-| `ASEA-CON-000002` | `ASEA-CON-000001` | `ASEA-CON-000001`, `ASEA-CON-000003`, `ASEA-CON-000004`, `ASEA-CON-000005`, `ASEA-CON-000006` | Approved | 1.0.0 | Knowledge Architect | 2026-07-17 | 2026-07-17 | Approved |
-| `ASEA-CON-000003` | `ASEA-CON-000001` | `ASEA-CON-000001`, `ASEA-CON-000002`, `ASEA-CON-000004`, `ASEA-CON-000005`, `ASEA-CON-000006` | Approved | 1.0.0 | Knowledge Architect | 2026-07-17 | 2026-07-17 | Approved |
-| `ASEA-CON-000004` | `ASEA-CON-000001` | `ASEA-CON-000001`, `ASEA-CON-000002`, `ASEA-CON-000003`, `ASEA-CON-000005`, `ASEA-CON-000006` | Approved | 1.0.0 | Knowledge Architect | 2026-07-17 | 2026-07-17 | Approved |
+| `ASEA-CON-000001` | None | `ASEA-CON-000002`, `ASEA-CON-000003`, `ASEA-CON-000004`, `ASEA-CON-000005`, `ASEA-CON-000006` | Approved | 1.0.1 | Knowledge Architect | 2026-07-17 | 2026-07-22 | Approved |
+| `ASEA-CON-000002` | `ASEA-CON-000001` | `ASEA-CON-000001`, `ASEA-CON-000003`, `ASEA-CON-000004`, `ASEA-CON-000005`, `ASEA-CON-000006` | Approved | 1.0.1 | Knowledge Architect | 2026-07-17 | 2026-07-22 | Approved |
+| `ASEA-CON-000003` | `ASEA-CON-000001` | `ASEA-CON-000001`, `ASEA-CON-000002`, `ASEA-CON-000004`, `ASEA-CON-000005`, `ASEA-CON-000006` | Approved | 1.0.1 | Knowledge Architect | 2026-07-17 | 2026-07-22 | Approved |
+| `ASEA-CON-000004` | `ASEA-CON-000001` | `ASEA-CON-000001`, `ASEA-CON-000002`, `ASEA-CON-000003`, `ASEA-CON-000005`, `ASEA-CON-000006` | Approved | 1.0.1 | Knowledge Architect | 2026-07-17 | 2026-07-22 | Approved |
 | `ASEA-CON-000005` | `ASEA-CON-000003` | `ASEA-CON-000003`, `ASEA-CON-000001`, `ASEA-CON-000002`, `ASEA-CON-000004`, `ASEA-CON-000006` | Approved | 1.0.0 | Knowledge Architect | 2026-07-17 | 2026-07-17 | Approved |
 | `ASEA-CON-000006` | `ASEA-CON-000003`, `ASEA-CON-000004`, `ASEA-CON-000005` | `ASEA-CON-000003`, `ASEA-CON-000004`, `ASEA-CON-000005`, `ASEA-CON-000001`, `ASEA-CON-000002` | Approved | 1.0.0 | Knowledge Architect | 2026-07-17 | 2026-07-17 | Approved |
 | `ASEA-CON-000007` | None | `ASEA-CON-000008`, `ASEA-CON-000009`, `ASEA-CON-000010`, `ASEA-CON-000011` | Candidate | 0.1.0 | Knowledge Architect | 2026-07-18 | 2026-07-18 | Evidence Review Required |

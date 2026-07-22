@@ -1,0 +1,65 @@
+{
+  "id": "ASEA-CON-000012",
+  "record_type": "concept",
+  "version": "0.1.0",
+  "workflow_state": "Candidate",
+  "title": "Problem Definition and Requirements",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-22",
+  "supersedes": [],
+  "tags": [
+    "chapter-03",
+    "problem-solving"
+  ],
+  "definition": "Problem definition establishes the required outcome, stakeholders, inputs, outputs, constraints, and acceptance boundaries before a solution is designed.",
+  "purpose": "Prevent solution-first implementation by making the problem and success boundary inspectable.",
+  "history": "Requirements and systems engineering formalized stakeholder needs, requirements, acceptance, and traceability; this record provides the beginner-facing boundary.",
+  "mental_model": "A problem contract is the shared boundary between an observed need and later solution design.",
+  "analogy": "A destination and travel constraints must be known before selecting a route; the analogy stops because software stakeholders and requirements can conflict and change.",
+  "terminology": [
+    "problem definition",
+    "stakeholder",
+    "required outcome",
+    "input",
+    "output",
+    "acceptance boundary"
+  ],
+  "relationships": [
+    "precedes solution design",
+    "contains constraints and assumptions",
+    "supports acceptance criteria"
+  ],
+  "prerequisite_ids": [
+    "ASEA-CON-000011"
+  ],
+  "real_world_usage": [
+    "Clarifying ambiguous tickets",
+    "Deriving testable acceptance conditions"
+  ],
+  "common_mistakes": [
+    "Writing a technology choice as the problem",
+    "Using unmeasurable success language"
+  ],
+  "industry_notes": "Teams use bounded requirements and acceptance evidence to align product, engineering, test, security, and operations.",
+  "ai_notes": "AI may clarify wording but cannot invent authoritative requirements; every added requirement needs source and review.",
+  "interview_notes": "Ask how the candidate would clarify an ambiguous ticket before coding.",
+  "exercise_candidates": [
+    "Turn a solution-first request into a problem contract"
+  ],
+  "lab_candidates": [
+    "Decompose a ticket-pricing request into contract fields"
+  ],
+  "project_candidates": [
+    "Create the problem contract for the first project increment"
+  ],
+  "claim_ids": [
+    "ASEA-CLM-000012"
+  ],
+  "learning_outcome_ids": [
+    "V01-LO005"
+  ],
+  "difficulty": "Beginner",
+  "knowledge_area": "Problem Solving"
+}
+

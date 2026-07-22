@@ -16,7 +16,13 @@ x-production-unit: "lesson-02"
 x-content-language: "tr-TR"
 ---
 
-# Algoritma Nedir? — Görselleştirme Notları
+# Algoritma (Algorithm) Nedir? — Görselleştirme Notları
+
+**Terminoloji standardı:** problem örneği (Problem Instance), girdi (Input),
+çıktı (Output), ön koşul (Precondition), son koşul (Postcondition), doğruluk
+(Correctness), sonlanma (Termination), izleme (Trace), uygulama
+(Implementation), sezgisel yöntem (Heuristic) ve determinizm (Determinism).
+Sonraki kullanımlar Türkçedir.
 
 ## Purpose
 
@@ -33,32 +39,32 @@ içindeki doğrulanmış önerilere dayanır.
 
 ## Content
 
-### Diagram Suggestions
+### Diyagram Önerileri
 
 “Problem sözleşmesi → Algoritma → İzleme → Kanıt” akışı kullanılmalıdır. İkinci
 bir diyagram, doğruluk ve sonlanmayı iki ayrı kapı olarak göstermelidir.
 
-### Animation Suggestions
+### Animasyon Önerileri
 
 Bir liste girdisi üzerinde aday değerin adım adım güncellenmesi canlandırılmalı;
 her karede işlenen değer, mevcut aday ve kalan veri görünmelidir.
 
-### Timeline Suggestions
+### Zaman Çizelgesi Önerileri
 
 Yatay sıra; sözleşmenin yazılması, aday algoritmanın kurulması, normal girdinin
 izlenmesi, sınır girdinin izlenmesi ve karşı örnek incelemesini göstermelidir.
 
-### Concept Graph Suggestions
+### Kavram Grafiği Önerileri
 
 Merkezde algoritma; çevresinde girdi, çıktı, ön koşul, son koşul, doğruluk,
 sonlanma, izleme, uygulama ve gösterim düğümleri bulunmalıdır.
 
-### UI Suggestions
+### Kullanıcı Arayüzü Önerileri
 
 Sol panelde sözleşme, orta panelde adımlar, sağ panelde seçili girdinin izleme
 tablosu gösterilmelidir. Doğruluk ve sonlanma göstergeleri ayrı tutulmalıdır.
 
-### Interactive Suggestions
+### Etkileşimli Öneriler
 
 Öğrenci normal, sınır veya geçersiz girdi seçebilmeli; sistem yalnız adım ve
 durum geçişlerini göstermeli, algoritmanın genel doğruluğunu otomatik olarak

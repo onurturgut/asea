@@ -1,0 +1,65 @@
+{
+  "id": "ASEA-CON-000011",
+  "record_type": "concept",
+  "version": "0.1.0",
+  "workflow_state": "Candidate",
+  "title": "Algorithm",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-22",
+  "supersedes": [],
+  "tags": [
+    "chapter-01",
+    "programming-foundations"
+  ],
+  "definition": "An algorithm is a finite and unambiguous procedure that transforms valid inputs into specified outputs and terminates under its stated conditions.",
+  "purpose": "Establish the solution-procedure concept required before problem definition and pseudocode work.",
+  "history": "Algorithms predate electronic computers; modern computing represents and executes them through formal and programmable systems.",
+  "mental_model": "An algorithm is a bounded route from valid input to specified output with explicit progress and a stopping condition.",
+  "analogy": "A route plan has ordered steps and a destination, but real travel may rely on human judgment not permitted in an unambiguous algorithm.",
+  "terminology": [
+    "algorithm",
+    "valid input",
+    "specified output",
+    "termination",
+    "procedure"
+  ],
+  "relationships": [
+    "composed-of instructions",
+    "solves bounded problem",
+    "requires termination conditions"
+  ],
+  "prerequisite_ids": [
+    "ASEA-CON-000010"
+  ],
+  "real_world_usage": [
+    "Designing a language-independent solution procedure",
+    "Checking whether a procedure terminates"
+  ],
+  "common_mistakes": [
+    "Calling any task list an algorithm",
+    "Omitting valid-input and termination conditions"
+  ],
+  "industry_notes": "Algorithms provide the behavior model later implemented, tested, analyzed, and maintained.",
+  "ai_notes": "AI-generated algorithms require independent checks for validity, termination, correctness, and hidden assumptions.",
+  "interview_notes": "Ask the candidate to explain what makes a procedure finite and unambiguous.",
+  "exercise_candidates": [
+    "Identify missing input, output, or termination conditions"
+  ],
+  "lab_candidates": [
+    "Convert a precise daily process into a finite procedure"
+  ],
+  "project_candidates": [
+    "Design the algorithm contract for a simulator"
+  ],
+  "claim_ids": [
+    "ASEA-CLM-000011"
+  ],
+  "learning_outcome_ids": [
+    "V01-LO001",
+    "V01-LO002"
+  ],
+  "difficulty": "Beginner",
+  "knowledge_area": "Algorithms"
+}
+

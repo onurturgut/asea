@@ -1,0 +1,64 @@
+{
+  "id": "ASEA-CON-000013",
+  "record_type": "concept",
+  "version": "0.1.0",
+  "workflow_state": "Candidate",
+  "title": "Constraint and Assumption",
+  "owner_role": "Knowledge Architect",
+  "created_on": "2026-07-18",
+  "updated_on": "2026-07-22",
+  "supersedes": [],
+  "tags": [
+    "chapter-03",
+    "problem-solving"
+  ],
+  "definition": "A constraint limits an acceptable solution, while an assumption is a condition treated as true until evidence confirms or invalidates it.",
+  "purpose": "Make mandatory boundaries and uncertain beliefs independently reviewable.",
+  "history": "Engineering requirements processes distinguish imposed constraints from assumptions that require monitoring and validation.",
+  "mental_model": "A constraint is a wall around acceptable solutions; an assumption is a labeled bridge that must be inspected before trusting it.",
+  "analogy": "A locked venue closing time is a constraint, while expecting all guests to arrive early is an assumption; organizational authority determines which rules are truly mandatory.",
+  "terminology": [
+    "constraint",
+    "assumption",
+    "authority",
+    "validation",
+    "invalidation"
+  ],
+  "relationships": [
+    "refines problem definition",
+    "limits solution space",
+    "requires evidence review"
+  ],
+  "prerequisite_ids": [
+    "ASEA-CON-000012"
+  ],
+  "real_world_usage": [
+    "Recording platform or policy limits",
+    "Tracking environmental and user-behavior assumptions"
+  ],
+  "common_mistakes": [
+    "Presenting a preference as a constraint",
+    "Presenting an assumption as a fact"
+  ],
+  "industry_notes": "Visible assumptions support risk management, change impact analysis, and safer design decisions.",
+  "ai_notes": "AI often turns common patterns into unstated assumptions; engineers must label and verify them.",
+  "interview_notes": "Ask the candidate to classify several project statements as constraint, assumption, preference, or open question.",
+  "exercise_candidates": [
+    "Build a constraint-assumption decision table"
+  ],
+  "lab_candidates": [
+    "Create an assumption ledger with owners and invalidation impact"
+  ],
+  "project_candidates": [
+    "Record constraints and assumptions for the project contract"
+  ],
+  "claim_ids": [
+    "ASEA-CLM-000013"
+  ],
+  "learning_outcome_ids": [
+    "V01-LO005"
+  ],
+  "difficulty": "Beginner",
+  "knowledge_area": "Problem Solving"
+}
+

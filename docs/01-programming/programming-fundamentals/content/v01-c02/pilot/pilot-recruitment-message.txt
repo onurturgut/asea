@@ -1,0 +1,45 @@
+ASEA C02 ÖĞRENCİ PİLOTU — KATILIM DAVETİ
+
+ASEA (Aisurix Software Engineering Academy) için hazırlanan
+“Bilgisayarlar Programları Nasıl Çalıştırır?” dersini gerçek öğrencilerle test
+ediyoruz.
+
+Kimler katılabilir?
+
+- Yazılıma yeni başlayanlar
+- CPU, bellek ve program yürütme modelini daha önce ayrıntılı öğrenmemiş kişiler
+- Temel düzeyde dosya, tarayıcı ve terminal kullanabilenler
+- Profesyonel yazılım geliştirici olarak çalışmayanlar
+
+Pilot sırasında neler yapılacak?
+
+- Kısa bir başlangıç ölçümü
+- ASEA ana dersini çalışma
+- Kod örnekleri ve alıştırmalar
+- 25 soruluk kısa sınav
+- Uygulamalı laboratuvar
+- Kısa son ölçüm ve geri bildirim görüşmesi
+
+Tahmini süre
+
+- Ana rota: 2–3 saat
+- Laboratuvar ve ek çalışmalarla toplam: yaklaşık 4–5 saat
+- Çalışma birden fazla oturuma bölünebilir
+
+Toplanan bilgiler
+
+- Anonim katılımcı kodu
+- Başlangıç ve son ölçüm puanları
+- Quiz ve laboratuvar sonuçları
+- Tamamlama süresi
+- Takılma ve yardım ihtiyacı görülen konular
+- Ders hakkındaki geri bildirimler
+
+Gerçek ad, e-posta, ekran kaydı veya özel kaynak kodu pilot sonucu için zorunlu
+değildir. Katılım gönüllüdür ve katılımcı istediği zaman çalışmayı bırakabilir.
+
+Bu pilotun amacı katılımcıyı yargılamak değil; dersin başlangıç seviyesindeki
+bir öğrenci için anlaşılır, yeterli ve uygulanabilir olup olmadığını ölçmektir.
+
+Katılmak isteyen adaylara ASEA Repository Owner tarafından anonim bir P01–P08
+katılımcı kodu ve çalışma yönergeleri verilecektir.
