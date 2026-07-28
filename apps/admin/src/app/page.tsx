@@ -1,8 +1,12 @@
-export default function Page() {
-  return (
-    <main>
-      <h1>ASEA Admin</h1>
-      <p>The administration application foundation is ready.</p>
-    </main>
-  );
+import type { Metadata } from "next";
+
+import LoginScreen from "@/screens/login-screen";
+
+export const metadata: Metadata = {
+  title: "Giriş",
+  description: "ASEA öğrenci uygulamasına Google ile giriş yap.",
+};
+
+export default function LoginPage() {
+  return <LoginScreen />;
 }

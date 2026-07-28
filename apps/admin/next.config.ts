@@ -1,7 +1,11 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  reactStrictMode: true,
+  transpilePackages: [
+    "@asea/shared",
+    "@asea/content-engine",
+    "@asea/database",
+  ],
   typescript: {
     tsconfigPath: "tsconfig.next.json",
   },

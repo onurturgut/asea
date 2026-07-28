@@ -1,0 +1,584 @@
+{
+  "surface": "report",
+  "manifest": {
+    "version": 1,
+    "surface": "report",
+    "title": "ASEA 2026 Fiyatlandırma Raporu",
+    "description": "ASEA öğrenci uygulamasının mevcut kapsamı, yeniden yapım maliyeti, kaynak kod/IP satış değeri ve lisans fiyatlandırması.",
+    "generatedAt": "2026-07-29T12:00:00+03:00",
+    "sources": [
+      {
+        "id": "repo-audit",
+        "label": "ASEA depo incelemesi, 29 Temmuz 2026",
+        "path": "apps/admin",
+        "query": {
+          "description": "Next.js öğrenci uygulaması, içerik motoru, MongoDB API'leri, dinamik dersler ve dokümantasyon üzerinde yapılan yerel kapsam sayımı.",
+          "engine": "PowerShell",
+          "language": "PowerShell",
+          "executed_at": "2026-07-29T12:00:00+03:00",
+          "filters": [
+            "node_modules ve .next hariç tutuldu",
+            "uygulama kodu .ts, .tsx, .js, .jsx ve .css dosyalarıyla sınırlandı",
+            "ders varlığı kanonik chapter ve programlama temelleri aktivite paketleriyle sınırlandı"
+          ],
+          "metric_definitions": [
+            "Uygulama kodu: apps/admin altındaki kaynak dosyaların fiziksel satır sayısı.",
+            "Ders varlığı: docs/01-programming/chapters altındaki 18 kanonik ders.",
+            "Aktivite varlığı: docs/01-programming/programming-fundamentals/content altındaki Markdown paketleri."
+          ],
+          "tables_used": [
+            "apps/admin",
+            "packages/content-engine",
+            "packages/database",
+            "docs/01-programming/chapters",
+            "docs/01-programming/programming-fundamentals/content"
+          ]
+        }
+      },
+      {
+        "id": "valuation-model",
+        "label": "ASEA aşağıdan yukarı maliyet modeli",
+        "path": "docs/product/asea-pricing-report-2026.artifact.json",
+        "query": {
+          "description": "İncelenen kapsamın rol, saat ve piyasa ücret bandı ile yeniden yapım maliyeti; ardından ürün olgunluğu indirimi ve ticari paketleme varsayımları.",
+          "engine": "Deterministic model",
+          "language": "formula",
+          "executed_at": "2026-07-29T12:00:00+03:00",
+          "filters": [
+            "KDV hariç",
+            "Kur: 1 USD = 47,3802 TL",
+            "Mevcut kullanıcı, gelir veya sözleşme değeri dahil değil",
+            "Marka değeri ve şirket hissesi dahil değil"
+          ],
+          "metric_definitions": [
+            "Yeniden yapım maliyeti = düşük/yüksek tahmini saat x ilgili düşük/yüksek uzmanlık ücreti.",
+            "Merkez tahmin = yazılım için 1.530 saat x 42,5 USD ve içerik için 1.000 saat x 32,5 USD.",
+            "Kaynak kod/IP satış hedefi, gelir üretmeyen ve henüz üretime hazır olmayan ürün için yeniden yapım merkez değerinden olgunluk ve transfer riski indirimiyle türetildi.",
+            "Üretim V1 ve tam ekosistem fiyatları; tamamlanma işi, teslim riski, garanti ve proje yönetimi payını içerir."
+          ]
+        }
+      },
+      {
+        "id": "replacement-model",
+        "label": "ASEA yeniden yapım maliyeti hesabı",
+        "path": "docs/product/asea-pricing-report-2026.artifact.json",
+        "query": {
+          "description": "Kapsam bileşenlerini düşük ve yüksek saat/ücret varsayımlarıyla maliyetlendiren statik, yeniden üretilebilir model.",
+          "engine": "DuckDB",
+          "language": "SQL",
+          "sql": "SELECT * FROM (VALUES ('Ürün keşfi ve UX',140,220,4200,12100),('Frontend ve tasarım sistemi',420,620,12600,34100),('İçerik motoru, katalog ve arama',180,280,5400,15400),('MongoDB API ve kod çalışma alanı',240,360,7200,19800),('QA, proje yönetimi ve mevcut teslim',240,360,7200,19800),('Ders ve aktivite varlığı',700,1300,14000,58500)) AS t(component,low_hours,high_hours,low_cost_usd,high_cost_usd)",
+          "executed_at": "2026-07-29T12:00:00+03:00",
+          "metric_definitions": [
+            "Düşük maliyet = düşük saat x düşük piyasa ücreti.",
+            "Yüksek maliyet = yüksek saat x yüksek piyasa ücreti."
+          ]
+        }
+      },
+      {
+        "id": "commercial-model",
+        "label": "ASEA ticari teklif fiyat noktaları",
+        "path": "docs/product/asea-pricing-report-2026.artifact.json",
+        "query": {
+          "description": "IP devri, MVP yeniden üretimi, üretim V1 ve tam ekosistem için önerilen orta ve bant fiyatları.",
+          "engine": "DuckDB",
+          "language": "SQL",
+          "sql": "SELECT * FROM (VALUES ('IP devri',2.4,1.8,2.9,'Kaynak kod, tasarım ve mevcut içerik; münhasır hak devri varsayımı','Gelirsiz çalışan MVP'),('MVP',5.0,4.2,5.8,'İncelenen mevcut kapsamın müşteriye özel yeniden üretimi','Sabit kapsam ve sınırlı garanti'),('Üretim V1',8.0,7.0,9.5,'Auth, RBAC, gerçek AI, test, güvenlik, izleme, yayın yönetimi','Canlı kullanıma hazır'),('Tam ekosistem',11.5,9.5,14.0,'Öğrenci uygulaması, içerik admini ve tanıtım sitesi','Kurumsal ürün paketi')) AS t(offering,recommended_m_try,low_m_try,high_m_try,scope,delivery_state)",
+          "executed_at": "2026-07-29T12:00:00+03:00",
+          "filters": [
+            "KDV hariç",
+            "Üçüncü taraf kullanım giderleri hariç"
+          ],
+          "metric_definitions": [
+            "recommended_m_try: sözleşme görüşmesinde hedeflenen merkez fiyat, milyon TL.",
+            "low_m_try ve high_m_try: kapsam ve risk paylaşımına göre makul teklif bandı, milyon TL."
+          ]
+        }
+      },
+      {
+        "id": "saas-model",
+        "label": "ASEA abonelik ve kurum lisans modeli",
+        "path": "docs/product/asea-pricing-report-2026.artifact.json",
+        "query": {
+          "description": "Bireysel ve kurum paketlerinin öğrenci başına liste fiyatı modeli.",
+          "engine": "DuckDB",
+          "language": "SQL",
+          "sql": "SELECT * FROM (VALUES ('Core bireysel','Öğrenci',399,3990,'AI hariç; yıllık planda iki ay avantaj'),('AI Mentor bireysel','Öğrenci',699,6990,'Aylık AI kredisi ve ücretli aşım paketi'),('Kurum 100–499','Okul / akademi',350,4200,'Öğrenci başına; en az 100 yıllık koltuk'),('Kurum 500–999','Okul / akademi',250,3000,'Öğrenci başına; yıllık peşin'),('Enterprise 1000+','Üniversite / şirket',180,2160,'Öğrenci başına; SSO ve SLA ayrıca')) AS t(plan,audience,monthly_try,annual_try,commercial_rule)",
+          "executed_at": "2026-07-29T12:00:00+03:00",
+          "filters": [
+            "KDV hariç",
+            "AI aşım kullanımı hariç"
+          ],
+          "metric_definitions": [
+            "Kurumsal aylık ve yıllık fiyatlar öğrenci/koltuk başınadır.",
+            "Bireysel fiyatlar tek kullanıcı içindir."
+          ]
+        }
+      },
+      {
+        "id": "clutch",
+        "label": "Clutch Software Development Company Pricing Guide 2026",
+        "href": "https://clutch.co/developers/pricing",
+        "query": {
+          "description": "Doğrulanmış müşteri incelemelerine dayalı yazılım şirketi proje ve saatlik ücret karşılaştırmaları.",
+          "executed_at": "2026-07-29T12:00:00+03:00"
+        }
+      },
+      {
+        "id": "upwork-fullstack",
+        "label": "Upwork Full Stack Developer Cost",
+        "href": "https://www.upwork.com/hire/full-stack-developers/cost/",
+        "query": {
+          "description": "Geçmiş sözleşmelerden türetilen full-stack geliştirici saatlik ücret bandı.",
+          "executed_at": "2026-07-29T12:00:00+03:00"
+        }
+      },
+      {
+        "id": "upwork-learning",
+        "label": "Upwork Instructional Designer Cost",
+        "href": "https://www.upwork.com/hire/instructional-designers/cost/",
+        "query": {
+          "description": "Öğretim ve öğrenme deneyimi tasarımı için saatlik ücret karşılaştırması.",
+          "executed_at": "2026-07-29T12:00:00+03:00"
+        }
+      },
+      {
+        "id": "fx",
+        "label": "Investing.com USD/TRY, 29 Temmuz 2026",
+        "href": "https://tr.investing.com/currencies/usd-try",
+        "query": {
+          "description": "USD cinsinden piyasa karşılaştırmalarını TL'ye çevirmek için kullanılan anlık referans kur.",
+          "executed_at": "2026-07-29T12:00:00+03:00",
+          "metric_definitions": [
+            "Rapor dönüşüm kuru: 1 USD = 47,3802 TL."
+          ]
+        }
+      },
+      {
+        "id": "learning-benchmarks",
+        "label": "DataCamp ve Coursera güncel bireysel fiyatları",
+        "href": "https://www.datacamp.com/pricing?period=yearly&tab=learn",
+        "query": {
+          "description": "Global çevrimiçi öğrenme abonelikleri için bireysel fiyat çıpaları; DataCamp yıllık planda aylık 14 USD, Coursera Plus aylık 59 USD veya yıllık 399 USD.",
+          "executed_at": "2026-07-29T12:00:00+03:00",
+          "tables_used": [
+            "https://www.datacamp.com/pricing?period=yearly&tab=learn",
+            "https://www.coursera.org/courseraplus/"
+          ]
+        }
+      }
+    ],
+    "charts": [
+      {
+        "id": "commercial-price-points",
+        "title": "Önerilen ticari fiyat noktaları",
+        "subtitle": "Mevcut varlığın devrinden tam ürün ekosistemine geçildikçe teslim kapsamı ve risk artar.",
+        "type": "bar",
+        "dataset": "commercial_prices",
+        "sourceId": "commercial-model",
+        "encodings": {
+          "x": {
+            "field": "offering",
+            "type": "nominal",
+            "label": "Teklif"
+          },
+          "y": {
+            "field": "recommended_m_try",
+            "type": "quantitative",
+            "format": "number",
+            "label": "Önerilen fiyat",
+            "unit": "milyon TL"
+          },
+          "tooltip": [
+            {
+              "field": "low_m_try",
+              "type": "quantitative",
+              "label": "Alt bant",
+              "unit": "milyon TL"
+            },
+            {
+              "field": "high_m_try",
+              "type": "quantitative",
+              "label": "Üst bant",
+              "unit": "milyon TL"
+            },
+            {
+              "field": "scope",
+              "type": "text",
+              "label": "Kapsam"
+            }
+          ]
+        },
+        "xAxisTitle": "Ticari teklif türü",
+        "yAxisTitle": "Milyon TL, KDV hariç",
+        "valueFormat": "number",
+        "unit": "milyon TL",
+        "layout": "full"
+      }
+    ],
+    "tables": [
+      {
+        "id": "replacement-cost",
+        "title": "Yeniden yapım maliyeti bileşenleri",
+        "subtitle": "Düşük ve yüksek senaryoda saat ile USD maliyet bandı.",
+        "dataset": "replacement_cost",
+        "sourceId": "replacement-model",
+        "defaultSort": {
+          "field": "high_cost_usd",
+          "direction": "desc"
+        },
+        "density": "dense",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "component",
+            "label": "Bileşen",
+            "type": "text"
+          },
+          {
+            "field": "low_cost_usd",
+            "label": "Düşük maliyet",
+            "format": "currency"
+          },
+          {
+            "field": "high_cost_usd",
+            "label": "Yüksek maliyet",
+            "format": "currency"
+          }
+        ]
+      },
+      {
+        "id": "saas-pricing",
+        "title": "Önerilen abonelik ve kurum lisansları",
+        "subtitle": "Ürün V1 tamamlandıktan sonra uygulanacak liste fiyatları; KDV ve AI aşım kullanımı hariç.",
+        "dataset": "saas_prices",
+        "sourceId": "saas-model",
+        "defaultSort": {
+          "field": "annual_try",
+          "direction": "asc"
+        },
+        "density": "dense",
+        "layout": "full",
+        "columns": [
+          {
+            "field": "plan",
+            "label": "Paket",
+            "type": "text"
+          },
+          {
+            "field": "monthly_try",
+            "label": "Aylık",
+            "format": "currency"
+          },
+          {
+            "field": "annual_try",
+            "label": "Yıllık",
+            "format": "currency"
+          }
+        ]
+      }
+    ],
+    "blocks": [
+      {
+        "id": "title",
+        "type": "markdown",
+        "body": "# ASEA 2026 Fiyatlandırma Raporu",
+        "layout": "full"
+      },
+      {
+        "id": "summary",
+        "type": "markdown",
+        "body": "## Executive Summary\n\n- **Bugünkü ASEA bir demo sayfasından belirgin biçimde daha değerli, fakat henüz satışa hazır bir SaaS değildir.** İncelenen öğrenci uygulamasında yaklaşık 9.550 satır özel uygulama kodu, 18 dinamik ders, 17 aktivite paketi, arama, MongoDB kayıtları ve tarayıcı içi JavaScript çalışma alanı bulunuyor.\n- **Mevcut varlığın yeniden yapım maliyeti yaklaşık 2,40–7,57 milyon TL; merkez tahmin 4,62 milyon TL'dir.** Bu değer, yazılım ile ders/aktivite üretimini ayrı fiyatlandırır ve 29 Temmuz 2026 kuruyla hesaplanır.\n- **Projeyi bugün tüm kaynak kod ve içerik haklarıyla devredeceksen önerilen açılış fiyatı 2,90 milyon TL, hedef kapanış 2,30–2,70 milyon TL, korunması gereken taban ise 1,80 milyon TL'dir.** Gelir ve kullanıcı kanıtı olmadığı için satış fiyatı yeniden yapım maliyetinin altında tutulmuştur.\n- **Bir müşteriye üretime hazır V1 olarak teslim edilecek sabit fiyat 7,0–9,5 milyon TL + KDV olmalıdır.** Bu fiyat kimlik doğrulama, yetkilendirme, gerçek AI, test, güvenlik, izleme, dağıtım ve içerik yayın yönetimini kapsayacak şekilde sözleşmelendirilmelidir.",
+        "layout": "full"
+      },
+      {
+        "id": "scope",
+        "type": "markdown",
+        "body": "## İncelenen ürün kapsamı güçlü bir MVP oluşturuyor\n\n**Çalışan çekirdek:** Next.js App Router tabanlı öğrenci uygulaması; dashboard, akademiler, projeler, notlar, kısa notlar, arama, başarımlar, mülakat, profil ve üç sütunlu ders ekranı rotalarına sahip. İçerik motoru Markdown belgelerini ders paketlerine dönüştürüyor; MongoDB kısa/uzun notları ve ders ilerlemesini saklıyor; kod editörü izole Web Worker içinde JavaScript çalıştırabiliyor.\n\n**İçerik varlığı:** 18 kanonik ders 133.032 kelime; aktivite paketleri 91.328 kelime içeriyor. Toplam 224.360 kelimelik bu varlık, salt uygulama kodundan ayrı bir üretim maliyetidir.\n\n**Değeri aşağı çeken eksikler:** Google/hesap tabanlı gerçek kimlik doğrulama, rol ve yetki sistemi, ödeme, üretim dağıtımı, otomatik test paketi, güvenlik sertleştirmesi ve gözlemlenebilirlik bulunmuyor. Mentor gerçek bir AI servisi yerine doküman tabanlı deterministik yanıt veriyor. Profil, başarımlar ve mülakat gibi bazı alanlar örnek veri kullanıyor. Planlanan C19–C28 dersleri ve ayrı ders yazma/yayınlama yönetim paneli hazır değil.",
+        "layout": "full",
+        "sourceId": "repo-audit"
+      },
+      {
+        "id": "market",
+        "type": "markdown",
+        "body": "## Sektör ücretleri maliyet modelinin çıpasını oluşturuyor\n\nClutch'ın 28 Temmuz 2026 tarihli rehberinde yazılım şirketlerinin çoğu 25–49 USD/saat bandında; doğrulanmış projelerin ortalaması 132.480 USD olarak veriliyor. Upwork geçmiş sözleşmelerinde full-stack geliştirici medyan bandı 16–35 USD/saat. ASEA'nın özel UX'i, içerik motoru ve ürün mimarisi nedeniyle yazılım tarafında 30–55 USD/saatlik harmanlanmış oran kullanıldı.\n\nÖğretim tasarımcıları ve teknik yazarlar için görülen 20–45 USD/saat bandı, ders ve aktivite varlığının maliyetlenmesinde kullanıldı. Bunlar Türkiye'de tek kişinin maaş maliyeti değil; keşif, tasarım, geliştirme, revizyon, QA ve teslim sorumluluğu taşıyan ticari üretim oranlarıdır.",
+        "layout": "full"
+      },
+      {
+        "id": "cost-table-block",
+        "type": "table",
+        "tableId": "replacement-cost",
+        "layout": "full"
+      },
+      {
+        "id": "valuation",
+        "type": "markdown",
+        "body": "## Aynı varlık farklı satış biçimlerinde farklı fiyatlanmalı\n\n**Kaynak kod/IP devri:** Ürün kullanıcı ve gelir üretmediği için alıcı tamamlanma, bakım ve pazar riskini devralır. Bu nedenle yeniden yapım merkez değeri olan 4,62 milyon TL doğrudan satış fiyatı değildir. Tüm içerik hakları, tasarım ve kaynak kod için 2,90 milyon TL'den görüşmeye başlanması; 2,30–2,70 milyon TL aralığında kapanış hedeflenmesi uygundur.\n\n**Müşteriye mevcut MVP'nin yeniden üretimi:** Kapsam dondurulmuş, 60 günlük hata garantili ticari teklif için 4,2–5,8 milyon TL + KDV önerilir. Bu paket üretim V1 eksiklerini içermez.\n\n**Üretime hazır V1:** Gerçek kullanıcı hesabı, Google girişi, rol/yetki, AI mentor, testler, güvenlik, izleme, yedekleme, içerik yönetimi ve dağıtım ile 7,0–9,5 milyon TL + KDV önerilir.\n\n**Tam ASEA ekosistemi:** Öğrenci uygulaması, ayrı içerik/yayın admini ve tanıtım sitesi birlikte 9,5–14,0 milyon TL + KDV bandında fiyatlanmalıdır. Kurumsal özelleştirme, entegrasyon ve veri göçü ayrıca kapsamlandırılır.",
+        "layout": "full",
+        "sourceId": "valuation-model"
+      },
+      {
+        "id": "commercial-chart-block",
+        "type": "chart",
+        "chartId": "commercial-price-points",
+        "layout": "full"
+      },
+      {
+        "id": "saas",
+        "type": "markdown",
+        "body": "## SaaS modeli erişilebilir giriş ve kontrollü AI maliyeti istemeli\n\nGlobal çıpalar geniş bir aralıkta: DataCamp yıllık Premium planı aylık eşdeğer 14 USD, Coursera Plus ise 59 USD/ay veya 399 USD/yıl. ASEA'nın Türkiye odaklı ilk sürümünde yerel satın alma gücü ve henüz dar olan içerik kataloğu dikkate alınarak daha düşük giriş fiyatı önerilir.\n\nBireysel Core paket 399 TL/ay veya 3.990 TL/yıl; AI Mentor paket 699 TL/ay veya 6.990 TL/yıl olmalıdır. AI paketi sınırsız kullanım sözü vermemeli; aylık kredi ve aşım paketi kullanmalıdır. Kurumlarda minimum yıllık taahhüt, öğrenci başına kademeli fiyat ve 150–450 bin TL kurulum/eğitim bedeli uygulanmalıdır.",
+        "layout": "full"
+      },
+      {
+        "id": "saas-table-block",
+        "type": "table",
+        "tableId": "saas-pricing",
+        "layout": "full"
+      },
+      {
+        "id": "next-steps",
+        "type": "markdown",
+        "body": "## Önerilen sonraki adımlar\n\n1. **Satış biçimini seç:** Tam IP devri, müşteriye özel proje veya SaaS lisansı aynı teklif içinde karıştırılmamalı.\n2. **Üretim V1 kapsamını dondur:** Google giriş, roller, AI kullanım kotası, admin yayın akışı, test kapsamı ve C19–C28 içerikleri kabul kriterlerine çevrilmeli.\n3. **Fiyatı kilometre taşlarına böl:** %30 başlangıç, %25 UX/ürün kabulü, %25 beta, %20 canlıya geçiş ve garanti teslimi önerilir.\n4. **Bakımı ayrı sözleş:** Yıllık bakım ve sürüm bütçesi uygulama bedelinin %18–22'si; üçüncü taraf AI, barındırma, e-posta ve veritabanı giderleri ayrıca faturalandırılmalı.\n5. **Değeri kullanıcı kanıtıyla yükselt:** Ücretli pilot, tamamlanma oranı, haftalık aktif öğrenci ve öğrenme çıktısı ölçülmeden şirket/ürün değerlemesi yapılmamalı.",
+        "layout": "full"
+      },
+      {
+        "id": "questions",
+        "type": "markdown",
+        "body": "## Bir sonraki fiyat revizyonunda yanıtlanması gerekenler\n\n- Satılacak şey yalnızca kaynak kod mu, yoksa marka ve tüm eğitim içeriğinin münhasır hakkı mı?\n- İlk müşteri bireysel öğrenciler, özel eğitim kurumu, üniversite veya şirket akademisi mi?\n- 12 ay içindeki hedef aktif öğrenci ve ödeme dönüşümü nedir?\n- İçeriklerin uzman incelemesi, telif zinciri ve ticari kullanım hakları belgelenmiş mi?\n- AI mentor için öğrenci başına aylık kullanım ve maliyet tavanı nedir?",
+        "layout": "full"
+      },
+      {
+        "id": "caveats",
+        "type": "markdown",
+        "body": "## Varsayımlar ve sınırlar\n\nBu rapor şirket değerlemesi değil, 29 Temmuz 2026 itibarıyla maliyet ve pazar çıpasına dayalı ürün fiyatlandırmasıdır. Kullanıcı, gelir, büyüme, sözleşme, marka bilinirliği veya yatırım verisi verilmediği için gelir çarpanı kullanılmadı. Kelime sayısı kalite veya telif temizliğini kanıtlamaz; içerik değerinin korunması için konu uzmanı ve pedagojik QA gerekir. TL rakamları 47,3802 USD/TRY referans kuru ile çevrildiği için teklif tarihindeki kur ve enflasyona göre güncellenmelidir. Tüm ticari fiyatlar KDV, bulut, AI token kullanımı, ödeme komisyonu ve müşteri özel entegrasyonları hariçtir.",
+        "layout": "full"
+      }
+    ]
+  },
+  "snapshot": {
+    "version": 1,
+    "generatedAt": "2026-07-29T12:00:00+03:00",
+    "status": "ready",
+    "datasets": {
+      "replacement_cost": [
+        {
+          "component": "Ürün keşfi ve UX",
+          "low_hours": 140,
+          "high_hours": 220,
+          "low_rate_usd": 30,
+          "high_rate_usd": 55,
+          "low_cost_usd": 4200,
+          "high_cost_usd": 12100,
+          "basis": "Özel üç sütunlu öğrenme deneyimi ve ekran mimarisi"
+        },
+        {
+          "component": "Frontend ve tasarım sistemi",
+          "low_hours": 420,
+          "high_hours": 620,
+          "low_rate_usd": 30,
+          "high_rate_usd": 55,
+          "low_cost_usd": 12600,
+          "high_cost_usd": 34100,
+          "basis": "Next.js ekranları, bileşenler, responsive ve etkileşimler"
+        },
+        {
+          "component": "İçerik motoru, katalog ve arama",
+          "low_hours": 180,
+          "high_hours": 280,
+          "low_rate_usd": 30,
+          "high_rate_usd": 55,
+          "low_cost_usd": 5400,
+          "high_cost_usd": 15400,
+          "basis": "Markdown derleme, dinamik rota ve klasik arama"
+        },
+        {
+          "component": "MongoDB API ve kod çalışma alanı",
+          "low_hours": 240,
+          "high_hours": 360,
+          "low_rate_usd": 30,
+          "high_rate_usd": 55,
+          "low_cost_usd": 7200,
+          "high_cost_usd": 19800,
+          "basis": "Not/ilerleme kalıcılığı, Web Worker ve araç kartları"
+        },
+        {
+          "component": "QA, proje yönetimi ve mevcut teslim",
+          "low_hours": 240,
+          "high_hours": 360,
+          "low_rate_usd": 30,
+          "high_rate_usd": 55,
+          "low_cost_usd": 7200,
+          "high_cost_usd": 19800,
+          "basis": "Kapsam koordinasyonu, revizyon, kalite ve build doğrulama"
+        },
+        {
+          "component": "Ders ve aktivite varlığı",
+          "low_hours": 700,
+          "high_hours": 1300,
+          "low_rate_usd": 20,
+          "high_rate_usd": 45,
+          "low_cost_usd": 14000,
+          "high_cost_usd": 58500,
+          "basis": "224.360 kelime teknik içerik, aktivite ve öğretim tasarımı"
+        }
+      ],
+      "commercial_prices": [
+        {
+          "offering": "IP devri",
+          "recommended_m_try": 2.4,
+          "low_m_try": 1.8,
+          "high_m_try": 2.9,
+          "scope": "Kaynak kod, tasarım ve mevcut içerik; münhasır hak devri varsayımı",
+          "delivery_state": "Gelirsiz çalışan MVP"
+        },
+        {
+          "offering": "MVP",
+          "recommended_m_try": 5.0,
+          "low_m_try": 4.2,
+          "high_m_try": 5.8,
+          "scope": "İncelenen mevcut kapsamın müşteriye özel yeniden üretimi",
+          "delivery_state": "Sabit kapsam ve sınırlı garanti"
+        },
+        {
+          "offering": "Üretim V1",
+          "recommended_m_try": 8.0,
+          "low_m_try": 7.0,
+          "high_m_try": 9.5,
+          "scope": "Auth, RBAC, gerçek AI, test, güvenlik, izleme, yayın yönetimi",
+          "delivery_state": "Canlı kullanıma hazır"
+        },
+        {
+          "offering": "Tam ekosistem",
+          "recommended_m_try": 11.5,
+          "low_m_try": 9.5,
+          "high_m_try": 14.0,
+          "scope": "Öğrenci uygulaması, içerik admini ve tanıtım sitesi",
+          "delivery_state": "Kurumsal ürün paketi"
+        }
+      ],
+      "saas_prices": [
+        {
+          "plan": "Core bireysel",
+          "audience": "Öğrenci",
+          "monthly_try": 399,
+          "annual_try": 3990,
+          "commercial_rule": "AI hariç; yıllık planda iki ay avantaj",
+          "ai_policy": "AI kredisi yok",
+          "minimum_seats": 1
+        },
+        {
+          "plan": "AI Mentor bireysel",
+          "audience": "Öğrenci",
+          "monthly_try": 699,
+          "annual_try": 6990,
+          "commercial_rule": "Aylık AI kredisi ve ücretli aşım paketi",
+          "ai_policy": "Adil kullanım/kredi sınırı",
+          "minimum_seats": 1
+        },
+        {
+          "plan": "Kurum 100–499",
+          "audience": "Okul / akademi",
+          "monthly_try": 350,
+          "annual_try": 4200,
+          "commercial_rule": "Öğrenci başına; en az 100 yıllık koltuk",
+          "ai_policy": "AI ayrıca veya havuz kredi",
+          "minimum_seats": 100
+        },
+        {
+          "plan": "Kurum 500–999",
+          "audience": "Okul / akademi",
+          "monthly_try": 250,
+          "annual_try": 3000,
+          "commercial_rule": "Öğrenci başına; yıllık peşin",
+          "ai_policy": "AI ayrıca veya havuz kredi",
+          "minimum_seats": 500
+        },
+        {
+          "plan": "Enterprise 1000+",
+          "audience": "Üniversite / şirket",
+          "monthly_try": 180,
+          "annual_try": 2160,
+          "commercial_rule": "Öğrenci başına; SSO ve SLA ayrıca",
+          "ai_policy": "Kuruma özel kredi ve maliyet tavanı",
+          "minimum_seats": 1000
+        }
+      ],
+      "repo_scope": [
+        {
+          "metric": "Admin uygulaması özel kodu",
+          "value": 9550,
+          "unit": "satır",
+          "files": 114,
+          "status": "mevcut"
+        },
+        {
+          "metric": "Kanonik ders",
+          "value": 18,
+          "unit": "ders",
+          "files": 18,
+          "words": 133032,
+          "status": "mevcut"
+        },
+        {
+          "metric": "Aktivite içeriği",
+          "value": 17,
+          "unit": "chapter paketi",
+          "files": 233,
+          "words": 91328,
+          "status": "C18 paketi eksik"
+        },
+        {
+          "metric": "Planlanan ancak olmayan ders",
+          "value": 10,
+          "unit": "ders",
+          "files": 0,
+          "status": "C19–C28"
+        }
+      ],
+      "valuation_summary": [
+        {
+          "case": "Düşük",
+          "hours": 1920,
+          "cost_usd": 50600,
+          "fx_usd_try": 47.3802,
+          "cost_try": 2397438
+        },
+        {
+          "case": "Merkez",
+          "hours": 2530,
+          "cost_usd": 97525,
+          "fx_usd_try": 47.3802,
+          "cost_try": 4620754
+        },
+        {
+          "case": "Yüksek",
+          "hours": 3140,
+          "cost_usd": 159700,
+          "fx_usd_try": 47.3802,
+          "cost_try": 7566618
+        }
+      ]
+    }
+  },
+  "sources": [
+    {
+      "id": "fx",
+      "label": "Investing.com USD/TRY",
+      "href": "https://tr.investing.com/currencies/usd-try"
+    },
+    {
+      "id": "clutch",
+      "label": "Clutch Software Development Pricing 2026",
+      "href": "https://clutch.co/developers/pricing"
+    },
+    {
+      "id": "upwork-fullstack",
+      "label": "Upwork Full Stack Developer Cost",
+      "href": "https://www.upwork.com/hire/full-stack-developers/cost/"
+    },
+    {
+      "id": "upwork-learning",
+      "label": "Upwork Instructional Designer Cost",
+      "href": "https://www.upwork.com/hire/instructional-designers/cost/"
+    }
+  ]
+}

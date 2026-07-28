@@ -179,3 +179,99 @@ Pilotun tamamlanması için yapılacaklar:
    oturumlarını uygulamak.
 4. Gerçek sonuçları pilot-results.csv dosyasına kaydetmek.
 5. En az beş geçerli tamamlanmış kayıttan sonra sonuç analizini başlatmak.
+
+MÜFREDAT ÜRETİMİ DURAKLATMA VE DEVAM KAYDI
+
+Kayıt tarihi: 2026-07-28
+Durum: Geçici olarak ertelendi
+
+Mevcut ilerleme:
+
+1. V01-C17 — Koleksiyonlar ve Yineleme ana dersi ile on iki parçalık öğrenme
+   paketi tamamlandı.
+2. V01-C18 — Kayıtlar ve Veri Modelleme araştırma paketi doğrulandı ve Draft
+   Production için hazır.
+3. V01-C18 ana ders üretimine başlandı; ders ve öğrenme paketi henüz
+   tamamlanmadı.
+4. V01-C19–V01-C28 ana ders ve öğrenme paketleri henüz üretilmedi.
+
+Müfredat üretimine dönüldüğünde uygulanacak sıra:
+
+1. V01-C18 ana dersini tamamlamak.
+2. V01-C18 için on iki parçalık öğrenme paketini üretmek ve doğrulamak.
+3. V01-M05 üretim raporunu hazırlamak.
+4. Kanonik chapter sırasını izleyerek V01-C19 üretimine geçmek.
+
+YENİ AKTİF ÇALIŞMA ODAĞI
+
+Başlangıç tarihi: 2026-07-28
+Durum: Aktif öncelik
+
+Bir sonraki geliştirme dönemi aşağıdaki üç alanı birlikte ele alacaktır:
+
+1. ASEA içerikleri için arama motoru ve arama deneyimi.
+2. `apps/web` içinde ASEA'yı tanıtan herkese açık web sitesi.
+3. `apps/admin` içinde öğrenci dashboard'u, üç sütunlu ders çalışma alanı,
+   arama, Kod Editörü ve çalışma araçları.
+
+Bu çalışma tamamlanana veya yeniden önceliklendirilene kadar yeni chapter
+üretimi V01-C18 noktasında bekletilecektir.
+
+ÜRÜN VE ARAYÜZ PLANLAMASINDA ERTELENEN GELİŞTİRMELER
+
+Kayıt tarihi: 2026-07-28
+Durum: İlk sürüm sonrasına ertelendi
+
+Arama deneyimi:
+
+1. İlk sürümde dersler, kavramlar, kod örnekleri, quizler, laboratuvarlar,
+   projeler, öğrenci notları ve izin verilen öğrenci çalışma kayıtları klasik
+   sonuç listesiyle aranacaktır.
+2. Sonraki sürümde arama sonuçlarına, ASEA'nın doğrulanmış kaynaklarına dayanan
+   AI tarafından üretilmiş özet cevap katmanı eklenecektir.
+3. AI özeti kaynak bağlantıları göstermeli, ilgili ders bölümüne geçiş
+   sağlamalı ve doğrulanmamış bilgiyi kesin bilgi gibi sunmamalıdır.
+
+Gelişmiş ders yazma ve yayın araçları:
+
+Bu araçlar `apps/web` veya `apps/admin` içinde geliştirilmeyecektir. Sonraki
+aşamada ayrı bir içerik yönetimi projesinde ele alınacaktır.
+
+1. Markdown/MDX ve yapılandırılmış içerik bloklarını destekleyen editör.
+2. Dersin öğrenci görünümünü gösteren canlı önizleme.
+3. AI destekli taslak üretme, yeniden yazma ve kalite denetimi.
+4. Kaynak ve iddia eşleme araçları.
+5. Sürüm geçmişi, değişiklik karşılaştırması ve geri alma.
+6. Teknik doğruluk, pedagojik kalite, terminoloji, bağlantı ve erişilebilirlik
+   kontrolleri.
+7. İncelemeye gönderme, onaylama, reddetme ve yayınlama iş akışı.
+
+Çok rollü içerik yönetimi:
+
+1. Yazar içerik taslağını üretir ve incelemeye gönderir.
+2. Teknik incelemeci kodu, teknik iddiaları ve kaynakları doğrular.
+3. Eğitimsel incelemeci öğrenme çıktısı, anlatım, ölçme ve zorluk uyumunu
+   değerlendirir.
+4. Yayın yetkilisi gerekli kapılar tamamlandıktan sonra içeriği yayımlar.
+5. İlk sürümde bir kullanıcı birden fazla rolü üstlenebilir; sistem rol ve
+   karar kayıtlarını ayrı tutacak şekilde tasarlanmalıdır.
+
+Quiz başarı ve tekrar politikası:
+
+1. Quiz başarı eşiği ürünün ölçme-değerlendirme aşamasında belirlenecektir.
+2. Tekrar hakkı, soru ve seçenek sıralamasının değiştirilmesi, soru havuzu
+   kullanımı ve yeniden deneme bekleme süresi ayrıca kararlaştırılacaktır.
+3. Başarı kapıları; sonraki chapter, laboratuvar, challenge, cevap anahtarı ve
+   modül projesi için ayrı kurallarla yapılandırılabilir olmalıdır.
+4. Nihai politika belirlenene kadar arayüz sabit bir başarı yüzdesini ürün
+   kuralı gibi göstermemelidir.
+
+ASEA görsel kimliği:
+
+1. ASEA logosu sonraki marka tasarımı aşamasında hazırlanacaktır.
+2. Kalıcı renk paleti ve tasarım tokenları logo ile birlikte
+   kararlaştırılacaktır.
+3. İlk çalışma prototipi sakin ve odaklı bir çalışma alanı karakterinde,
+   nötr ve değiştirilebilir geçici tasarım tokenlarıyla hazırlanmalıdır.
+4. Açık ve koyu tema aynı semantik token yapısını kullanmalı; geçici renkler
+   bileşenlerin içine sabitlenmemelidir.
