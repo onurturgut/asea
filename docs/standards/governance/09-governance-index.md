@@ -15,7 +15,10 @@ Bu indeks, ASEA Standards v2’yi değiştirmeden tamamlayan Governance Extensio
 
 ## Scope
 
-Paket yalnız governance belge türlerini ve süreçlerini kapsar. Repository, Curriculum, Volume ve Chapter Standards v2’nin eğitim, yapı ve ortak metadata kararları aynen korunur. Bu paket Standards v3 değildir.
+Paket yalnız governance belge türlerini ve süreçlerini kapsar. Repository,
+Curriculum, Volume ve Chapter Standards v2 ile Teaching and Continuity
+Standard v1'in eğitim, yapı ve ortak metadata kararları aynen korunur. Bu
+paket Standards v3 değildir.
 
 ## Required Metadata
 
@@ -77,11 +80,13 @@ Governance belgeleri Standards v2 ortak yaşam döngüsünü kullanır: `Draft �
 | [Curriculum Standard v2](../curriculum-standard-v2.md) | Learning progression, outcome meaning, assessment relationships | Canonical/derived traceability ownership and audit evidence |
 | [Volume Standard v2](../volume-standard-v2.md) | Volume packaging, Blueprint, Capstone, Volume DoD | Supporting-file schemas and formal freeze record |
 | [Chapter Standard v2](../chapter-standard-v2.md) | Chapter schema, 15 H2 structure, Chapter review gate | Content/Chapter audit and validation evidence |
+| [Teaching and Continuity Standard v1](../teaching-and-continuity-standard-v1.md) | Learner-facing instruction, scaffolding and academy-module-chapter continuity | Pedagogical audit and validation evidence |
 
 ### Precedence
 
 1. Repository Standard v2 common constraints always apply.
-2. Curriculum, Volume ve Chapter Standards kendi semantic/type alanlarında otoritedir.
+2. Curriculum, Volume, Chapter ve Teaching and Continuity Standards kendi
+   semantic/type alanlarında otoritedir.
 3. Governance Extension yalnız önceden tanımsız governance/supporting alanlarını tamamlar.
 4. Extension, core standard kuralını zayıflatamaz.
 5. Traceability için Curriculum Standard’daki `assessment.md` authority korunur; ayrı matrix’ler derived’dır.
@@ -141,4 +146,5 @@ Website veya `traceability-matrix.md`, authoritative `assessment.md` source ID/v
 - [Curriculum Standard v2.0](../curriculum-standard-v2.md)
 - [Volume Standard v2.0](../volume-standard-v2.md)
 - [Chapter Standard v2.0](../chapter-standard-v2.md)
+- [Teaching and Continuity Standard v1.0](../teaching-and-continuity-standard-v1.md)
 - [Migration Guide v1 to v2](../migration-guide-v1-to-v2.md)

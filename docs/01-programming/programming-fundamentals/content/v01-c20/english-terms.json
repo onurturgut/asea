@@ -1,0 +1,117 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C20-TERMS01",
+  "chapterId": "V01-C20",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {
+      "term": "string",
+      "turkish": "metin dizisi",
+      "explanation": "JavaScript'te metinsel veriyi taşıyan immutable değer türü.",
+      "firstUseContext": "Ham ders başlıkları",
+      "example": "\"Programlama Temelleri\"",
+      "confusedWith": "number",
+      "revisitAt": "V01-C21"
+    },
+    {
+      "term": "immutable",
+      "turkish": "değiştirilemez",
+      "explanation": "Bir string işleminin özgün değeri yerinde değiştirmeyip yeni değer üretmesi.",
+      "firstUseContext": "trim sonrası ham değerin korunması",
+      "example": "raw.trim()",
+      "confusedWith": "const binding",
+      "revisitAt": "V01-C30"
+    },
+    {
+      "term": "whitespace",
+      "turkish": "boşluk karakterleri",
+      "explanation": "Space, tab ve satır sonu gibi görsel aralık veya düzen oluşturan değerler.",
+      "firstUseContext": "trim ve tokenization",
+      "example": "\"\\t ASEA \\n\"",
+      "confusedWith": "space",
+      "revisitAt": "V01-C24"
+    },
+    {
+      "term": "normalization",
+      "turkish": "normalizasyon / ortaklaştırma",
+      "explanation": "Farklı ham metinleri açık bir ürün politikasına göre ortak temsile getirme.",
+      "firstUseContext": "Metin pipeline'ı",
+      "example": "trim + NFC + locale case",
+      "confusedWith": "validation",
+      "revisitAt": "V01-C35"
+    },
+    {
+      "term": "locale",
+      "turkish": "dil ve bölge ayarı",
+      "explanation": "Dil-duyarlı işlemlerde kullanılacak kültürel/dilsel kuralları tanımlayan etiket.",
+      "firstUseContext": "Türkçe case dönüşümü",
+      "example": "\"tr-TR\"",
+      "confusedWith": "language syntax",
+      "revisitAt": "V01-C35"
+    },
+    {
+      "term": "token",
+      "turkish": "metin parçası",
+      "explanation": "Sonraki işlem için belirlenmiş kuralla ayrılan anlamlı parça.",
+      "firstUseContext": "Başlık kelimeleri",
+      "example": "[\"javascript\", \"temelleri\"]",
+      "confusedWith": "character",
+      "revisitAt": "V01-C21"
+    },
+    {
+      "term": "tokenization",
+      "turkish": "parçalara ayırma",
+      "explanation": "Metni belirlenmiş sınırlara göre token koleksiyonuna dönüştürme.",
+      "firstUseContext": "Whitespace pipeline aşaması",
+      "example": "text.split(/\\s+/)",
+      "confusedWith": "validation",
+      "revisitAt": "V01-C31"
+    },
+    {
+      "term": "parsing",
+      "turkish": "ayrıştırma",
+      "explanation": "Metinsel girdiyi tanımlı yapısal parçalara dönüştürme.",
+      "firstUseContext": "Ada|85|Ankara kaydı",
+      "example": "raw.split(\"|\")",
+      "confusedWith": "validation",
+      "revisitAt": "V01-C24"
+    },
+    {
+      "term": "code unit",
+      "turkish": "kod birimi",
+      "explanation": "JavaScript string'lerinin UTF-16 temsil ve indeksleme birimi.",
+      "firstUseContext": "Emoji length karşılaştırması",
+      "example": "\"🦊\".length === 2",
+      "confusedWith": "code point",
+      "revisitAt": "V01-C34"
+    },
+    {
+      "term": "code point",
+      "turkish": "kod noktası",
+      "explanation": "Unicode'da bir karaktere atanmış soyut sayısal kimlik.",
+      "firstUseContext": "UTF-16 sınırı",
+      "example": "U+1F98A",
+      "confusedWith": "code unit",
+      "revisitAt": "V01-C34"
+    },
+    {
+      "term": "grapheme cluster",
+      "turkish": "grafem kümesi",
+      "explanation": "Kullanıcının çoğunlukla tek görsel karakter olarak algıladığı code point dizisi.",
+      "firstUseContext": "Birleşik emoji",
+      "example": "👨‍👦",
+      "confusedWith": "code point",
+      "revisitAt": "V01-C35"
+    },
+    {
+      "term": "pipeline",
+      "turkish": "işleme hattı",
+      "explanation": "Bir aşamanın çıktısını sonraki aşamanın girdisi yapan görünür dönüşüm sırası.",
+      "firstUseContext": "Başlık normalizasyonu",
+      "example": "trim → NFC → case → tokenize",
+      "confusedWith": "single method chain",
+      "revisitAt": "V01-C31"
+    }
+  ]
+}

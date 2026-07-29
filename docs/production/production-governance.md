@@ -10,6 +10,7 @@ authority: "Informational"
 owner_role: "Governance Architect"
 source_ids:
   - "ASEA-STD-REPOSITORY-002"
+  - "ASEA-STD-TEACHING-001"
   - "ASEA-STD-GOV-REVIEW-001"
   - "ASEA-STD-GOV-VALIDATION-001"
 derived_from:
@@ -39,6 +40,7 @@ or alter existing standards and registries.
 | Knowledge records | KOS standards and atomic registries |
 | Curriculum and Outcomes | Curriculum and Volume standards |
 | Chapter structure | Chapter Standard v2 |
+| Learner-facing teaching and continuity | Teaching and Continuity Standard v1 |
 | Traceability | Canonical Assessment Plan and Traceability Standard |
 | Validation result | Validation Standard |
 | Review decision | Review Standard |
@@ -115,6 +117,8 @@ equal approval.
 - Outcome or Chapter architecture change: return to curriculum governance.
 - CPP design change: revise packet and rerun pre-production review.
 - Draft technical or pedagogical defect: revise Draft and rerun affected review.
+- Teaching or continuity defect: return to the chapter continuity contract,
+  revise the learner-facing Draft, and rerun pedagogical review.
 - Published correction: create a new version and preserve immutable history.
 
 No urgency permits direct mutation of a Stable or frozen artefact.
@@ -124,6 +128,7 @@ No urgency permits direct mutation of a Stable or frozen artefact.
 Publication requires:
 
 - complete and approved Research and Production Packets;
+- Teaching and Continuity conformance evidence;
 - approved post-draft reviews;
 - validated assessments and assets;
 - no open Critical or Major finding;
@@ -140,6 +145,7 @@ freeze rules. It creates no parallel governance or approval state.
 - [Production Architecture](./production-architecture.md)
 - [Production Lifecycle](./production-lifecycle.md)
 - [Standards Index v2](../standards/standards-index-v2.md)
+- [Teaching and Continuity Standard v1](../standards/teaching-and-continuity-standard-v1.md)
 - [Review Standard](../standards/governance/02-review-standard.md)
 - [Validation Standard](../standards/governance/08-validation-standard.md)
 - [Freeze Standard](../standards/governance/05-freeze-standard.md)

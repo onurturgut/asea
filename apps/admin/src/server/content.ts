@@ -105,6 +105,78 @@ async function readOptionalSource(
   return null;
 }
 
+interface EnglishTermRecord {
+  term: string;
+  turkish: string;
+  explanation: string;
+  firstUseContext?: string;
+  example?: string;
+  confusedWith?: string;
+  revisitAt?: string;
+}
+
+async function readEnglishTermsSource(root: string, directory: string) {
+  const relativePath = path.join(directory, "english-terms.json");
+  try {
+    const raw = await readFile(path.join(root, relativePath), "utf8");
+    const payload = JSON.parse(raw) as {
+      chapterId?: string;
+      terms?: EnglishTermRecord[];
+    };
+    const terms = Array.isArray(payload.terms) ? payload.terms : [];
+    if (!terms.length) return null;
+
+    const body = terms
+      .map((term) => {
+        const details = [
+          `**Türkçe:** ${term.turkish}`,
+          term.firstUseContext
+            ? `**İlk kullanım:** ${term.firstUseContext}`
+            : null,
+          term.example ? `**Örnek:** ${term.example}` : null,
+          term.confusedWith
+            ? `**Karıştırılabilir:** ${term.confusedWith}`
+            : null,
+          term.revisitAt ? `**Tekrar noktası:** ${term.revisitAt}` : null,
+        ].filter((value): value is string => Boolean(value));
+
+        return [
+          `## ${term.term}`,
+          "",
+          term.explanation,
+          "",
+          ...details,
+        ].join("\n");
+      })
+      .join("\n\n");
+
+    return {
+      kind: "english-terms" as const,
+      sourcePath: relativePath.replaceAll("\\", "/"),
+      markdown: [
+        "---",
+        'document_type: "english-terms"',
+        `chapter_id: "${payload.chapterId ?? "unknown"}"`,
+        'title: "İngilizce Terimler"',
+        "---",
+        "",
+        "# İngilizce Terimler",
+        "",
+        "Bu chapter'da kullanılan teknik terimleri bağlamlarıyla tekrar edin.",
+        "",
+        body,
+      ].join("\n"),
+    } satisfies MarkdownSource;
+  } catch (error) {
+    const code =
+      error instanceof Error && "code" in error
+        ? (error as NodeJS.ErrnoException).code
+        : undefined;
+    if (code === "ENOENT") return null;
+    throw error;
+  }
+}
+
 function scalarMetadata(document: ContentDocument, key: string, fallback = "") {
   const value = document.metadata[key];
   return typeof value === "string" ? value : fallback;
@@ -137,7 +209,12 @@ function moduleIdForChapter(chapterId: string) {
   if (number <= 16) return "V01-M04";
   if (number <= 20) return "V01-M05";
   if (number <= 23) return "V01-M06";
-  return "V01-M07";
+  if (number <= 28) return "V01-M07";
+  if (number === 29 || number === 38) return "V01-M08";
+  if (number <= 31) return "V01-M09";
+  if (number <= 33) return "V01-M10";
+  if (number <= 35) return "V01-M11";
+  return "V01-M12";
 }
 
 function normalizeChapterId(value: string) {
@@ -214,11 +291,12 @@ export const getChapterContent = cache(
       chapterId.toLowerCase(),
     );
     const artifacts = (
-      await Promise.all(
-        ARTIFACT_FILES.map(([kind, candidates]) =>
+      await Promise.all([
+        ...ARTIFACT_FILES.map(([kind, candidates]) =>
           readOptionalSource(root, kind, packageDirectory, candidates),
         ),
-      )
+        readEnglishTermsSource(root, packageDirectory),
+      ])
     ).filter((source): source is MarkdownSource => source !== null);
     const lessonDocument = compileMarkdownDocument(lesson);
 

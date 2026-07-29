@@ -1,0 +1,16 @@
+{
+  "chapter_id": "V01-C18",
+  "title": "İngilizce Terimler",
+  "terms": [
+    {"term": "record", "turkish": "kayıt", "definition": "Tek varlık veya olayı anlatan adlandırılmış alanlar bütünü.", "example": "inventory record"},
+    {"term": "field", "turkish": "alan", "definition": "Kayıt içindeki tek anlamlı veri parçası.", "example": "stock field"},
+    {"term": "schema", "turkish": "şema", "definition": "İzin verilen veri yapısı ve kısıtlarının sözleşmesi.", "example": "JSON Schema"},
+    {"term": "instance", "turkish": "örnek/kayıt örneği", "definition": "Şemaya göre oluşan gerçek değer.", "example": "an object instance"},
+    {"term": "invariant", "turkish": "değişmez", "definition": "Model geçerliyken doğru kalması gereken koşul.", "example": "reservedStock <= stock"},
+    {"term": "invalid state", "turkish": "geçersiz durum", "definition": "En az bir değişmezi ihlal eden durum.", "example": "negative stock"},
+    {"term": "identity", "turkish": "kimlik", "definition": "Varlığı zaman içinde ayırt eden değer.", "example": "productId"},
+    {"term": "reference equality", "turkish": "referans eşitliği", "definition": "İki değerin aynı nesneyi gösterip göstermediği.", "example": "a === b"},
+    {"term": "derived data", "turkish": "türetilmiş veri", "definition": "Başka alanlardan hesaplanabilen veri.", "example": "line total"},
+    {"term": "construction boundary", "turkish": "oluşturma sınırı", "definition": "Ham girdiyi doğrulayıp geçerli kayıt üreten sınır.", "example": "createInventoryItem"}
+  ]
+}

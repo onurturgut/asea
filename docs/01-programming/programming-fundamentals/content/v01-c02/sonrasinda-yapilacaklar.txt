@@ -275,3 +275,68 @@ ASEA görsel kimliği:
    nötr ve değiştirilebilir geçici tasarım tokenlarıyla hazırlanmalıdır.
 4. Açık ve koyu tema aynı semantik token yapısını kullanmalı; geçici renkler
    bileşenlerin içine sabitlenmemelidir.
+
+DERS İÇERİĞİ ÜRETİM STANDARDI VE SONRAKİ REVİZYON
+
+Kayıt tarihi: 2026-07-29
+Durum: İçerik üretim kararları onaylandı
+
+Mevcut chapter'ların sonraki revizyonu:
+
+1. V01-C01–V01-C18 dersleri yeni ASEA chapter standardına göre daha sonra
+   toplu olarak yeniden düzenlenecektir.
+2. Bu çalışma mevcut arama motoru, kaynak kataloğu ve yeni ders üretimi
+   planlaması tamamlandıktan sonra ayrı bir içerik revizyon aşamasında ele
+   alınacaktır.
+3. Revizyon; sıfırdan başlayan Türk öğrenciler için anlatım, teknik terimler,
+   örnekler, hata ayıklama, alıştırmalar, quiz, laboratuvar, görseller,
+   kaynaklar ve kalite kapılarını kapsayacaktır.
+4. Tamamlanan mevcut chapter'lar silinmeyecek; sürümlü biçimde yeni standarda
+   yükseltilecektir.
+
+Akademi boyunca gelişen ana proje:
+
+1. Her akademide küçük ve bağımsız laboratuvarların yanında, chapter'lar
+   ilerledikçe büyüyen tek bir ana proje bulunacaktır.
+2. Her chapter ana projeye yeni bir yetenek, teknik karar, test veya iyileştirme
+   eklemelidir.
+3. Ana proje, öğrencinin önceki chapter bilgisini kullanmasını ve kararlarını
+   teknik olarak açıklamasını gerektirmelidir.
+4. Akademi sonunda proje çalışır ürün, kaynak kod, testler, teknik açıklama ve
+   öğrencinin öğrenme kanıtlarını içermelidir.
+
+Zorunlu görsel anlatım:
+
+1. Her chapter en az bir amaca bağlı diyagram, süreç görseli, durum izleyici,
+   karşılaştırma veya etkileşimli görsel içermelidir.
+2. Görsel yalnızca dekorasyon amacıyla kullanılmamalı; belirli bir öğrenme
+   çıktısını desteklemelidir.
+3. Bellek, çalışma zamanı, veri akışı, ağ, algoritma ve mimari gibi görünmeyen
+   süreçlerde adımlı görsel anlatım zorunludur.
+4. Her görsel için açıklayıcı başlık, metin alternatifi, kaynak/lisans kaydı ve
+   gerekiyorsa azaltılmış hareket seçeneği bulunmalıdır.
+5. Teknik doğruluk, pedagojik açıklık, erişilebilirlik ve mobil/masaüstü
+   kullanılabilirlik görsel yayın kapısının parçasıdır.
+
+İngilizce Terimler kartı:
+
+1. Her chapter'ın sağ araç sütununda `İngilizce Terimler` adlı ayrı bir kart
+   bulunacaktır.
+2. Kart; terimin İngilizcesini, Türkçe karşılığını, kısa teknik açıklamasını,
+   kod içindeki kullanımını, örnek dokümantasyon cümlesini ve ilişkili terimleri
+   gösterecektir.
+3. Öğrenci terimi kısa nota veya flashcard koleksiyonuna ekleyebilecektir.
+4. İngilizce terimler ana ders anlatımını kesmeyecek; chapter bağlamına göre
+   kartta erişilebilir olacaktır.
+
+Yayın onayı:
+
+1. Her chapter teknik doğruluk, pedagojik sıralama, Türkçe anlatım,
+   terminoloji, kod çalıştırma, quiz ve cevap doğrulama, laboratuvar testleri,
+   kaynak/lisans, erişilebilirlik, güncellik ve chapter uyumu kontrollerinden
+   geçmelidir.
+2. Otomatik kontroller başarısızken chapter son onaya gönderilmemelidir.
+3. Otomatik kontroller tamamlandıktan sonra son yayın onayı proje sahibi
+   tarafından verilecektir.
+4. Son onay verilmeden içerik öğrencilere yayımlanmayacak; düzeltme gereken
+   chapter yeniden taslak durumuna dönecektir.

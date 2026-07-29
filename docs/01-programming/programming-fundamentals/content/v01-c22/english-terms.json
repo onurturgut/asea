@@ -1,0 +1,117 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C22-TERMS01",
+  "chapterId": "V01-C22",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {
+      "term": "sorting",
+      "turkish": "sıralama",
+      "explanation": "Değerleri açık bir karşılaştırma kuralına göre düzene koyma işlemi.",
+      "firstUseContext": "Chapter ID listesi",
+      "example": "[21, 8, 17] → [8, 17, 21]",
+      "confusedWith": "searching",
+      "revisitAt": "V01-C23"
+    },
+    {
+      "term": "selection sort",
+      "turkish": "seçmeli sıralama",
+      "explanation": "Her turda sırasız bölümün en küçük değerini seçen algoritma.",
+      "firstUseContext": "Sınav kâğıtlarını seçme",
+      "example": "smallestIndex",
+      "confusedWith": "linear search",
+      "revisitAt": "V01-C23"
+    },
+    {
+      "term": "insertion sort",
+      "turkish": "eklemeli sıralama",
+      "explanation": "Yeni değeri sıralı önekteki doğru konuma yerleştiren algoritma.",
+      "firstUseContext": "İskambil kartları",
+      "example": "currentValue and position",
+      "confusedWith": "selection sort",
+      "revisitAt": "V01-C23"
+    },
+    {
+      "term": "comparison",
+      "turkish": "karşılaştırma",
+      "explanation": "İki değerin sıralama ilişkisini değerlendiren işlem.",
+      "firstUseContext": "En küçük adayı bulma",
+      "example": "a < b",
+      "confusedWith": "assignment",
+      "revisitAt": "V01-C23"
+    },
+    {
+      "term": "swap",
+      "turkish": "yer değiştirme",
+      "explanation": "İki index'teki değerin konumlarını karşılıklı değiştirme.",
+      "firstUseContext": "Selection dış turu",
+      "example": "index 0 ↔ index 3",
+      "confusedWith": "shift",
+      "revisitAt": "V01-C23"
+    },
+    {
+      "term": "shift",
+      "turkish": "kaydırma",
+      "explanation": "Bir değeri komşu konuma taşıyarak yer açma işlemi.",
+      "firstUseContext": "Insertion while döngüsü",
+      "example": "value moves one position right",
+      "confusedWith": "swap",
+      "revisitAt": "V01-C23"
+    },
+    {
+      "term": "sorted prefix",
+      "turkish": "sıralı önek",
+      "explanation": "Array'in başında doğru sıralandığı kanıtlanan bölüm.",
+      "firstUseContext": "Dış döngü değişmezi",
+      "example": "0..start-1",
+      "confusedWith": "whole sorted array",
+      "revisitAt": "V01-C23"
+    },
+    {
+      "term": "stability",
+      "turkish": "kararlılık",
+      "explanation": "Eşit anahtarlı kayıtların özgün göreli sırasının korunması.",
+      "firstUseContext": "Eşit puanlı öğrenciler",
+      "example": "Ada remains before Mert",
+      "confusedWith": "program reliability",
+      "revisitAt": "V01-C31"
+    },
+    {
+      "term": "in-place",
+      "turkish": "yerinde",
+      "explanation": "Girdi boyutuyla büyüyen ikinci bir koleksiyon kullanmadan çalışma.",
+      "firstUseContext": "Algoritma alan kararı",
+      "example": "mutate the same array",
+      "confusedWith": "immutable",
+      "revisitAt": "V01-C23"
+    },
+    {
+      "term": "mutation",
+      "turkish": "değiştirme / mutasyon",
+      "explanation": "Var olan array veya nesnenin içeriğini yerinde değiştirme.",
+      "firstUseContext": "sort() davranışı",
+      "example": "values[0] = 2",
+      "confusedWith": "rebinding",
+      "revisitAt": "V01-C30"
+    },
+    {
+      "term": "comparator",
+      "turkish": "karşılaştırıcı",
+      "explanation": "İki öğenin sıralama ilişkisini negatif, sıfır veya pozitif sonuçla tanımlayan fonksiyon.",
+      "firstUseContext": "Kayıt sıralama",
+      "example": "(a, b) => a.score - b.score",
+      "confusedWith": "boolean predicate",
+      "revisitAt": "V01-C31"
+    },
+    {
+      "term": "duplicate value",
+      "turkish": "yinelenen değer",
+      "explanation": "Aynı sıralama anahtarına sahip birden fazla öğe.",
+      "firstUseContext": "Stability deneyi",
+      "example": "two records with score 80",
+      "confusedWith": "same record",
+      "revisitAt": "V01-C31"
+    }
+  ]
+}

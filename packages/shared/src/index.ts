@@ -10,6 +10,7 @@ export type ContentArtifactKind =
   | "quiz-answer-key"
   | "interview"
   | "flashcards"
+  | "english-terms"
   | "mentor"
   | "assessment"
   | "project"

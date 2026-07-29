@@ -180,8 +180,9 @@ All Chapter Blueprints are version `0.1.0`, status `Draft`, and freeze status `U
 
 ## Standards
 
-- [Standards Index v2.0](../../standards/standards-index-v2.md)
+- [Standards Index v2.1](../../standards/standards-index-v2.md)
 - [Volume Standard v2.0](../../standards/volume-standard-v2.md)
 - [Chapter Standard v2.0](../../standards/chapter-standard-v2.md)
+- [Teaching and Continuity Standard v1.0](../../standards/teaching-and-continuity-standard-v1.md)
 - [Curriculum Standard v2.0](../../standards/curriculum-standard-v2.md)
 - [Repository Standard v2.0](../../standards/repository-standard-v2.md)

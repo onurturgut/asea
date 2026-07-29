@@ -1,0 +1,117 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C21-TERMS01",
+  "chapterId": "V01-C21",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {
+      "term": "search",
+      "turkish": "arama",
+      "explanation": "Bir hedefin koleksiyonda bulunup bulunmadığını ve konumunu belirleme işlemi.",
+      "firstUseContext": "ASEA chapter kataloğu",
+      "example": "search chapter 21",
+      "confusedWith": "sorting",
+      "revisitAt": "V01-C23"
+    },
+    {
+      "term": "target",
+      "turkish": "hedef",
+      "explanation": "Arama sırasında bulmaya çalıştığımız değer.",
+      "firstUseContext": "Fonksiyon parametresi",
+      "example": "target = 21",
+      "confusedWith": "current value",
+      "revisitAt": "V01-C22"
+    },
+    {
+      "term": "linear search",
+      "turkish": "doğrusal arama",
+      "explanation": "Koleksiyonu başlangıçtan sona sırayla inceleyen arama stratejisi.",
+      "firstUseContext": "Sırasız chapter başlıkları",
+      "example": "0, 1, 2, 3 index sırası",
+      "confusedWith": "binary search",
+      "revisitAt": "V01-C23"
+    },
+    {
+      "term": "binary search",
+      "turkish": "ikili arama",
+      "explanation": "Sıralı veride olası aralığı karşılaştırmayla küçülten arama stratejisi.",
+      "firstUseContext": "Sıralı chapter ID'leri",
+      "example": "low..high aralığı",
+      "confusedWith": "divide without ordering",
+      "revisitAt": "V01-C23"
+    },
+    {
+      "term": "sorted input",
+      "turkish": "sıralı girdi",
+      "explanation": "Değerleri belirlenmiş bir karşılaştırma kuralına göre düzende olan girdi.",
+      "firstUseContext": "Binary search ön koşulu",
+      "example": "[2, 8, 17, 21]",
+      "confusedWith": "normalized input",
+      "revisitAt": "V01-C22"
+    },
+    {
+      "term": "invariant",
+      "turkish": "değişmez",
+      "explanation": "Algoritmanın belirli bir noktasında her adımda doğru kalması gereken ifade.",
+      "firstUseContext": "Hedefin low..high aralığında kalması",
+      "example": "target remains in the candidate range",
+      "confusedWith": "constant variable",
+      "revisitAt": "V01-C23"
+    },
+    {
+      "term": "inclusive range",
+      "turkish": "kapsayıcı aralık",
+      "explanation": "Sol ve sağ sınırın ikisinin de aralığa dahil olduğu index bölgesi.",
+      "firstUseContext": "Binary search sınırları",
+      "example": "low <= index <= high",
+      "confusedWith": "exclusive range",
+      "revisitAt": "V01-C22"
+    },
+    {
+      "term": "comparison",
+      "turkish": "karşılaştırma",
+      "explanation": "İki değerin eşitlik veya sıralama ilişkisini değerlendiren işlem.",
+      "firstUseContext": "Target ile current value",
+      "example": "middleValue < target",
+      "confusedWith": "assignment",
+      "revisitAt": "V01-C23"
+    },
+    {
+      "term": "comparator",
+      "turkish": "karşılaştırıcı",
+      "explanation": "İki değerin sıralama ilişkisini tanımlayan tutarlı kural veya fonksiyon.",
+      "firstUseContext": "Türkçe başlık sıralaması",
+      "example": "Intl.Collator(\"tr-TR\").compare",
+      "confusedWith": "normalizer",
+      "revisitAt": "V01-C22"
+    },
+    {
+      "term": "not found",
+      "turkish": "bulunamadı",
+      "explanation": "Hedef için geçerli bir konum bulunmadığını belirten sonuç durumu.",
+      "firstUseContext": "Arama dönüş değeri",
+      "example": "-1",
+      "confusedWith": "undefined element",
+      "revisitAt": "V01-C24"
+    },
+    {
+      "term": "duplicate",
+      "turkish": "yinelenen değer",
+      "explanation": "Koleksiyonda aynı karşılaştırma değerinin birden fazla kez bulunması.",
+      "firstUseContext": "İlk eşleşme challenge'ı",
+      "example": "[5, 5, 5]",
+      "confusedWith": "same index",
+      "revisitAt": "V01-C22"
+    },
+    {
+      "term": "trace",
+      "turkish": "çalışma izi",
+      "explanation": "Algoritmanın değişken ve kararlarını adım adım görünür kılan kayıt.",
+      "firstUseContext": "low-high-middle tablosu",
+      "example": "turn 1: low=0, high=6",
+      "confusedWith": "final output",
+      "revisitAt": "V01-C23"
+    }
+  ]
+}

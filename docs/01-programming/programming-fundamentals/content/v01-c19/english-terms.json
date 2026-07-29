@@ -1,0 +1,107 @@
+{
+  "chapter_id": "V01-C19",
+  "title": "İngilizce Terimler",
+  "version": "0.2.0",
+  "terms": [
+    {
+      "term": "recursion",
+      "turkish": "özyineleme",
+      "definition": "Bir problemi aynı sözleşmedeki daha küçük problem yardımıyla çözme yaklaşımı.",
+      "first_use_context": "Derinliği önceden bilinmeyen iç içe öğrenme gruplarındaki dersleri sayma ihtiyacı.",
+      "code_example": "countLessons(child)",
+      "confused_with": "repetition / yineleme",
+      "distinction": "Her recursion tekrar içerir; fakat döngüdeki tekrar yeni call frame oluşturmak zorunda değildir.",
+      "revisit": "V01-C20 metin parçalama, V01-C21 arama ve sonraki ağaç algoritmaları"
+    },
+    {
+      "term": "base case",
+      "turkish": "temel durum",
+      "definition": "Yeni recursive call yapmadan en küçük geçerli problem için doğru sonuç veren durum.",
+      "first_use_context": "countdown(0) çağrısının hiçbir yeni çağrı üretmeden bitmesi.",
+      "code_example": "if (n === 0) return 0;",
+      "confused_with": "input validation / girdi doğrulaması",
+      "distinction": "Base case geçerli en küçük problemi çözer; validation sözleşme dışı girdiyi reddeder.",
+      "revisit": "V01-C20 boş metin ve V01-C21 boş arama aralığı"
+    },
+    {
+      "term": "recursive case",
+      "turkish": "özyinelemeli durum",
+      "definition": "Aynı sözleşmedeki daha küçük problemi çözüp sonucunu mevcut cevaba dönüştüren durum.",
+      "first_use_context": "sumTo(n) sonucunun n ile sumTo(n - 1) sonucunu birleştirmesi.",
+      "code_example": "return n + sumTo(n - 1);",
+      "confused_with": "recursive call / özyinelemeli çağrı",
+      "distinction": "Recursive case yalnız çağrıyı değil, küçük sonucun nasıl birleştirildiğini de kapsar.",
+      "revisit": "V01-C21 arama aralığını küçültme"
+    },
+    {
+      "term": "progress measure",
+      "turkish": "ilerleme ölçüsü",
+      "definition": "Her çağrının temel duruma yaklaştığını görünür ve sonlu biçimde gösteren ölçü.",
+      "first_use_context": "countdown çağrılarında n değerinin 3, 2, 1, 0 olması.",
+      "code_example": "n - 1",
+      "confused_with": "counter / sayaç",
+      "distinction": "Progress measure kodda ayrı sayaç olmak zorunda değildir; kalan eleman veya daha küçük alt ağaç olabilir.",
+      "revisit": "V01-C23 algoritmik karmaşıklık ve doğruluk gerekçesi"
+    },
+    {
+      "term": "call stack",
+      "turkish": "çağrı yığını",
+      "definition": "Henüz tamamlanmamış fonksiyon çağrılarını ve dönüş sırasını takip eden çalışma zamanı yapısı için kullanılan model.",
+      "first_use_context": "sumTo(3) dış çağrısının sumTo(2) sonucunu beklemesi.",
+      "code_example": "sumTo(3) -> sumTo(2) -> sumTo(1) -> sumTo(0)",
+      "confused_with": "data stack / veri yığını",
+      "distinction": "Call stack çalışma zamanı çağrılarını tutar; programın ayrıca kullandığı bir veri stack'i farklı bir yapıdır.",
+      "revisit": "V01-C24 runtime failure ve V01-C25 debugging"
+    },
+    {
+      "term": "call frame",
+      "turkish": "çağrı çerçevesi",
+      "definition": "Tek bir fonksiyon çağrısının parametre, yerel değer, bekleyen işlem ve dönüş noktasını taşıyan kayıt.",
+      "first_use_context": "Her sumTo çağrısının kendi n değerine sahip olması.",
+      "code_example": "sumTo(2): n = 2, 2 + ? bekliyor",
+      "confused_with": "function definition / fonksiyon tanımı",
+      "distinction": "Fonksiyon tanımı bir kez yazılır; her çağrı ayrı frame oluşturur.",
+      "revisit": "V01-C33 closure ve yaşam süresi"
+    },
+    {
+      "term": "descent",
+      "turkish": "iniş",
+      "definition": "Recursive çağrıların daha küçük problemlere doğru yeni frame'ler oluşturduğu faz.",
+      "first_use_context": "sumTo çağrılarının 3'ten 0'a ilerlemesi.",
+      "code_example": "3 -> 2 -> 1 -> 0",
+      "confused_with": "unwinding / çözülme",
+      "distinction": "İnişte çağrılar oluşur; çözülmede bekleyen çağrılar sonuç üretir.",
+      "revisit": "V01-C21 recursive arama izi"
+    },
+    {
+      "term": "unwinding",
+      "turkish": "çözülme",
+      "definition": "Base case sonucundan sonra bekleyen frame'lerin ters sırada işlemlerini tamamlayıp döndüğü faz.",
+      "first_use_context": "sumTo(0) sonucu geldikten sonra 1, 3 ve 6 sonuçlarının oluşması.",
+      "code_example": "0 -> 1 -> 3 -> 6",
+      "confused_with": "descent / iniş",
+      "distinction": "Çözülme daha küçük çağrı tamamlandıktan sonra gerçekleşir.",
+      "revisit": "V01-C36 exception stack unwinding"
+    },
+    {
+      "term": "termination",
+      "turkish": "sonlanma",
+      "definition": "Bir hesaplamanın geçerli girdiler için sonlu sayıda adımdan sonra bitmesi.",
+      "first_use_context": "Base case'in bulunmasının tek başına yeterli olmadığını kanıtlama.",
+      "code_example": "n >= 0 ve her çağrıda n - 1",
+      "confused_with": "correctness / doğruluk",
+      "distinction": "Bir fonksiyon durabilir ama yanlış sonuç üretebilir; sonlanma ve doğruluk ayrı kanıtlardır.",
+      "revisit": "V01-C23 algoritma doğruluğu ve V01-C24 failure modes"
+    },
+    {
+      "term": "stack depth",
+      "turkish": "yığın derinliği",
+      "definition": "Belirli bir anda call stack üzerinde bekleyen frame sayısı.",
+      "first_use_context": "Çok derin recursive girdinin runtime sınırını aşabilmesi.",
+      "code_example": "countdown(1000000)",
+      "confused_with": "data depth / veri derinliği",
+      "distinction": "Veri derinliği recursive çağrı derinliğini etkileyebilir; fakat ikisi her algoritmada birebir aynı olmak zorunda değildir.",
+      "revisit": "V01-C23 alan maliyeti ve V01-C24 çalışma zamanı hataları"
+    }
+  ]
+}

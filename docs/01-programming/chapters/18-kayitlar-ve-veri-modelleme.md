@@ -1,23 +1,30 @@
 ---
+document_type: "chapter"
 title: "Kayıtlar ve Veri Modelleme — Anlamlı ve Geçerli Yapılar Tasarlamak"
 volume: "01"
 chapter: "18"
 chapter_id: "V01-C18"
+volume_id: "V01"
 slug: "kayitlar-ve-veri-modelleme"
 difficulty: "Beginner"
 estimated_time: "8-10 saat"
 status: "Draft"
-version: "0.1.0"
+version: "0.2.0"
 blueprint_id: "V01-C18-BP01"
 production_packet_id: "V01-C18-CPP-001"
 prerequisites:
   - "V01-C05"
   - "V01-C14"
   - "V01-C17"
-learning_objectives:
+learning_outcomes:
   - "V01-LO027"
   - "V01-LO028"
-last_updated: "2026-07-23"
+related_lab_ids:
+  - "V01-C18-L01"
+related_assessment_ids:
+  - "V01-C18-AS01"
+next_chapter_id: "V01-C19"
+last_updated: "2026-07-29"
 ---
 
 # Kayıtlar ve Veri Modelleme — Anlamlı ve Geçerli Yapılar Tasarlamak
@@ -605,3 +612,255 @@ const failedPayment = {
 failure biçiminde errorCode zorunluluğunu uygular. Bu yaklaşım bütün geçersiz
 durumları sihirli biçimde yok etmez; temsil kümesini gereksinime yaklaştırır.
 
+## Engineering Perspective
+
+### Model bir iletişim ve değişim sınırıdır
+
+Veri modeli yalnız programın bellekte kullandığı şekil değildir. Ürün ekibi
+“stokta”, geliştirici `availableStock`, rapor `stock` ve dış servis `quantity`
+diyorsa aynı kavramın dört farklı anlamı oluşabilir. Profesyonel model, gereksinim
+cümlesi ile kod alanı arasındaki izi görünür tutar.
+
+| Gereksinim | Alan | Karar | Kanıt |
+|---|---|---|---|
+| Ürün kalıcı bir kodla bulunur | `code` | Trim sonrası boş olmayan metin | Boş ve boşluk girdisi reddedilir |
+| Fiziksel adet negatife düşmez | `stock` | Sıfır veya büyük tamsayı | `-1`, `1.5`, `"4"` reddedilir |
+| Ayrılmış adet kullanılabilir adedi aşmaz | `reservedStock` | `0 <= reservedStock <= stock` | Alanlar arası test |
+| Sipariş eşiği yokluğu anlamlı değildir | `reorderLevel` | Zorunlu, negatif olmayan tamsayı | Eksik alan reddedilir |
+
+Bu tablo bir kod incelemesinde “neden bu alan var?” sorusunu yanıtlar. Alanın
+gerekçesi yoksa, modelin taşıdığı yük de gerekçesizdir.
+
+### Doğrulama katmanları aynı işi yapmaz
+
+```mermaid
+flowchart LR
+  A[Dış ham veri] --> B[Çalışma zamanı doğrulama]
+  B -->|hatalı| C[Yapılandırılmış hata]
+  B -->|geçerli| D[Domain kaydı]
+  D --> E[Domain işlemi]
+  E --> F[Değişmez kontrolü]
+  F --> G[Depolama sınırı]
+```
+
+Statik tür denetimi geliştiricinin kodunu kontrol eder; tarayıcıdan, API'den veya
+dosyadan gelen JSON'u kendiliğinden doğrulamaz. Runtime validator dış veriyi,
+construction function domain kurallarını, depolama kısıtı ise kalıcı kayıt
+bütünlüğünü korur. Aynı kontrolün birden çok katmanda bulunması bazen gereksiz
+tekrar değil, farklı hata sınırlarına karşı savunmadır.
+
+### Değişim ve geriye dönük uyumluluk
+
+`supplierCode` alanını zorunlu eklemek yeni kayıtları iyileştirirken eski kayıtları
+okunamaz hâle getirebilir. Bu değişiklik için en az şu kararlar gerekir:
+
+1. Eski kayıt alanı nereden üretilecek?
+2. Gerçek bir varsayılan yoksa migration nasıl yapılacak?
+3. Eski okuyucular yeni kaydı gördüğünde ne olacak?
+4. Şema ve veri sürümü nasıl izlenecek?
+5. Başarısız migration geri alınabilecek mi?
+
+`"UNKNOWN"` yazmak teknik olarak boşluğu kapatır fakat iş gerçeğini uydurabilir.
+Sahte varsayılan yerine açık bilinmeyen durumu, kontrollü migration veya yeni bir
+model varyantı daha doğru olabilir.
+
+### Gizlilik ve veri minimizasyonu
+
+Bir alanı saklayabilmek onu saklamamız gerektiği anlamına gelmez. Envanter modeli
+ürün kodu ve stok adedine ihtiyaç duyarken son düzenleyen çalışanın kişisel telefon
+numarasına ihtiyaç duymaz. Her hassas alan için amaç, erişim, saklama süresi ve
+silme davranışı belirlenmelidir. AI önerisinde “ileride lazım olur” gerekçesiyle
+eklenen alanlar veri minimizasyonu açısından reddedilmelidir.
+
+## Real World Examples
+
+### Sipariş satırı
+
+Bir sipariş satırı ürün kimliği, birim fiyat ve adedi birlikte taşır. Güncel ürün
+fiyatına yeniden bakmak geçmiş sipariş toplamını değiştirebileceği için satış
+anındaki fiyat kayda alınabilir:
+
+```js
+const orderLine = {
+  productId: "P-104",
+  unitPriceInCents: 2490,
+  quantity: 2,
+};
+
+function calculateOrderLineTotal(line) {
+  return line.unitPriceInCents * line.quantity;
+}
+```
+
+Buradaki tekrar bilinçlidir: `unitPriceInCents`, ürün kataloğunun anlık fiyatı
+değil sipariş anının kanıtıdır.
+
+### Sensör ölçümü
+
+```js
+const measurement = {
+  sensorId: "S-8",
+  capturedAt: "2026-07-29T08:30:00Z",
+  temperatureCelsius: 24.6,
+};
+```
+
+`temperature: 24.6` alanı birimi gizler. Alan adındaki `Celsius` ve ISO tarih
+biçimi iki önemli varsayımı görünür kılar. Yine de tarih metninin gerçekten geçerli
+olduğu runtime sınırında kontrol edilmelidir.
+
+### İşlem sonucu varyantları
+
+Başarı ve hata aynı anda gerçekleşmemelidir:
+
+```js
+function parseStock(value) {
+  if (!Number.isInteger(value) || value < 0) {
+    return {
+      status: "failure",
+      error: { code: "INVALID_STOCK", field: "stock" },
+    };
+  }
+
+  return { status: "success", value };
+}
+```
+
+Çağıran kod önce `status` alanını kontrol eder. Böylece başarısız sonuçtan yanlışlıkla
+`value` okumak zorlaşır.
+
+## Common Mistakes
+
+| Belirti | Kök neden | Etki | Teşhis |
+|---|---|---|---|
+| `0` stok “eksik” sayılıyor | Truthiness ile iş anlamı karıştırıldı | Geçerli kayıt reddedilir | `0`, `false`, `""`, `null` ayrı test edilir |
+| İki aynı görünen kayıt eşit çıkmıyor | `===` referansı karşılaştırır | Yanlış tekrar/arama sonucu | Kimlik veya alan karşılaştırma amacı yazılır |
+| Toplam eski kalıyor | Türetilmiş alan kaynakla birlikte güncellenmedi | Yanlış fiyat/rapor | Kaynak alan değişiminden sonra invariant testi |
+| Eski veriler okunmuyor | Yeni zorunlu alan migrationsız eklendi | Üretim hatası | Eski örneklerle uyumluluk testi |
+| Hata yalnız `false` | Hata sözleşmesi tasarlanmadı | Kullanıcı ve geliştirici nedeni bulamaz | Alan yolu ve hata kodu kontrol edilir |
+| Modelde ilgisiz kişisel veri var | “Belki gerekir” alanları eklendi | Gizlilik ve güvenlik riski | Her alan için amaç ve saklama süresi sorulur |
+
+En tehlikeli hata, tek başarılı örneği modelin doğruluğuna kanıt saymaktır. Bir
+model; normal, sınır, eksik, yanlış tür ve alanlar arası çelişki örnekleriyle
+denenmeden güvenilir değildir.
+
+## Best Practices
+
+- Önce gereksinim–alan tablosunu, sonra object literal'i yazın.
+- Alan adında anlamı ve gerekiyorsa birimi görünür kılın.
+- Opsiyonelliği veri gelmediği için değil, yokluğun domain anlamı olduğu için seçin.
+- Dış girdiyi `unknown` kabul edip construction boundary'de doğrulayın.
+- Tek alan kontrolleriyle alanlar arası değişmezleri ayrı listeleyin.
+- Hataları kararlı kodlar ve alan yollarıyla yapılandırın; hassas değeri mesaja
+  taşımayın.
+- Başarılı construction sonucunun bütün değişmezleri sağladığını test edin.
+- Türetilmiş veriyi saklıyorsanız doğruluk kaynağı ve güncelleme politikasını yazın.
+- Şema değişikliklerini eski kayıt ve eski okuyucularla sınayın.
+- AI önerisindeki her alan için gereksinim kaynağı isteyin.
+
+Bu öneriler bağlama bağlıdır. Tek kullanımlık küçük bir hesapta construction
+function gereksiz olabilir; dış veri alan, kalıcı kayıt oluşturan veya ekipler arası
+paylaşılan bir sistemde ise açık sınır güçlü bir korumadır.
+
+## Hands-on Exercise
+
+### Objective
+
+`V01-LO027` ve `V01-LO028` için bir envanter gereksinimini alan karar tablosuna,
+çalışan modele ve değişmez testlerine dönüştürmek.
+
+### Requirements
+
+Model şu bilgileri taşımalıdır: ürün kodu, görünen ad, toplam stok, ayrılmış stok,
+yeniden sipariş eşiği ve durum. En az üç tek-alan kuralı ve iki alanlar-arası
+değişmez tanımlayın.
+
+### Tasks
+
+1. Her alanın cevapladığı iş sorusunu yazın.
+2. Tür, zorunluluk, varsayılan, normal ve geçersiz örnekleri tabloya ekleyin.
+3. `createInventoryItem(input)` construction function'ını yazın.
+4. Fonksiyonun bütün hataları `{ field, code }` biçiminde toplamasını sağlayın.
+5. Başarı sonucunda normalize edilmiş kayıt döndürün.
+6. Normal, sınır, eksik, yanlış tür ve iki çelişkili durum için test yazın.
+7. Modelinize gereksiz bir alan ekleyip neden kaldırdığınızı karar kaydına yazın.
+
+### Deliverables
+
+- `inventory-model.js`
+- `inventory-model.test.js`
+- `field-decisions.md`
+- `invariants.md`
+- Test çalıştırma komutu ve beklenen sonuç
+
+### Evaluation Criteria
+
+Alan kararlarının gereksinime izlenmesi %25, değişmez ve construction boundary %25,
+test kanıtı %25, hata sözleşmesi %15, açıklama ve veri minimizasyonu %10 ağırlığa
+sahiptir. Ayrıntılı ölçütler içerik paketindeki `assessment-rubric.md` dosyasındadır.
+
+## Reflection Questions
+
+1. Modelinizde en kolay gözden kaçan geçersiz durum hangisiydi? Neden?
+2. Hangi alanı opsiyonel yapmayı düşündünüz ve hangi iş kanıtıyla karar verdiniz?
+3. `null`, eksik özellik ve `0` sizin modelinizde hangi farklı anlamları taşıyor?
+4. Türetilmiş bir alanı saklamak hangi durumda savunulabilir?
+5. AI önerisinden hangi alanı reddederdiniz ve gereksinim izi neden yetersiz olurdu?
+6. Model yarın yeni bir zorunlu alan kazanırsa eski kayıtları nasıl korursunuz?
+
+## Chapter Summary
+
+Veri modelleme, değerleri bir nesne içine koymaktan önce gelen karar çalışmasıdır.
+Gereksinim; kayıt sınırına, alanlara, türlere, zorunluluklara ve değişmezlere
+dönüşür. Şema izin verilen yapıyı, instance gerçek değerleri anlatır. JavaScript
+nesnesi yalnız temsildir; iyi domain modelini tek başına garanti etmez.
+
+Construction boundary dış veriyi doğrular ve yalnız değişmezleri sağlayan kayıtları
+içeri alır. Kimlik ile referans eşitliği, eksik ile `null`, kaynak ile türetilmiş veri
+ayrımları modelin doğru davranması için açıkça seçilir. Değişim, gizlilik ve
+geriye dönük uyumluluk da model kararının parçasıdır.
+
+### Navigation
+
+Önceki bölümde koleksiyonları işlediniz. Bu bölümde koleksiyon öğesinin güvenilir
+şeklini kurdunuz. Sonraki bölümde kendine benzer yapı ve problemleri özyinelemeli
+düşünmeyle işleyeceksiniz.
+
+## Key Takeaways
+
+- Önce gereksinim, sonra temsil gelir.
+- Alan adı, türü ve zorunluluğu ayrı tasarım kararlarıdır.
+- `undefined`, `null`, boş metin, `0` ve `false` aynı durum değildir.
+- Şema ile tek bir nesne örneği farklıdır.
+- `===`, iki ayrı nesnenin alan değerlerini karşılaştırmaz.
+- Değişmezler tek alanı ve alanlar arası ilişkileri kapsar.
+- Construction boundary geçersiz kaydın sisteme girişini sınırlar.
+- Statik tür ve runtime validation birbirinin alternatifi değildir.
+- Türetilmiş veri saklanıyorsa drift politikası gerekir.
+- AI tarafından önerilen her alan gereksinim ve test kanıtıyla doğrulanır.
+
+## Further Reading
+
+- [JSON Schema — Objects](https://json-schema.org/understanding-json-schema/reference/object):
+  `properties`, `required` ve ek alan davranışını somutlaştırır.
+- [TypeScript — Object Types](https://www.typescriptlang.org/docs/handbook/2/objects.html):
+  statik nesne türleri ve optional alanları bir sonraki dil katmanında gösterir.
+- [MDN — Working with Objects](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Working_with_objects):
+  JavaScript nesne ve özellik davranışını ayrıntılandırır.
+- [Parse, don't validate](https://lexi-lambda.github.io/blog/2019/11/05/parse-don-t-validate/):
+  doğrulanmış veri ile ham veri sınırını daha ileri düzeyde tartışır.
+
+## References
+
+- ECMA International, *ECMAScript Language Specification — Object Type*:
+  <https://tc39.es/ecma262/2025/multipage/ecmascript-data-types-and-values.html#sec-object-type>
+- MDN, *Object initializer*:
+  <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Object_initializer>
+- MDN, *Object.hasOwn()*:
+  <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object/hasOwn>
+- MDN, *Equality comparisons and sameness*:
+  <https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Equality_comparisons_and_sameness>
+- JSON Schema, *Draft 2020-12 Validation*:
+  <https://json-schema.org/draft/2020-12/json-schema-validation>
+- TypeScript, *Object Types*:
+  <https://www.typescriptlang.org/docs/handbook/2/objects.html>

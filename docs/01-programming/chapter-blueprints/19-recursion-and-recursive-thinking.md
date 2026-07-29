@@ -4,7 +4,7 @@ blueprint_id: "V01-C19-BP01"
 blueprint_type: "Chapter"
 scope_id: "V01-C19"
 title: "Chapter 19 Blueprint — Recursion and Recursive Thinking"
-version: "0.1.1"
+version: "0.2.0"
 status: "Draft"
 freeze_status: "Unfrozen"
 owner_role: "Curriculum Architect"
@@ -38,7 +38,7 @@ review_ids: []
 | Chapter ID | `V01-C19` |
 | Module | `V01-M05` — Structured Data and Recursion |
 | Difficulty | Beginner |
-| Estimated Study Time | 6-7 hours |
+| Estimated Study Time | 8-10 hours |
 | Primary Lab | `V01-C19-L01` — Trace Recursive Structures |
 | Assessment | `V01-C19-AS01` |
 | Next Chapter | `V01-C20` |
@@ -59,6 +59,8 @@ This Chapter closes the gap between `V01-C10`, `V01-C13`, `V01-C14`, `V01-C15` e
 - Introduce supporting concepts only where they explain a core mechanism: Structural recursion, stack depth, iterative alternative, divide intuition..
 - Preserve the language-independent curriculum; JavaScript may illustrate behavior but may not define the outcome.
 - Produce Chapter content that follows the 15 mandatory H2 headings in Chapter Standard v2.0.
+- Apply ASEA Teaching and Continuity Standard v1.0 to the learner-facing
+  narrative, variable/type explanations, practice ladder, and C18-C20 handoff.
 
 ### Out of Scope
 
@@ -401,6 +403,7 @@ This local trace is derived from `learning-outcomes.md`, `chapter-map.md`, `labs
 - [Reference Catalog](../references.md)
 - [Glossary](../glossary.md)
 - [Chapter Standard v2.0](../../standards/chapter-standard-v2.md)
+- [Teaching and Continuity Standard v1.0](../../standards/teaching-and-continuity-standard-v1.md)
 - [Volume Standard v2.0](../../standards/volume-standard-v2.md)
 - [Curriculum Standard v2.0](../../standards/curriculum-standard-v2.md)
 - [Repository Standard v2.0](../../standards/repository-standard-v2.md)

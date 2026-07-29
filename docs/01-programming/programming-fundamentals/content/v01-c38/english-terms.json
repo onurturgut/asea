@@ -1,0 +1,126 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C38-TERMS01",
+  "chapterId": "V01-C38",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {
+      "term": "source code",
+      "turkish": "kaynak kod",
+      "explanation": "Geliştiricinin yazdığı ve bir çalışma zamanı tarafından yürütülecek talimat metni.",
+      "firstUseContext": "Kodun çıktıya ulaşırken geçtiği katmanlar",
+      "example": "runtime-report.js dosyasındaki JavaScript satırları",
+      "confusedWith": "process",
+      "revisitAt": "V01-C37"
+    },
+    {
+      "term": "JavaScript engine",
+      "turkish": "JavaScript motoru",
+      "explanation": "JavaScript dil kurallarını uygulayıp kodu yürüten bileşen.",
+      "firstUseContext": "Beş katmanlı yürütme modeli",
+      "example": "Kaynak kodu ayrıştırıp talimatları yürütür",
+      "confusedWith": "code editor",
+      "revisitAt": "V01-C29"
+    },
+    {
+      "term": "runtime",
+      "turkish": "çalışma zamanı",
+      "explanation": "Programın gerçekten yürütüldüğü sistem ve çalışma imkânları.",
+      "firstUseContext": "Node.js ile dosya çalıştırma",
+      "example": "Node.js",
+      "confusedWith": "programming language",
+      "revisitAt": "V01-C29"
+    },
+    {
+      "term": "host environment",
+      "turkish": "host ortamı / barındıran ortam",
+      "explanation": "JavaScript programına dış dünyayla ilişki kuracağı ortama özgü API'leri sağlar.",
+      "firstUseContext": "document ve process karşılaştırması",
+      "example": "Tarayıcı document, Node.js process sağlar",
+      "confusedWith": "ECMAScript",
+      "revisitAt": "V01-C35"
+    },
+    {
+      "term": "tooling",
+      "turkish": "geliştirme araçları",
+      "explanation": "Kodu yazma, çalıştırma, gözleme ve tekrarlama işlerini destekleyen araçlar bütünü.",
+      "firstUseContext": "Editör-terminal-runtime ayrımı",
+      "example": "VS Code, PowerShell, npm script",
+      "confusedWith": "runtime",
+      "revisitAt": "V01-C28"
+    },
+    {
+      "term": "entry point",
+      "turkish": "giriş noktası",
+      "explanation": "Runtime'ın programı yürütmeye başladığı kaynak dosya.",
+      "firstUseContext": "node runtime-report.js Ada 85 komutu",
+      "example": "runtime-report.js",
+      "confusedWith": "working directory",
+      "revisitAt": "V01-C37"
+    },
+    {
+      "term": "working directory",
+      "turkish": "mevcut çalışma klasörü",
+      "explanation": "Sürecin göreli yolları yorumlarken başlangıç aldığı klasör.",
+      "firstUseContext": "Dosya bulunamadı hata avı",
+      "example": "process.cwd()",
+      "confusedWith": "source file directory",
+      "revisitAt": "V01-C28"
+    },
+    {
+      "term": "process",
+      "turkish": "süreç",
+      "explanation": "Runtime tarafından başlatılmış, o anda çalışmakta olan program örneği.",
+      "firstUseContext": "Komutun başlatılmasından tamamlanmasına yürütme izi",
+      "example": "node app.js ile başlayan çalışan örnek",
+      "confusedWith": "source file",
+      "revisitAt": "V01-C36"
+    },
+    {
+      "term": "command-line argument",
+      "turkish": "komut satırı argümanı",
+      "explanation": "Süreç başlatılırken programa iletilen metinsel girdi.",
+      "firstUseContext": "process.argv indeks tablosu",
+      "example": "node app.js Ada komutundaki Ada",
+      "confusedWith": "function parameter",
+      "revisitAt": "V01-C29"
+    },
+    {
+      "term": "standard output",
+      "turkish": "standart çıktı",
+      "explanation": "Programın normal sonuç ve bilgi mesajlarını dışarı verdiği kanal.",
+      "firstUseContext": "console.log çıktısı",
+      "example": "stdout",
+      "confusedWith": "exit status",
+      "revisitAt": "V01-C36"
+    },
+    {
+      "term": "standard error",
+      "turkish": "standart hata",
+      "explanation": "Programın hata ve teşhis mesajlarını normal çıktıdan ayrı taşıyabildiği kanal.",
+      "firstUseContext": "console.error ve exit status ayrımı",
+      "example": "stderr",
+      "confusedWith": "exception",
+      "revisitAt": "V01-C24"
+    },
+    {
+      "term": "exit status",
+      "turkish": "çıkış durumu",
+      "explanation": "Süreç tamamlandığında kabuğa veya otomasyona bıraktığı makine-okunur sonuç.",
+      "firstUseContext": "Başarı ve hata kanıtları",
+      "example": "0 başarı, sıfır dışı başarısızlık",
+      "confusedWith": "error message",
+      "revisitAt": "V01-C26"
+    },
+    {
+      "term": "reproducible workflow",
+      "turkish": "tekrar üretilebilir çalışma akışı",
+      "explanation": "Aynı koşullar ve adımlarla başka bir kişinin aynı sonucu yeniden elde edebildiği çalışma sözleşmesi.",
+      "firstUseContext": "README çalışma kaydı",
+      "example": "Sürüm + klasör + komut + girdi + beklenen çıktı",
+      "confusedWith": "screenshot",
+      "revisitAt": "V01-C28"
+    }
+  ]
+}

@@ -20,6 +20,7 @@ import {
   Eye,
   FileText,
   Layers,
+  Languages,
   Lightbulb,
   ListChecks,
   LockKeyhole,
@@ -44,6 +45,7 @@ type ToolId =
   | "lab"
   | "challenge"
   | "flashcards"
+  | "englishterms"
   | "mindmap"
   | "viz"
   | "interview"
@@ -103,6 +105,13 @@ const TOOLS: {
     color: "tool-rose",
   },
   {
+    id: "englishterms",
+    name: "İngilizce Terimler",
+    desc: "Teknik kelimeleri bağlamıyla öğren",
+    icon: Languages,
+    color: "tool-cyan",
+  },
+  {
     id: "mindmap",
     name: "Zihin Haritası",
     desc: "Kavramlar arası bağ",
@@ -153,6 +162,7 @@ const TOOL_ARTIFACT_KIND: Partial<Record<ToolId, ContentArtifactKind>> = {
   lab: "lab",
   challenge: "challenge",
   flashcards: "flashcards",
+  englishterms: "english-terms",
   mindmap: "concept-summary",
   viz: "visualization",
   interview: "interview",

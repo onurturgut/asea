@@ -4,7 +4,7 @@ blueprint_id: "V01-C20-BP01"
 blueprint_type: "Chapter"
 scope_id: "V01-C20"
 title: "Chapter 20 Blueprint — Strings and Text Processing"
-version: "0.1.1"
+version: "0.2.0"
 status: "Draft"
 freeze_status: "Unfrozen"
 owner_role: "Curriculum Architect"
@@ -36,7 +36,7 @@ review_ids: []
 | Chapter ID | `V01-C20` |
 | Module | `V01-M05` — Structured Data and Recursion |
 | Difficulty | Beginner |
-| Estimated Study Time | 5-6 hours |
+| Estimated Study Time | 8-10 hours |
 | Primary Lab | `V01-C20-L01` — Build a Text Statistics Pipeline |
 | Assessment | `V01-C20-AS01` |
 | Next Chapter | `V01-C21` |
@@ -57,6 +57,8 @@ This Chapter closes the gap between `V01-C08`, `V01-C14`, `V01-C17` evidence and
 - Introduce supporting concepts only where they explain a core mechanism: Unicode awareness, case folding intuition, delimiter, whitespace, formatting..
 - Preserve the language-independent curriculum; JavaScript may illustrate behavior but may not define the outcome.
 - Produce Chapter content that follows the 15 mandatory H2 headings in Chapter Standard v2.0.
+- Apply ASEA Teaching and Continuity Standard v1.0 to the learner-facing
+  narrative, variable/type explanations, practice ladder, and C19-C21 handoff.
 
 ### Out of Scope
 
@@ -74,8 +76,8 @@ This Chapter closes the gap between `V01-C08`, `V01-C14`, `V01-C17` evidence and
 
 ### Knowledge Outputs
 
-- **V01-LO031:** Metin işleme pipeline'ı tasarlamak.
-- **V01-LO031:** whitespace, case ve empty input edge case'lerini test etmek..
+- **V01-LO031:** Whitespace, locale-aware case, Unicode normalization and empty
+  input policies are explicit in a testable text-processing pipeline.
 - A reviewable plan connecting concepts, examples, practice, assessment, and project evidence.
 
 ## Audience and Level
@@ -101,8 +103,8 @@ Plan a short retrieval task that asks the learner to reproduce the prerequisite 
 
 ### Outcome Mapping
 
-- **V01-LO031:** Metin işleme pipeline'ı tasarlamak.
-- **V01-LO031:** whitespace, case ve empty input edge case'lerini test etmek..
+- **V01-LO031:** Metin işleme pipeline'ı tasarlamak; whitespace, locale-aware
+  case, Unicode normalization ve empty-input sınırlarını test etmek.
 
 ### Legacy Source Mapping
 

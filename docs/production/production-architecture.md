@@ -12,6 +12,7 @@ source_ids:
   - "ASEA-STD-KOS-003"
   - "ASEA-STD-KOS-009"
   - "ASEA-STD-CHAPTER-002"
+  - "ASEA-STD-TEACHING-001"
 derived_from:
   - "ASEA-SD-IDX-029"
   - "ASEA-SD-IDX-023"
@@ -39,7 +40,8 @@ creates no educational content.
 - The KOS owns Sources, Evidence, Claims, Concepts, graph records, research
   briefs, and production packets.
 - Curriculum and Chapter standards own Learning Outcomes, Assessments, Chapters,
-  and learner-facing structure.
+  and source-file structure. The Teaching and Continuity Standard owns the
+  learner-facing instructional experience and continuity contract.
 - This architecture orchestrates existing owners and creates no second source
   of truth.
 - Knowledge Foundation state: Release Candidate 1; not frozen.
@@ -78,7 +80,7 @@ to the earliest stage that owns the defect.
 | Educational Review | Technically reviewed packet | Learning-design findings | Outcome relevance and teachability Approved |
 | Production Packet | Approved research inputs | Schema-valid CPP | All required mappings and output targets complete |
 | Packet Approval | CPP and validation report | Approved Content Review | Exact CPP version Authorized |
-| Lesson Authoring | Approved CPP | Traceable Chapter draft | Chapter Standard structure complete |
+| Lesson Authoring | Approved CPP | Traceable Chapter draft | Chapter structure plus Teaching and Continuity conformance complete |
 | Assessment Generation | Draft and assessment map | Governed assessment artefacts | Outcome coverage and answer integrity pass |
 | Interactive Assets | Approved specifications | Assets and manifests | Accessibility, security, and reproducibility pass |
 | Publishing Review | Complete release candidate | Approved Final Review and manifest | No open blocking findings |
@@ -105,7 +107,8 @@ retain Claim-to-Source navigation.
 2. Material Claims resolve to Evidence and Active Sources.
 3. Concepts and Claims map to Learning Outcomes.
 4. A Production Packet validates and receives an Approved Content Review.
-5. The Chapter passes post-draft Technical and Pedagogical Reviews.
+5. The Chapter passes post-draft Technical and Pedagogical Reviews, including
+   Teaching and Continuity conformance.
 6. Assessments and assets pass their specialized gates.
 7. Repository and Final Reviews approve the exact release candidate.
 

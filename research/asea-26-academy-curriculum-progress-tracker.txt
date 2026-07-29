@@ -6,7 +6,9 @@ Kaynak: research/asea-26-academy-curriculum-tree.md
 Kapsam: 26 akademi, 207 modül, bütün tanımlı konu ve alt konular
 Dil: Türkçe
 Oluşturulma tarihi: 2026-07-22
-Son güncelleme: 2026-07-23 — C01–C17 repository ilerlemesi eşitlendi
+Son güncelleme: 2026-07-29 — ASEA Öğretme ve Devamlılık Standardı,
+Programlama Temelleri 12 modül/38 chapter kanonik görünümü, C19 pilotu ve
+C38 runtime/tooling üretim paketi işlendi
 
 AMAÇ
 ----------------------------------------------------------------------
@@ -15,6 +17,57 @@ Bu dosya, ASEA öğrencisinin 26 akademide göreceği konu ve alt konuları tek
 bir yerde göstermesi ve üretim/öğrenme ilerlemesinin izlenmesi için
 hazırlanmıştır. Kanonik Blueprint veya standartların yerine geçmez. Kaynak
 müfredat araştırma taslağı Draft ve Informational durumundadır.
+
+ZORUNLU ÖĞRETME VE DEVAMLILIK SÖZLEŞMESİ
+----------------------------------------------------------------------
+
+Bu takipçide üretilecek bütün yeni akademi, modül ve chapter'lar
+`docs/standards/teaching-and-continuity-standard-v1.md` dosyasındaki
+ASEA Teaching and Continuity Standard v1.0'a uymak ZORUNDADIR.
+
+Bu karar bütün 26 akademi için geçerlidir:
+
+- ASEA kaynak dokümantasyonu öğrenciye aktaran bir katalog değil, doğrulanmış
+  bilgiyi sıfırdan profesyonelliğe taşıyan bir dijital öğretmen ve koçtur.
+- Akademi -> modül -> chapter akışı bağımsız yazılar toplamı olamaz. Her birim
+  önceki yeterliği kullanır, görünür bir yeni yeterlik üretir ve sonrakine
+  devir yapar.
+- Chapter için kelime sayısı veya süre üst sınırı yoktur. Uzunluk öğrenme
+  ihtiyacına göre belirlenir ve anlamlı çalışma duraklarına ayrılır.
+- Her yeni değişken, veri türü ve önemli kod kararı; temsil ettiği bilgi, ad,
+  değer, tür, tür seçiminin nedeni, alternatifin neden seçilmediği, çalışma
+  sırasındaki değişimi ve hata/sınır davranışıyla açıklanır.
+- Her chapter'da Birlikte yapalım, Şimdi sen dene, Hata avı, Bağımsız
+  uygulama ve Gerçek proje bağlantısı bulunur.
+- Öğrenci çözümü görmeden önce tahmin ve deneme fırsatı bulur. İpuçları soru,
+  küçük yön, kavramsal açıklama, kısmi yapı ve gerekçeli çözüm sırasıyla
+  kademelenir.
+- Teknik terimler önce davranış ve ihtiyaç üzerinden öğretilir; ilk kullanımda
+  Türkçe ve İngilizce birlikte verilir. Sağ paneldeki İngilizce Terimler
+  kartı için yapılandırılmış terim verisi üretilir.
+- Quiz, kod okuma, hata ayıklama, mülakat, lab ve proje aynı learning
+  outcome'u farklı kanıt biçimleriyle ölçer.
+- Her akademide chapter'larla birlikte büyüyen en az bir proje omurgası
+  bulunur.
+
+Her chapter için üretim ve review kanıtı:
+
+[ ] Gelen yeterlik ve kısa hatırlama köprüsü tanımlandı
+[ ] Yeni ihtiyaç, yeni yeterlik ve sonraki devir tanımlandı
+[ ] Süregelen projeye eklenecek artış tanımlandı
+[ ] Anlatım ihtiyaç -> sezgi -> örnek -> teknik adlandırma sırasını izliyor
+[ ] Yeni değişken, tür ve kod kararları ayrıntılı gerekçelendirildi
+[ ] Kodun çalışma izi tablo, akış veya çağrı iziyle görünür yapıldı
+[ ] Beş zorunlu uygulama kademesi üretildi
+[ ] Kademeli ipuçları ve adım adım gerekçeli çözüm üretildi
+[ ] İngilizce Terimler kart verisi üretildi
+[ ] Quiz, mülakat, lab ve proje aynı outcome'larla hizalandı
+[ ] Sonraki chapter'a devir kontrol edildi
+
+Chapter veya modül sayısı sabit bir pedagojik üst sınır değildir. Ayrı bir
+zihinsel model, ölçülebilir outcome, eksik ön koşul, uygulama ihtiyacı veya
+proje kapısı gerektirdiğinde yeni chapter/modül; kimlik, dependency,
+assessment ve migration kaydıyla eklenebilir.
 
 DURUM İŞARETLERİ
 ----------------------------------------------------------------------
@@ -43,16 +96,19 @@ GENEL İLERLEME
 
 Akademiler: 0 / 26
 Modüller: 0 / 207 tamamlandı; 1 / 207 aktif
-Kanonik Chapter ana ders üretimi: 17 / 38
-Chapter üretim birimi: 17 / 236 Draft paket üretildi
+Kanonik Chapter ana ders üretimi: 23 / 38 Draft
+Chapter üretim birimi: 23 / 236 Draft paket üretildi
 (38 kanonik + 198 kanonik olmayan aday)
 Tamamlanan kanonik akademiler: 0 / 26
 Üretimdeki akademi: Akademi 01 — Programlama Temelleri
-Mevcut Draft paketler: C01, C02, C03, C04, C05, C06, C07, C08, C09, C10, C11, C12, C13, C14, C15, C16 ve C17
-Referans Chapter modeli: C02; C03 ve C04 Repository Owner tarafından onaylandı
-Son tamamlanan üretim: C17 — 8.000+ kelimelik öğrenci merkezli ana ders,
-26 kaynaklı Research Packet, CPP ve tam öğrenme paketi üretildi
-Sıradaki üretim: C18 — Records and Data Modeling
+Mevcut Draft ana dersler: C01–C22 ve C38
+Önceki referans Chapter modeli: C02; C03 ve C04 Repository Owner tarafından
+onaylandı. Bu referanslar yeni Öğretme ve Devamlılık Standardı v1.0'a otomatik
+olarak uygun sayılmaz; geriye dönük uygunluk incelemesine alınacaktır.
+Son üretilen ana ders: C22 — Sıralama Algoritmaları; Öğretme Standardı v1.0'a
+uygun 21 dosyalık öğrenci/destek paketi Draft olarak üretildi.
+Sıradaki üretim: Repository Owner'ın sayısal sıra kararıyla C23 — Algoritmik
+Karmaşıklık ve Ödünleşimler
 Öğrenci pilotu: Repository Owner kararıyla Akademi 01 içerikleri tamamlandıktan
 sonraki toplu pilot aşamasına ertelendi
 
@@ -98,6 +154,298 @@ modellenip algoritmaya dönüştürüldüğünü ve küçük programların nası
 biçimde üretildiğini öğretmek.
 
 Ön koşul: Yok. Temel bilgisayar kullanımı yeterlidir.
+
+KANONİK ÜRETİM VE ÖĞRENME GÖRÜNÜMÜ — 12 MODÜL / 38 CHAPTER
+----------------------------------------------------------------------
+
+Kaynak: docs/01-programming/programming-fundamentals/academy/
+        03-module-registry.md ve 04-chapter-registry.md
+
+Önemli: Dosya üretim numarası ile öğrencinin yayın/öğrenme sırası aynı değildir.
+Mevcut C01–C19 Draft dosyaları üretilmiş olsa da öğrenci yolu kanonik dependency
+sırasını izler. Eksik ön koşullar tamamlanmadan sonraki Draft içerik öğrenciye
+başarı kapısı olarak açılmaz.
+
+Kanonik öğrenme sırası:
+
+M01 -> M02 -> M08 -> M03 -> M04 -> M10 -> M05 -> M09 -> M11 -> M06
+    -> M12 -> M07
+
+Her modülde chapter devir sözleşmesi ve büyüyen proje artışı ayrıca
+üretilecektir.
+
+Modül 01 — Bilgisayımsal Düşünme (`V01-M01`)
+Modül durumu: [~] Ana dersler üretildi  [ ] Yeni standarda uygunluk  [ ] Proje kapısı
+Proje: `V01-P01` Talimat Simülatörü
+
+[x] `V01-C01` — Programlama Nedir?
+    Gelen: temel bilgisayar kullanımı
+    Devir: program, talimat, girdi, işlem, çıktı ve durum modeli
+[x] `V01-C02` — Bilgisayarlar Programları Nasıl Çalıştırır?
+    Gelen: C01 program modeli
+    Devir: yürütme sırası, CPU, bellek, depolama ve çalışma zamanı modeli
+[x] `V01-C03` — Problem Tanımı ve Ayrıştırma
+    Gelen: C01–C02 yürütülebilir talimat modeli
+    Devir: amaç, kapsam, girdi, çıktı, kısıt ve alt problem sözleşmesi
+[x] `V01-C04` — Algoritmalar, Sözde Kod ve İzleme
+    Gelen: C03 kesin problem sözleşmesi
+    Devir: sonlu algoritma, sözde kod, izleme tablosu ve doğruluk başlangıcı
+
+Modül 02 — Veriler ve İfadeler (`V01-M02`)
+Modül durumu: [~] Ana dersler üretildi  [ ] Yeni standarda uygunluk  [ ] Proje kapısı
+Proje: `V01-P02` Veri Dönüşüm Konsolu
+
+[x] `V01-C05` — Değerler ve Veri Türleri
+    Gelen: C04 izlenebilir işlem adımları
+    Devir: değeri türüne, anlamlı işlemlere ve temsil sınırına göre açıklama
+[x] `V01-C06` — Değişkenler ve Durum
+    Gelen: C05 değer ve tür modeli
+    Devir: ad, bağlama, başlangıç değeri, yeniden atama ve durum izi
+[x] `V01-C07` — Operatörler ve İfadeler
+    Gelen: C05–C06 tür ve durum modeli
+    Devir: ifadeyi değerlendirme sırası ve sonuç türüyle elle izleme
+[x] `V01-C08` — Girdi, Çıktı ve Veri Dönüşümü
+    Gelen: C07 ifade hattı
+    Devir: dış girdiyi alma, dönüştürme, doğrulama ve çıktı üretme sınırı
+
+Modül 08 — JavaScript Çalışma Zamanı ve Tür Semantiği (`V01-M08`)
+Modül durumu: [~] C38 Draft paket hazır; C29 bekliyor
+Proje bağlantısı: `V01-P07`
+
+[~] `V01-C38` — JavaScript Çalışma Zamanı, Araçlar ve Yürütme Ortamları
+    Gelen: C02 yürütme modeli ve C08 girdi/çıktı sınırı
+    Durum: Öğretme Standardı v1.0'a uygun ana ders, Blueprint, research ve
+    21 dosyalık çalışma paketi üretildi. Otomatik validation geçti; bağımsız
+    teknik/pedagojik review ve öğrenci pilotu bekliyor.
+    `V01-C38-VR001` validation raporu `Pass with Warnings`.
+    Devir: runtime, host, Node.js/tarayıcı ve tekrar üretilebilir çalışma akışı
+[ ] `V01-C29` — JavaScript Tür Sistemi ve Dönüşüm Semantiği
+    Gelen: C05, C07 ve C38
+    Devir: dinamik tür, açık/örtük dönüşüm, eşitlik ve dönüşüm kararı
+
+Modül 03 — Kontrol Akışı (`V01-M03`)
+Modül durumu: [~] Ana dersler üretildi; kanonik ön koşul M08 bekleniyor
+Proje: `V01-P03` Kural Tabanlı İş Akışı
+
+[x] `V01-C09` — Boolean Mantığı ve Doğruluk
+    Gelen: C07 ifadeleri ve C29 tür/dönüşüm semantiği
+    Devir: boolean karar koşulu, doğruluk tablosu ve birleşik mantık
+[x] `V01-C10` — Koşullu Yürütme
+    Gelen: C09 boolean modeli
+    Devir: dallanma, kapsama, karar tablosu ve erişilebilir yol analizi
+[x] `V01-C11` — Yineleme ve Döngüler
+    Gelen: C06 durum ve C10 kontrollü yürütme
+    Devir: başlangıç, koşul, ilerleme, sonlanma ve döngü değişmezi
+[x] `V01-C12` — İç İçe ve Bileşik Kontrol Akışı
+    Gelen: C10–C11 karar ve tekrar modelleri
+    Devir: bileşik yolları izleme, sadeleştirme ve okunabilirlik kararı
+
+Modül 04 — Fonksiyonlar ve Ayrıştırma (`V01-M04`)
+Modül durumu: [~] Ana dersler üretildi  [ ] Yeni standarda uygunluk  [ ] Proje kapısı
+Proje: `V01-P04` Fonksiyon Tabanlı Yardımcı Araç Seti
+
+[x] `V01-C13` — Fonksiyonlar ve Sözleşmeler
+    Gelen: tekrarlanan C09–C12 davranışları
+    Devir: ad, girdi, çıktı, sorumluluk ve yan etki sözleşmesi
+[x] `V01-C14` — Parametreler ve Dönüş Değerleri
+    Gelen: C13 fonksiyon sözleşmesi
+    Devir: parametre/argüman ayrımı, veri akışı ve dönüş değeri tasarımı
+[x] `V01-C15` — Kapsam, Yaşam Süresi ve Yan Etkiler
+    Gelen: C06 durum ve C13–C14 fonksiyon çağrıları
+    Devir: isim çözümleme, yerel durum, yaşam süresi ve etki sınırı
+[x] `V01-C16` — İşlevsel Ayrıştırma ve Yeniden Kullanım
+    Gelen: C13–C15 fonksiyon kararları
+    Devir: sorumluluklara ayrılmış, test edilebilir küçük program tasarımı
+
+Modül 10 — İşlevsel JavaScript (`V01-M10`)
+Modül durumu: [ ] Başlanmadı
+Proje bağlantısı: `V01-P07`
+
+[ ] `V01-C32` — Higher-Order Fonksiyonlar ve Callback'ler
+    Gelen: C14–C16 fonksiyon sözleşmeleri
+    Devir: fonksiyonu değer olarak taşıma ve callback çalışma akışını izleme
+[ ] `V01-C33` — Closure, Yaşam Süresi ve Durum Kapsülleme
+    Gelen: C15 kapsam/yaşam süresi ve C32 callback modeli
+    Devir: lexical environment, closure ve kontrollü özel durum modeli
+
+Modül 05 — Yapılandırılmış Veri ve Özyineleme (`V01-M05`)
+Modül durumu: [~] C17–C20 Draft hazır; bağımsız review ve pilot bekliyor
+Proje: `V01-P05` Yapılandırılmış Veri İşleyici
+
+[x] `V01-C17` — Koleksiyonlar ve Yineleme
+    Gelen: C11 döngü ve C16 fonksiyon ayrıştırma
+    Devir: koleksiyon sözleşmesi, indeks/sınır, dolaşma ve sonuç üretme
+[x] `V01-C18` — Kayıtlar ve Veri Modelleme
+    Gelen: C05 türler, C14 sözleşmeler ve C17 koleksiyonlar
+    Devir: alanları birlikte anlam taşıyan kayıt, invariant ve model kararı
+[~] `V01-C19` — Özyineleme ve Özyinelemeli Düşünme
+    Gelen: C10, C13–C15 ve C18 iç içe model
+    Durum: Öğretme Standardı v1.0 pilot yeniden yazımı tamamlandı; pedagojik ve
+    teknik review bekliyor. 21 dosyalık öğrenme paketi ve
+    `V01-C19-VR001` validation raporu `Pass with Warnings`.
+    Devir hedefi: taban durum, küçülen problem, çağrı izi ve sonlanma gerekçesi
+[~] `V01-C20` — String'ler ve Metin İşleme
+    Gelen: C17 koleksiyon dolaşımı, C18 modelleme ve C19 ayrıştırma
+    Durum: Ana ders, Blueprint güncellemesi, research ve 21 dosyalık paket
+    üretildi. `V01-C20-VR001` validation raporu `Pass with Warnings`;
+    bağımsız review ve öğrenci pilotu bekliyor.
+    Devir: metin temsili, Unicode sınırı ve doğrulanabilir metin hattı
+
+Modül 09 — JavaScript Nesneleri ve Koleksiyonları (`V01-M09`)
+Modül durumu: [~] C21–C22 Draft paket hazır; C23 bekliyor
+Proje bağlantısı: `V01-P07`
+
+[ ] `V01-C30` — Nesneler, Özellikler ve Veri Modelleme
+    Gelen: C18 kayıt modeli, C29 semantik ve C33 durum sınırı
+    Devir: JavaScript nesne kimliği, property erişimi ve mutasyon modeli
+[ ] `V01-C31` — Diziler ve Koleksiyon Hatları
+    Gelen: C17 koleksiyonlar, C30 nesneler ve C32 callback'ler
+    Devir: `map`, `filter`, `reduce` hatlarını tür ve veri akışıyla tasarlama
+
+Modül 11 — Sayısal ve Zamansal Hesaplama (`V01-M11`)
+Modül durumu: [ ] Başlanmadı
+Proje bağlantısı: `V01-P07`
+
+[ ] `V01-C34` — Sayılar, Math ve Sayısal Güvenilirlik
+    Gelen: C05, C29 ve C31 veri hatları
+    Devir: kayan nokta, güvenli tamsayı, yuvarlama ve güvenilir hesap sınırı
+[ ] `V01-C35` — Tarihler, Zaman ve Zamansal Sınırlar
+    Gelen: C30 modelleme ve C34 sayısal güvenilirlik
+    Devir: an/süre ayrımı, saat dilimi, UTC ve tarih hesaplama sınırı
+
+Modül 06 — Algoritmalar ve Verimlilik (`V01-M06`)
+Modül durumu: [ ] Başlanmadı
+Proje: `V01-P06` Algoritma Çalışma Tezgâhı
+
+[~] `V01-C21` — Arama Algoritmaları
+    Gelen: C17–C20 veri işleme ve C31 koleksiyon davranışı
+    Durum: Ana ders, Blueprint v0.2, research ve 21 dosyalık paket üretildi.
+    `V01-C21-VR001` otomatik validation sonucu `Pass with Warnings`; C31
+    canonical dependency kapanışı, bağımsız review ve öğrenci pilotu bekliyor.
+    Devir: doğrusal/ikili arama seçimi, ön koşul ve çalışma izi
+[~] `V01-C22` — Sıralama Algoritmaları
+    Gelen: C21 arama ve koleksiyon değişmezleri
+    Durum: Ana ders, Blueprint v0.2, research ve 21 dosyalık paket üretildi.
+    `V01-C22-VR001` otomatik validation sonucu `Pass with Warnings`; C31
+    canonical dependency kapanışı, bağımsız review ve öğrenci pilotu bekliyor.
+    Devir: temel sıralama yaklaşımlarını elle izleme ve karşılaştırma
+[ ] `V01-C23` — Algoritmik Karmaşıklık ve Ödünleşimler
+    Gelen: C21–C22 çalışan algoritmalar
+    Devir: işlem büyümesi, zaman/alan maliyeti ve seçim gerekçesi
+
+Modül 12 — Hatalar ve Modül Sınırları (`V01-M12`)
+Modül durumu: [ ] Başlanmadı
+Proje bağlantısı: `V01-P08`
+
+[ ] `V01-C36` — İstisna Yönetimi ve Özel Hatalar
+    Gelen: C10 kontrol akışı, C13 sözleşme ve C29 runtime davranışı
+    Devir: throw/catch, hata sözleşmesi, anlamlı mesaj ve özel hata tasarımı
+[ ] `V01-C37` — ES Modülleri ve Program Organizasyonu
+    Gelen: C16 ayrıştırma, C33 durum sınırı ve C36 hata sözleşmesi
+    Devir: import/export, bağımlılık grafiği ve kararlı modül sınırı
+
+Modül 07 — Güvenilirlik ve Program Tasarımı (`V01-M07`)
+Modül durumu: [ ] Başlanmadı
+Projeler: `V01-P08`, `V01-CP01`
+
+[ ] `V01-C24` — Hatalar ve Başarısızlık Türleri
+    Gelen: önceki modüllerin yürütme, veri ve hata sözleşmeleri
+    Devir: syntax/runtime/logic/failure ayrımı ve yeniden üretilebilir belirti
+[ ] `V01-C25` — Sistematik Hata Ayıklama
+    Gelen: C24 hata sınıfları
+    Devir: gözlem, hipotez, deney, daraltma, düzeltme ve doğrulama
+[ ] `V01-C26` — Test Temelleri
+    Gelen: C13 sözleşmeler, C23 sınırlar ve C25 hata ayıklama
+    Devir: örnek, sınır ve hata durumu için otomatik test tasarımı
+[ ] `V01-C27` — Temiz Kod ve Refactoring
+    Gelen: C16 ayrıştırma, C26 güvenlik ağı ve C37 modül sınırı
+    Devir: davranışı koruyarak adlandırma, sadeleştirme ve yapı iyileştirme
+[ ] `V01-C28` — Gereksinimden Teslimata Program Tasarımı
+    Gelen: C03–C27 ve C29–C38 bütünleşik yeterlikleri
+    Devir: gereksinim, tasarım, kod, test, Git kanıtı ve teknik savunma
+
+Kanonik Akademi 01 mezuniyet kapısı:
+
+[ ] 38 chapter'ın zorunlu outcome kanıtları
+[ ] `V01-P01`–`V01-P08` proje kapıları
+[ ] `V01-CP01` güvenilir komut satırı problem çözücüsü
+[ ] Kod, test, README, Git/PR ve karar gerekçesi
+[ ] Gecikmeli kalıcılık kontrolü
+[ ] Teknik savunma ve bağımsız transfer görevi
+[ ] Sonraki akademiye yeterlik devir kaydı
+
+AKADEMİ 01 — ONAYLI ÜRETİM VE YENİDEN İNCELEME SIRASI
+----------------------------------------------------------------------
+
+Dalga 0 — Öğretme standardı pilotu
+
+[x] ASEA Teaching and Continuity Standard v1.0 yazıldı ve registry'ye bağlandı
+[~] C01–C38 gelen/çıkan yeterlik ve süregelen proje artışı matrisi: tracker
+    düzeyinde hazır; ayrı machine-readable matris üretimi bekliyor
+[x] C19 yeni standardın ilk tam pilot chapter'ı olarak yeniden yazıldı
+[~] C19 kod izi, değişken/tür açıklamaları, beş uygulama kademesi, terim kartı,
+    quiz, mülakat, lab, adım adım çözüm ve proje artışı üretildi
+[x] C19 otomatik/masa başı validation: `V01-C19-VR001` Pass with Warnings
+[~] Bağımsız teknik, pedagojik, assessment ve erişilebilirlik review planı
+    üretildi; reviewer kararları ve öğrenci pilotu bekliyor
+[~] Pilot bulgularıyla chapter üretim şablonu ve kalite kontrol listesi:
+    C19'da uygulandı; bağımsız review/pilot sonrası kesinleştirilecek
+
+Dalga 1 — Erken dependency boşluğunu kapatma
+
+[x] C38 JavaScript çalışma zamanı ve araçlar: Blueprint, research packet,
+    ana anlatım, 21 dosyalık uygulama/değerlendirme paketi ve otomatik
+    validation üretildi
+[~] C38 bağımsız teknik, pedagojik, assessment, erişilebilirlik review ve
+    öğrenci pilotu bekliyor
+[ ] C29 JavaScript tür sistemi ve dönüşüm semantiği üretilecek
+[ ] C09–C19 Draft'larının M08 ön koşul bağlantıları ve erken kullanılan
+    terimleri kontrol edilecek
+
+Dalga 2 — Yapılandırılmış veri modülünü tamamlama
+
+[ ] C17–C18 yeni standarda göre devamlılık incelemesi
+[ ] C19 pilot düzeltmelerinin kapanışı
+[x] C20 String'ler ve Metin İşleme: ana ders, research, 21 dosyalık paket ve
+    `V01-C20-VR001` otomatik validation üretildi
+[~] C20 bağımsız review ve öğrenci pilotu bekliyor
+[ ] `V01-P05` Yapılandırılmış Veri İşleyici proje kapısı
+
+Dalga 3 — İşlevsel JavaScript ve JavaScript koleksiyonları
+
+[ ] C32–C33
+[ ] C30–C31
+[ ] `V01-P07` ilk bütünleştirme artışı
+
+Dalga 4 — Sayısal/zamansal güvenilirlik ve algoritmalar
+
+[ ] C34–C35
+[~] C21 Arama Algoritmaları: ana ders, research, 21 dosyalık paket ve
+    `V01-C21-VR001` otomatik validation üretildi
+[~] C22 Sıralama Algoritmaları: ana ders, research, 21 dosyalık paket ve
+    `V01-C22-VR001` otomatik validation üretildi
+[ ] C23
+[ ] `V01-P06` ve `V01-P07` kapanışları
+
+Dalga 5 — Hata sınırları ve güvenilir teslimat
+
+[ ] C36–C37
+[ ] C24–C28
+[ ] `V01-P08`, `V01-CP01`, gecikmeli kalıcılık kontrolü ve teknik savunma
+
+Geriye dönük uygunluk:
+
+[ ] C01–C08 — başlangıç dili, değişken/tür ayrıntısı ve proje devamlılığı
+[ ] C09–C16 — M08 dependency, kod izi ve uygulama kademeleri
+[ ] C17–C18 — C19/C20 devri ve yapılandırılmış veri proje omurgası
+
+ESKİ ARAŞTIRMA KAPSAM GÖRÜNÜMÜ — KANONİK OLMAYAN 9 MODÜLLÜ TASLAK
+----------------------------------------------------------------------
+
+Aşağıdaki konu listesi 2026-07-22 tarihli 26 akademi araştırma ağacının kapsam
+girdisidir. Chapter kimliği, öğrenci sırası veya yayın kapısı için kanonik
+değildir. Yukarıdaki 12 modüllük görünüm çakışma hâlinde esas alınır. Bu bölüm,
+kapsam kaybını ve gelecekteki migration kararlarını izlemek için korunur.
 
 Modül 01 — Bilgisayımsal Düşünme
 Modül durumu: [ ] Başlanmadı  [x] Devam ediyor  [ ] Tamamlandı  [ ] İncelendi
