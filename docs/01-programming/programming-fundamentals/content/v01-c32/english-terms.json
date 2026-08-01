@@ -1,0 +1,29 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C32-TERMS01",
+  "chapterId": "V01-C32",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {"term":"function value","turkish":"fonksiyon değeri","explanation":"Binding ve argument olarak taşınabilen callable object value.","firstUseContext":"calculate reference","example":"const rule = isPassing","confusedWith":"return value","revisitAt":"V01-C33"},
+    {"term":"callable","turkish":"çağrılabilir","explanation":"Call expression ile çalıştırılabilen value niteliği.","firstUseContext":"typeof rule","example":"rule(85)","confusedWith":"her object","revisitAt":"V01-C33"},
+    {"term":"function reference","turkish":"fonksiyon referansı","explanation":"Function'ı çağırmadan value olarak erişme.","firstUseContext":"double argument","example":"run(5, double)","confusedWith":"invocation","revisitAt":"V01-C31"},
+    {"term":"invocation","turkish":"çağırma","explanation":"Call expression ile function code'unu çalıştırma.","firstUseContext":"double()","example":"operation(value)","confusedWith":"passing","revisitAt":"V01-C33"},
+    {"term":"call expression","turkish":"çağrı ifadesi","explanation":"Callable value ve arguments ile invocation başlatan expression.","firstUseContext":"operation(left,right)","example":"add(12, 8)","confusedWith":"function declaration","revisitAt":"V01-C33"},
+    {"term":"higher-order function","turkish":"yüksek dereceli fonksiyon","explanation":"Function kabul eden veya function döndüren function.","firstUseContext":"applyOperation","example":"filter(predicate)","confusedWith":"callback","revisitAt":"V01-C33"},
+    {"term":"callback","turkish":"geri çağrılan fonksiyon","explanation":"Çağrılma yetkisi başka caller'a verilen function value.","firstUseContext":"operation parameter","example":"standardRule","confusedWith":"her helper function","revisitAt":"V01-C31"},
+    {"term":"caller","turkish":"çağıran taraf","explanation":"Callback invocation zamanını ve arguments'ını belirleyen function/API.","firstUseContext":"processItems","example":"Array.prototype.map","confusedWith":"callback","revisitAt":"V01-C33"},
+    {"term":"callback contract","turkish":"callback sözleşmesi","explanation":"Arguments, return, order/count, timing ve error beklentileri.","firstUseContext":"beş soru","example":"(value,index) => output","confusedWith":"yalnız arity","revisitAt":"V01-P07"},
+    {"term":"argument order","turkish":"argüman sırası","explanation":"Caller'ın callback'e values gönderdiği pozisyon düzeni.","firstUseContext":"map signature","example":"value, index, array","confusedWith":"parameter name","revisitAt":"V01-C31"},
+    {"term":"return flow","turkish":"dönüş değeri akışı","explanation":"Callback sonucunun caller'a ve oradan dış caller'a ilerlemesi.","firstUseContext":"applyOperation trace","example":"20 → result → total","confusedWith":"console output","revisitAt":"V01-C33"},
+    {"term":"invocation count","turkish":"çağrı sayısı","explanation":"Caller'ın callback'i kaç kez çalıştırdığı.","firstUseContext":"spy","example":"items.length kez","confusedWith":"array length garantisi","revisitAt":"V01-C31"},
+    {"term":"invocation order","turkish":"çağrı sırası","explanation":"Birden fazla callback call'un gerçekleşme düzeni.","firstUseContext":"rule sonra formatter","example":"validate → transform","confusedWith":"output sort order","revisitAt":"V01-P07"},
+    {"term":"signature","turkish":"çağrı imzası","explanation":"Parameters ve return'ün type/anlam sözleşmesi.","firstUseContext":"parseInt mismatch","example":"(text, radix) → number","confusedWith":"yalnız parameter count","revisitAt":"V01-C31"},
+    {"term":"adapter function","turkish":"uyarlayıcı fonksiyon","explanation":"İki çağrı sözleşmesinin argument anlamlarını eşleyen wrapper.","firstUseContext":"map parse adapter","example":"value => parseInt(value, 10)","confusedWith":"duplicate logic","revisitAt":"V01-P07"},
+    {"term":"predicate","turkish":"koşul fonksiyonu","explanation":"Boolean bağlamında karar value'su döndüren callback.","firstUseContext":"standardRule","example":"score => score >= 70","confusedWith":"mapper","revisitAt":"V01-C31"},
+    {"term":"mapper","turkish":"dönüştürücü callback","explanation":"Bir input elementinden output element üreten callback.","firstUseContext":"processItems","example":"student => card","confusedWith":"predicate","revisitAt":"V01-C31"},
+    {"term":"comparator","turkish":"karşılaştırma callback'i","explanation":"İki value'nun göreli sırası için numeric karar döndüren function.","firstUseContext":"sorting policy","example":"(a,b) => a.score-b.score","confusedWith":"predicate","revisitAt":"V01-C22"},
+    {"term":"side effect","turkish":"yan etki","explanation":"Return value dışında gözlenebilir state veya dış dünya değişimi.","firstUseContext":"invocation counter","example":"calls.push(args)","confusedWith":"return value","revisitAt":"V01-C33"},
+    {"term":"test spy","turkish":"çağrı gözlemcisi","explanation":"Arguments, order ve count'u kaydeden test double.","firstUseContext":"notificationSpy","example":"calls array","confusedWith":"production logger","revisitAt":"V01-C26"}
+  ]
+}

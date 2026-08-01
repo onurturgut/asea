@@ -4,31 +4,12 @@ blueprint_id: "V01-C28-BP01"
 blueprint_type: "Chapter"
 scope_id: "V01-C28"
 title: "Chapter 28 Blueprint — Program Design from Requirements to Delivery"
-version: "0.1.0"
+version: "0.2.0"
 status: "Draft"
 freeze_status: "Unfrozen"
 owner_role: "Curriculum Architect"
 prerequisites:
-  - "V01-C03"
-  - "V01-C04"
-  - "V01-C05"
-  - "V01-C06"
-  - "V01-C07"
-  - "V01-C08"
-  - "V01-C09"
-  - "V01-C10"
-  - "V01-C11"
-  - "V01-C12"
-  - "V01-C13"
-  - "V01-C14"
-  - "V01-C15"
   - "V01-C16"
-  - "V01-C17"
-  - "V01-C18"
-  - "V01-C19"
-  - "V01-C20"
-  - "V01-C21"
-  - "V01-C22"
   - "V01-C23"
   - "V01-C24"
   - "V01-C25"
@@ -58,14 +39,16 @@ review_ids: []
 | Chapter ID | `V01-C28` |
 | Module | `V01-M07` — Reliability and Program Design |
 | Difficulty | Intermediate |
-| Estimated Study Time | 7-9 hours |
+| Estimated Study Time | 11-14 hours |
 | Primary Lab | `V01-C28-L01` — Produce a Program Design Dossier |
 | Assessment | `V01-C28-AS01` |
 | Next Chapter | Volume 01 Final Assessment and Capstone |
 
 ### Chapter Purpose
 
-Problem contract, data model, algorithm, function map, test, debugging ve review kanıtlarını tek program design dossier'da birleştirmek.
+Ölçülebilir gereksinimleri veri modeli, algoritma, fonksiyon haritası, hata
+politikası, testler ve teslim kanıtlarıyla tek bir program design dossier içinde
+birleştirmek.
 
 ### Why This Chapter Exists
 
@@ -75,7 +58,9 @@ This Chapter closes the gap between the assessed evidence from `V01-C03` through
 
 ### In Scope
 
-- Plan the mental models, examples, practice, and assessment needed for: Requirements, design, implementation plan, verification, delivery..
+- Plan the mental models, examples, practice, and assessment needed for program
+  design, requirements traceability, acceptance criteria, risk/delivery and
+  technical review.
 - Introduce supporting concepts only where they explain a core mechanism: Scope control, traceability, technical review, change readiness, retrospective..
 - Preserve the language-independent curriculum; JavaScript may illustrate behavior but may not define the outcome.
 - Produce Chapter content that follows the 15 mandatory H2 headings in Chapter Standard v2.0.
@@ -98,16 +83,19 @@ This Chapter closes the gap between the assessed evidence from `V01-C03` through
 
 ### Knowledge Outputs
 
-- **V01-LO046:** Ölçülebilir gereksinimden modüler çözüm tasarlamak.
-- **V01-LO046:** teslimi correctness, tests, readability ve limitations ile savunmak..
+- **V01-LO046:** Ölçülebilir gereksinimlerden modüler, test edilmiş ve
+  açıklanabilir küçük program tasarlayıp teslim edebilmek.
 - A reviewable plan connecting concepts, examples, practice, assessment, and project evidence.
 
 ## Audience and Level
 
 - **Audience:** Learners who have passed the listed prerequisites and are following Volume 01 in sequence.
 - **Entry level:** Intermediate; no unstated framework or infrastructure experience.
-- **Exit behavior:** The learner can ölçülebilir gereksinimden modüler çözüm tasarlamak; teslimi correctness, tests, readability ve limitations ile savunmak..
-- **Teaching posture:** Concept first, progressively reduced guidance, explicit trace and reflection.
+- **Exit behavior:** Öğrenci bir ihtiyacı kapsamı açık gereksinimlere dönüştürür;
+  her gereksinimi tasarım, kod, test ve review kanıtına bağlar; kalan risk ve
+  sınırlamaları saklamadan teslimini savunur.
+- **Teaching posture:** ASEA Teaching and Continuity Standard v1.0; ihtiyaç →
+  sezgi → birlikte modelleme → kod → kanıt → bağımsız teslim akışı.
 
 ## Prerequisites
 
@@ -127,8 +115,8 @@ Plan a short retrieval task that asks the learner to reproduce the prerequisite 
 
 ### Outcome Mapping
 
-- **V01-LO046:** Ölçülebilir gereksinimden modüler çözüm tasarlamak.
-- **V01-LO046:** teslimi correctness, tests, readability ve limitations ile savunmak..
+- **V01-LO046:** Ölçülebilir gereksinimlerden modüler, test edilmiş ve
+  açıklanabilir küçük program tasarlayıp teslim edebilmek.
 
 ### Legacy Source Mapping
 
@@ -140,11 +128,16 @@ The v2 identifiers are normative inside this Blueprint. The legacy mapping remai
 
 ### Core Concepts
 
-- **Requirements:** Plan definition, boundary, mechanism, trace, and one transfer case.
-- **design:** Plan definition, boundary, mechanism, trace, and one transfer case.
-- **implementation plan:** Plan definition, boundary, mechanism, trace, and one transfer case.
-- **verification:** Plan definition, boundary, mechanism, trace, and one transfer case.
-- **delivery.:** Plan definition, boundary, mechanism, trace, and one transfer case.
+- **Program Design (`ASEA-CON-000097`):** Transform requirements into a coherent
+  data model, algorithm, function structure, failure policy and verification plan.
+- **Requirements Traceability (`ASEA-CON-000098`):** Connect each requirement to
+  design, implementation, tests and review evidence.
+- **Acceptance Criteria (`ASEA-CON-000099`):** Define measurable completion and
+  acceptance conditions.
+- **Risk and Delivery (`ASEA-CON-000100`):** Record uncertainty, mitigation,
+  residual limitations and controlled handoff evidence.
+- **Technical Review (`ASEA-CON-000101`):** Evaluate correctness, evidence,
+  trade-offs, risks and maintainability against explicit scope.
 
 ### Supporting Concepts
 
@@ -157,17 +150,18 @@ The v2 identifiers are normative inside this Blueprint. The legacy mapping remai
 ### Concept Dependency
 
 - Begin with the prerequisite evidence and make the new conceptual gap explicit.
-- Establish Requirements and design before introducing implementation plan, verification, delivery..
+- Establish measurable requirements and acceptance criteria before program design;
+  connect the implemented design to traceability, risk and technical review.
 - Use supporting concepts after the learner can predict the core behavior.
 - End with a transfer task that connects the Chapter capability to the final integration gate.
 
 ### Terminology
 
-- **Requirements:** Plan the first-use bilingual definition, one non-example, and consistent later usage.
-- **design:** Plan the first-use bilingual definition, one non-example, and consistent later usage.
-- **implementation plan:** Plan the first-use bilingual definition, one non-example, and consistent later usage.
-- **verification:** Plan the first-use bilingual definition, one non-example, and consistent later usage.
-- **delivery.:** Plan the first-use bilingual definition, one non-example, and consistent later usage.
+- **Program design:** Program tasarımı.
+- **Requirements traceability:** Gereksinim izlenebilirliği.
+- **Acceptance criteria:** Kabul kriterleri.
+- **Risk and delivery:** Risk ve teslim.
+- **Technical review:** Teknik inceleme.
 - **Scope control:** Plan the first-use bilingual definition, one non-example, and consistent later usage.
 - **traceability:** Plan the first-use bilingual definition, one non-example, and consistent later usage.
 - **technical review:** Plan the first-use bilingual definition, one non-example, and consistent later usage.
@@ -181,31 +175,21 @@ The v2 identifiers are normative inside this Blueprint. The legacy mapping remai
 1.1.1 Contrast a successful and failed scenario without presenting the final solution
 1.2 Scope and vocabulary boundary
 1.2.1 Connect prerequisite evidence to the first core concept
-2. Requirements mental model
-2.1 Definition, purpose, and boundary
-2.1.1 Contrast Requirements with the nearest related concept and identify its observable behavior
-2.2 Mechanism and representation
-2.2.1 Trace Requirements through one normal, one boundary, and one failure-oriented case
-3. design mental model
-3.1 Definition, purpose, and boundary
-3.1.1 Contrast design with the nearest related concept and identify its observable behavior
-3.2 Mechanism and representation
-3.2.1 Trace design through one normal, one boundary, and one failure-oriented case
-4. implementation plan mental model
-4.1 Definition, purpose, and boundary
-4.1.1 Contrast implementation plan with the nearest related concept and identify its observable behavior
-4.2 Mechanism and representation
-4.2.1 Trace implementation plan through one normal, one boundary, and one failure-oriented case
-5. verification mental model
-5.1 Definition, purpose, and boundary
-5.1.1 Contrast verification with the nearest related concept and identify its observable behavior
-5.2 Mechanism and representation
-5.2.1 Trace verification through one normal, one boundary, and one failure-oriented case
-6. delivery. mental model
-6.1 Definition, purpose, and boundary
-6.1.1 Contrast delivery. with the nearest related concept and identify its observable behavior
-6.2 Mechanism and representation
-6.2.1 Trace delivery. through one normal, one boundary, and one failure-oriented case
+2. Requirement and acceptance-criteria mental model
+2.1 Need, requirement, constraint and implementation-detail boundaries
+2.1.1 Turn one ambiguous need into measurable normal, boundary and invalid criteria
+3. Program-design mental model
+3.1 Data model, algorithm, function map and failure policy
+3.1.1 Justify each type, responsibility boundary and rejected alternative
+4. Requirements-traceability mental model
+4.1 Requirement → design → code → test → review chain
+4.1.1 Detect one decorative ID link and replace it with behavior-sensitive evidence
+5. Verification and validation mental model
+5.1 Product-to-requirement and product-to-need questions
+5.1.1 Trace one green-test/wrong-product case and one correct validation decision
+6. Risk, technical-review and delivery mental model
+6.1 Risk, mitigation, residual limitation and review decision
+6.1.1 Assemble a reproducible handoff and defend a bounded delivery decision
 7. Engineering application and trade-offs
 7.1 Apply the concept to a bounded program decision
 7.1.1 Compare correctness, simplicity, readability, and change cost where relevant
@@ -226,8 +210,8 @@ The v2 identifiers are normative inside this Blueprint. The legacy mapping remai
 
 | Diagram Name | Purpose | Diagram Type | Concepts Covered |
 |---|---|---|---|
-| Program Design from Requirements to Delivery Concept Boundary | Show the Chapter's main concepts and exclusions | Concept map | Requirements, design, implementation plan |
-| Requirements Behavior Flow | Make state, decision, or transformation order visible | Flow diagram | Requirements, design, implementation plan, verification |
+| Program Design from Requirements to Delivery Concept Boundary | Show the Chapter's main concepts and exclusions | Concept map | Requirements, acceptance criteria, program design |
+| Requirements Behavior Flow | Make state, decision, or transformation order visible | Flow diagram | Requirement, design, implementation, verification |
 | Dependency to Evidence | Connect prerequisite knowledge to assessment evidence | Traceability flow | V01-C03–V01-C27 → V01-LO046 |
 
 No Mermaid source is produced at Blueprint stage.
@@ -246,7 +230,7 @@ No Mermaid source is produced at Blueprint stage.
 |---|---|---|---|---|---|
 | `V01-C28-CODE01` | Demonstrate the smallest observable behavior | Requirements | Guided | Deterministic result with an explained trace | Kodla başlayıp contract'ı sonradan yazmak |
 | `V01-C28-CODE02` | Expose a boundary or invalid case | design | Supported | Controlled boundary behavior and diagnostic evidence | çalışan çıktıyı tamamlanmış mühendislik saymak. |
-| `V01-C28-CODE03` | Compare two valid designs | delivery. | Transfer | Same required behavior with a justified trade-off | Choosing by syntax preference without evidence |
+| `V01-C28-CODE03` | Compare two valid designs | Risk and Delivery | Transfer | Same required behavior with a justified trade-off | Choosing by syntax preference without evidence |
 
 Only example contracts are planned; no executable code is included.
 
@@ -307,7 +291,8 @@ The Lab file is not created in this task.
 ### Planned Quiz
 
 - **Quiz ID:** `V01-C28-QZ01`
-- **Scope:** Requirements, design, implementation plan, verification, delivery.; common mistakes; prerequisite-to-output reasoning.
+- **Scope:** Program design, requirements traceability, acceptance criteria,
+  risk/delivery, technical review and prerequisite-to-output reasoning.
 - **Learning Outcomes:** `V01-LO046`
 - **Question Types:** Concept distinction, trace/prediction, failure diagnosis, and short scenario selection.
 - **Question Count:** 12

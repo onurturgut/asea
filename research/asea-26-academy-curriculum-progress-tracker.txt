@@ -6,9 +6,8 @@ Kaynak: research/asea-26-academy-curriculum-tree.md
 Kapsam: 26 akademi, 207 modül, bütün tanımlı konu ve alt konular
 Dil: Türkçe
 Oluşturulma tarihi: 2026-07-22
-Son güncelleme: 2026-07-29 — ASEA Öğretme ve Devamlılık Standardı,
-Programlama Temelleri 12 modül/38 chapter kanonik görünümü, C19 pilotu ve
-C38 runtime/tooling üretim paketi işlendi
+Son güncelleme: 2026-08-01 — C34–C37 ana dersleri, Blueprint'leri, research kayıtları,
+21 dosyalık öğrenme paketleri ve otomatik validation raporları işlendi
 
 AMAÇ
 ----------------------------------------------------------------------
@@ -96,19 +95,20 @@ GENEL İLERLEME
 
 Akademiler: 0 / 26
 Modüller: 0 / 207 tamamlandı; 1 / 207 aktif
-Kanonik Chapter ana ders üretimi: 23 / 38 Draft
-Chapter üretim birimi: 23 / 236 Draft paket üretildi
+Kanonik Chapter ana ders üretimi: 38 / 38 Draft
+Chapter üretim birimi: 38 / 236 Draft paket üretildi
 (38 kanonik + 198 kanonik olmayan aday)
 Tamamlanan kanonik akademiler: 0 / 26
 Üretimdeki akademi: Akademi 01 — Programlama Temelleri
-Mevcut Draft ana dersler: C01–C22 ve C38
+Mevcut Draft ana dersler: C01–C38
 Önceki referans Chapter modeli: C02; C03 ve C04 Repository Owner tarafından
 onaylandı. Bu referanslar yeni Öğretme ve Devamlılık Standardı v1.0'a otomatik
 olarak uygun sayılmaz; geriye dönük uygunluk incelemesine alınacaktır.
-Son üretilen ana ders: C22 — Sıralama Algoritmaları; Öğretme Standardı v1.0'a
-uygun 21 dosyalık öğrenci/destek paketi Draft olarak üretildi.
-Sıradaki üretim: Repository Owner'ın sayısal sıra kararıyla C23 — Algoritmik
-Karmaşıklık ve Ödünleşimler
+Son üretilen ana ders: C37 — ES Modülleri ve Program Organizasyonu; C34–C37 için
+Öğretme Standardı v1.0'a uygun 21 dosyalık öğrenci/destek paketleri ve
+`Pass with Warnings` otomatik validation raporları üretildi.
+Sıradaki aşama: Akademi 01 toplu bağımsız teknik/pedagojik/assessment review,
+P07–P08 kapanış kanıtları ve öğrenci pilot hazırlığı
 Öğrenci pilotu: Repository Owner kararıyla Akademi 01 içerikleri tamamlandıktan
 sonraki toplu pilot aşamasına ertelendi
 
@@ -209,7 +209,7 @@ Proje: `V01-P02` Veri Dönüşüm Konsolu
     Devir: dış girdiyi alma, dönüştürme, doğrulama ve çıktı üretme sınırı
 
 Modül 08 — JavaScript Çalışma Zamanı ve Tür Semantiği (`V01-M08`)
-Modül durumu: [~] C38 Draft paket hazır; C29 bekliyor
+Modül durumu: [~] C38 ve C29 Draft paket hazır; bağımsız review ve P07 bekliyor
 Proje bağlantısı: `V01-P07`
 
 [~] `V01-C38` — JavaScript Çalışma Zamanı, Araçlar ve Yürütme Ortamları
@@ -219,8 +219,11 @@ Proje bağlantısı: `V01-P07`
     teknik/pedagojik review ve öğrenci pilotu bekliyor.
     `V01-C38-VR001` validation raporu `Pass with Warnings`.
     Devir: runtime, host, Node.js/tarayıcı ve tekrar üretilebilir çalışma akışı
-[ ] `V01-C29` — JavaScript Tür Sistemi ve Dönüşüm Semantiği
+[~] `V01-C29` — JavaScript Tür Sistemi ve Dönüşüm Semantiği
     Gelen: C05, C07 ve C38
+    Durum: Ana ders, Blueprint, research ve 21 dosyalık paket üretildi.
+    `V01-C29-VR001` otomatik validation sonucu `Pass with Warnings`;
+    bağımsız review ve öğrenci pilotu bekliyor.
     Devir: dinamik tür, açık/örtük dönüşüm, eşitlik ve dönüşüm kararı
 
 Modül 03 — Kontrol Akışı (`V01-M03`)
@@ -258,15 +261,23 @@ Proje: `V01-P04` Fonksiyon Tabanlı Yardımcı Araç Seti
     Devir: sorumluluklara ayrılmış, test edilebilir küçük program tasarımı
 
 Modül 10 — İşlevsel JavaScript (`V01-M10`)
-Modül durumu: [ ] Başlanmadı
+Modül durumu: [~] C32–C33 Draft paket hazır; bağımsız review ve P07 bekliyor
 Proje bağlantısı: `V01-P07`
 
-[ ] `V01-C32` — Higher-Order Fonksiyonlar ve Callback'ler
-    Gelen: C14–C16 fonksiyon sözleşmeleri
-    Devir: fonksiyonu değer olarak taşıma ve callback çalışma akışını izleme
-[ ] `V01-C33` — Closure, Yaşam Süresi ve Durum Kapsülleme
+[~] `V01-C32` — Higher-Order Fonksiyonlar ve Callback'ler
+    Gelen: C13–C14 function contract/veri akışı ve C16 functional decomposition
+    Durum: Blueprint, ana ders, research ve 21 dosyalık paket üretildi.
+    `V01-C32-VR001` otomatik validation sonucu `Pass with Warnings`; bağımsız review ve
+    öğrenci pilotu bekliyor.
+    Devir: function value, higher-order contract ve callback control/data-flow
+    kanıtları C33 closure/state modeline ve C31 pipeline kapısına aktarılıyor
+[~] `V01-C33` — Closure, Yaşam Süresi ve Durum Kapsülleme
     Gelen: C15 kapsam/yaşam süresi ve C32 callback modeli
-    Devir: lexical environment, closure ve kontrollü özel durum modeli
+    Durum: Blueprint, ana ders, research ve 21 dosyalık paket üretildi.
+    `V01-C33-VR001` otomatik validation sonucu `Pass with Warnings`; bağımsız review ve
+    öğrenci pilotu bekliyor.
+    Devir: lexical environment, captured binding, lifetime ve invariant koruyan
+    closure state boundary kanıtları C30, C17 ve C37'ye aktarılıyor
 
 Modül 05 — Yapılandırılmış Veri ve Özyineleme (`V01-M05`)
 Modül durumu: [~] C17–C20 Draft hazır; bağımsız review ve pilot bekliyor
@@ -292,29 +303,43 @@ Proje: `V01-P05` Yapılandırılmış Veri İşleyici
     Devir: metin temsili, Unicode sınırı ve doğrulanabilir metin hattı
 
 Modül 09 — JavaScript Nesneleri ve Koleksiyonları (`V01-M09`)
-Modül durumu: [~] C21–C22 Draft paket hazır; C23 bekliyor
+Modül durumu: [~] C30–C31 Draft paket hazır; bağımsız review ve P07 bekliyor
 Proje bağlantısı: `V01-P07`
 
-[ ] `V01-C30` — Nesneler, Özellikler ve Veri Modelleme
+[~] `V01-C30` — Nesneler, Özellikler ve Veri Modelleme
     Gelen: C18 kayıt modeli, C29 semantik ve C33 durum sınırı
-    Devir: JavaScript nesne kimliği, property erişimi ve mutasyon modeli
-[ ] `V01-C31` — Diziler ve Koleksiyon Hatları
+    Durum: Blueprint, ana ders, research ve 21 dosyalık paket üretildi.
+    `V01-C30-VR001` otomatik validation sonucu `Pass with Warnings`; C33 Draft
+    dependency üretildi, C33 assessment/review ile bağımsız C30 review ve pilot bekliyor.
+    Devir: Geçerli nesne modeli, identity, property erişimi, mutation, shallow copy
+    ve aliasing kanıtları C31 koleksiyon hatlarına aktarılıyor
+[~] `V01-C31` — Diziler ve Koleksiyon Hatları
     Gelen: C17 koleksiyonlar, C30 nesneler ve C32 callback'ler
-    Devir: `map`, `filter`, `reduce` hatlarını tür ve veri akışıyla tasarlama
+    Durum: Blueprint, ana ders, research ve 21 dosyalık paket üretildi.
+    `V01-C31-VR001` otomatik validation sonucu `Pass with Warnings`; C32 öğrenci kapısı,
+    bağımsız review ve öğrenci pilotu bekliyor.
+    Devir: `map`, `filter`, `reduce` hatları; type/cardinality, mutation ve identity
+    kanıtları C22, C34 ve C21'e aktarılıyor
 
 Modül 11 — Sayısal ve Zamansal Hesaplama (`V01-M11`)
-Modül durumu: [ ] Başlanmadı
+Modül durumu: [~] C34–C35 Draft paket hazır; modül review ve P07 kapanışı bekliyor
 Proje bağlantısı: `V01-P07`
 
-[ ] `V01-C34` — Sayılar, Math ve Sayısal Güvenilirlik
-    Gelen: C05, C29 ve C31 veri hatları
+[~] `V01-C34` — Sayılar, Math ve Sayısal Güvenilirlik
+    Gelen: C05/C07 sayısal temel, C29 tür semantiği ve C31 veri hatları
+    Durum: Blueprint, ana ders, research ve 21 dosyalık paket üretildi.
+    `V01-C34-VR001` otomatik validation sonucu `Pass with Warnings`; bağımsız review ve
+    öğrenci pilotu bekliyor.
     Devir: kayan nokta, güvenli tamsayı, yuvarlama ve güvenilir hesap sınırı
-[ ] `V01-C35` — Tarihler, Zaman ve Zamansal Sınırlar
-    Gelen: C30 modelleme ve C34 sayısal güvenilirlik
+[~] `V01-C35` — Tarihler, Zaman ve Zamansal Sınırlar
+    Gelen: C08 girdi/çıktı sınırı ve C34 sayısal güvenilirlik
+    Durum: Blueprint, ana ders, research ve 21 dosyalık paket üretildi.
+    `V01-C35-VR001` otomatik validation sonucu `Pass with Warnings`; bağımsız review ve
+    öğrenci pilotu bekliyor.
     Devir: an/süre ayrımı, saat dilimi, UTC ve tarih hesaplama sınırı
 
 Modül 06 — Algoritmalar ve Verimlilik (`V01-M06`)
-Modül durumu: [ ] Başlanmadı
+Modül durumu: [~] C36–C37 Draft paket hazır; bağımsız review ve P08 kapanışı bekliyor
 Proje: `V01-P06` Algoritma Çalışma Tezgâhı
 
 [~] `V01-C21` — Arama Algoritmaları
@@ -329,39 +354,63 @@ Proje: `V01-P06` Algoritma Çalışma Tezgâhı
     `V01-C22-VR001` otomatik validation sonucu `Pass with Warnings`; C31
     canonical dependency kapanışı, bağımsız review ve öğrenci pilotu bekliyor.
     Devir: temel sıralama yaklaşımlarını elle izleme ve karşılaştırma
-[ ] `V01-C23` — Algoritmik Karmaşıklık ve Ödünleşimler
+[~] `V01-C23` — Algoritmik Karmaşıklık ve Ödünleşimler
     Gelen: C21–C22 çalışan algoritmalar
+    Durum: Ana ders, Blueprint v0.2, research ve 21 dosyalık paket üretildi.
+    `V01-C23-VR001` otomatik validation sonucu `Pass with Warnings`;
+    bağımsız review ve öğrenci pilotu bekliyor.
     Devir: işlem büyümesi, zaman/alan maliyeti ve seçim gerekçesi
 
 Modül 12 — Hatalar ve Modül Sınırları (`V01-M12`)
 Modül durumu: [ ] Başlanmadı
 Proje bağlantısı: `V01-P08`
 
-[ ] `V01-C36` — İstisna Yönetimi ve Özel Hatalar
-    Gelen: C10 kontrol akışı, C13 sözleşme ve C29 runtime davranışı
+[~] `V01-C36` — İstisna Yönetimi ve Özel Hatalar
+    Gelen: C10 kontrol akışı, C13/C15 sözleşme-kapsam ve C29 runtime davranışı
+    Durum: Blueprint, ana ders, research ve 21 dosyalık paket üretildi.
+    `V01-C36-VR001` otomatik validation sonucu `Pass with Warnings`; bağımsız review ve
+    öğrenci pilotu bekliyor.
     Devir: throw/catch, hata sözleşmesi, anlamlı mesaj ve özel hata tasarımı
-[ ] `V01-C37` — ES Modülleri ve Program Organizasyonu
+[~] `V01-C37` — ES Modülleri ve Program Organizasyonu
     Gelen: C16 ayrıştırma, C33 durum sınırı ve C36 hata sözleşmesi
+    Durum: Blueprint, ana ders, research ve 21 dosyalık paket üretildi.
+    `V01-C37-VR001` otomatik validation sonucu `Pass with Warnings`; bağımsız review ve
+    öğrenci pilotu bekliyor.
     Devir: import/export, bağımlılık grafiği ve kararlı modül sınırı
 
 Modül 07 — Güvenilirlik ve Program Tasarımı (`V01-M07`)
-Modül durumu: [ ] Başlanmadı
+Modül durumu: [~] C24–C28 Draft paket hazır; bağımsız review ve Capstone bekliyor
 Projeler: `V01-P08`, `V01-CP01`
 
-[ ] `V01-C24` — Hatalar ve Başarısızlık Türleri
+[~] `V01-C24` — Hatalar ve Başarısızlık Türleri
     Gelen: önceki modüllerin yürütme, veri ve hata sözleşmeleri
+    Durum: Ana ders, Blueprint v0.2, research ve 21 dosyalık paket üretildi.
+    `V01-C24-VR001` otomatik validation sonucu `Pass with Warnings`;
+    bağımsız review ve öğrenci pilotu bekliyor.
     Devir: syntax/runtime/logic/failure ayrımı ve yeniden üretilebilir belirti
-[ ] `V01-C25` — Sistematik Hata Ayıklama
+[~] `V01-C25` — Sistematik Hata Ayıklama
     Gelen: C24 hata sınıfları
+    Durum: Ana ders, Blueprint v0.2, research ve 21 dosyalık paket üretildi.
+    `V01-C25-VR001` otomatik validation sonucu `Pass with Warnings`;
+    bağımsız review ve öğrenci pilotu bekliyor.
     Devir: gözlem, hipotez, deney, daraltma, düzeltme ve doğrulama
-[ ] `V01-C26` — Test Temelleri
+[~] `V01-C26` — Test Temelleri
     Gelen: C13 sözleşmeler, C23 sınırlar ve C25 hata ayıklama
+    Durum: Ana ders, Blueprint v0.2, research ve 21 dosyalık paket üretildi.
+    `V01-C26-VR001` otomatik validation sonucu `Pass with Warnings`;
+    bağımsız review ve öğrenci pilotu bekliyor.
     Devir: örnek, sınır ve hata durumu için otomatik test tasarımı
-[ ] `V01-C27` — Temiz Kod ve Refactoring
+[~] `V01-C27` — Temiz Kod ve Refactoring
     Gelen: C16 ayrıştırma, C26 güvenlik ağı ve C37 modül sınırı
+    Durum: Ana ders, Blueprint v0.2, research ve 21 dosyalık paket üretildi.
+    `V01-C27-VR001` otomatik validation sonucu `Pass with Warnings`;
+    bağımsız review ve öğrenci pilotu bekliyor.
     Devir: davranışı koruyarak adlandırma, sadeleştirme ve yapı iyileştirme
-[ ] `V01-C28` — Gereksinimden Teslimata Program Tasarımı
+[~] `V01-C28` — Gereksinimden Teslimata Program Tasarımı
     Gelen: C03–C27 ve C29–C38 bütünleşik yeterlikleri
+    Durum: Ana ders, Blueprint v0.2, research ve 21 dosyalık paket üretildi.
+    `V01-C28-VR001` otomatik validation sonucu `Pass with Warnings`;
+    bağımsız review, öğrenci pilotu ve Capstone teslimi bekliyor.
     Devir: gereksinim, tasarım, kod, test, Git kanıtı ve teknik savunma
 
 Kanonik Akademi 01 mezuniyet kapısı:
@@ -398,7 +447,16 @@ Dalga 1 — Erken dependency boşluğunu kapatma
     validation üretildi
 [~] C38 bağımsız teknik, pedagojik, assessment, erişilebilirlik review ve
     öğrenci pilotu bekliyor
-[ ] C29 JavaScript tür sistemi ve dönüşüm semantiği üretilecek
+[~] C29 JavaScript tür sistemi ve dönüşüm semantiği: Blueprint, ana ders,
+    research, 21 dosyalık paket ve `V01-C29-VR001` validation üretildi
+[~] C30 Nesneler, Özellikler ve Veri Modelleme: Blueprint, ana ders, research,
+    21 dosyalık paket ve `V01-C30-VR001` validation üretildi; bağımsız review bekliyor
+[~] C31 Diziler ve Koleksiyon Hatları: Blueprint, ana ders, research ve 21 dosyalık
+    paket ve `V01-C31-VR001` validation üretildi; bağımsız review bekliyor
+[~] C32 Yüksek Dereceli Fonksiyonlar ve Callback'ler: Blueprint, ana ders, research
+    ve 21 dosyalık paket ile `V01-C32-VR001` validation üretildi; bağımsız review bekliyor
+[~] C33 Closure, Yaşam Süresi ve Durum Kapsülleme: Blueprint, ana ders, research ve
+    21 dosyalık paket ile `V01-C33-VR001` validation üretildi; bağımsız review bekliyor
 [ ] C09–C19 Draft'larının M08 ön koşul bağlantıları ve erken kullanılan
     terimleri kontrol edilecek
 
@@ -413,24 +471,38 @@ Dalga 2 — Yapılandırılmış veri modülünü tamamlama
 
 Dalga 3 — İşlevsel JavaScript ve JavaScript koleksiyonları
 
-[ ] C32–C33
-[ ] C30–C31
+[~] C32 ana ders, research ve 21 dosyalık paket üretildi; bağımsız review bekliyor
+[~] C33 ana ders, research ve 21 dosyalık paket üretildi; bağımsız review bekliyor
+[~] C30 ana ders, research ve 21 dosyalık paket üretildi; C33 Draft dependency
+    üretildi, assessment/review kapanışı bekliyor
+[~] C31 ana ders, research ve 21 dosyalık paket üretildi; C32 öğrenci kapısı ve
+    bağımsız review bekliyor
 [ ] `V01-P07` ilk bütünleştirme artışı
 
 Dalga 4 — Sayısal/zamansal güvenilirlik ve algoritmalar
 
-[ ] C34–C35
+[~] C34–C35 ana ders, research ve 21 dosyalık paketler üretildi; bağımsız review bekliyor
 [~] C21 Arama Algoritmaları: ana ders, research, 21 dosyalık paket ve
     `V01-C21-VR001` otomatik validation üretildi
 [~] C22 Sıralama Algoritmaları: ana ders, research, 21 dosyalık paket ve
     `V01-C22-VR001` otomatik validation üretildi
-[ ] C23
+[~] C23 Algoritmik Karmaşıklık ve Ödünleşimler: ana ders, research, 21 dosyalık
+    paket ve `V01-C23-VR001` otomatik validation üretildi
 [ ] `V01-P06` ve `V01-P07` kapanışları
 
 Dalga 5 — Hata sınırları ve güvenilir teslimat
 
-[ ] C36–C37
-[ ] C24–C28
+[~] C36–C37 ana ders, research ve 21 dosyalık paketler üretildi; bağımsız review bekliyor
+[~] C24 Hatalar ve Başarısızlık Türleri: ana ders, research, 21 dosyalık paket
+    ve `V01-C24-VR001` otomatik validation üretildi
+[~] C25 Sistematik Hata Ayıklama: ana ders, research, 21 dosyalık paket ve
+    `V01-C25-VR001` otomatik validation üretildi
+[~] C26 Test Temelleri: ana ders, research, 21 dosyalık paket ve
+    `V01-C26-VR001` otomatik validation üretildi
+[~] C27 Temiz Kod ve Refactoring: ana ders, research, 21 dosyalık paket ve
+    `V01-C27-VR001` otomatik validation üretildi
+[~] C28 Gereksinimden Teslimata Program Tasarımı: ana ders, research, 21
+    dosyalık paket ve `V01-C28-VR001` otomatik validation üretildi
 [ ] `V01-P08`, `V01-CP01`, gecikmeli kalıcılık kontrolü ve teknik savunma
 
 Geriye dönük uygunluk:

@@ -4,7 +4,7 @@ blueprint_id: "V01-C27-BP01"
 blueprint_type: "Chapter"
 scope_id: "V01-C27"
 title: "Chapter 27 Blueprint — Clean Code and Refactoring"
-version: "0.1.0"
+version: "0.2.0"
 status: "Draft"
 freeze_status: "Unfrozen"
 owner_role: "Curriculum Architect"
@@ -38,7 +38,7 @@ review_ids: []
 | Chapter ID | `V01-C27` |
 | Module | `V01-M07` — Reliability and Program Design |
 | Difficulty | Intermediate |
-| Estimated Study Time | 6-7 hours |
+| Estimated Study Time | 10-12 hours |
 | Primary Lab | `V01-C27-L01` — Refactor Under Test |
 | Assessment | `V01-C27-AS01` |
 | Next Chapter | `V01-C28` |
@@ -72,20 +72,27 @@ This Chapter closes the gap between `V01-C16`, `V01-C23`, `V01-C25`, `V01-C26` e
 - `V01-C23`: required evidence defined by the dependency map.
 - `V01-C25`: required evidence defined by the dependency map.
 - `V01-C26`: required evidence defined by the dependency map.
+- `docs/standards/teaching-and-continuity-standard-v1.md`: need-first,
+  prediction-first, explicit trace, staged hints, project continuity, and
+  novice-safe terminology contract.
 - Volume 00 study, evidence, and reflection discipline.
 - Terminology already established by prerequisite Chapters.
 
 ### Knowledge Outputs
 
-- **V01-LO044:** Code smell'i somut bakım riskiyle açıklamak.
-- **V01-LO045:** küçük refactoring adımlarında davranışın korunduğunu testle göstermek..
+- **V01-LO044:** Test güvencesi altında küçük adımlarla behavior-preserving
+  refactoring yapmak.
+- **V01-LO045:** Refactoring sonucunu readability, cohesion, duplication ve
+  complexity ölçütleriyle savunmak.
 - A reviewable plan connecting concepts, examples, practice, assessment, and project evidence.
 
 ## Audience and Level
 
 - **Audience:** Learners who have passed the listed prerequisites and are following Volume 01 in sequence.
 - **Entry level:** Intermediate; no unstated framework or infrastructure experience.
-- **Exit behavior:** The learner can code smell'i somut bakım riskiyle açıklamak; küçük refactoring adımlarında davranışın korunduğunu testle göstermek..
+- **Exit behavior:** The learner can test güvencesi altında küçük ve geri
+  alınabilir refactoring adımları uygulamak; sonucu readability, cohesion,
+  duplication ve complexity kanıtlarıyla savunmak.
 - **Teaching posture:** Concept first, progressively reduced guidance, explicit trace and reflection.
 
 ## Prerequisites
@@ -105,8 +112,10 @@ Plan a short retrieval task that asks the learner to reproduce the prerequisite 
 
 ### Outcome Mapping
 
-- **V01-LO044:** Code smell'i somut bakım riskiyle açıklamak.
-- **V01-LO045:** küçük refactoring adımlarında davranışın korunduğunu testle göstermek..
+- **V01-LO044:** Test güvencesi altında küçük adımlarla behavior-preserving
+  refactoring yapmak.
+- **V01-LO045:** Refactoring sonucunu readability, cohesion, duplication ve
+  complexity ölçütleriyle savunmak.
 
 ### Legacy Source Mapping
 
@@ -390,6 +399,10 @@ This local trace is derived from `learning-outcomes.md`, `chapter-map.md`, `labs
 
 ## References
 
+- [ASEA Teaching and Continuity Standard](../../standards/teaching-and-continuity-standard-v1.md)
+- [Refactoring — Martin Fowler](https://refactoring.com/)
+- [Google JavaScript Style Guide](https://google.github.io/styleguide/jsguide.html)
+- [Google Documentation Best Practices](https://google.github.io/styleguide/docguide/best_practices.html)
 - [Volume 01 README](../README.md)
 - [Volume Blueprint](../volume-blueprint.md)
 - [Chapter Map](../chapter-map.md)

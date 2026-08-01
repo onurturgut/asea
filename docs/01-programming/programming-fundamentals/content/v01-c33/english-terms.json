@@ -1,0 +1,29 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C33-TERMS01",
+  "chapterId": "V01-C33",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {"term":"closure","turkish":"kapanış","explanation":"Function'ın oluşturulduğu lexical çevredeki bindings'e erişim davranışı.","firstUseContext":"createCounter","example":"increment accesses count","confusedWith":"inner function syntax","revisitAt":"V01-C37"},
+    {"term":"lexical environment","turkish":"sözcüksel çevre","explanation":"Lexical nesting'e göre identifier bindings ve outer ilişki modeli.","firstUseContext":"E1 diagram","example":"E1 { count: 0 }","confusedWith":"heap object","revisitAt":"V01-C37"},
+    {"term":"environment record","turkish":"çevre kaydı","explanation":"Specification'ın identifier bindings'i modelleyen mekanizması.","firstUseContext":"ECMA model","example":"function environment","confusedWith":"JS-accessible object","revisitAt":"V01-C37"},
+    {"term":"outer environment","turkish":"dış çevre","explanation":"Identifier aramasında bir sonraki lexical environment bağlantısı.","firstUseContext":"count resolution","example":"local → E1","confusedWith":"caller","revisitAt":"V01-C37"},
+    {"term":"capture","turkish":"yakalama","explanation":"Function'ın dış lexical binding erişimini koruması için kullanılan anlatım.","firstUseContext":"threshold binding","example":"rule reads threshold","confusedWith":"value copy","revisitAt":"V01-C37"},
+    {"term":"captured binding","turkish":"erişimi korunan bağ","explanation":"Closure body'nin dış environment'ta çözdüğü binding.","firstUseContext":"count","example":"E1.count","confusedWith":"snapshot","revisitAt":"V01-P07"},
+    {"term":"lifetime","turkish":"yaşam süresi","explanation":"State veya value'ya erişimin anlamlı/erişilebilir kaldığı zaman boyutu.","firstUseContext":"outer return","example":"F1 remains reachable","confusedWith":"scope","revisitAt":"V01-C37"},
+    {"term":"reachability","turkish":"erişilebilirlik ilişkisi","explanation":"Programdaki referans yollarıyla bir value/state'e ulaşılabilmesi.","firstUseContext":"returned function","example":"counter → F1 → E1","confusedWith":"scope visibility","revisitAt":"V01-C37"},
+    {"term":"retention","turkish":"erişimin sürmesi","explanation":"Captured graph'ın reachable closure nedeniyle yaşamaya devam etmesi.","firstUseContext":"memory orientation","example":"registered callback","confusedWith":"kesin leak","revisitAt":"V01-C37"},
+    {"term":"factory function","turkish":"üretici fonksiyon","explanation":"Her çağrıda yeni configured API/state instance üreten function.","firstUseContext":"createCounter","example":"createProgressTracker","confusedWith":"singleton","revisitAt":"V01-C37"},
+    {"term":"instance","turkish":"örnek","explanation":"Belirli factory invocation'ın ürettiği API ve state bütünü.","firstUseContext":"Ada/Mert counters","example":"E1/F1","confusedWith":"class-only term","revisitAt":"V01-P07"},
+    {"term":"encapsulation","turkish":"kapsülleme","explanation":"State erişimini açık operations ve invariants sınırında tutma.","firstUseContext":"counter API","example":"increment/read/reset","confusedWith":"security secrecy","revisitAt":"V01-C37"},
+    {"term":"state boundary","turkish":"durum sınırı","explanation":"State ownership ve allowed transitions'ı tanımlayan interface.","firstUseContext":"progress tracker","example":"commands + queries","confusedWith":"yalnız scope","revisitAt":"V01-C37"},
+    {"term":"command","turkish":"durum değiştiren işlem","explanation":"Owned state üzerinde kontrollü transition yapan operation.","firstUseContext":"completeNext","example":"reset","confusedWith":"query","revisitAt":"V01-P07"},
+    {"term":"query","turkish":"durum sorgusu","explanation":"State'i değiştirmeden bilgi döndüren operation.","firstUseContext":"getSnapshot","example":"isComplete","confusedWith":"command","revisitAt":"V01-P07"},
+    {"term":"snapshot","turkish":"anlık durum görüntüsü","explanation":"Belirli andaki state'i dışarı sunan bağımsız value/object.","firstUseContext":"before/after","example":"fresh object","confusedWith":"internal reference","revisitAt":"V01-C30"},
+    {"term":"reference leak","turkish":"referans sızıntısı","explanation":"Internal mutable identity'nin dış caller'a verilmesi.","firstUseContext":"unsafe store","example":"return state","confusedWith":"memory leak","revisitAt":"V01-C37"},
+    {"term":"instance independence","turkish":"örnek bağımsızlığı","explanation":"Ayrı factory calls'ın ayrı state bindings taşıması.","firstUseContext":"Ada/Mert","example":"E1.count != E2.count","confusedWith":"shared closure state","revisitAt":"V01-P07"},
+    {"term":"cleanup contract","turkish":"temizleme sözleşmesi","explanation":"Artık gerekmeyen registration/reference'ın kim tarafından ne zaman bırakılacağı.","firstUseContext":"lifetime engineering","example":"unsubscribe","confusedWith":"garbage collection timing","revisitAt":"V01-C37"},
+    {"term":"private by interface","turkish":"arayüz üzerinden özel","explanation":"Binding'in yalnız exposed operations yoluyla erişilebilir olması.","firstUseContext":"counter count","example":"counter.count absent","confusedWith":"security boundary","revisitAt":"V01-C37"}
+  ]
+}

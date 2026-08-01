@@ -1,0 +1,25 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C24-TERMS01",
+  "chapterId": "V01-C24",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {"term":"symptom","turkish":"belirti","explanation":"Beklenen ile gözlenen arasındaki dışarıdan görülebilen fark.","firstUseContext":"Kaydet düğmesi çalışmadı","example":"Not listede görünmedi","confusedWith":"root cause","revisitAt":"V01-C25"},
+    {"term":"defect","turkish":"kusur","explanation":"Kod veya tasarım yapısındaki yanlışlık.","firstUseContext":"Eksik üst sınır kontrolü","example":"progress > 100 kontrolü yok","confusedWith":"failure","revisitAt":"V01-C25"},
+    {"term":"fault","turkish":"kusur","explanation":"Bir sistem öğesinde yanlış davranış üretebilen kusur; bu chapterda defect ile aynı çalışma grubunda kullanılır.","firstUseContext":"Olay zinciri","example":"Yanlış operatör","confusedWith":"exception","revisitAt":"V01-C25"},
+    {"term":"error state","turkish":"yanlış iç durum","explanation":"Program durumunun beklenen kuraldan sapmış hâli.","firstUseContext":"İlerleme değişmezi","example":"progress = 105","confusedWith":"error message","revisitAt":"V01-C25"},
+    {"term":"failure","turkish":"başarısızlık","explanation":"Gözlenen sistem davranışının sözleşmede beklenenden sapması.","firstUseContext":"Ekranda %105","example":"Yanlış çıktı","confusedWith":"defect","revisitAt":"V01-C25"},
+    {"term":"exception","turkish":"istisna","explanation":"Normal kontrol akışını keserek çağrı zincirinde ilerleyen olay.","firstUseContext":"throw ve catch","example":"TypeError","confusedWith":"her tür failure","revisitAt":"V01-C36"},
+    {"term":"syntax failure","turkish":"sözdizimi başarısızlığı","explanation":"Kaynak kodun yürütülebilir program olarak ayrıştırılamaması.","firstUseContext":"Eksik parantez","example":"SyntaxError","confusedWith":"logic failure","revisitAt":"V01-C25"},
+    {"term":"runtime failure","turkish":"çalışma zamanı başarısızlığı","explanation":"Geçerli kod yürütülürken işlemin tamamlanamaması.","firstUseContext":"undefined.trim","example":"TypeError","confusedWith":"syntax failure","revisitAt":"V01-C25"},
+    {"term":"logic failure","turkish":"mantık başarısızlığı","explanation":"Programın çalışmaya devam edip beklenenden farklı sonuç üretmesi.","firstUseContext":"Yanlış yüzde formülü","example":"3 / 12 yerine 3 * 12","confusedWith":"runtime failure","revisitAt":"V01-C26"},
+    {"term":"contract failure","turkish":"sözleşme başarısızlığı","explanation":"İlan edilen girdi, çıktı veya durum kuralının ihlal edilmesi.","firstUseContext":"0–100 ilerleme sınırı","example":"progress = -10","confusedWith":"user mistake","revisitAt":"V01-C26"},
+    {"term":"environmental failure","turkish":"ortam kaynaklı başarısızlık","explanation":"Kod dışındaki gerekli koşulun sağlanmaması.","firstUseContext":"Eksik yapılandırma","example":"CONFIG_MISSING","confusedWith":"syntax failure","revisitAt":"V01-C25"},
+    {"term":"error contract","turkish":"hata sözleşmesi","explanation":"Başarısızlığın nasıl bildirileceğini ve sonrasında ne yapılacağını tanımlayan arayüz.","firstUseContext":"validateProgress sonucu","example":"ok, code, userMessage","confusedWith":"error message","revisitAt":"V01-C26"},
+    {"term":"error boundary","turkish":"hata sınırı","explanation":"Başarısızlığın anlamlı biçimde ele alındığı sorumluluk sınırı.","firstUseContext":"render katmanı","example":"Diagnostic yerine kullanıcı mesajı","confusedWith":"input boundary","revisitAt":"V01-C36"},
+    {"term":"fault propagation","turkish":"kusurun etkisinin yayılması","explanation":"Başarısızlık veya yanlış durum bilgisinin katmanlar boyunca ilerlemesi.","firstUseContext":"validate → save → render","example":"result nesnesini taşımak","confusedWith":"hata kopyalamak","revisitAt":"V01-C25"},
+    {"term":"recovery","turkish":"kurtarma","explanation":"Failure sonrasında sistemi tanımlı ve güvenli duruma getirme davranışı.","firstUseContext":"Girdiyi düzeltip yeniden deneme","example":"Yan etki olmadan formu korumak","confusedWith":"hatayı gizlemek","revisitAt":"V01-C36"},
+    {"term":"fail fast","turkish":"erken başarısız olma","explanation":"Bozuk durumu ilerletmeden ihlali bulunduğu sınıra yakın görünür yapmak.","firstUseContext":"Input validation","example":"Geçersiz değeri kaydetmemek","confusedWith":"programı her zaman kapatmak","revisitAt":"V01-C36"}
+  ]
+}

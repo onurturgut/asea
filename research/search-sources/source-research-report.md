@@ -2,17 +2,17 @@
 document_type: "research-report"
 document_id: "ASEA-SEARCH-SOURCES-RR01"
 title: "ASEA Search Engine Kaynak Araştırması"
-version: "0.1.0"
+version: "0.2.0"
 status: "Research Candidate"
-last_updated: "2026-07-29"
+last_updated: "2026-08-02"
 ---
 
 # ASEA Search Engine Kaynak Araştırması
 
 ## Karar Özeti
 
-ASEA arama motoru için 22 akademiyi kapsayan **320 tekil kaynaklık** ilk katalog
-oluşturuldu. Otomatik erişim kontrolünde 306 kaynak doğrulandı, 2 kaynak erişilebilir
+ASEA arama motoru için 22 akademiyi kapsayan **347 kayıtlık** kaynak kataloğu
+oluşturuldu. Otomatik erişim kontrolünde 332 kaynak doğrulandı, 3 kaynak erişilebilir
 fakat otomasyona kapalı bulundu, 12 kaynak ise manuel inceleme kuyruğuna alındı.
 Her akademide en az 10 küratörlü kaynak bulunur. Ortak kaynaklar tek kopya olarak
 saklanır ve `academy_ids` ile birden fazla akademiye bağlanır.
@@ -24,19 +24,20 @@ bağlantıyı indekslemelidir.
 
 ## Kapsam
 
-| Ölçüt | Sonuç |
-|---|---:|
-| Akademi | 22 |
-| Tekil kaynak | 320 |
-| Doğrulanmış URL | 306 |
-| Erişilebilir fakat kısıtlı | 2 |
-| Manuel inceleme gerekli | 12 |
-| Resmî dokümantasyon | 64 |
-| Üniversite dersi | 23 |
-| Şirket eğitimi | 38 |
-| GitHub deposu | 17 |
-| Açık ders/kitap/müfredat | 31 |
-| Mevcut ASEA kaynak kayıtlarından geri kazanılan | 105 |
+| Ölçüt                                           | Sonuç |
+| ----------------------------------------------- | ----: |
+| Akademi                                         |    22 |
+| Kaynak kaydı                                    |   347 |
+| Doğrulanmış URL                                 |   332 |
+| Erişilebilir fakat kısıtlı                      |     3 |
+| Manuel inceleme gerekli                         |    12 |
+| Resmî dokümantasyon                             |    64 |
+| Üniversite dersi                                |    44 |
+| Üniversite kaynağı                              |     3 |
+| Şirket eğitimi                                  |    38 |
+| GitHub deposu                                   |    17 |
+| Açık ders/kitap/müfredat                        |    37 |
+| Mevcut ASEA kaynak kayıtlarından geri kazanılan |   105 |
 
 Kaynak türleri; üniversite dersleri, resmî dokümantasyonlar, dil ve güvenlik
 standartları, şirket eğitimleri, açık dersler, açık kitaplar, pratik platformları ve
@@ -77,14 +78,14 @@ kanıtlamaz.
 
 ## İçerik Kullanım Politikası
 
-| Durum | ASEA davranışı |
-|---|---|
-| Resmî dokümantasyon veya standart | İddiayı doğrula, kısa özgün açıklama yaz, kaynağa bağlan |
-| Açık lisans kesinleşmiş | Lisans yükümlülüğünü kayıt altına al; gerekiyorsa atıf ve share-alike uygula |
-| Lisans belirsiz veya tüm hakları saklı | Yalnız metadata, özgün özet ve dış bağlantı |
-| Giriş gerektiren eğitim | Erişim koşulunu göster; kapalı içeriği kopyalama |
-| GitHub deposu | Repo lisansını dosya düzeyinde doğrulamadan kodu içeri alma |
-| Robots/koşullar otomasyona izin vermiyor | Arama sonucu olarak dış bağlantı göster; otomatik tam metin alma |
+| Durum                                    | ASEA davranışı                                                               |
+| ---------------------------------------- | ---------------------------------------------------------------------------- |
+| Resmî dokümantasyon veya standart        | İddiayı doğrula, kısa özgün açıklama yaz, kaynağa bağlan                     |
+| Açık lisans kesinleşmiş                  | Lisans yükümlülüğünü kayıt altına al; gerekiyorsa atıf ve share-alike uygula |
+| Lisans belirsiz veya tüm hakları saklı   | Yalnız metadata, özgün özet ve dış bağlantı                                  |
+| Giriş gerektiren eğitim                  | Erişim koşulunu göster; kapalı içeriği kopyalama                             |
+| GitHub deposu                            | Repo lisansını dosya düzeyinde doğrulamadan kodu içeri alma                  |
+| Robots/koşullar otomasyona izin vermiyor | Arama sonucu olarak dış bağlantı göster; otomatik tam metin alma             |
 
 ## Manuel İnceleme Kuyruğu
 
@@ -95,7 +96,9 @@ kanonik URL ve lisans bakımından kontrol edilmelidir.
 
 ## İlk Üretim Önerisi
 
-İlk sürümde 306 doğrulanmış kaynağın metadata'sı indekslenebilir. Arama sonuçlarında
-kaynak adı, kurum, tür, akademi, ilgili chapter, erişim koşulu ve dış bağlantı
-gösterilmelidir. Kaynak özeti yalnız ASEA'nın özgün metni olmalı; belirsiz lisanslı
-sayfaların tam metni depolanmamalıdır.
+Arama ekranı 347 katalog kaydını metadata olarak indeksler; doğrulama ve lisans
+durumunu sonuç kartında görünür kılar. Ders araştırmasında öncelik 332 doğrulanmış
+kaynağındır. Kısıtlı veya manuel inceleme gerektiren 15 kayıt yalnız keşif amacıyla
+gösterilmeli ve kanıt olarak kullanılmadan önce yeniden kontrol edilmelidir. Kaynak
+özeti yalnız ASEA'nın özgün metni olmalı; belirsiz lisanslı sayfaların tam metni
+depolanmamalıdır.

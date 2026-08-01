@@ -4,7 +4,7 @@ blueprint_id: "V01-C23-BP01"
 blueprint_type: "Chapter"
 scope_id: "V01-C23"
 title: "Chapter 23 Blueprint — Algorithmic Complexity and Trade-offs"
-version: "0.1.1"
+version: "0.2.0"
 status: "Draft"
 freeze_status: "Unfrozen"
 owner_role: "Curriculum Architect"
@@ -38,7 +38,7 @@ review_ids: []
 | Chapter ID | `V01-C23` |
 | Module | `V01-M06` — Algorithms and Efficiency |
 | Difficulty | Intermediate |
-| Estimated Study Time | 6-7 hours |
+| Estimated Study Time | 9-11 hours |
 | Primary Lab | `V01-C23-L01` — Measure Growth, Explain Trade-offs |
 | Assessment | `V01-C23-AS01` |
 | Next Chapter | `V01-C24` |
@@ -74,6 +74,8 @@ This Chapter closes the gap between `V01-C04`, `V01-C17`, `V01-C21`, `V01-C22` e
 - `V01-C22`: required evidence defined by the dependency map.
 - Volume 00 study, evidence, and reflection discipline.
 - Terminology already established by prerequisite Chapters.
+- `Teaching and Continuity Standard v1.0`: narrative teaching, explicit cost
+  models, prediction-first measurement, and Chapter-to-Chapter continuity.
 
 ### Knowledge Outputs
 
@@ -401,6 +403,7 @@ This local trace is derived from `learning-outcomes.md`, `chapter-map.md`, `labs
 - [Reference Catalog](../references.md)
 - [Glossary](../glossary.md)
 - [Chapter Standard v2.0](../../standards/chapter-standard-v2.md)
+- [Teaching and Continuity Standard v1.0](../../standards/teaching-and-continuity-standard-v1.md)
 - [Volume Standard v2.0](../../standards/volume-standard-v2.md)
 - [Curriculum Standard v2.0](../../standards/curriculum-standard-v2.md)
 - [Repository Standard v2.0](../../standards/repository-standard-v2.md)

@@ -2,7 +2,7 @@
 
 import { AppShell } from "@/components/layout/AppShell";
 import type { SearchDocument } from "@asea/shared";
-import { Search as SearchIcon, ArrowRight } from "lucide-react";
+import { Search as SearchIcon, ArrowRight, ExternalLink } from "lucide-react";
 import Link from "next/link";
 import { useEffect, useState } from "react";
 
@@ -15,9 +15,23 @@ const FILTERS = [
   "Laboratuvarlar",
   "Projeler",
   "Mülakat",
+  "Kaynaklar",
   "Notlarım",
   "Kısa Notlar",
 ];
+
+const FILTER_KIND_MAP: Record<string, SearchDocument["kind"][]> = {
+  Dersler: ["academy", "module", "chapter", "lesson", "reading-guide"],
+  Kavramlar: ["concept-summary"],
+  "Kod örnekleri": ["examples", "debugging"],
+  Quizler: ["quiz"],
+  Laboratuvarlar: ["lab"],
+  Projeler: ["project"],
+  Mülakat: ["interview"],
+  Kaynaklar: ["external-source"],
+  Notlarım: ["long-note"],
+  "Kısa Notlar": ["short-note"],
+};
 
 function highlight(text: string, q: string) {
   if (!q) return text;
@@ -44,7 +58,10 @@ export default function SearchScreen() {
     const controller = new AbortController();
     const timer = setTimeout(() => {
       setLoading(true);
-      fetch(`/api/search?q=${encodeURIComponent(q)}`, {
+      const requestedKinds = FILTER_KIND_MAP[filter];
+      const kindQuery =
+        requestedKinds?.length === 1 ? `&kind=${requestedKinds[0]}` : "";
+      fetch(`/api/search?q=${encodeURIComponent(q)}${kindQuery}`, {
         signal: controller.signal,
       })
         .then((response) => response.json())
@@ -62,30 +79,13 @@ export default function SearchScreen() {
       clearTimeout(timer);
       controller.abort();
     };
-  }, [q]);
+  }, [filter, q]);
 
   const visibleResults =
     filter === "Tümü"
       ? results
       : results.filter((result) => {
-          const map: Record<string, SearchDocument["kind"][]> = {
-            Dersler: [
-              "academy",
-              "module",
-              "chapter",
-              "lesson",
-              "reading-guide",
-            ],
-            Kavramlar: ["concept-summary"],
-            "Kod örnekleri": ["examples", "debugging"],
-            Quizler: ["quiz"],
-            Laboratuvarlar: ["lab"],
-            Projeler: ["project"],
-            Mülakat: ["interview"],
-            Notlarım: ["long-note"],
-            "Kısa Notlar": ["short-note"],
-          };
-          return map[filter]?.includes(result.kind) ?? true;
+          return FILTER_KIND_MAP[filter]?.includes(result.kind) ?? true;
         });
   return (
     <AppShell>
@@ -124,30 +124,68 @@ export default function SearchScreen() {
               Bu sorguyla eşleşen içerik yok. Farklı anahtar kelime dene.
             </li>
           ) : (
-            visibleResults.map((r) => (
-              <li key={`${r.kind}-${r.id}`}>
-                <Link
-                  href={r.path}
-                  className="focus-ring group flex w-full items-start gap-4 px-5 py-4 text-left hover:bg-surface-2"
-                >
+            visibleResults.map((r) => {
+              const resultContent = (
+                <>
                   <span className="mt-1 rounded-md bg-muted px-2 py-0.5 text-[10px] font-medium uppercase tracking-wider text-muted-foreground">
-                    {r.kind}
+                    {r.kind === "external-source" ? "kaynak" : r.kind}
                   </span>
                   <div className="min-w-0 flex-1">
                     <div className="text-sm font-semibold">
                       {highlight(r.title, q)}
                     </div>
                     <div className="mt-0.5 text-xs text-muted-foreground">
-                      {r.path}
+                      {r.kind === "external-source"
+                        ? [r.sourceOwner, r.sourceType, r.sourceLanguage]
+                            .filter(Boolean)
+                            .join(" · ")
+                        : r.path}
                     </div>
                     <p className="mt-1 text-sm text-foreground/80">
                       {highlight(r.excerpt, q)}
                     </p>
+                    {r.kind === "external-source" ? (
+                      <div className="mt-2 flex flex-wrap gap-1.5 text-[10px] text-muted-foreground">
+                        <span className="rounded-full bg-muted px-2 py-0.5">
+                          Kalite {r.qualityScore ?? "—"}/100
+                        </span>
+                        <span className="rounded-full bg-muted px-2 py-0.5">
+                          {r.sourceVerification ?? "kontrol edilmedi"}
+                        </span>
+                        <span className="rounded-full bg-muted px-2 py-0.5">
+                          {r.sourceLicense ?? "lisans incelemesi gerekli"}
+                        </span>
+                      </div>
+                    ) : null}
                   </div>
-                  <ArrowRight className="mt-2 size-4 shrink-0 text-muted-foreground transition group-hover:translate-x-0.5 group-hover:text-foreground" />
-                </Link>
-              </li>
-            ))
+                  {r.kind === "external-source" ? (
+                    <ExternalLink className="mt-2 size-4 shrink-0 text-muted-foreground transition group-hover:text-foreground" />
+                  ) : (
+                    <ArrowRight className="mt-2 size-4 shrink-0 text-muted-foreground transition group-hover:translate-x-0.5 group-hover:text-foreground" />
+                  )}
+                </>
+              );
+              const className =
+                "focus-ring group flex w-full items-start gap-4 px-5 py-4 text-left hover:bg-surface-2";
+              return (
+                <li key={`${r.kind}-${r.id}`}>
+                  {r.kind === "external-source" ? (
+                    <a
+                      href={r.path}
+                      target="_blank"
+                      rel="noreferrer"
+                      className={className}
+                    >
+                      {resultContent}
+                    </a>
+                  ) : (
+                    <Link href={r.path} className={className}>
+                      {resultContent}
+                    </Link>
+                  )}
+                </li>
+              );
+            })
           )}
         </ul>
       </div>

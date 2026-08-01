@@ -1,0 +1,29 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C30-TERMS01",
+  "chapterId": "V01-C30",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {"term":"object","turkish":"nesne","explanation":"Adlandırılmış property'ler taşıyan ve kimliği bulunan JavaScript değeri.","firstUseContext":"öğrenci ilerleme kaydı","example":"{ studentId: \"ST-001\" }","confusedWith":"binding","revisitAt":"V01-C31"},
+    {"term":"property","turkish":"özellik","explanation":"Object üzerindeki key ve value ilişkisidir.","firstUseContext":"displayName alanı","example":"student.displayName","confusedWith":"variable","revisitAt":"V01-C31"},
+    {"term":"property key","turkish":"özellik anahtarı","explanation":"Object içindeki değeri adlandıran anahtar.","firstUseContext":"object literal","example":"studentId","confusedWith":"property value","revisitAt":"V01-C34"},
+    {"term":"object literal","turkish":"nesne değişmezi yazımı","explanation":"Süslü parantezle yeni object üretme sözdizimi.","firstUseContext":"ilk model","example":"{ completed: 30 }","confusedWith":"JSON text","revisitAt":"V01-C31"},
+    {"term":"identity","turkish":"kimlik","explanation":"Bir object value'yu diğerlerinden ayıran özdeşlik.","firstUseContext":"iki literal karşılaştırması","example":"a === b","confusedWith":"aynı içerik","revisitAt":"V01-C31"},
+    {"term":"reference","turkish":"referans","explanation":"Bir binding'den object value'ya erişimi anlatan kavramsal ilişki.","firstUseContext":"O1 izi","example":"student → O1","confusedWith":"görünür bellek adresi","revisitAt":"V01-C33"},
+    {"term":"alias","turkish":"takma erişim yolu","explanation":"Aynı object'e ulaşan başka binding veya yol.","firstUseContext":"courseCard = student","example":"iki bağ, tek O1","confusedWith":"copy","revisitAt":"V01-C31"},
+    {"term":"mutation","turkish":"yerinde değişim","explanation":"Var olan object state'inin yerinde değiştirilmesi.","firstUseContext":"completedChapters ataması","example":"student.progress.completedChapters = 31","confusedWith":"rebinding","revisitAt":"V01-C31"},
+    {"term":"rebinding","turkish":"yeniden bağlama","explanation":"Bir binding'in başka value'ya bağlanması.","firstUseContext":"const sınırı","example":"student = other","confusedWith":"property mutation","revisitAt":"V01-C33"},
+    {"term":"state","turkish":"durum","explanation":"Programın belirli bir anda taşıdığı gözlenebilir değerler bütünü.","firstUseContext":"object property değerleri","example":"completed = 30","confusedWith":"identity","revisitAt":"V01-C33"},
+    {"term":"dot notation","turkish":"nokta gösterimi","explanation":"Kodu yazarken bilinen property key'e erişim biçimi.","firstUseContext":"displayName okuma","example":"student.displayName","confusedWith":"computed access","revisitAt":"V01-C31"},
+    {"term":"bracket notation","turkish":"köşeli parantez gösterimi","explanation":"Bir ifadeden hesaplanan property key'e erişim biçimi.","firstUseContext":"selectedField","example":"student[selectedField]","confusedWith":"dot notation","revisitAt":"V01-C31"},
+    {"term":"own property","turkish":"nesnenin kendi özelliği","explanation":"Doğrudan object üzerinde bulunan property.","firstUseContext":"Object.hasOwn","example":"Object.hasOwn(profile, \"nickname\")","confusedWith":"her undefined okuma","revisitAt":"V01-C34"},
+    {"term":"shallow copy","turkish":"sığ kopya","explanation":"Dış yapısı yeni olup nested object referanslarını paylaşabilen kopya.","firstUseContext":"spread","example":"{ ...student }","confusedWith":"deep copy","revisitAt":"V01-C31"},
+    {"term":"deep copy","turkish":"derin kopya","explanation":"İlgili nested mutable yapıların da bağımsızlaştırıldığı kopyalama fikri.","firstUseContext":"shallow sınırı","example":"bu chapter'da genel çözüm olarak uygulanmaz","confusedWith":"spread","revisitAt":"V01-C34"},
+    {"term":"spread syntax","turkish":"yayma sözdizimi","explanation":"Bir object'in enumerable own property değerlerini yeni literal içine yayma biçimi.","firstUseContext":"root copy","example":"{ ...source }","confusedWith":"deep clone","revisitAt":"V01-C31"},
+    {"term":"invariant","turkish":"değişmez geçerlilik kuralı","explanation":"Model geçerli kaldığı sürece doğru olması gereken kural.","firstUseContext":"completed <= total","example":"0 <= completedChapters","confusedWith":"const","revisitAt":"V01-P07"},
+    {"term":"factory function","turkish":"üretici fonksiyon","explanation":"Doğrulanmış ve geçerli object üreten fonksiyon.","firstUseContext":"createStudentProgress","example":"createStudentProgress(input)","confusedWith":"raw parser","revisitAt":"V01-C34"},
+    {"term":"immutable update","turkish":"eski durumu değiştirmeyen güncelleme","explanation":"Girdiyi mutate etmeden gerekli yeni object'leri üreten güncelleme.","firstUseContext":"advanceProgress","example":"new root + new progress","confusedWith":"freeze","revisitAt":"V01-C31"},
+    {"term":"ownership","turkish":"veri sahipliği","explanation":"Bir object'in yaşam döngüsü ve mutation kararından sorumlu taraf.","firstUseContext":"mühendislik kararı","example":"UI state sahibi","confusedWith":"property ownership","revisitAt":"V01-C33"}
+  ]
+}

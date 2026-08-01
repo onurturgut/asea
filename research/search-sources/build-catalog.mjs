@@ -4,7 +4,7 @@ import path from "node:path";
 const ROOT = path.resolve(import.meta.dirname, "../..");
 const OUTPUT_DIRECTORY = path.join(ROOT, "research", "search-sources");
 const OUTPUT_PATH = path.join(OUTPUT_DIRECTORY, "source-catalog.json");
-const TARGET_COUNT = 320;
+const BASE_TARGET_COUNT = 320;
 const VERIFIED_AT = new Date().toISOString();
 
 const ACADEMIES = [
@@ -302,6 +302,38 @@ const SEEDS = {
   ],
 };
 
+// academy | additional academies | name | URL | owner | type | topics |
+// chapters | language | license | indexing policy | recommended use | ASEA summary
+const UNIVERSITY_EXPANSION_SEEDS = [
+  "programming-fundamentals|javascript|SICP JavaScript Edition|https://mitpress.mit.edu/9780262367622/structure-and-interpretation-of-computer-programs/|MIT Press and MIT EECS|open-book|abstraction,functions,recursion,interpreters|V01-C13,V01-C16,V01-C19,V01-C32,V01-C33,V01-C37|en|Open Access; exact OA terms must be checked|Metadata, original ASEA summary and external link|Primary research reference|JavaScript üzerinden soyutlama, fonksiyonlar, değerlendirme modeli ve program yapısını öğreten açık erişimli üniversite kitabı.",
+  "programming-fundamentals|data-structures-algorithms|MIT Mathematics for Computer Science|https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/resources/mit6_042js15_textbook/|MIT OpenCourseWare|open-book|discrete-mathematics,logic,proofs,graphs,probability|V01-C04,V01-C09,V01-C19,V01-C23|en|CC BY-NC-SA 4.0 under MIT OCW terms|License-compliant use; metadata and original ASEA synthesis by default|Primary research reference|Bilgisayar bilimi için mantık, ispat, ayrık yapılar, grafikler ve olasılık temellerini kapsayan açık ders kitabı.",
+  "data-structures-algorithms|programming-fundamentals|Algorithms by Jeff Erickson|https://jeffe.cs.illinois.edu/teaching/algorithms/|University of Illinois Urbana-Champaign|open-book|recursion,dynamic-programming,greedy,graphs,complexity|V01-C19,V01-C21,V01-C22,V01-C23|en|CC BY 4.0 for the textbook|License-compliant use; attribution required|Primary research reference|Algoritma tasarımı, recursion, dynamic programming, greedy yöntemler ve grafik algoritmaları için açık kitap.",
+  "ai-machine-learning|data-structures-algorithms|UC Berkeley CS188 Introduction to Artificial Intelligence|https://inst.eecs.berkeley.edu/~cs188/textbook/|University of California Berkeley|open-book|search,csp,games,probability,machine-learning,logic||en|CC BY-SA 4.0|License-compliant use; attribution and ShareAlike required for adaptations|Primary research reference|Arama, constraint satisfaction, oyunlar, olasılıksal çıkarım, makine öğrenmesi ve mantığı kapsayan güncel CS188 kitabı.",
+  "system-design|cybersecurity|Stanford CS144 Computer Networking Lecture Notes|https://www.scs.stanford.edu/09au-cs144/notes/|Stanford University|university-course|tcp,ip,dns,routing,congestion-control,network-security||en|Instructor/Stanford lecture-note reuse permission stated on source page|Use within stated permission; keep attribution and source link|Primary research reference|TCP, IP, DNS, routing, congestion control ve ağ güvenliğini kapsayan Stanford ders notları.",
+  "data-structures-algorithms|programming-fundamentals|Waterloo Introduction to Theory of Computing|https://cs.uwaterloo.ca/~watrous/ToC-notes/|University of Waterloo|university-course|automata,formal-languages,turing-machines,computability,complexity||en|Free use and distribution for study/teaching; sale prohibited|Use within stated non-sale permission; keep attribution|Primary research reference|Otomata, biçimsel diller, Turing makineleri, hesaplanabilirlik ve karmaşıklık için 20 derslik PDF notları.",
+  "software-architecture|testing-quality|TU Delft Software Engineering OpenCourseWare|https://ocw.tudelft.nl/course-lectures/3-1-1-introduction-the-software-engineer-ad-gse/|Delft University of Technology|university-course|software-engineering,design,quality,process||en|CC BY-NC-SA 4.0 unless otherwise noted|License-compliant use; metadata and original ASEA synthesis by default|Primary research reference|Yazılım mühendisliği rolleri, tasarım, süreç ve kalite konularında TU Delft açık ders materyali.",
+  "programming-fundamentals||İTÜ Programlamaya Giriş Ders Notları|https://web.itu.edu.tr/uyar/programlama/|İstanbul Teknik Üniversitesi|university-course|programming,scientific-computing,algorithms|V01-C01,V01-C02,V01-C03,V01-C04,V01-C05,V01-C06,V01-C07,V01-C08|tr|CC BY-NC-SA 3.0|License-compliant use; attribution and ShareAlike required for adaptations|Primary research reference|Türk öğrenci için programlama ve bilimsel hesaplama temellerini PDF, sunum ve örnek kodlarla ele alan İTÜ kaynağı.",
+  "data-structures-algorithms|programming-fundamentals|MIT 6.006 Introduction to Algorithms Lecture Notes|https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-notes/|MIT OpenCourseWare|university-course|data-structures,sorting,hashing,graphs,dynamic-programming|V01-C17,V01-C19,V01-C21,V01-C22,V01-C23|en|CC BY-NC-SA 4.0 under MIT OCW terms|License-compliant use; metadata and original ASEA synthesis by default|Primary research reference|Veri yapıları, sıralama, hashing, grafik arama ve dynamic programming için ders notları, problem setleri ve çözümler.",
+  "data-structures-algorithms||MIT 6.046 Design and Analysis of Algorithms|https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2012/resources/lecture-notes/|MIT OpenCourseWare|university-course|divide-and-conquer,dynamic-programming,greedy,graph-algorithms,randomized-algorithms||en|CC BY-NC-SA 4.0 under MIT OCW terms|License-compliant use; metadata and original ASEA synthesis by default|Advanced research reference|İleri algoritma tasarımı, doğruluk ispatı ve asimptotik analiz için MIT ders notları.",
+  "system-design|software-architecture|Operating Systems Three Easy Pieces|https://research.cs.wisc.edu/wind/OSTEP/|University of Wisconsin-Madison|open-book|operating-systems,virtualization,concurrency,persistence,security||en|Free chapter access; author requests direct linking and individual terms review|Metadata, original ASEA summary and direct chapter links; do not mirror|Primary research reference|İşletim sistemlerini virtualization, concurrency ve persistence eksenlerinde öğreten üniversite kitabı.",
+  "programming-fundamentals||Cambridge Foundations of Computer Science|https://www.cl.cam.ac.uk/teaching/2526/FoundsCS/materials.html|University of Cambridge|university-course|functional-programming,foundations,reasoning||en|University copyright; no broad reuse license identified|Metadata, original ASEA summary and external link only|Primary research reference|Cambridge 2025-26 Foundations of Computer Science dersinin sürümlendirilmiş PDF notları.",
+  "system-design|software-architecture|Cambridge Operating Systems|https://www.cl.cam.ac.uk/teaching/2324/OpSystems/materials/|University of Cambridge|university-course|processes,scheduling,memory,io,filesystems,linux||en|University copyright; no broad reuse license identified|Metadata, original ASEA summary and external link only|Primary research reference|Süreçler, scheduling, sanal bellek, I/O, dosya sistemleri ve Linux case study materyalleri.",
+  "databases||Cambridge Databases|https://www.cl.cam.ac.uk/teaching/2526/Databases/materials.html|University of Cambridge|university-course|relational-databases,sql,document-databases,graph-databases||en|University copyright; third-party readings have separate terms|Metadata, original ASEA summary and external link only|Primary research reference|İlişkisel, document ve graph database modellerini tutorial ve assessed exercise'larla karşılaştıran ders.",
+  "system-design|software-architecture|Cambridge Distributed Systems Notes|https://www.cl.cam.ac.uk/teaching/2122/ConcDisSys/dist-sys-notes.pdf|University of Cambridge|university-course|distributed-systems,concurrency,fault-tolerance,consistency||en|University copyright; no broad reuse license identified|Metadata, original ASEA summary and external link only|Primary research reference|Dağıtık sistemler, concurrency, hata toleransı ve güvenilir iletişim için bütünleşik PDF notları.",
+  "programming-fundamentals|software-architecture|Waterloo CS241 Course Notes|https://student.cs.uwaterloo.ca/~cs241/notes/|University of Waterloo|university-course|compilers,assembly,parsing,code-generation||en|Course terms must be checked|Metadata, original ASEA summary and external link only|Primary research reference|Kaynak programın assembly ve makine koduna dönüşümünü ele alan PDF ders notları.",
+  "programming-fundamentals|software-architecture|Waterloo CS442 Programming Languages|https://student.cs.uwaterloo.ca/~cs442/W25/notes/|University of Waterloo|university-course|programming-languages,semantics,types,ocaml||en|Course terms must be checked|Metadata, original ASEA summary and external link only|Advanced research reference|Programlama dili ilkeleri, semantics, türler ve farklı dil paradigmaları için modüler PDF notları.",
+  "databases||CMU 15-445 Database Systems Spring 2026|https://15445.courses.cs.cmu.edu/spring2026/schedule.html|Carnegie Mellon University|university-course|sql,storage,indexes,query-execution,transactions,recovery,distributed-databases||en|Course terms must be checked|Metadata, original ASEA summary and external link only|Primary research reference|SQL'den storage ve query execution'a, concurrency control'den recovery ve dağıtık veritabanlarına uzanan güncel ders.",
+  "software-architecture|testing-quality|CMU Principles of Software Construction|https://www.cs.cmu.edu/~charlie/courses/17-214/2018-fall/|Carnegie Mellon University|university-course|object-oriented-design,testing,api-design,concurrency,devops||en|Course terms must be checked|Metadata, original ASEA summary and external link only|Primary research reference|Orta ölçekli yazılım tasarımı, API, test, robustness, concurrency ve DevOps ilkelerini birleştiren ders.",
+  "software-architecture|testing-quality|CMU Introduction to Software Engineering|https://www.cs.cmu.edu/~aldrich/courses/413/|Carnegie Mellon University|university-course|requirements,architecture,testing,code-review,project-management||en|Course terms must be checked|Metadata, original ASEA summary and external link only|Primary research reference|Gereksinim, mimari, kodlama, test, ekip geliştirme ve mühendislik araçlarını proje üzerinden işleyen ders.",
+  "ai-machine-learning|data-science|Stanford CS229 Machine Learning Notes|https://cs229.stanford.edu/syllabus-spring2020.html|Stanford University|university-course|supervised-learning,unsupervised-learning,deep-learning,learning-theory||en|Course terms must be checked|Metadata, original ASEA summary and external link only|Primary research reference|Supervised/unsupervised learning, SVM, neural networks, model selection ve öğrenme teorisi notları.",
+  "cybersecurity||Stanford Applied Cryptography Book|https://crypto.stanford.edu/~dabo/cryptobook/|Stanford University|open-book|cryptography,encryption,signatures,protocols||en|Freely available author-hosted PDF; exact reuse terms must be checked|Metadata, original ASEA summary and external link only|Primary research reference|Modern kriptografinin temel yapıları, güvenlik tanımları ve protokolleri için lisansüstü kitap.",
+  "cybersecurity|system-design|MIT 6.857 Network and Computer Security|https://ocw.mit.edu/courses/6-857-network-and-computer-security-spring-2014/resources/lecture-notes/|MIT OpenCourseWare|university-course|network-security,cryptography,authentication,privacy||en|CC BY-NC-SA 4.0 under MIT OCW terms|License-compliant use; metadata and original ASEA synthesis by default|Advanced research reference|Ağ ve bilgisayar güvenliği, kriptografi, authentication ve privacy konularında MIT PDF notları.",
+  "system-design|cybersecurity|MIT 6.829 Computer Networks|https://ocw.mit.edu/courses/6-829-computer-networks-fall-2002/resources/lecture-notes/|MIT OpenCourseWare|university-course|packet-switching,ip,routing,dns,congestion-control||en|CC BY-NC-SA 4.0 under MIT OCW terms|License-compliant use; metadata and original ASEA synthesis by default|Advanced research reference|Paket anahtarlama, IP ölçekleme, routing, DNS ve congestion control için ileri ağ notları.",
+  "data-structures-algorithms|programming-fundamentals|NKÜ Veri Yapıları Açık Ders Materyalleri|https://adys.nku.edu.tr/OpenCourse/Course/Veri_Yap%C4%B1lar%C4%B1_%28Eski_-_Old%29/91|Tekirdağ Namık Kemal Üniversitesi|university-course|linked-lists,stacks,queues,trees,hashing,graphs,sorting|V01-C17,V01-C19,V01-C21,V01-C22,V01-C23|tr|No broad reuse license identified|Metadata, original ASEA summary and external link only|Supporting Turkish reference|Bağlı listeler, yığın, kuyruk, ağaç, hash, graph ve sıralama için haftalık Türkçe ders materyalleri.",
+  "programming-fundamentals|data-structures-algorithms|Kayseri Üniversitesi Bilgisayar Ders Dokümanları|https://avesis.kayseri.edu.tr/nurullahozturk/dokumanlar|Kayseri Üniversitesi|university-course|data-structures,linux,computer-architecture,optimization||tr|No broad reuse license identified|Metadata, original ASEA summary and external link only|Supporting Turkish reference|Veri yapıları, Linux/Unix, bilgisayar mimarisi ve optimizasyon için güncel Türkçe öğretim materyalleri.",
+  "data-structures-algorithms|programming-fundamentals|OMÜ Veri Yapıları ve Programlama|https://avys.omu.edu.tr/lessons/0/4820/9386/5134|Ondokuz Mayıs Üniversitesi|university-course|arrays,linked-lists,stacks,queues,trees,graphs,sorting|V01-C17,V01-C19,V01-C21,V01-C22,V01-C23|tr|No broad reuse license identified|Metadata, original ASEA summary and external link only|Supporting Turkish reference|Temel veri yapıları, dynamic memory, sıralama ve laboratuvar pratiği için Türkçe ders kaynağı.",
+];
+
 const PRIMARY_DOMAINS = new Set([
   "developer.mozilla.org",
   "tc39.es",
@@ -336,7 +368,8 @@ const PRIMARY_DOMAINS = new Set([
 const GITHUB_LICENSE_CACHE = new Map();
 
 function parseSeed(academyId, value) {
-  const [name, url, owner, sourceType, topics, chapters = ""] = value.split("|");
+  const [name, url, owner, sourceType, topics, chapters = ""] =
+    value.split("|");
   return {
     academy_id: academyId,
     academy_ids: [academyId],
@@ -347,6 +380,41 @@ function parseSeed(academyId, value) {
     source_type: sourceType,
     topic_ids: topics.split(","),
     url,
+  };
+}
+
+function parseUniversityExpansionSeed(value) {
+  const [
+    academyId,
+    additionalAcademies,
+    name,
+    url,
+    owner,
+    sourceType,
+    topics,
+    chapters,
+    language,
+    license,
+    indexingPolicy,
+    recommendedUse,
+    summary,
+  ] = value.split("|");
+  return {
+    academy_id: academyId,
+    academy_ids: [academyId, ...additionalAcademies.split(",").filter(Boolean)],
+    academy_name: academyNames.get(academyId),
+    chapter_ids: chapters ? chapters.split(",") : [],
+    source_name: name,
+    source_owner: owner,
+    source_type: sourceType,
+    topic_ids: topics.split(","),
+    url,
+    language,
+    license,
+    indexing_policy: indexingPolicy,
+    recommended_use: recommendedUse,
+    asea_summary: summary,
+    discovered_in: "university-source-research-2026-08-02",
   };
 }
 
@@ -377,7 +445,9 @@ async function extractRepositorySources() {
   for (const filePath of await walkMarkdown(docsPath)) {
     const relativePath = path.relative(ROOT, filePath).replaceAll("\\", "/");
     const markdown = await readFile(filePath, "utf8");
-    for (const match of markdown.matchAll(/\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g)) {
+    for (const match of markdown.matchAll(
+      /\[([^\]]+)\]\((https?:\/\/[^)\s]+)\)/g,
+    )) {
       let parsed;
       try {
         parsed = new URL(match[2]);
@@ -421,7 +491,10 @@ function deduplicate(records) {
       ]),
     ];
     current.chapter_ids = [
-      ...new Set([...(current.chapter_ids ?? []), ...(record.chapter_ids ?? [])]),
+      ...new Set([
+        ...(current.chapter_ids ?? []),
+        ...(record.chapter_ids ?? []),
+      ]),
     ];
     current.topic_ids = [
       ...new Set([...(current.topic_ids ?? []), ...(record.topic_ids ?? [])]),
@@ -469,6 +542,13 @@ async function getGitHubMetadata(record) {
 }
 
 function legalClassification(record, github) {
+  if (record.license && record.indexing_policy && record.recommended_use) {
+    return {
+      license: record.license,
+      indexing_policy: record.indexing_policy,
+      recommended_use: record.recommended_use,
+    };
+  }
   if (record.url.includes("developer.mozilla.org")) {
     return {
       license: "CC-BY-SA 2.5 or later; code samples CC0",
@@ -478,8 +558,7 @@ function legalClassification(record, github) {
   }
   if (github) {
     const openLicense =
-      github.license &&
-      !["NOASSERTION", "OTHER"].includes(github.license);
+      github.license && !["NOASSERTION", "OTHER"].includes(github.license);
     return {
       license: github.license ?? "Belirsiz",
       indexing_policy: openLicense
@@ -594,51 +673,67 @@ async function main() {
   const curated = Object.entries(SEEDS).flatMap(([academyId, entries]) =>
     entries.map((entry) => parseSeed(academyId, entry)),
   );
+  const universityExpansion = UNIVERSITY_EXPANSION_SEEDS.map(
+    parseUniversityExpansionSeed,
+  );
   const existing = await extractRepositorySources();
-  const selected = deduplicate([...curated, ...existing]).slice(0, TARGET_COUNT);
+  const base = deduplicate([...curated, ...existing]).slice(
+    0,
+    BASE_TARGET_COUNT,
+  );
+  const selected = deduplicate([...base, ...universityExpansion]);
 
-  const enriched = await mapWithConcurrency(selected, 12, async (record, index) => {
-    const github = await getGitHubMetadata(record);
-    const verification = await verifyUrl(record.url);
-    const legal = legalClassification(record, github);
-    const parsed = new URL(record.url);
-    return {
-      source_id: `ASEA-EXT-${String(index + 1).padStart(4, "0")}`,
-      source_name: record.source_name,
-      source_owner: record.source_owner,
-      source_type: record.source_type,
-      academy_id: record.academy_id,
-      academy_ids: record.academy_ids ?? [record.academy_id],
-      academy_name: record.academy_name,
-      chapter_ids: record.chapter_ids,
-      topic_ids: record.topic_ids,
-      url: record.url,
-      final_url: verification.final_url,
-      domain: parsed.hostname.toLowerCase(),
-      language: "en",
-      access: record.source_type === "commercial-course" ? "freemium" : "free",
-      registration_required: [
-        "corporate-training",
-        "commercial-course",
-      ].includes(record.source_type),
-      certificate_available: ["corporate-training", "commercial-course"].includes(
-        record.source_type,
-      ),
-      access_method:
-        parsed.hostname === "github.com" ? "GitHub API" : "Statik sayfa",
-      robots_txt_url: `${parsed.protocol}//${parsed.hostname}/robots.txt`,
-      license: legal.license,
-      indexing_policy: legal.indexing_policy,
-      recommended_asea_use: legal.recommended_use,
-      quality_score: qualityScore(record, verification, github),
-      verification,
-      github,
-      discovered_in: record.discovered_in ?? "curated-web-research",
-      verified_at: VERIFIED_AT,
-      notes:
-        "Tam metin alımı öncesinde robots.txt, kullanım koşulları ve lisans tekil olarak yeniden kontrol edilmelidir.",
-    };
-  });
+  const enriched = await mapWithConcurrency(
+    selected,
+    12,
+    async (record, index) => {
+      const github = await getGitHubMetadata(record);
+      const verification = await verifyUrl(record.url);
+      const legal = legalClassification(record, github);
+      const parsed = new URL(record.url);
+      return {
+        source_id: `ASEA-EXT-${String(index + 1).padStart(4, "0")}`,
+        source_name: record.source_name,
+        source_owner: record.source_owner,
+        source_type: record.source_type,
+        academy_id: record.academy_id,
+        academy_ids: record.academy_ids ?? [record.academy_id],
+        academy_name: record.academy_name,
+        chapter_ids: record.chapter_ids,
+        topic_ids: record.topic_ids,
+        url: record.url,
+        final_url: verification.final_url,
+        domain: parsed.hostname.toLowerCase(),
+        language: record.language ?? "en",
+        access:
+          record.source_type === "commercial-course" ? "freemium" : "free",
+        registration_required: [
+          "corporate-training",
+          "commercial-course",
+        ].includes(record.source_type),
+        certificate_available: [
+          "corporate-training",
+          "commercial-course",
+        ].includes(record.source_type),
+        access_method:
+          parsed.hostname === "github.com" ? "GitHub API" : "Statik sayfa",
+        robots_txt_url: `${parsed.protocol}//${parsed.hostname}/robots.txt`,
+        license: legal.license,
+        indexing_policy: legal.indexing_policy,
+        recommended_asea_use: legal.recommended_use,
+        quality_score: qualityScore(record, verification, github),
+        verification,
+        github,
+        discovered_in: record.discovered_in ?? "curated-web-research",
+        verified_at: VERIFIED_AT,
+        notes:
+          "Tam metin alımı öncesinde robots.txt, kullanım koşulları ve lisans tekil olarak yeniden kontrol edilmelidir.",
+        asea_summary:
+          record.asea_summary ??
+          `${record.source_owner} tarafından yayımlanan ${record.source_type} kaynağı.`,
+      };
+    },
+  );
 
   const countsByAcademy = Object.fromEntries(
     ACADEMIES.map(([id]) => [
@@ -647,18 +742,20 @@ async function main() {
     ]),
   );
   const statusCounts = Object.fromEntries(
-    [...new Set(enriched.map((source) => source.verification.verification_status))].map(
-      (status) => [
-        status,
-        enriched.filter(
-          (source) => source.verification.verification_status === status,
-        ).length,
-      ],
-    ),
+    [
+      ...new Set(
+        enriched.map((source) => source.verification.verification_status),
+      ),
+    ].map((status) => [
+      status,
+      enriched.filter(
+        (source) => source.verification.verification_status === status,
+      ).length,
+    ]),
   );
 
   const output = {
-    catalog_version: "0.1.0",
+    catalog_version: "0.2.0",
     generated_at: VERIFIED_AT,
     status: "research-candidate",
     target_audience: "Sıfırdan başlayan Türk öğrenciler",

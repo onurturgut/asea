@@ -1,0 +1,457 @@
+ASEA — ÜRÜN VE GELİŞTİRME GÖREV SIRALAMASI
+======================================================================
+
+Belge tarihi: 2026-08-02
+Belge durumu: Aktif
+Sıralama kuralı: Daha küçük sıra numarası daha yüksek önceliği ifade eder.
+Tamamlanan görevler silinmez; durum ve tamamlanma tarihiyle işaretlenir.
+
+
+1. ETKİLEŞİMLİ VE GÖRSEL DERS DENEYİMİ
+----------------------------------------------------------------------
+
+Durum: Planlanacak — en yüksek ürün önceliği
+Uygulama alanı: apps/admin öğrenci çalışma alanı
+Kapsam: Önce Programlama Temelleri Akademisi, ardından diğer akademiler
+
+Ana hedef:
+
+Dersleri uzun bir metin akışı olmaktan çıkararak öğrencinin programın zihinde
+nasıl çalıştığını görebildiği, yönettiği ve deneyerek doğruladığı etkileşimli
+öğrenme sahnelerine dönüştürmek.
+
+Öğrenci aşağıdaki yapıları yalnızca okumamalı; adım adım görebilmelidir:
+
+- Kodun çalışma sırası
+- Değişkenlerin değer değişimi
+- Bellek modeli
+- Veri akışı
+- Kontrol akışı ve dallanma
+- Fonksiyon çağrıları ve çağrı yığını
+- Program çıktısı
+- Hatanın başladığı ilk durum sapması
+
+Uygulama görevleri:
+
+1.1. Mevcut chapter ve öğrenme paketi yapısını inceleyerek etkileşimli ders
+     bileşenlerinin içerik sözleşmesini tanımlamak.
+
+1.2. Chapter anlatımını şu öğrenme sahnelerine ayıran ortak UX akışını
+     tasarlamak:
+
+     - Problemle tanış
+     - Tahmin et
+     - Kodu çalıştır
+     - Programın içini gözlemle
+     - Girdiyi veya değeri değiştir
+     - Hata yap ve düzelt
+     - Kendi kodunu yaz
+     - Bağımsız uygula
+
+1.3. Yeniden kullanılabilir “Kod Yürütme Sahnesi” bileşenini tasarlamak.
+     Bileşen en az şu alanları içermelidir:
+
+     - Kod görünümü
+     - Aktif satır vurgusu
+     - Çalıştır, duraklat, sonraki adım, önceki adım ve sıfırla kontrolleri
+     - Girdi değerini değiştirme
+     - Değişken ve değer görünümü
+     - Koşul değerlendirme görünümü
+     - Program çıktısı
+     - Öğretmen açıklaması
+     - Tahmin sorusu
+     - Kod Editöründe Aç eylemi
+
+1.4. Orta sütunda kodun yanında veya bağlama göre sağ panelde açılabilen
+     “Programın Zihni” görünümünü tasarlamak:
+
+     - Aktif yürütme adımı
+     - Değişkenler
+     - Bellek kutuları ve referans bağlantıları
+     - Kontrol akışı
+     - Çağrı yığını
+     - Çıktı
+     - Öğretmen diliyle anlık açıklama
+
+1.5. Kavramlara göre kullanılacak ortak görsel dil ve simülasyon türlerini
+     belirlemek:
+
+     - Değişkenler: Etiketli bellek kutuları
+     - Boolean: Doğru/yanlış durumları
+     - Koşullar: Karar yolları
+     - Döngüler: Sayaç ve tekrar izi
+     - Fonksiyonlar: Girdi, işlem ve çıktı akışı
+     - Scope: İç içe erişim alanları
+     - Call stack: Fonksiyon çağrı kartları
+     - Array: İndeksli hücreler
+     - Object: Anahtar-değer alanları
+     - Reference: Aynı nesneye yönelen bağlantılar
+     - Recursion: Açılan ve geri çözülen çağrılar
+     - Async işlemler: Zaman çizelgesi, kuyruk ve event loop
+     - Algoritmalar: Karşılaştırma ve yer değiştirme animasyonları
+
+1.6. Öğrenciyi izleyici olmaktan çıkaran ortak etkileşimleri tasarlamak:
+
+     - Sonucu çalıştırmadan önce tahmin etme
+     - Sonraki değişken değerini seçme
+     - Programın izleyeceği dalı işaretleme
+     - Hatalı satırı veya ilk durum sapmasını bulma
+     - Eksik kodu tamamlama
+     - Kod satırlarını doğru sıraya koyma
+     - Girdiyi değiştirerek sonucu karşılaştırma
+
+1.7. Chapter'lar arasında devam eden görsel kavram sözlüğünü oluşturmak.
+     Aynı değişken, bellek, fonksiyon, koşul ve veri akışı kavramı bütün
+     chapter'larda aynı temel sembol, davranış ve anlamla gösterilmelidir.
+
+1.8. Sağ sütundaki mevcut ASEA araç kartlarını aktif öğrenme sahnesiyle
+     bağlama duyarlı çalışacak şekilde planlamak. Programın Zihni, Bellek,
+     Kontrol Akışı, Çağrı Yığını, Çıktı, İngilizce Terimler, AI Mentor,
+     İpuçları ve Kısa Notlar aktif kavrama göre doğru bağlamı göstermelidir.
+
+1.9. İlk pilot için tek bir referans chapter ve tek bir kod örneği seçmek.
+     Seçilen örneği bütün etkileşim, görselleştirme, erişilebilirlik ve öğrenme
+     kontrolleriyle uçtan uca tamamlamak.
+
+1.10. Pilot bileşeni başlangıç seviyesindeki öğrencilerle test etmek; öğrencinin
+      kodun sonraki adımını tahmin edip edemediğini, değer değişimini açıklayıp
+      açıklayamadığını ve benzer problemi bağımsız çözüp çözemediğini ölçmek.
+
+1.11. Pilot sonucuna göre bileşen sözleşmesini sabitlemek ve Programlama
+      Temelleri chapter'larına kavramsal sırayı koruyarak yaygınlaştırmak.
+
+1.12. Programlama Temelleri Akademisi için kalite kapısı tamamlandıktan sonra
+      aynı sistemi diğer akademilere konuya özgü görselleştirmelerle taşımak.
+
+Kalite ve erişilebilirlik koşulları:
+
+- Hareket yalnız öğrenci başlattığında çalışmalıdır.
+- Animasyon duraklatılabilmeli ve yeniden başlatılabilmelidir.
+- Azaltılmış hareket tercihi desteklenmelidir.
+- Bilgi yalnız renk, hareket veya konumla aktarılmamalıdır.
+- Klavye ile bütün temel kontroller kullanılabilmelidir.
+- Ekran okuyucu için eşdeğer metinsel yürütme izi sağlanmalıdır.
+- Aynı anda tek bir ana öğrenme odağı vurgulanmalıdır.
+- Başlangıç görünümü gereksiz teknik ayrıntılarla kalabalıklaştırılmamalıdır.
+- Görsel davranış kodun gerçek çalışma semantiğiyle uyumlu olmalıdır.
+- Bileşen mobilde kullanılabilir, masaüstünde ise tam öğrenme deneyimi sunmalıdır.
+
+Tamamlanma ölçütü:
+
+Bu görev yalnız görsel tasarım hazırlandığında tamamlanmış sayılmaz. Referans
+chapter'da öğrenci kodu adım adım çalıştırabilmeli, değer ve kontrol akışını
+görebilmeli, tahminini doğrulayabilmeli, hatayı teşhis edebilmeli ve benzer bir
+uygulamayı Kod Editöründe bağımsız olarak tamamlayabilmelidir.
+
+
+2. PROFESYONEL ÇALIŞMA ARAÇLARI VE PEKİŞTİRME MERKEZİ
+----------------------------------------------------------------------
+
+Durum: Planlanacak — ikinci ürün önceliği
+Uygulama alanı: apps/admin sağ çalışma paneli
+Bağımlılık: 1. Etkileşimli ve Görsel Ders Deneyimi
+
+Ana hedef:
+
+Sağ paneli basit bir araç menüsü olmaktan çıkararak öğrencinin öğrendiğini
+hatırladığı, görselleştirdiği, açıkladığı, uyguladığı ve tekrar ettiği kişisel
+pekiştirme merkezine dönüştürmek.
+
+Genel çalışma modeli:
+
+- Sağ panel başlangıçta profesyonel araç kartlarını gösterir.
+- Bir kart seçildiğinde panel ilgili aracın çalışma görünümüne dönüşür.
+- Zihin Haritası ve Görselleştirmeler gerektiğinde panel genişletilebilir veya
+  tam ekran açılabilir.
+- Araç içeriği aktif academy, module, chapter, section, concept ve kod örneği
+  bağlamına göre değişir.
+- Öğrencinin quiz, alıştırma, lab ve hata kayıtları kişisel tekrar planını besler.
+
+2.1. Çalışma aracı kart sistemini profesyonelleştirmek:
+
+     - Tutarlı ikon ve görsel hiyerarşi
+     - Tek cümlelik açık görev açıklaması
+     - Bekleyen etkinlik veya tekrar sayısı
+     - Önerilen, yeni, devam ediyor, tekrar zamanı, tamamlandı ve başarı kapısı
+       durumları
+     - İlerleme ve son çalışma bilgisi
+     - Klavye odağı ve erişilebilir durum açıklaması
+     - Öğrenciye ne yapacağını anlatan eylem odaklı bildirimler
+
+2.2. Görsel ve etkileşimli Zihin Haritası aracını geliştirmek:
+
+     - Chapter, modül, akademi ve kişisel gelişim görünümü
+     - Tıklanabilir kavram düğümleri ve anlam taşıyan bağlantılar
+     - Kavramın kısa açıklaması, İngilizce karşılığı ve ilgili kod örneği
+     - Önceki ve sonraki chapter bağlantıları
+     - Görüldü, tekrar edilmeli ve öğrenildi hâkimiyet durumları
+     - İlgili ders bölümüne ve çalışma aracına doğrudan geçiş
+     - Bir bağlantının neden var olduğunu öğretmen diliyle açıklama
+     - Yakınlaştırma, sürükleme, yeniden ortalama ve tam ekran kontrolleri
+
+2.3. Gerçek kart davranışına sahip Bilgi Kartları aracını geliştirmek:
+
+     - Ön yüzde soru, kavram, kod, hata veya görsel
+     - Arka yüzde cevap, neden ve önceki bilgiyle bağlantı
+     - Kart çevirme davranışı
+     - Tekrar, zorlandım ve biliyorum değerlendirmeleri
+     - Kavram, terim, kod çıktısı, hata teşhisi ve mülakat kart türleri
+     - Quiz yanlışları ve zorlanılan kavramlardan otomatik kart seçimi
+     - Aralıklı tekrar planı
+     - Günlük kart hedefi ve kişisel rekor
+     - Aynı kavramı farklı soru biçimleriyle yeniden sınama
+
+2.4. Etkileşimli Görselleştirmeler aracını geliştirmek:
+
+     - Kod yürütme animasyonu
+     - Bellek ve değişken görünümü
+     - Veri ve kontrol akışı
+     - Çağrı yığını ve scope
+     - Array, object ve reference ilişkileri
+     - Algoritma adımları
+     - Event loop ve zaman çizelgesi
+     - CPU, RAM ve program akışı
+     - Başlat, duraklat, önceki/sonraki adım, sıfırla ve hız ayarı
+     - Her adımda “ne çalıştı, ne değişti, neden değişti?” açıklaması
+     - Tam ekran ve azaltılmış hareket desteği
+
+2.5. Araçları ortak öğrenme döngüsüne bağlamak:
+
+     Ders → Görselleştirme → Tahmin → Alıştırma → Hata Avı → Bilgi Kartları
+     → Quiz → Laboratuvar → Mülakat Sorusu → Zihin Haritası
+
+2.6. Her chapter için “Bu ders için önerilen çalışma” akışını üretmek:
+
+     - İzlenecek görselleştirme
+     - Tamamlanacak bilgi kartları
+     - Çözülecek alıştırmalar
+     - Geçilmesi gereken quiz
+     - Tamamlanacak laboratuvar
+     - Kendi cümleleriyle yanıtlanacak mülakat sorusu
+
+2.7. Araçları bağlama duyarlı hâle getirmek. Örneğin öğrenci Boolean bölümündeyse
+     Zihin Haritası Boolean düğümünü ortalamalı, Bilgi Kartları Boolean kartlarını
+     getirmeli, Görselleştirmeler karşılaştırmanın Boolean üretmesini göstermeli ve
+     AI Mentor aynı bölüm ile kod örneğinin bağlamını kullanmalıdır.
+
+2.8. Her aracın ürettiği öğrenme kanıtını öğrenci gelişimine bağlamak:
+
+     - Hatırlama
+     - Kavramlar arasında bağ kurma
+     - Kod yürütmesini açıklama
+     - Hata teşhis etme
+     - Yönlendirmeli uygulama
+     - Bağımsız problem çözme
+     - Teknik bilgiyi kendi cümleleriyle anlatma
+
+2.9. İlk referans chapter üzerinde Zihin Haritası, Bilgi Kartları ve
+     Görselleştirmeler araçlarını birlikte çalışır hâle getirmek.
+
+2.10. Başlangıç seviyesindeki öğrencilerle pekiştirme testi yapmak; araçların
+      yalnız ilgi çekici görünmesini değil, hatırlama, açıklama ve bağımsız uygulama
+      başarısını artırıp artırmadığını ölçmek.
+
+Tamamlanma ölçütü:
+
+Öğrenci aktif chapter bağlamından ayrılmadan görsel zihin haritasını kullanabilmeli,
+kişiselleştirilmiş bilgi kartlarıyla tekrar yapabilmeli, kodun çalışma sürecini
+görselleştirebilmeli ve araçlarda ürettiği öğrenme kanıtını kendi gelişim ekranında
+görebilmelidir.
+
+
+3. PROFESYONEL VE RENKLİ ÖĞRENME KOD EDİTÖRÜ
+----------------------------------------------------------------------
+
+Durum: Planlanacak — üçüncü ürün önceliği
+Uygulama alanı: apps/admin Kod Editörü ve ders içi kod blokları
+Bağımlılık: 1. Etkileşimli ve Görsel Ders Deneyimi
+
+Ana hedef:
+
+Kod alanını düz bir metin belgesi görünümünden çıkararak öğrencinin kod parçalarını
+renk, yapı, hata göstergesi ve yürütme durumu üzerinden ayırt edebildiği profesyonel
+bir öğrenme IDE'sine dönüştürmek.
+
+Teknik yaklaşım:
+
+- Öğrencinin kod yazdığı etkileşimli editörde Monaco Editor kullanılmasını
+  değerlendirmek.
+- Ders içindeki salt okunur kod örneklerinde Shiki tabanlı, sunucu tarafında
+  üretilebilen sözdizimi renklendirmesi kullanmak.
+- İki alanda aynı ASEA kod tema tokenlarını ve kavramsal renk anlamlarını korumak.
+- İlk dil JavaScript olmakla birlikte tema ve editör adapter'ını sonraki dilleri
+  destekleyecek biçimde tasarlamak.
+
+3.1. ASEA'ya özgü sakin ve erişilebilir açık kod temasını tasarlamak:
+
+     - Anahtar kelimeler: mor
+     - Fonksiyon adları: mavi
+     - String değerleri: yeşil
+     - Sayılar: turuncu
+     - Boolean değerler: amber veya mor-turuncu
+     - Yorumlar: nötr gri ve gerektiğinde italik
+     - Operatörler: kontrollü vurgu rengi
+     - Hatalar: kırmızı
+     - Uyarılar: amber
+     - Aktif satır: hafif mavi zemin
+     - Seçim ve eşleşen kullanımlar: erişilebilir kontrastlı vurgu
+
+3.2. Renklerin dekoratif değil semantik olmasını sağlamak. Bilgi yalnız renkle
+     aktarılmamalı; hata, uyarı, çalışma ve başarı durumları ikon, metin veya çizgi
+     biçimiyle de belirtilmelidir.
+
+3.3. Kod yazma deneyimini profesyonelleştirmek:
+
+     - JavaScript sözdizimi renklendirme
+     - Otomatik girinti
+     - Parantez eşleştirme
+     - Girinti ve scope kılavuzları
+     - Hata ve uyarı alt çizgileri
+     - Öğrenci seviyesine uygun otomatik tamamlama
+     - Kod biçimlendirme
+     - Bul ve değiştir
+     - Geri al ve yinele
+     - Klavye kısayolları
+     - Yazı boyutu ve satır yüksekliği ayarı
+     - Açık ve koyu editör teması
+
+3.4. Üst araç çubuğunu önem sırasına göre yeniden düzenlemek:
+
+     - Birincil eylem: Çalıştır
+     - Öğrenme eylemleri: Adım adım çalıştır, testleri çalıştır, Mentor ipucu
+     - Dosya eylemleri: Kaydet, sıfırla, biçimlendir
+     - Tamamlama eylemi: Çözümü gönder
+     - Otomatik kayıt durumu: Kaydediliyor, kaydedildi veya kaydedilemedi
+
+3.5. Editöre görev ve başarı koşulları alanı eklemek:
+
+     - Çalışmanın amacı
+     - Öğrenciden beklenen görev
+     - Örnek girdi ve çıktı
+     - Tamamlanma koşulları
+     - Geçen test sayısı
+     - Kademeli ipuçları
+     - İlgili ders bölümüne dönüş
+
+3.6. Alt çalışma panelini profesyonelleştirmek:
+
+     - Konsol
+     - Testler ve başarısızlık açıklamaları
+     - Problemler
+     - Yürütme izi
+     - Mentor
+     - Çıktının veya hatanın ilgili kod satırına bağlantısı
+
+3.7. Ham çalışma zamanı hatalarını öğrenci dostu öğretmen açıklamalarına
+     dönüştürmek; doğrudan cevabı vermeden hatalı satıra, kavrama ve kademeli
+     ipucuna erişim sağlamak.
+
+3.8. Adım adım yürütme renk durumlarını eklemek:
+
+     - Çalışacak satır: mavi çerçeve
+     - Çalışan satır: sarı vurgu
+     - Tamamlanan adım: kısa süreli yeşil geri bildirim
+     - Hata oluşan satır: kırmızı vurgu
+     - Değeri değişen değişken: kontrollü geçiş
+     - Fonksiyona giriş ve dönüş: çağrı yığını ile eş zamanlı vurgu
+
+3.9. Ders içindeki kod bloklarını profesyonelleştirmek:
+
+     - Dil ve dosya adı etiketi
+     - Satır numaraları
+     - Sözdizimi renklendirmesi
+     - Kodu kopyala
+     - Çalıştır
+     - Adım adım incele
+     - Kod Editöründe Aç
+     - Açıklanan satırları vurgulama
+     - Uzun satırlarda güvenli yatay kaydırma
+
+3.10. Kod Editörünü Programın Zihni görünümüne bağlamak. Aktif satır, değişken,
+      bellek, kontrol akışı, çağrı yığını ve çıktı aynı yürütme durumunu paylaşmalıdır.
+
+3.11. Bağlamsal AI Mentor ve çözüm gönderme akışını editöre bağlamak. Mentor seçili
+      satırı, kodu, testleri ve çalışma zamanı hatasını görebilmeli; yardım sırasını
+      düşündüren soru, kavramsal ipucu, satır işareti, benzer örnek ve isteğe bağlı
+      açıklamalı çözüm olarak izlemelidir.
+
+Tamamlanma ölçütü:
+
+Öğrenci kod öğelerini görsel olarak ayırt edebilmeli, gerçek bir editör deneyimiyle
+kod yazabilmeli, hatanın hangi satırda ve neden oluştuğunu anlayabilmeli, testleri
+izleyebilmeli ve programı normal veya adım adım çalıştırarak çözümünü güvenle
+gönderebilmelidir. Kod blokları hiçbir öğrenci ekranında düz metin belgesi gibi
+görünmemelidir.
+
+
+4. CHAPTER BAŞLIKLARININ TÜRKÇELEŞTİRİLMESİ VE YERELLEŞTİRME
+----------------------------------------------------------------------
+
+Durum: Planlanacak — dördüncü ürün önceliği
+Uygulama alanı: İçerik motoru, chapter renderer ve öğrenci arayüzü
+
+Ana hedef:
+
+İçerik standartlarının kullandığı kanonik bölüm kimliklerini ve makine doğrulama
+sözleşmelerini korurken öğrenciye gösterilen bütün chapter bölüm başlıklarını doğal,
+tutarlı ve profesyonel Türkçe karşılıklarla sunmak.
+
+4.1. Öğrenci ekranlarında görünen İngilizce yapısal başlıkların tam envanterini
+     çıkarmak. Chapter, lab, quiz, proje, alıştırma ve değerlendirme dosyaları
+     birlikte taranmalıdır.
+
+4.2. Merkezi ASEA bölüm başlığı sözlüğünü oluşturmak. İlk eşlemeler:
+
+     - Hands-on Exercise → Uygulamalı Alıştırma
+     - Objective → Amaç
+     - Requirements → Gereksinimler
+     - Tasks → Yapılacaklar
+     - Deliverables → Teslim Edilecek Çalışmalar
+     - Evaluation Criteria → Değerlendirme Ölçütleri
+     - Reflection Questions → Düşünme ve Öz Değerlendirme Soruları
+     - Bonus Challenge → Ek Zorluk
+     - References → Kaynaklar
+
+4.3. Ham Markdown metninde kontrolsüz bul-değiştir uygulamak yerine içerik motorunda
+     yalnız heading bloklarına çalışan merkezi bir yerelleştirme katmanı geliştirmek.
+
+4.4. Kanonik bölüm kimliği ile görünen başlığı ayırmak. Hedef içerik modeli:
+
+     - section_id: Sistem, doğrulama ve analitik için sabit kimlik
+     - canonical_title: İçerik sözleşmesinin başlığı
+     - display_title_tr: Türk öğrenciye gösterilen başlık
+
+4.5. Curriculum Standard, Chapter Standard, şablonlar ve doğrulama kurallarını yeni
+     modele uyarlamak. Türkçe görünen başlıklar kalite denetimlerini bozmamalıdır.
+
+4.6. Kod anahtar kelimelerini, API adlarını, dosya adlarını, değişkenleri, kanonik
+     kimlikleri ve çevrilmemesi gereken resmî teknoloji adlarını yerelleştirme dışında
+     bırakmak.
+
+4.7. Başlık sözlüğü için otomatik testler eklemek:
+
+     - Bilinen başlık doğru Türkçe karşılığı üretir.
+     - Bilinmeyen başlık içerik kaybı oluşturmadan korunur ve raporlanır.
+     - Kod blokları ve paragraf metinleri değiştirilmez.
+     - Heading seviyesi ve bölüm sırası korunur.
+     - Arama ve chapter içi bağlantılar çalışmaya devam eder.
+
+4.8. C01-C38 chapter'larında öğrenci görünümü denetimi yapmak; İngilizce yapısal
+     başlık, yapay çeviri veya terminoloji tutarsızlığı kalmadığını doğrulamak.
+
+4.9. Altyapıyı ileride farklı arayüz dilleri eklenebilecek şekilde locale tabanlı
+     tasarlamak; ilk ve zorunlu öğrenci dili Türkçe olmalıdır.
+
+Tamamlanma ölçütü:
+
+Öğrenci chapter, alıştırma, lab, quiz ve proje ekranlarında İngilizce yapısal bölüm
+başlıkları görmemeli; bütün başlıklar doğal Türkçe olmalı, içerik sözleşmeleri ve
+otomatik kalite doğrulamaları çalışmaya devam etmelidir.
+
+
+5. SONRAKİ GÖREVLER
+----------------------------------------------------------------------
+
+Bu bölüm mevcut ürün, içerik, arama ve akademi genişletme çalışmalarının yeniden
+önceliklendirilmesi sırasında doldurulacaktır. İlk dört görevin referans uygulaması
+tamamlanmadan yeni ders UI sistemi diğer akademilere yayılmayacaktır.

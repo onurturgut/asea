@@ -404,8 +404,8 @@ function ArtifactBlock({ block }: { block: ContentBlock }) {
           block.ordered ? "list-decimal" : "list-disc"
         }`}
       >
-        {block.items.map((item) => (
-          <li key={item}>{item}</li>
+        {block.items.map((item, index) => (
+          <li key={`${index}-${item}`}>{item}</li>
         ))}
       </Tag>
     );
@@ -440,7 +440,7 @@ function ArtifactDetail({ document }: { document: ContentDocument }) {
       <div className="mt-4 border-t hairline pt-1">
         {document.blocks.slice(0, 28).map((block, index) => (
           <ArtifactBlock
-            key={`${block.type}-${"text" in block ? block.text.slice(0, 24) : index}`}
+            key={`${block.type}-${index}`}
             block={block}
           />
         ))}

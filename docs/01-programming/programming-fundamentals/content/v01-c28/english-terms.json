@@ -1,0 +1,27 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C28-TERMS01",
+  "chapterId": "V01-C28",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {"term":"program design","turkish":"program tasarımı","explanation":"Gereksinimleri veri, algoritma, fonksiyon, failure ve doğrulama planına dönüştürme.","firstUseContext":"haftalık plan özeti","example":"function map","confusedWith":"yalnız diyagram","revisitAt":"V01-CP01"},
+    {"term":"requirement","turkish":"gereksinim","explanation":"Sistemin sağlaması gereken gözlenebilir davranış veya sınır.","firstUseContext":"REQ-01","example":"non-empty array","confusedWith":"ihtiyaç","revisitAt":"V01-CP01"},
+    {"term":"acceptance criteria","turkish":"kabul kriterleri","explanation":"Bir gereksinimin kabul edilmesi için ölçülebilir koşullar.","firstUseContext":"Given/When/Then","example":"80 yüzde on-track","confusedWith":"test kodu","revisitAt":"V01-CP01"},
+    {"term":"scope","turkish":"kapsam","explanation":"Teslimde üstlenilen ve kanıtlanacak davranış sınırı.","firstUseContext":"ilk sürüm","example":"in-memory hesap","confusedWith":"task listesi","revisitAt":"V01-CP01"},
+    {"term":"non-goal","turkish":"kapsam dışı hedef","explanation":"Mevcut teslimde bilinçli olarak üstlenilmeyen alan.","firstUseContext":"database yok","example":"grafik arayüz","confusedWith":"önemsiz ihtiyaç","revisitAt":"V01-CP01"},
+    {"term":"assumption","turkish":"varsayım","explanation":"Doğruluğu henüz tam kanıtlanmadan tasarımda kabul edilen ifade.","firstUseContext":"yuvarlama beklentisi","example":"dakikalar integer","confusedWith":"requirement","revisitAt":"V01-CP01"},
+    {"term":"requirements traceability","turkish":"gereksinim izlenebilirliği","explanation":"Gereksinimden tasarım, kod, test ve review kanıtına bağ.","firstUseContext":"trace matrix","example":"REQ-05 → T-03","confusedWith":"ID listesi","revisitAt":"V01-CP01"},
+    {"term":"verification","turkish":"doğrulama","explanation":"Ürünün tanımlanan gereksinimlere uygun üretilip üretilmediğini kontrol.","firstUseContext":"eşik testi","example":"80 on-track","confusedWith":"validation","revisitAt":"V01-CP01"},
+    {"term":"validation","turkish":"geçerleme","explanation":"Ürünün gerçek kullanıcı ihtiyacını karşılayıp karşılamadığını kontrol.","firstUseContext":"öğrenci geri bildirimi","example":"haftalık özet yararlı mı","confusedWith":"verification","revisitAt":"V01-CP01"},
+    {"term":"risk","turkish":"risk","explanation":"Sonucu etkileyebilecek belirsiz gelecek olayı.","firstUseContext":"yuvarlama beklentisi","example":"paydaş farklı kural isteyebilir","confusedWith":"known limitation","revisitAt":"V01-CP01"},
+    {"term":"mitigation","turkish":"risk azaltma","explanation":"Riskin olasılığını veya etkisini azaltan eylem.","firstUseContext":"risk register","example":"örneklerle erken onay","confusedWith":"garanti","revisitAt":"V01-CP01"},
+    {"term":"residual risk","turkish":"kalan risk","explanation":"Azaltma uygulandıktan sonra devam eden risk.","firstUseContext":"teslim notu","example":"benchmark yapılmadı","confusedWith":"çözülmüş risk","revisitAt":"V01-CP01"},
+    {"term":"known limitation","turkish":"bilinen sınırlama","explanation":"Teslim anında mevcut olduğu bilinen davranış veya kapasite sınırı.","firstUseContext":"ondalık gösterilmez","example":"in-memory veri","confusedWith":"risk","revisitAt":"V01-CP01"},
+    {"term":"technical review","turkish":"teknik inceleme","explanation":"Correctness, kanıt, trade-off, risk ve maintainability değerlendirmesi.","firstUseContext":"teslim kapısı","example":"trace ve test review","confusedWith":"kişisel zevk","revisitAt":"V01-CP01"},
+    {"term":"delivery readiness","turkish":"teslime hazır olma","explanation":"Kod ve destekleyici kanıtların kontrollü devre hazır durumu.","firstUseContext":"delivery checklist","example":"test ve limitation hazır","confusedWith":"demo çalışıyor","revisitAt":"V01-CP01"},
+    {"term":"decision record","turkish":"karar kaydı","explanation":"Seçilen çözümü, bağlamı, alternatifleri ve sonuçları açıklayan kayıt.","firstUseContext":"tasarım savunması","example":"object yerine array reddi","confusedWith":"toplantı notu","revisitAt":"V01-CP01"},
+    {"term":"stakeholder","turkish":"paydaş","explanation":"Üründen etkilenen veya gereksinim üzerinde karar sahibi kişi ya da grup.","firstUseContext":"öğrenci ihtiyacı","example":"öğrenci ve eğitmen","confusedWith":"yalnız müşteri","revisitAt":"V01-CP01"},
+    {"term":"retrospective","turkish":"geriye dönük değerlendirme","explanation":"Teslim sonrası süreç, karar ve öğrenmeleri sonraki işe aktarma incelemesi.","firstUseContext":"chapter kapanışı","example":"hangi varsayım geç doğrulandı","confusedWith":"suçlama toplantısı","revisitAt":"V01-CP01"}
+  ]
+}

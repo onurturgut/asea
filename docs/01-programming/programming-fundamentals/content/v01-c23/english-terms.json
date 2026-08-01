@@ -1,0 +1,25 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C23-TERMS01",
+  "chapterId": "V01-C23",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {"term":"input size","turkish":"girdi büyüklüğü","explanation":"Problemin ölçeğini temsil eden nicelik.","firstUseContext":"n değişkeni","example":"chapterIds.length","confusedWith":"dosya boyutu","revisitAt":"V01-C24"},
+    {"term":"cost model","turkish":"maliyet modeli","explanation":"Analizde hangi temel işlemin sayılacağını belirleyen kabul.","firstUseContext":"karşılaştırma sayımı","example":"target === values[i]","confusedWith":"para maliyeti","revisitAt":"V01-C26"},
+    {"term":"operation count","turkish":"işlem sayısı","explanation":"Seçilen temel işlemin kaç kez yürütüldüğü.","firstUseContext":"çalışma izi","example":"comparisons = 4","confusedWith":"çalışma süresi","revisitAt":"V01-C24"},
+    {"term":"time complexity","turkish":"zaman karmaşıklığı","explanation":"Girdi büyürken gereken işin nasıl büyüdüğünü anlatan model.","firstUseContext":"büyüme tablosu","example":"Θ(n)","confusedWith":"milisaniye","revisitAt":"V01-C24"},
+    {"term":"space complexity","turkish":"alan karmaşıklığı","explanation":"Girdi büyürken kullanılan belleğin büyümesi.","firstUseContext":"kopya dizi","example":"O(n) extra space","confusedWith":"disk kapasitesi","revisitAt":"V01-C24"},
+    {"term":"asymptotic analysis","turkish":"asimptotik analiz","explanation":"Girdi çok büyürken baskın büyüme davranışını inceleme.","firstUseContext":"sabitleri ayırma","example":"3n + 2 → Θ(n)","confusedWith":"tek benchmark","revisitAt":"V01-C24"},
+    {"term":"upper bound","turkish":"üst sınır","explanation":"Büyümenin aşmayacağını belirten asimptotik sınır.","firstUseContext":"Big O","example":"O(n²)","confusedWith":"tam eşitlik","revisitAt":"V01-C26"},
+    {"term":"lower bound","turkish":"alt sınır","explanation":"Büyümenin altına düşmeyeceğini belirten asimptotik sınır.","firstUseContext":"Big Omega","example":"Ω(1)","confusedWith":"en kötü durum","revisitAt":"V01-C26"},
+    {"term":"tight bound","turkish":"sıkı sınır","explanation":"Üst ve alt sınırın aynı büyüme ailesinde buluşması.","firstUseContext":"Big Theta","example":"Θ(n)","confusedWith":"yaklaşık süre","revisitAt":"V01-C26"},
+    {"term":"constant time","turkish":"sabit zaman","explanation":"İş miktarının girdi boyutuyla büyümemesi.","firstUseContext":"ilk elemana erişim","example":"values[0]","confusedWith":"her cihazda aynı süre","revisitAt":"V01-C24"},
+    {"term":"linear time","turkish":"doğrusal zaman","explanation":"İş miktarının girdiyle orantılı büyümesi.","firstUseContext":"doğrusal arama","example":"Θ(n)","confusedWith":"tek döngü kuralı","revisitAt":"V01-C24"},
+    {"term":"quadratic time","turkish":"karesel zaman","explanation":"Girdi iki katına çıktığında işin yaklaşık dört kat büyümesi.","firstUseContext":"selection sort","example":"Θ(n²)","confusedWith":"her iç içe döngü","revisitAt":"V01-C24"},
+    {"term":"logarithmic time","turkish":"logaritmik zaman","explanation":"Her adımda arama alanının sabit oranda küçüldüğü büyüme.","firstUseContext":"ikili arama","example":"O(log n)","confusedWith":"doğrusal zaman","revisitAt":"V01-C24"},
+    {"term":"benchmark","turkish":"performans ölçümü","explanation":"Belirli veri ve ortamda yapılan deneysel süre veya kaynak ölçümü.","firstUseContext":"performance.now","example":"end - start","confusedWith":"karmaşıklık kanıtı","revisitAt":"V01-C25"},
+    {"term":"trade-off","turkish":"ödünleşim","explanation":"Bir niteliği iyileştirirken başka bir maliyeti kabul etme kararı.","firstUseContext":"zaman ve alan","example":"daha çok bellek, daha az arama süresi","confusedWith":"hata","revisitAt":"V01-C24"},
+    {"term":"dominant term","turkish":"baskın terim","explanation":"Büyük girdilerde toplam büyümeyi belirleyen en hızlı büyüyen terim.","firstUseContext":"n² + n","example":"n²","confusedWith":"en büyük katsayı","revisitAt":"V01-C24"}
+  ]
+}

@@ -1,0 +1,289 @@
+ASEA KAYNAK ENVANTERİ VE MEVCUT DURUM RAPORU
+======================================================================
+
+Rapor tarihi: 2026-08-02
+Rapor türü: Ders üretimi ve search engine kaynak tabanı envanteri
+Kapsam: Akademi 01 ders üretim corpus'u ve ASEA dış kaynak kataloğu
+
+YÖNETİCİ ÖZETİ
+----------------------------------------------------------------------
+
+ASEA şu anda ders içeriği üretim dosyalarında 398 normalize edilmiş farklı dış
+kaynak adresine başvuruyor. Normalize etme; aynı sayfanın takip parametresi,
+fragment veya sondaki slash nedeniyle birden fazla sayılmasını engeller.
+
+Ayrıca search engine için hazırlanmış 347 kayıtlık ayrı bir küratörlü kaynak
+kataloğu bulunuyor:
+
+- 332 kaynak URL'si doğrulanmış,
+- 3 kaynak erişilebilir fakat otomatik erişime kısıtlı,
+- 12 kaynak manuel inceleme bekliyor.
+
+Katalog kayıtları 329 farklı normalize URL'ye karşılık geliyor. Bunların 87 tanesi
+ders üretim corpus'undaki bağlantılarla doğrudan eşleşiyor. Ders corpus'u ile kaynak
+kataloğunun birleşiminde 640 farklı normalize edilmiş dış kaynak adresi bulunuyor.
+
+Bu rakamların anlamı:
+
+- Ders yazarken fiilen referans verilen kaynak adresi: 398
+- Search engine için kayıt altına alınmış kaynak: 347 kayıt / 329 normalize URL
+- İki havuzun doğrudan kesişimi: 87 normalize URL
+- ASEA'nın bildiği toplam tekil dış adres: 640
+- Search engine arayüzüne aktif bağlanan dış katalog kaynağı: 347
+
+Mevcut /search uygulaması source-catalog.json dosyasını server katmanında okuyor.
+Arama motoru ASEA chapter'ları, etkinlik paketleri, akademi/modül bilgileri, projeler,
+öğrencinin kısa/uzun notları ve dış kaynak metadata'sı üzerinde arama yapıyor.
+Arayüzdeki “Kaynaklar” filtresiyle dış katalog sonuçları ayrıştırılabiliyor.
+
+SAYIM YÖNTEMİ
+----------------------------------------------------------------------
+
+Aşağıdaki üretim alanları tarandı:
+
+- 38 ana chapter dosyası
+- 21 chapter sources.md dosyası
+- 121 chapter research Markdown dosyası
+- 1 ortak referans dosyası
+- Toplam 181 üretim/araştırma dosyası
+
+Ham sayımda 451 farklı URL metni bulundu. Query parameter, URL fragment ve sondaki
+slash farkları temizlendiğinde 398 kanonik dış adres kaldı. Bu adresler 98 farklı
+domain üzerinde bulunuyor.
+
+Bu sayım bir URL'yi otomatik olarak “kanıtlanmış doğru bilgi” kabul etmez. Kaynağın
+otoritesi, ilgili iddiayı gerçekten desteklemesi, sürümü, erişim koşulu ve lisansı
+chapter araştırma/review aşamasında ayrıca kontrol edilmelidir.
+
+KAYNAK KATALOĞUNUN TÜR DAĞILIMI
+----------------------------------------------------------------------
+
+Mevcut 347 katalog kaydının dağılımı:
+
+- Mevcut güvenilir/otoritatif referans: 105
+- Resmî dokümantasyon: 64
+- Şirket eğitimi: 38
+- Üniversite dersi: 44
+- Açık ders: 20
+- GitHub repository: 17
+- Pratik platformu: 11
+- Açık kitap: 15
+- Açık referans: 6
+- Güvenlik standardı: 5
+- Etkileşimli araç: 4
+- Profesyonel referans: 4
+- Dil standardı: 3
+- Üniversite kaynağı: 3
+- Açık müfredat: 2
+- Açık standart: 2
+- Profesyonel standart: 2
+- Ticari kurs: 2
+
+Katalog şu anda 22 akademi alanını kapsıyor. Her akademi için en az 10 kaynak
+hedeflenmiş; Programlama Temelleri 136 kaynak eşlemesiyle en geniş alandır.
+
+DERS ÜRETİMİNDE EN ÇOK BAŞVURULAN DOMAIN'LER
+----------------------------------------------------------------------
+
+Normalize edilmeden önce üretim corpus'unda bulunan tekil URL dağılımının önde
+gelen domain'leri:
+
+- developer.mozilla.org: 109
+- tc39.es: 75
+- learn.microsoft.com: 13
+- ocw.mit.edu: 13
+- refactoring.com: 13
+- docs.python.org: 12
+- docs.oracle.com: 11
+- swehb.nasa.gov: 9
+- nodejs.org: 9
+- csed.acm.org: 7
+- google.github.io: 7
+- eslint.org: 5
+- doc.rust-lang.org: 5
+- json-schema.org: 5
+- csrc.nist.gov: 4
+- pages.cs.wisc.edu: 4
+- webassembly.github.io: 4
+- sebokwiki.org: 4
+- openstax.org: 4
+- cheatsheetseries.owasp.org: 3
+- www.cs.cmu.edu: 3
+- www.typescriptlang.org: 3
+
+Bu tablo kaynak kalitesini değil, bağlantı yoğunluğunu gösterir. Bir standardın tek
+bağlantısı, çok bağlantılı bir tutorial sitesinden daha yüksek kanıt değeri taşıyabilir.
+
+MEVCUT KAYNAK SINIFLARI
+----------------------------------------------------------------------
+
+1. Dil ve platform standartları
+   TC39/ECMAScript, WHATWG, Unicode, ISO ve ilgili normatif standartlar.
+
+2. Resmî teknoloji dokümantasyonları
+   MDN, Node.js, TypeScript, Python, React, Next.js, GitHub, MongoDB, AWS,
+   Google Cloud ve Microsoft Learn.
+
+3. Üniversite dersleri ve açık akademik materyaller
+   MIT OpenCourseWare, Harvard, Stanford, UC Berkeley, Carnegie Mellon,
+   University of Helsinki, University of Waterloo ve diğer üniversite kaynakları.
+
+4. Açık kitaplar
+   SICP, Algorithms by Jeff Erickson, OSTEP, Eloquent JavaScript, Pro Git,
+   Open Data Structures ve benzeri kaynaklar.
+
+5. Mühendislik ve kalite kaynakları
+   Google Engineering Practices, NASA Software Engineering Handbook, SWEBOK,
+   SEBoK, Martin Fowler ve refactoring kaynakları.
+
+6. Güvenlik kaynakları
+   OWASP, NIST, MITRE CWE ve üniversitelerin güvenlik ders materyalleri.
+
+7. Uygulama ve pratik kaynakları
+   Exercism, Frontend Mentor, NodeSchool, SQLBolt, picoCTF ve OverTheWire.
+
+8. GitHub repository kaynakları
+   OSSU, You Don't Know JS Yet, Microsoft Web Dev for Beginners, Type Challenges,
+   Node.js Best Practices, System Design Primer ve OpenAI Cookbook.
+
+EKLENEN ÜNİVERSİTE KAYNAKLARI — 2026-08-02 GENİŞLETMESİ
+----------------------------------------------------------------------
+
+Aşağıdaki 27 kaynak yeni genişletme turunda bulundu ve ASEA-EXT-0321 ile
+ASEA-EXT-0347 arasında kataloğa eklendi. Metadata, özgün ASEA özeti, lisans notu,
+dil, akademi, konu ve chapter eşlemeleriyle search engine'e bağlandı.
+
+Açık lisansı veya açık kullanım izni görünür olan güçlü adaylar:
+
+1. MIT — Structure and Interpretation of Computer Programs, JavaScript Edition
+   https://mitpress.mit.edu/9780262367622/structure-and-interpretation-of-computer-programs/
+
+2. MIT OCW — Mathematics for Computer Science
+   https://ocw.mit.edu/courses/6-042j-mathematics-for-computer-science-spring-2015/resources/mit6_042js15_textbook/
+
+3. University of Illinois — Algorithms, Jeff Erickson
+   https://jeffe.cs.illinois.edu/teaching/algorithms/
+   Kitap lisansı: Creative Commons Attribution 4.0.
+
+4. UC Berkeley — Introduction to Artificial Intelligence, CS188
+   https://inst.eecs.berkeley.edu/~cs188/textbook/
+   Lisans: Creative Commons Attribution-ShareAlike 4.0.
+
+5. Stanford — CS144 Computer Networking Lecture Notes
+   https://www.scs.stanford.edu/09au-cs144/notes/
+   Eğitmene/Stanford'a ait notlar için kopyalama, değiştirme ve dağıtma izni açık.
+
+6. University of Waterloo — Introduction to Theory of Computing
+   https://cs.uwaterloo.ca/~watrous/ToC-notes/
+   Bireysel çalışma ve ders kullanımı için ücretsiz dağıtım izni; satış yasak.
+
+7. TU Delft OpenCourseWare — Software Engineering
+   https://ocw.tudelft.nl/course-lectures/3-1-1-introduction-the-software-engineer-ad-gse/
+   Lisans: Creative Commons Attribution-NonCommercial-ShareAlike 4.0.
+
+8. İstanbul Teknik Üniversitesi — Programlamaya Giriş Ders Notları
+   https://web.itu.edu.tr/uyar/programlama/
+   Lisans: Creative Commons Attribution-NonCommercial-ShareAlike 3.0.
+
+Metadata, özgün ASEA özeti ve dış bağlantı olarak değerlendirilecek adaylar:
+
+9. MIT 6.006 — Introduction to Algorithms
+   https://ocw.mit.edu/courses/6-006-introduction-to-algorithms-spring-2020/resources/lecture-notes/
+
+10. MIT 6.046 — Design and Analysis of Algorithms
+    https://ocw.mit.edu/courses/6-046j-design-and-analysis-of-algorithms-spring-2012/resources/lecture-notes/
+
+11. University of Wisconsin-Madison — Operating Systems: Three Easy Pieces
+    https://research.cs.wisc.edu/wind/OSTEP/
+
+12. University of Cambridge — Foundations of Computer Science
+    https://www.cl.cam.ac.uk/teaching/2526/FoundsCS/materials.html
+
+13. University of Cambridge — Operating Systems
+    https://www.cl.cam.ac.uk/teaching/2324/OpSystems/materials/
+
+14. University of Cambridge — Databases
+    https://www.cl.cam.ac.uk/teaching/2526/Databases/materials.html
+
+15. University of Cambridge — Distributed Systems
+    https://www.cl.cam.ac.uk/teaching/2122/ConcDisSys/dist-sys-notes.pdf
+
+16. University of Waterloo — CS241 Course Notes
+    https://student.cs.uwaterloo.ca/~cs241/notes/
+
+17. University of Waterloo — CS442 Programming Languages Course Notes
+    https://student.cs.uwaterloo.ca/~cs442/W25/notes/
+
+18. Carnegie Mellon University — 15-445 Database Systems
+    https://15445.courses.cs.cmu.edu/spring2026/schedule.html
+
+19. Carnegie Mellon University — Principles of Software Construction
+    https://www.cs.cmu.edu/~charlie/courses/17-214/2018-fall/
+
+20. Carnegie Mellon University — Introduction to Software Engineering
+    https://www.cs.cmu.edu/~aldrich/courses/413/
+
+21. Stanford — CS229 Machine Learning Notes
+    https://cs229.stanford.edu/syllabus-spring2020.html
+
+22. Stanford — A Graduate Course in Applied Cryptography
+    https://crypto.stanford.edu/~dabo/cryptobook/
+
+23. MIT OCW — Network and Computer Security
+    https://ocw.mit.edu/courses/6-857-network-and-computer-security-spring-2014/resources/lecture-notes/
+
+24. MIT OCW — Computer Networks
+    https://ocw.mit.edu/courses/6-829-computer-networks-fall-2002/resources/lecture-notes/
+
+25. Namık Kemal Üniversitesi — Veri Yapıları Açık Ders Materyalleri
+    https://adys.nku.edu.tr/OpenCourse/Course/Veri_Yap%C4%B1lar%C4%B1_%28Eski_-_Old%29/91
+
+26. Kayseri Üniversitesi — Veri Yapıları, Linux ve Bilgisayar Mimarisi Notları
+    https://avesis.kayseri.edu.tr/nurullahozturk/dokumanlar
+
+27. Ondokuz Mayıs Üniversitesi — Veri Yapıları ve Programlama
+    https://avys.omu.edu.tr/lessons/0/4820/9386/5134
+
+HUKUKİ VE AKADEMİK KULLANIM KURALI
+----------------------------------------------------------------------
+
+- Üniversite domain'inde bulunan her PDF yasal açık kopya değildir.
+- Ticari kitapların izinsiz PDF kopyaları kataloğa alınmaz.
+- Açık lisans görünmüyorsa varsayılan davranış; yalnız metadata, ASEA'nın özgün
+  özeti ve dış bağlantıyı saklamaktır.
+- PDF tam metni ancak açık lisans, yazar/yayınevi izni ve robots/kullanım koşulları
+  birlikte doğrulandığında indekslenebilir.
+- Chapter metni kaynakların birleşik doğrulamasına dayanır fakat ASEA tarafından
+  sıfırdan, Türk öğrenci için özgün öğretmen anlatımıyla yazılır.
+- Her teknik iddia mümkünse en az bir birincil ve bir bağımsız kaynakla doğrulanır.
+- Kaynağın sürümü, erişim tarihi, ilgili bölümü ve desteklediği iddia kaydedilir.
+
+ÖNERİLEN GENİŞLETME HEDEFİ
+----------------------------------------------------------------------
+
+Kısa vadeli hedef:
+
+- Manuel inceleme bekleyen Kayseri Üniversitesi ve Ondokuz Mayıs Üniversitesi
+  kayıtlarının tarayıcı, kanonik URL ve lisans kontrolü,
+- Programlama Temelleri C01-C38 için chapter-kaynak eşleme matrisi,
+- Her chapter için en az 2 birincil ve 2 yardımcı kaynak,
+- Türkçe kaynakların ayrı language=tr etiketiyle gösterilmesi,
+- 332 doğrulanmış katalog kaynağının ders üretimi için önceliklendirilmesi.
+
+Orta vadeli hedef:
+
+- 26 akademinin tamamında en az 15 yüksek kaliteli kaynak,
+- Her kaynakta sahip, tür, akademi, chapter, konu, dil, erişim, lisans, güncellik,
+  kalite skoru ve doğrulama tarihi,
+- Ölü bağlantı ve sürüm değişikliği için periyodik doğrulama,
+- Öğrenciye “neden bu kaynak?” açıklaması ve seviye etiketi,
+- Tam metin yerine lisans güvenli özgün özet ve doğrudan kaynak bağlantısı.
+
+SONUÇ
+----------------------------------------------------------------------
+
+ASEA'nın ders yazımında başvurduğu mevcut operasyonel taban 398 farklı normalize
+dış kaynak adresidir. Ayrı katalog 347 küratörlü kayıt taşımakta ve search engine'e
+metadata olarak bağlıdır. Yeni üniversite kaynakları katalog içinde chapter düzeyinde
+aranabilir; doğrulanmış kayıtlar ders araştırmasında kullanılabilir, inceleme etiketli
+kayıtlar ise kanıt olarak kullanılmadan önce manuel kontrolden geçirilmelidir.

@@ -1,0 +1,20 @@
+{"documentType":"english-terms","documentId":"V01-C34-TERMS01","chapterId":"V01-C34","terms":[
+{"term":"floating point","turkish":"kayan nokta","explanation":"Sınırlı precision sayısal temsil."},
+{"term":"precision","turkish":"hassasiyet","explanation":"Temsil edilebilen anlamlı ayrıntı."},
+{"term":"rounding","turkish":"yuvarlama","explanation":"Value'yu seçilmiş temsil grid'ine taşıma."},
+{"term":"finite","turkish":"sonlu","explanation":"NaN veya sonsuz olmayan Number."},
+{"term":"safe integer","turkish":"güvenli tamsayı","explanation":"Number'da ayırt edilebilir integer."},
+{"term":"tolerance","turkish":"tolerans","explanation":"Domain'in kabul ettiği fark."},
+{"term":"absolute error","turkish":"mutlak hata","explanation":"İki value arasındaki mutlak fark."},
+{"term":"relative error","turkish":"göreli hata","explanation":"Farkın büyüklüğe göre ölçeği."},
+{"term":"minor unit","turkish":"alt para birimi","explanation":"Cent gibi integer para ölçeği."},
+{"term":"overflow boundary","turkish":"taşma sınırı","explanation":"Temsil aralığı sınırı."},
+{"term":"NaN","turkish":"sayı olmayan numeric sonuç","explanation":"Number type özel value."},
+{"term":"Infinity","turkish":"sonsuzluk","explanation":"Sonlu olmayan Number value."},
+{"term":"formatting","turkish":"biçimlendirme","explanation":"Presentation string üretimi."},
+{"term":"canonical unit","turkish":"kanonik birim","explanation":"İç modelde seçilen tek unit."},
+{"term":"error budget","turkish":"hata bütçesi","explanation":"Domain'in kabul ettiği numeric sapma."},
+{"term":"clamp","turkish":"aralığa sıkıştırma","explanation":"Value'yu min/max sınırına çekme."},
+{"term":"integer","turkish":"tamsayı","explanation":"Kesirli kısmı olmayan Number."},
+{"term":"display boundary","turkish":"gösterim sınırı","explanation":"Numeric value'nun kullanıcı metnine çevrildiği katman."}
+]}

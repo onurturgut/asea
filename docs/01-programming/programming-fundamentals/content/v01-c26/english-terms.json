@@ -1,0 +1,25 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C26-TERMS01",
+  "chapterId": "V01-C26",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {"term":"test case","turkish":"test vakası","explanation":"Belirli bir davranışı sınayan girdi, expected ve sonuç kanıtı.","firstUseContext":"İlerleme testi","example":"0 kabul edilir","confusedWith":"test suite","revisitAt":"V01-C27"},
+    {"term":"expected result","turkish":"beklenen sonuç","explanation":"Sözleşmeye göre testin üretmesi gereken sonuç.","firstUseContext":"Oracle","example":"value = 80","confusedWith":"actual result","revisitAt":"V01-C27"},
+    {"term":"actual result","turkish":"gerçekleşen sonuç","explanation":"Test edilen kodun çalıştırmada ürettiği değer.","firstUseContext":"Act adımı","example":"result.value","confusedWith":"expected result","revisitAt":"V01-C27"},
+    {"term":"test oracle","turkish":"test doğruluk kaynağı","explanation":"Expected sonucun doğru olduğunu belirleyen bağımsız bilgi.","firstUseContext":"Fonksiyon contract’ı","example":"0–100 kabul kriteri","confusedWith":"implementation output","revisitAt":"V01-C28"},
+    {"term":"assertion","turkish":"doğrulama iddiası","explanation":"Actual ve expected arasındaki ilişkinin doğru olmasını zorunlu kılan kontrol.","firstUseContext":"expectEqual","example":"actual === expected","confusedWith":"if ile iş mantığı","revisitAt":"V01-C27"},
+    {"term":"unit test","turkish":"birim testi","explanation":"Küçük bir davranış birimini kontrollü ve izole koşulda sınayan test.","firstUseContext":"validateProgress","example":"tek fonksiyon contract’ı","confusedWith":"integration test","revisitAt":"V01-C28"},
+    {"term":"regression test","turkish":"gerileme testi","explanation":"Daha önce gözlenen defect’in geri dönüşünü yakalayan test.","firstUseContext":"C25 failing case","example":"totalMinutes([30]) === 30","confusedWith":"her yeni test","revisitAt":"V01-C27"},
+    {"term":"boundary value","turkish":"sınır değeri","explanation":"Davranışın değiştiği kenar veya hemen çevresindeki değer.","firstUseContext":"0–100 aralığı","example":"-1, 0, 100, 101","confusedWith":"normal input","revisitAt":"V01-C28"},
+    {"term":"equivalence partition","turkish":"eşdeğerlik bölümü","explanation":"Aynı kuralla işlenmesi beklenen çakışmayan girdi sınıfı.","firstUseContext":"Invalid input sınıfları","example":"sayısal olmayan stringler","confusedWith":"tek değer","revisitAt":"V01-C28"},
+    {"term":"happy path","turkish":"başarılı ana yol","explanation":"Geçerli ve beklenen koşullarda ilerleyen temel başarı senaryosu.","firstUseContext":"50 değeri","example":"ok true","confusedWith":"tam coverage","revisitAt":"V01-C28"},
+    {"term":"test isolation","turkish":"test izolasyonu","explanation":"Test sonucunun başka testlerin state veya sırasına bağlı olmaması.","firstUseContext":"Paylaşılan state","example":"her test kendi girdisini kurar","confusedWith":"unit boyutu","revisitAt":"V01-C27"},
+    {"term":"test suite","turkish":"test paketi","explanation":"Birlikte çalıştırılan ilişkili testler kümesi.","firstUseContext":"Progress testleri","example":"normal + boundary + invalid","confusedWith":"test case","revisitAt":"V01-C27"},
+    {"term":"coverage","turkish":"kapsama","explanation":"Testlerin hangi kod, dal, gereksinim veya risk öğesine değdiği bilgisi.","firstUseContext":"Risk raporu","example":"branch coverage","confusedWith":"quality score","revisitAt":"V01-C28"},
+    {"term":"blind spot","turkish":"kör nokta","explanation":"Test suite’in güvenilir kanıt üretmediği risk alanı.","firstUseContext":"Coverage sınırı","example":"integration denenmedi","confusedWith":"known defect","revisitAt":"V01-C28"},
+    {"term":"deep equality","turkish":"derin eşitlik","explanation":"Nesne ve koleksiyonların iç değerlerini yapısal olarak karşılaştırma.","firstUseContext":"Object assertion","example":"deepStrictEqual","confusedWith":"reference equality","revisitAt":"V01-C27"},
+    {"term":"Arrange-Act-Assert","turkish":"hazırla-çalıştır-doğrula","explanation":"Test koşulu, davranış çağrısı ve assertion’ı ayıran okuma düzeni.","firstUseContext":"İlk boundary testi","example":"input → function → expect","confusedWith":"production flow","revisitAt":"V01-C27"}
+  ]
+}

@@ -4,7 +4,7 @@ blueprint_id: "V01-C25-BP01"
 blueprint_type: "Chapter"
 scope_id: "V01-C25"
 title: "Chapter 25 Blueprint — Systematic Debugging"
-version: "0.1.0"
+version: "0.2.0"
 status: "Draft"
 freeze_status: "Unfrozen"
 owner_role: "Curriculum Architect"
@@ -38,7 +38,7 @@ review_ids: []
 | Chapter ID | `V01-C25` |
 | Module | `V01-M07` — Reliability and Program Design |
 | Difficulty | Intermediate |
-| Estimated Study Time | 6-7 hours |
+| Estimated Study Time | 10-12 hours |
 | Primary Lab | `V01-C25-L01` — Debug from Symptom to Root Cause |
 | Assessment | `V01-C25-AS01` |
 | Next Chapter | `V01-C26` |
@@ -72,6 +72,9 @@ This Chapter closes the gap between `V01-C02`, `V01-C04`, `V01-C23`, `V01-C24` e
 - `V01-C04`: required evidence defined by the dependency map.
 - `V01-C23`: required evidence defined by the dependency map.
 - `V01-C24`: required evidence defined by the dependency map.
+- `docs/standards/teaching-and-continuity-standard-v1.md`: need-first,
+  prediction-first, explicit trace, staged hints, project continuity, and
+  novice-safe terminology contract.
 - Volume 00 study, evidence, and reflection discipline.
 - Terminology already established by prerequisite Chapters.
 
@@ -390,6 +393,11 @@ This local trace is derived from `learning-outcomes.md`, `chapter-map.md`, `labs
 
 ## References
 
+- [ASEA Teaching and Continuity Standard](../../standards/teaching-and-continuity-standard-v1.md)
+- [Chrome DevTools — Pause with breakpoints](https://developer.chrome.com/docs/devtools/javascript/breakpoints)
+- [Chrome DevTools — JavaScript debugging reference](https://developer.chrome.com/docs/devtools/javascript/reference)
+- [MDN — debugger statement](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/debugger)
+- [Git — git bisect](https://git-scm.com/docs/git-bisect)
 - [Volume 01 README](../README.md)
 - [Volume Blueprint](../volume-blueprint.md)
 - [Chapter Map](../chapter-map.md)

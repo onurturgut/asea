@@ -139,11 +139,18 @@ export interface SearchDocument {
     | "module"
     | "short-note"
     | "long-note"
-    | "project";
+    | "project"
+    | "external-source";
   title: string;
   excerpt: string;
   path: string;
   chapterId?: string;
   locked?: boolean;
+  sourceOwner?: string;
+  sourceType?: string;
+  sourceLanguage?: string;
+  sourceLicense?: string;
+  sourceVerification?: string;
+  qualityScore?: number;
   searchableText: string;
 }

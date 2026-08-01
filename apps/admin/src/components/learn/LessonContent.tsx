@@ -42,8 +42,8 @@ function ContentBlockView({
           block.ordered ? "list-decimal" : "list-disc"
         }`}
       >
-        {block.items.map((item) => (
-          <li key={item}>{item}</li>
+        {block.items.map((item, index) => (
+          <li key={`${index}-${item}`}>{item}</li>
         ))}
       </Tag>
     );
@@ -189,7 +189,7 @@ export function LessonContent({
         </div>
         {content.lesson.blocks.map((block, index) => (
           <ContentBlockView
-            key={`${block.type}-${"text" in block ? block.text.slice(0, 32) : index}`}
+            key={`${block.type}-${index}`}
             block={block}
             onOpenCodeEditor={onOpenCodeEditor}
           />

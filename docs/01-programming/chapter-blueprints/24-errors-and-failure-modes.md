@@ -4,7 +4,7 @@ blueprint_id: "V01-C24-BP01"
 blueprint_type: "Chapter"
 scope_id: "V01-C24"
 title: "Chapter 24 Blueprint — Errors and Failure Modes"
-version: "0.1.0"
+version: "0.2.0"
 status: "Draft"
 freeze_status: "Unfrozen"
 owner_role: "Curriculum Architect"
@@ -38,7 +38,7 @@ review_ids: []
 | Chapter ID | `V01-C24` |
 | Module | `V01-M07` — Reliability and Program Design |
 | Difficulty | Intermediate |
-| Estimated Study Time | 5-6 hours |
+| Estimated Study Time | 10-12 hours |
 | Primary Lab | `V01-C24-L01` — Classify and Contain Failures |
 | Assessment | `V01-C24-AS01` |
 | Next Chapter | `V01-C25` |
@@ -72,6 +72,9 @@ This Chapter closes the gap between `V01-C08`, `V01-C12`, `V01-C15`, `V01-C18` e
 - `V01-C12`: required evidence defined by the dependency map.
 - `V01-C15`: required evidence defined by the dependency map.
 - `V01-C18`: required evidence defined by the dependency map.
+- `docs/standards/teaching-and-continuity-standard-v1.md`: need-first,
+  prediction-first, explicit trace, staged hints, project continuity, and
+  novice-safe terminology contract.
 - Volume 00 study, evidence, and reflection discipline.
 - Terminology already established by prerequisite Chapters.
 
@@ -390,6 +393,11 @@ This local trace is derived from `learning-outcomes.md`, `chapter-map.md`, `labs
 
 ## References
 
+- [ASEA Teaching and Continuity Standard](../../standards/teaching-and-continuity-standard-v1.md)
+- [MDN — Control flow and error handling](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
+- [MDN — try...catch](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/try...catch)
+- [MDN — Error cause](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Error/cause)
+- [NIST SP 800-142](https://csrc.nist.gov/csrc/media/Projects/automated-combinatorial-testing-for-software/documents/SP800-142-101006.pdf)
 - [Volume 01 README](../README.md)
 - [Volume Blueprint](../volume-blueprint.md)
 - [Chapter Map](../chapter-map.md)

@@ -1,0 +1,25 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C25-TERMS01",
+  "chapterId": "V01-C25",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {"term":"debugging","turkish":"hata ayıklama","explanation":"Failure’ın nedenini kanıtla bulma ve düzeltmeyi doğrulama süreci.","firstUseContext":"Araştırma döngüsü","example":"reproduce → hypothesize → experiment","confusedWith":"rastgele düzeltme","revisitAt":"V01-C26"},
+    {"term":"reproduction","turkish":"yeniden üretim","explanation":"Aynı koşullarda aynı failure’ı tekrar gözleyebilme.","firstUseContext":"Failure kaydı","example":"5 denemenin 5’inde NaN","confusedWith":"tek ekran görüntüsü","revisitAt":"V01-C26"},
+    {"term":"minimal failing case","turkish":"en küçük başarısız örnek","explanation":"Aynı failure’ı koruyan en küçük açıklanabilir kod ve veri.","firstUseContext":"[30] girdisi","example":"totalMinutes([30])","confusedWith":"en kısa kod","revisitAt":"V01-C26"},
+    {"term":"observation","turkish":"gözlem","explanation":"Çalışmadan veya araçtan doğrudan ölçülen bilgi.","firstUseContext":"index çalışma izi","example":"index === 3","confusedWith":"yorum","revisitAt":"V01-C26"},
+    {"term":"hypothesis","turkish":"hipotez","explanation":"Yanlışlanabilir ve ölçülebilir açıklama adayı.","firstUseContext":"H1–H3","example":"Döngü sınırı aşıyor","confusedWith":"tahmin","revisitAt":"V01-C26"},
+    {"term":"experiment","turkish":"deney","explanation":"Hipotezi kontrollü koşullarda sınayan işlem.","firstUseContext":"Tek değişkenli kontrol","example":"index ve length ölçümü","confusedWith":"fix","revisitAt":"V01-C26"},
+    {"term":"root cause","turkish":"kök neden","explanation":"Failure mekanizmasını başlatan temel kusur veya karar.","firstUseContext":"Yanlış sınır operatörü","example":"<= yerine < sözleşmesi","confusedWith":"symptom","revisitAt":"V01-C27"},
+    {"term":"trigger","turkish":"tetikleyici","explanation":"Var olan kusurun görünür failure üretmesini sağlayan koşul.","firstUseContext":"Fonksiyon çağrısı","example":"Diziyle çağırmak","confusedWith":"root cause","revisitAt":"V01-C26"},
+    {"term":"breakpoint","turkish":"durma noktası","explanation":"Yürütmeyi seçilen satırdan önce durduran debugger noktası.","firstUseContext":"Döngü gövdesi","example":"index değerini incelemek","confusedWith":"exception","revisitAt":"V01-C38"},
+    {"term":"conditional breakpoint","turkish":"koşullu durma noktası","explanation":"Yalnız belirtilen koşul doğru olduğunda yürütmeyi durdurur.","firstUseContext":"index === length","example":"Son turda dur","confusedWith":"if ifadesi","revisitAt":"V01-C38"},
+    {"term":"logpoint","turkish":"log noktası","explanation":"Kaynak kodu değiştirmeden debugger konsoluna değer yazan nokta.","firstUseContext":"Tekrarlı akış","example":"index ve total kaydı","confusedWith":"console.log satırı","revisitAt":"V01-C38"},
+    {"term":"call stack","turkish":"çağrı yığını","explanation":"Mevcut yürütme noktasına getiren fonksiyon çağrılarının sırası.","firstUseContext":"Exception izi","example":"render → save → validate","confusedWith":"scope","revisitAt":"V01-C36"},
+    {"term":"scope","turkish":"kapsam","explanation":"Durulan noktada hangi değişkenlere erişilebildiğini belirleyen sınır.","firstUseContext":"Debugger değişkenleri","example":"yerel index","confusedWith":"call stack","revisitAt":"V01-C38"},
+    {"term":"binary isolation","turkish":"ikili daraltma","explanation":"Şüpheli alanı parçalar hâlinde azaltarak failure kaynağını arama.","firstUseContext":"Veri hattının ortası","example":"iyi/kötü yarı","confusedWith":"binary search implementation","revisitAt":"V01-C27"},
+    {"term":"regression","turkish":"gerileme","explanation":"Daha önce çalışan davranışın değişiklikten sonra bozulması.","firstUseContext":"Fix verification","example":"Komşu örnek artık başarısız","confusedWith":"ilk failure","revisitAt":"V01-C26"},
+    {"term":"confirmation bias","turkish":"doğrulama yanlılığı","explanation":"Kanıtı ilk inanılan açıklamayı destekleyecek biçimde seçme eğilimi.","firstUseContext":"İlk hipotez","example":"Karşı kanıtı görmezden gelmek","confusedWith":"hipotez","revisitAt":"V01-C27"}
+  ]
+}

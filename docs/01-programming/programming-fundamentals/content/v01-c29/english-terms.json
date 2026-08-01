@@ -1,0 +1,27 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C29-TERMS01",
+  "chapterId": "V01-C29",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {"term":"value","turkish":"değer","explanation":"Programın taşıdığı somut bilgi örneği.","firstUseContext":"40 ve \"40\" karşılaştırması","example":"number 40","confusedWith":"binding","revisitAt":"V01-C30"},
+    {"term":"type","turkish":"tür","explanation":"Değerin operasyon ve semantik kategorisi.","firstUseContext":"runtime gözlemi","example":"string","confusedWith":"variable name","revisitAt":"V01-C30"},
+    {"term":"binding","turkish":"isim-değer bağı","explanation":"Bir identifier'ı o anda bir value'ya bağlayan ilişki.","firstUseContext":"progress değişimi","example":"progress → 40","confusedWith":"value","revisitAt":"V01-C33"},
+    {"term":"dynamic typing","turkish":"dinamik türleme","explanation":"Type kararlarının runtime'daki value üzerinden verilmesi.","firstUseContext":"aynı binding farklı type","example":"40 sonra \"40%\"","confusedWith":"kuralsızlık","revisitAt":"V01-C30"},
+    {"term":"primitive","turkish":"ilkel değer","explanation":"Object olmayan temel language value kategorisi.","firstUseContext":"language types","example":"string ve number","confusedWith":"object","revisitAt":"V01-C30"},
+    {"term":"explicit conversion","turkish":"açık tür dönüşümü","explanation":"Dönüşümün geliştirici tarafından kodda görünür istenmesi.","firstUseContext":"Number(rawMinutes)","example":"String(40)","confusedWith":"coercion","revisitAt":"V01-P07"},
+    {"term":"implicit coercion","turkish":"örtük tür zorlaması","explanation":"Operator veya bağlamın çalışma sırasında başlattığı dönüşüm.","firstUseContext":"\"5\" + 1","example":"1 → \"1\"","confusedWith":"explicit conversion","revisitAt":"V01-C09"},
+    {"term":"abstract operation","turkish":"soyut işlem","explanation":"ECMAScript davranışını tanımlayan specification algoritması.","firstUseContext":"ToNumber","example":"IsLooselyEqual","confusedWith":"çağrılabilir JS fonksiyonu","revisitAt":"V01-C34"},
+    {"term":"truthy","turkish":"doğrumsu","explanation":"Boolean context'te true'ya dönüşen value.","firstUseContext":"Boolean(\"false\")","example":"boş olmayan string","confusedWith":"true literal","revisitAt":"V01-C09"},
+    {"term":"falsy","turkish":"yanlışsı","explanation":"Boolean context'te false'a dönüşen sınırlı value kümesi.","firstUseContext":"ToBoolean","example":"0 ve empty string","confusedWith":"yalnız false","revisitAt":"V01-C09"},
+    {"term":"NaN","turkish":"geçerli sayı sonucu olmayan özel değer","explanation":"Number type'ında numeric sonuç üretilemediğini gösteren value.","firstUseContext":"Number(\"forty\")","example":"Number.isNaN","confusedWith":"ayrı type","revisitAt":"V01-C34"},
+    {"term":"strict equality","turkish":"sıkı eşitlik","explanation":"Farklı type'ları dönüştürmeden karşılaştıran equality davranışı.","firstUseContext":"===","example":"\"5\" === 5 false","confusedWith":"identity'nin tüm çeşitleri","revisitAt":"V01-C30"},
+    {"term":"loose equality","turkish":"gevşek eşitlik","explanation":"Type'lar farklıysa belirlenmiş conversion adımları uygulayabilen equality.","firstUseContext":"==","example":"\"5\" == 5 true","confusedWith":"rastgele karşılaştırma","revisitAt":"V01-C09"},
+    {"term":"input grammar","turkish":"girdi dilbilgisi","explanation":"Raw metnin kabul edilen biçim kuralları.","firstUseContext":"integer regex","example":"0 veya pozitif decimal token","confusedWith":"converted range","revisitAt":"V01-P07"},
+    {"term":"canonical type","turkish":"kanonik tür","explanation":"Domain içinde aynı bilgi için kullanılan tek ve kararlı type.","firstUseContext":"boundary sonrası number","example":"minutes number","confusedWith":"raw type","revisitAt":"V01-C30"},
+    {"term":"information loss","turkish":"bilgi kaybı","explanation":"Conversion sırasında source bilginin geri döndürülemez biçimde kaybolması.","firstUseContext":"00123 → 123","example":"leading zero kaybı","confusedWith":"syntax error","revisitAt":"V01-C34"},
+    {"term":"conversion boundary","turkish":"dönüşüm sınırı","explanation":"Raw verinin doğrulanıp domain value'ya çevrildiği kontrollü katman.","firstUseContext":"parseMinutes","example":"validate → Number → verify","confusedWith":"her operator coercion'ı","revisitAt":"V01-P07"},
+    {"term":"type trace","turkish":"tür izi","explanation":"Operand, conversion, ara değer ve final value/type zinciri.","firstUseContext":"\"5\" + 1 + 2","example":"string → string → string","confusedWith":"yalnız output","revisitAt":"V01-C09"}
+  ]
+}

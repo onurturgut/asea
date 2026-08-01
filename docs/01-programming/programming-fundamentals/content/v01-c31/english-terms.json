@@ -1,0 +1,29 @@
+{
+  "documentType": "english-terms",
+  "documentId": "V01-C31-TERMS01",
+  "chapterId": "V01-C31",
+  "version": "0.1.0",
+  "status": "Draft",
+  "terms": [
+    {"term":"array","turkish":"dizi","explanation":"Sıralı index property'leri ve özel length davranışı olan object.","firstUseContext":"student collection","example":"[studentA, studentB]","confusedWith":"set","revisitAt":"V01-C22"},
+    {"term":"element","turkish":"eleman","explanation":"Array içinde bir index'te erişilen value.","firstUseContext":"students[0]","example":"Student object","confusedWith":"index","revisitAt":"V01-C21"},
+    {"term":"index","turkish":"indis","explanation":"Array elementine erişen sıfır tabanlı sayısal property key.","firstUseContext":"ilk element","example":"students[0]","confusedWith":"length","revisitAt":"V01-C21"},
+    {"term":"length","turkish":"uzunluk","explanation":"Array index'leriyle özel ilişkisi bulunan property.","firstUseContext":"empty array","example":"students.length","confusedWith":"her zaman mevcut element sayısı","revisitAt":"V01-C34"},
+    {"term":"collection","turkish":"koleksiyon","explanation":"Birlikte işlenen value grubu.","firstUseContext":"student records","example":"Student[]","confusedWith":"tek object","revisitAt":"V01-C21"},
+    {"term":"pipeline","turkish":"işlem hattı","explanation":"Bir aşamanın output'unu sonrakinin input'u yapan veri akışı.","firstUseContext":"filter-map-reduce","example":"Student[] → number","confusedWith":"yalnız method chain","revisitAt":"V01-P07"},
+    {"term":"predicate","turkish":"koşul fonksiyonu","explanation":"Bir element için boolean bağlamında karar değeri üreten callback.","firstUseContext":"filter","example":"student => student.active","confusedWith":"mapper","revisitAt":"V01-C32"},
+    {"term":"callback","turkish":"geri çağrılan fonksiyon","explanation":"Array yöntemi tarafından elementler için çağrılan function value.","firstUseContext":"map","example":"score => score * 2","confusedWith":"callback sonucu","revisitAt":"V01-C32"},
+    {"term":"cardinality","turkish":"eleman sayısı","explanation":"Pipeline aşamasındaki collection büyüklüğü.","firstUseContext":"filter trace","example":"3 → 2","confusedWith":"element type","revisitAt":"V01-C34"},
+    {"term":"map","turkish":"dönüştürme","explanation":"Her mevcut element için output value üreten array yöntemi.","firstUseContext":"view model","example":"students.map(toCard)","confusedWith":"filter","revisitAt":"V01-P07"},
+    {"term":"filter","turkish":"süzme","explanation":"Koşula uyan mevcut elementleri yeni array'e seçen yöntem.","firstUseContext":"active students","example":"students.filter(isActive)","confusedWith":"map","revisitAt":"V01-P07"},
+    {"term":"reduce","turkish":"biriktirerek birleştirme","explanation":"Elementleri accumulator üzerinden tek sonuca birleştiren yöntem.","firstUseContext":"total completed","example":"scores.reduce(sum, 0)","confusedWith":"filter","revisitAt":"V01-C34"},
+    {"term":"accumulator","turkish":"biriktirici","explanation":"Reduce çağrıları arasında taşınan ara sonuç.","firstUseContext":"sum trace","example":"0 → 31 → 60","confusedWith":"current element","revisitAt":"V01-C34"},
+    {"term":"initial value","turkish":"başlangıç değeri","explanation":"Accumulator'ın başlangıç state'i ve empty-input sonucu.","firstUseContext":"reduce","example":"0","confusedWith":"ilk element","revisitAt":"V01-C34"},
+    {"term":"short-circuit","turkish":"erken sonuçlandırma","explanation":"Sonuç belli olduğunda kalan elementleri işlememe davranışı.","firstUseContext":"some/every/find","example":"ilk eşleşmede durma","confusedWith":"break syntax","revisitAt":"V01-C21"},
+    {"term":"mutating method","turkish":"yerinde değiştiren yöntem","explanation":"Source array state'ini değiştiren operation.","firstUseContext":"sort","example":"source.sort()","confusedWith":"copying method","revisitAt":"V01-C22"},
+    {"term":"non-mutating method","turkish":"kaynağı değiştirmeyen yöntem","explanation":"Source state'ini koruyup yeni output üreten operation.","firstUseContext":"toSorted","example":"source.toSorted()","confusedWith":"deep copy","revisitAt":"V01-C22"},
+    {"term":"comparator","turkish":"karşılaştırma fonksiyonu","explanation":"Sıralamada iki elementin göreli düzenini belirleyen callback.","firstUseContext":"numeric sort","example":"(a, b) => a - b","confusedWith":"predicate","revisitAt":"V01-C22"},
+    {"term":"no-match","turkish":"eşleşme bulunmaması","explanation":"Sorgu koşuluna uyan element olmaması state'i.","firstUseContext":"find","example":"undefined","confusedWith":"runtime error","revisitAt":"V01-C21"},
+    {"term":"sparse array","turkish":"boşluklu dizi","explanation":"Bazı index property'leri bulunmayan array.","firstUseContext":"length sınırı","example":"length mevcut element sayısıyla ayrışabilir","confusedWith":"undefined element","revisitAt":"V01-C34"}
+  ]
+}

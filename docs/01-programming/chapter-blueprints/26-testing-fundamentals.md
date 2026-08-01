@@ -4,7 +4,7 @@ blueprint_id: "V01-C26-BP01"
 blueprint_type: "Chapter"
 scope_id: "V01-C26"
 title: "Chapter 26 Blueprint — Testing Fundamentals"
-version: "0.1.0"
+version: "0.2.0"
 status: "Draft"
 freeze_status: "Unfrozen"
 owner_role: "Curriculum Architect"
@@ -43,7 +43,7 @@ review_ids: []
 | Chapter ID | `V01-C26` |
 | Module | `V01-M07` — Reliability and Program Design |
 | Difficulty | Intermediate |
-| Estimated Study Time | 6-7 hours |
+| Estimated Study Time | 10-12 hours |
 | Primary Lab | `V01-C26-L01` — Design a Boundary-Focused Test Suite |
 | Assessment | `V01-C26-AS01` |
 | Next Chapter | `V01-C27` |
@@ -82,20 +82,26 @@ This Chapter closes the gap between `V01-C10`, `V01-C13`, `V01-C14`, `V01-C15`, 
 - `V01-C18`: required evidence defined by the dependency map.
 - `V01-C24`: required evidence defined by the dependency map.
 - `V01-C25`: required evidence defined by the dependency map.
+- `docs/standards/teaching-and-continuity-standard-v1.md`: need-first,
+  prediction-first, explicit trace, staged hints, project continuity, and
+  novice-safe terminology contract.
 - Volume 00 study, evidence, and reflection discipline.
 - Terminology already established by prerequisite Chapters.
 
 ### Knowledge Outputs
 
 - **V01-LO042:** Contract'tan normal, boundary ve invalid testler üretmek.
-- **V01-LO043:** bir defect için failing regression test tasarlamak..
+- **V01-LO043:** Bir test suite'in risk kapsamını ve kör noktalarını açıklamak;
+  bilinen defect için failing regression testini bu kanıta dahil etmek.
 - A reviewable plan connecting concepts, examples, practice, assessment, and project evidence.
 
 ## Audience and Level
 
 - **Audience:** Learners who have passed the listed prerequisites and are following Volume 01 in sequence.
 - **Entry level:** Intermediate; no unstated framework or infrastructure experience.
-- **Exit behavior:** The learner can contract'tan normal, boundary ve invalid testler üretmek; bir defect için failing regression test tasarlamak..
+- **Exit behavior:** The learner can contract'tan normal, boundary ve invalid
+  testler üretmek; bilinen defect için regression testi tasarlamak ve test
+  suite'in risk kapsamı ile kör noktalarını açıklamak.
 - **Teaching posture:** Concept first, progressively reduced guidance, explicit trace and reflection.
 
 ## Prerequisites
@@ -121,7 +127,8 @@ Plan a short retrieval task that asks the learner to reproduce the prerequisite 
 ### Outcome Mapping
 
 - **V01-LO042:** Contract'tan normal, boundary ve invalid testler üretmek.
-- **V01-LO043:** bir defect için failing regression test tasarlamak..
+- **V01-LO043:** Bir test suite'in risk kapsamını ve kör noktalarını açıklamak;
+  bilinen defect için failing regression testini bu kanıta dahil etmek.
 
 ### Legacy Source Mapping
 
@@ -410,6 +417,10 @@ This local trace is derived from `learning-outcomes.md`, `chapter-map.md`, `labs
 
 ## References
 
+- [ASEA Teaching and Continuity Standard](../../standards/teaching-and-continuity-standard-v1.md)
+- [Node.js Test Runner](https://nodejs.org/api/test.html)
+- [Node.js Assert](https://nodejs.org/api/assert.html)
+- [ISTQB CTFL Syllabus v4.0.1](https://istqb.org/wp-content/uploads/2024/11/ISTQB_CTFL_Syllabus_v4.0.1.pdf)
 - [Volume 01 README](../README.md)
 - [Volume Blueprint](../volume-blueprint.md)
 - [Chapter Map](../chapter-map.md)

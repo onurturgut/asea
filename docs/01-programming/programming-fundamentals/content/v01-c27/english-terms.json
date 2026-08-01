@@ -1,0 +1,21 @@
+{
+  "documentType":"english-terms","documentId":"V01-C27-TERMS01","chapterId":"V01-C27","version":"0.1.0","status":"Draft",
+  "terms":[
+    {"term":"readability","turkish":"okunabilirlik","explanation":"Kodun niyetini ve akışını doğru anlama maliyeti.","firstUseContext":"calc örneği","example":"açıklayıcı isimler","confusedWith":"formatting","revisitAt":"V01-C28"},
+    {"term":"code smell","turkish":"kod kokusu","explanation":"Olası bakım riskine işaret eden, bağlamla değerlendirilmesi gereken belirti.","firstUseContext":"anlamsız adlar","example":"s.m","confusedWith":"defect","revisitAt":"V01-C28"},
+    {"term":"refactoring","turkish":"yeniden yapılandırma","explanation":"Observable behavior’ı değiştirmeden iç yapıyı iyileştirme.","firstUseContext":"güvenlik döngüsü","example":"rename","confusedWith":"rewrite","revisitAt":"V01-C28"},
+    {"term":"behavior-preserving","turkish":"davranışı koruyan","explanation":"Dışarıdan gözlenebilir sözleşmeyi aynı tutan değişiklik.","firstUseContext":"yeşil testler","example":"aynı skor","confusedWith":"feature","revisitAt":"V01-C28"},
+    {"term":"semantic preservation","turkish":"anlamsal koruma","explanation":"Refactoring öncesi ve sonrası observable semantiğin aynı olması.","firstUseContext":"boundary testi","example":">= 60 korunur","confusedWith":"aynı satır sayısı","revisitAt":"V01-C28"},
+    {"term":"rename","turkish":"yeniden adlandırma","explanation":"Program öğesinin adını davranışı değiştirmeden açıklayıcı yapma.","firstUseContext":"calc → calculateSessionScore","example":"d → durationMinutes","confusedWith":"yeni değişken","revisitAt":"V01-C28"},
+    {"term":"extract function","turkish":"fonksiyon çıkarma","explanation":"Anlamlı kod bölümünü isimli ve odaklı fonksiyona taşıma.","firstUseContext":"bonus kuralı","example":"completionBonusFor","confusedWith":"kod kopyalama","revisitAt":"V01-C28"},
+    {"term":"cohesion","turkish":"bağdaşıklık","explanation":"Parçaların aynı sorumluluk ve değişiklik nedeni etrafında birleşmesi.","firstUseContext":"bonus fonksiyonu","example":"tek domain kuralı","confusedWith":"coupling","revisitAt":"V01-C28"},
+    {"term":"duplication","turkish":"tekrar","explanation":"Aynı iş bilgisinin birden fazla bağımsız kaynakta temsil edilmesi.","firstUseContext":"bonus oranı","example":"üç kopya kural","confusedWith":"benzer syntax","revisitAt":"V01-C28"},
+    {"term":"magic number","turkish":"isimsiz anlamlı sayı","explanation":"Domain anlamı açıklayıcı ad olmadan kullanılan literal.","firstUseContext":"60 dakika","example":"LONG_SESSION_MINUTES","confusedWith":"her numeric literal","revisitAt":"V01-C28"},
+    {"term":"cognitive complexity","turkish":"bilişsel karmaşıklık","explanation":"Kontrol akışını anlamak için gereken zihinsel karar yükü.","firstUseContext":"iç içe koşullar","example":"karar derinliği","confusedWith":"time complexity","revisitAt":"V01-C28"},
+    {"term":"small change","turkish":"küçük değişiklik","explanation":"Tek hedefli, kolay incelenen ve geri alınan dönüşüm.","firstUseContext":"refactoring döngüsü","example":"yalnız rename","confusedWith":"önemsiz değişiklik","revisitAt":"V01-C28"},
+    {"term":"rewrite","turkish":"yeniden yazım","explanation":"Geniş kod bölümünü yeniden kuran ve daha büyük davranış riski taşıyan değişim.","firstUseContext":"refactoring sınırı","example":"dosyayı baştan kurmak","confusedWith":"refactoring","revisitAt":"V01-C28"},
+    {"term":"implementation detail","turkish":"uygulama ayrıntısı","explanation":"Dış sözleşmenin parçası olmayan iç yapı kararı.","firstUseContext":"test bağımlılığı","example":"yerel değişken adı","confusedWith":"observable behavior","revisitAt":"V01-C28"},
+    {"term":"coupling","turkish":"bağımlılık derecesi","explanation":"Kod parçalarının birbirinin değişikliklerinden etkilenme düzeyi.","firstUseContext":"yanlış abstraction","example":"farklı kuralları zorla birleştirmek","confusedWith":"cohesion","revisitAt":"V01-C28"},
+    {"term":"before/after","turkish":"önce/sonra karşılaştırması","explanation":"Refactoring etkisini aynı ölçütlerle iki sürümde değerlendirme.","firstUseContext":"karar tablosu","example":"isim ve test sonucu","confusedWith":"ekran görüntüsü","revisitAt":"V01-C28"}
+  ]
+}

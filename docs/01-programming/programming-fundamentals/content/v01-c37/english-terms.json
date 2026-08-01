@@ -1,0 +1,20 @@
+{"documentType":"english-terms","documentId":"V01-C37-TERMS01","chapterId":"V01-C37","terms":[
+{"term":"module","turkish":"modül","explanation":"Kendi scope ve sözleşmesi olan kaynak birimi."},
+{"term":"export","turkish":"dışa aktarma","explanation":"Bir binding'i public API'ye açma."},
+{"term":"import","turkish":"içe aktarma","explanation":"Başka modülün export'una yerel erişim kurma."},
+{"term":"named export","turkish":"isimli dışa aktarma","explanation":"Belirli bir adla sunulan export."},
+{"term":"default export","turkish":"varsayılan dışa aktarma","explanation":"Modülün tek varsayılan export'u."},
+{"term":"module scope","turkish":"modül kapsamı","explanation":"İsimlerin modül içinde yaşadığı kapsam."},
+{"term":"binding","turkish":"isim-değer bağı","explanation":"Bir ismi storage/değere bağlayan dil ilişkisi."},
+{"term":"live binding","turkish":"canlı bağ","explanation":"Kaynak modüldeki güncel değeri gösteren import."},
+{"term":"module specifier","turkish":"modül belirteci","explanation":"Import kaynağını belirten metin."},
+{"term":"dependency","turkish":"bağımlılık","explanation":"Bir modülün çalışmak için istediği sözleşme."},
+{"term":"dependency graph","turkish":"bağımlılık grafiği","explanation":"Modül ve import ilişkilerinin yönlü modeli."},
+{"term":"circular dependency","turkish":"döngüsel bağımlılık","explanation":"Graph'ta tekrar başlangıca dönen bağımlılık yolu."},
+{"term":"public API","turkish":"açık arayüz","explanation":"Tüketicilere desteklenen modül yüzeyi."},
+{"term":"boundary leakage","turkish":"sınır sızıntısı","explanation":"Internal kararların public API'ye taşması."},
+{"term":"side effect","turkish":"yan etki","explanation":"Dönen değerin dışında gözlenen değişiklik."},
+{"term":"composition root","turkish":"birleştirme kökü","explanation":"Concrete bağımlılıkların kurulduğu başlangıç noktası."},
+{"term":"cohesion","turkish":"uyum","explanation":"Bir modüldeki işlerin aynı amaca hizmet etmesi."},
+{"term":"host resolution","turkish":"çalışma ortamı çözümlemesi","explanation":"Specifier'ın hangi kaynağa gittiğini host'un belirlemesi."}
+]}
