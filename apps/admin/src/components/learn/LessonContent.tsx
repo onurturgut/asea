@@ -1,15 +1,10 @@
 "use client";
 
-import type {
-  ChapterContentBundle,
-  ChapterNavigationItem,
-  ContentBlock,
-} from "@asea/shared";
+import type { ChapterContentBundle, ChapterNavigationItem } from "@asea/shared";
 import {
   ArrowLeft,
   ArrowRight,
   Check,
-  Code2,
   Lightbulb,
   ListChecks,
   LockKeyhole,
@@ -18,64 +13,9 @@ import {
 import Link from "next/link";
 import { toast } from "sonner";
 
+import { VisualLessonJourney } from "@/components/learn/VisualLessonJourney";
+import { InteractiveExecutionScene } from "@/components/learn/InteractiveExecutionScene";
 import { useAppState } from "@/lib/app-state";
-
-function ContentBlockView({
-  block,
-  onOpenCodeEditor,
-}: {
-  block: ContentBlock;
-  onOpenCodeEditor: () => void;
-}) {
-  if (block.type === "heading") {
-    const className =
-      block.level === 2
-        ? "mt-10 text-xl font-semibold tracking-tight"
-        : "mt-7 text-lg font-semibold tracking-tight";
-    return <h2 className={className}>{block.text}</h2>;
-  }
-  if (block.type === "list") {
-    const Tag = block.ordered ? "ol" : "ul";
-    return (
-      <Tag
-        className={`mt-3 space-y-2 pl-5 text-[15px] leading-[1.75] ${
-          block.ordered ? "list-decimal" : "list-disc"
-        }`}
-      >
-        {block.items.map((item, index) => (
-          <li key={`${index}-${item}`}>{item}</li>
-        ))}
-      </Tag>
-    );
-  }
-  if (block.type === "code") {
-    return (
-      <div className="mt-4 overflow-hidden rounded-xl border hairline bg-surface-2/60">
-        <div className="flex items-center justify-between border-b hairline px-3 py-1.5 text-[11px] text-muted-foreground">
-          <span className="font-mono">{block.language || "text"}</span>
-          <button
-            type="button"
-            onClick={onOpenCodeEditor}
-            className="focus-ring inline-flex items-center gap-1 rounded-md px-2 py-1 hover:bg-muted hover:text-foreground"
-          >
-            <Code2 className="size-3" /> Kod Editöründe Aç
-          </button>
-        </div>
-        <pre className="overflow-x-auto p-4 text-[13px] leading-relaxed">
-          <code className="font-mono">{block.code}</code>
-        </pre>
-      </div>
-    );
-  }
-  if (block.type === "quote") {
-    return (
-      <blockquote className="mt-4 border-l-2 border-tool-indigo pl-4 text-sm italic text-muted-foreground">
-        {block.text}
-      </blockquote>
-    );
-  }
-  return <p className="mt-3 text-[15px] leading-[1.75]">{block.text}</p>;
-}
 
 export function LessonContent({
   onOpenCodeEditor,
@@ -170,6 +110,8 @@ export function LessonContent({
         </ul>
       </div>
 
+      {content.id === "V01-C02" ? <InteractiveExecutionScene /> : null}
+
       {!content.hasActivityPackage ? (
         <div className="mt-6 flex items-start gap-3 rounded-xl border border-tool-amber/30 bg-tool-amber/5 p-4 text-sm">
           <LockKeyhole className="mt-0.5 size-4 shrink-0 text-tool-amber" />
@@ -183,18 +125,12 @@ export function LessonContent({
         </div>
       ) : null}
 
-      <section className="mt-10 rounded-2xl border hairline bg-surface p-6">
-        <div className="text-[11px] font-semibold uppercase tracking-wider text-tool-indigo">
-          Kanonik ASEA ders içeriği
-        </div>
-        {content.lesson.blocks.map((block, index) => (
-          <ContentBlockView
-            key={`${block.type}-${index}`}
-            block={block}
-            onOpenCodeEditor={onOpenCodeEditor}
-          />
-        ))}
-      </section>
+      <VisualLessonJourney
+        blocks={content.lesson.blocks}
+        chapterId={content.id}
+        chapterTitle={content.title}
+        onOpenCodeEditor={onOpenCodeEditor}
+      />
 
       <div className="mt-12 grid grid-cols-[1fr_auto_1fr] items-center gap-3 border-t hairline pt-6">
         {previousChapter ? (
